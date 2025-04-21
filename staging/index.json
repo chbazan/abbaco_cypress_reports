@@ -1,0 +1,152 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-04-21T14:55:27.580Z",
+    "end": "2025-04-21T14:55:44.757Z",
+    "duration": 17177,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0774e20f-5d2b-4474-ab17-6ac52cfa0fe0",
+      "title": "",
+      "fullFile": "cypress/e2e/1-getting-started/abbaco_smoke_test.cy.js",
+      "file": "cypress/e2e/1-getting-started/abbaco_smoke_test.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b758a083-90ac-42cb-8fc2-3fd57c230b17",
+          "title": "Smoke Test Abbaco: Home | Analizar: AL30 | Mi Portafolio | Curvas | Arbitraje | Sensibilidad | Screener | Graficador",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Precondición: LogIn",
+              "fullTitle": "Smoke Test Abbaco: Home | Analizar: AL30 | Mi Portafolio | Curvas | Arbitraje | Sensibilidad | Screener | Graficador Precondición: LogIn",
+              "timedOut": null,
+              "duration": 8834,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.clearAllCookies();\ncy.clearAllLocalStorage();\ncy.clearAllSessionStorage();\ncy.LoginAbbaco();",
+              "err": {},
+              "uuid": "8c70a831-fcb0-47bc-a5b7-3b43fbfe2870",
+              "parentUUID": "b758a083-90ac-42cb-8fc2-3fd57c230b17",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8c70a831-fcb0-47bc-a5b7-3b43fbfe2870"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8834,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "3c679436-4ff1-40ac-abe1-c57a97ed7af7",
+          "title": "Home",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validaciones de todas las cartas del Home",
+              "fullTitle": "Home Validaciones de todas las cartas del Home",
+              "timedOut": null,
+              "duration": 5221,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Test', {\n  matchCase: false\n}).click();\ncy.get('span.placeholder-glow').should('not.exist');\ncy.get('.card-body').should('exist').and('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 5000ms: Expected to find content: 'Test' but never did.",
+                "estack": "AssertionError: Timed out retrying after 5000ms: Expected to find content: 'Test' but never did.\n    at Context.eval (webpack://cypress/./cypress/e2e/1-getting-started/abbaco_smoke_test.cy.js:22:11)",
+                "diff": null
+              },
+              "uuid": "abdc02a8-1939-4a09-9774-4c41706aaead",
+              "parentUUID": "3c679436-4ff1-40ac-abe1-c57a97ed7af7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "abdc02a8-1939-4a09-9774-4c41706aaead"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 5221,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "index",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "index",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
