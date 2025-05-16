@@ -5,9 +5,9 @@
     "passes": 4,
     "pending": 0,
     "failures": 0,
-    "start": "2025-05-16T13:35:31.707Z",
-    "end": "2025-05-16T13:35:48.308Z",
-    "duration": 16601,
+    "start": "2025-05-16T15:15:20.033Z",
+    "end": "2025-05-16T15:15:33.837Z",
+    "duration": 13804,
     "testsRegistered": 4,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "88da25ef-ecbb-4700-bc13-66a48b0213fb",
+      "uuid": "69233e20-cb6b-4fc6-88eb-5bfb357d6441",
       "title": "",
       "fullFile": "cypress/e2e/1-getting-started/abbaco_cotizacion_test.cy.js",
       "file": "cypress/e2e/1-getting-started/abbaco_cotizacion_test.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "e7744b08-575c-4b27-8df3-5efa329a44a2",
+          "uuid": "bb5fa856-a660-4a0a-b554-3f92ce45cd06",
           "title": "|Precondición|",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Iniciar sesión en Abbaco",
               "fullTitle": "|Precondición| Iniciar sesión en Abbaco",
               "timedOut": null,
-              "duration": 9563,
+              "duration": 7143,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,26 +47,26 @@
               "context": null,
               "code": "cy.clearAllCookies();\ncy.clearAllLocalStorage();\ncy.clearAllSessionStorage();\ncy.LoginAbbaco();",
               "err": {},
-              "uuid": "ab1a301d-6e86-48c8-a182-037e2c98d3a0",
-              "parentUUID": "e7744b08-575c-4b27-8df3-5efa329a44a2",
+              "uuid": "9faa243a-b477-4ac0-a0d9-7b0ef7af8ec7",
+              "parentUUID": "bb5fa856-a660-4a0a-b554-3f92ce45cd06",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "ab1a301d-6e86-48c8-a182-037e2c98d3a0"
+            "9faa243a-b477-4ac0-a0d9-7b0ef7af8ec7"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 9563,
+          "duration": 7143,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "c015584a-e8c7-4132-bb05-26bdbcbf5959",
+          "uuid": "d4fd2fc0-3745-4f83-9046-17b269508299",
           "title": "|Chequeo de la última cotización de la especie AL30|",
           "fullFile": "",
           "file": "",
@@ -77,7 +77,7 @@
               "title": "Ingreso de especie AL30 para Analizar",
               "fullTitle": "|Chequeo de la última cotización de la especie AL30| Ingreso de especie AL30 para Analizar",
               "timedOut": null,
-              "duration": 3440,
+              "duration": 3160,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -86,8 +86,8 @@
               "context": null,
               "code": "cy.get('input[class=\"input-sm border-0 p-0 shadow-none form-control\"]').should('exist').and('be.visible').click().type(_constants.default.HARD_DOLLAR);\ncy.get('[id=\"search-item-AL30 - BYMA - ARS\"]').should('exist').and('be.visible').click();\ncy.contains('Analizar').click({\n  force: true\n});\ncy.get('li.nav-item').should('exist').and('be.visible');\ncy.get('.card-body').should('exist').and('be.visible');\n// Guardar en una variable la versión de Abbaco\ncy.get('#app-version').invoke('text').then(text => {\n  const ABBACO_VERSION = text.trim();\n  cy.writeFile('abbaco-version.txt', ABBACO_VERSION);\n});",
               "err": {},
-              "uuid": "86706c95-92e1-4b6f-af09-a7df49c63e1a",
-              "parentUUID": "c015584a-e8c7-4132-bb05-26bdbcbf5959",
+              "uuid": "cbc9bf6c-6b4a-4718-a279-910640dd6c72",
+              "parentUUID": "d4fd2fc0-3745-4f83-9046-17b269508299",
               "isHook": false,
               "skipped": false
             },
@@ -95,7 +95,7 @@
               "title": "Valida que se muestren las cartas con sus títulos de TIR, M. Duration, Paridad y Última Cotización, en la pestaña \"General\"",
               "fullTitle": "|Chequeo de la última cotización de la especie AL30| Valida que se muestren las cartas con sus títulos de TIR, M. Duration, Paridad y Última Cotización, en la pestaña \"General\"",
               "timedOut": null,
-              "duration": 278,
+              "duration": 260,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -104,8 +104,8 @@
               "context": null,
               "code": "cy.contains('h6.text-uppercase.card-title', 'TIR', {\n  matchCase: false\n}).should('exist').and('have.text', 'TIR% TEA');\ncy.log('El cuadro de TIR ha sido validado correctamente.');\ncy.contains('h6.text-uppercase.card-title', 'M. Duration', {\n  matchCase: false\n}).should('exist').and('have.text', 'M. Durationaños');\ncy.log('El cuadro de Duration ha sido validado correctamente.');\ncy.contains('h6.text-uppercase.card-title', 'Paridad', {\n  matchCase: false\n}).should('exist').and('have.text', 'Paridad%');\ncy.log('El cuadro de Paridad ha sido validado correctamente.');\ncy.contains('h6.text-uppercase.card-title', 'Última Cotización', {\n  matchCase: false\n}).should('exist').and($el => {\n  // Obtén el texto del elemento y elimina los espacios innecesarios\n  const text = $el.text().replace(/\\s/g, '');\n  // Verifica que el texto sea \"Última CotizaciónARS\" o \"Última CotizaciónUSD\"\n  expect(text).to.match(/ÚltimaCotización(ARS|USD)$/);\n});\ncy.log('El cuadro de Última Cotización ha sido validado correctamente.');",
               "err": {},
-              "uuid": "d210df11-44f2-4007-9974-fdd5c0a8b5e2",
-              "parentUUID": "c015584a-e8c7-4132-bb05-26bdbcbf5959",
+              "uuid": "f58ae928-88b7-4b48-9651-03a257a9e121",
+              "parentUUID": "d4fd2fc0-3745-4f83-9046-17b269508299",
               "isHook": false,
               "skipped": false
             },
@@ -113,7 +113,7 @@
               "title": "Valida que el pop up de Última Cotización contenga un precio intradiario o de cierre, según corresponda",
               "fullTitle": "|Chequeo de la última cotización de la especie AL30| Valida que el pop up de Última Cotización contenga un precio intradiario o de cierre, según corresponda",
               "timedOut": null,
-              "duration": 112,
+              "duration": 111,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -122,22 +122,22 @@
               "context": null,
               "code": "cy.ValidarPreciosCierreIntra();",
               "err": {},
-              "uuid": "9ce37823-c624-42df-bb1a-82960d59de6b",
-              "parentUUID": "c015584a-e8c7-4132-bb05-26bdbcbf5959",
+              "uuid": "9a7c3afb-d85d-42b7-8088-7d00277bf5cc",
+              "parentUUID": "d4fd2fc0-3745-4f83-9046-17b269508299",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "86706c95-92e1-4b6f-af09-a7df49c63e1a",
-            "d210df11-44f2-4007-9974-fdd5c0a8b5e2",
-            "9ce37823-c624-42df-bb1a-82960d59de6b"
+            "cbc9bf6c-6b4a-4718-a279-910640dd6c72",
+            "f58ae928-88b7-4b48-9651-03a257a9e121",
+            "9a7c3afb-d85d-42b7-8088-7d00277bf5cc"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3830,
+          "duration": 3531,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
