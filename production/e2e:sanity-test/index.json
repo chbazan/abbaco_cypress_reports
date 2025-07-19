@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 3,
-    "tests": 3,
-    "passes": 2,
+    "tests": 2,
+    "passes": 1,
     "pending": 0,
     "failures": 1,
-    "start": "2025-07-18T12:48:45.341Z",
-    "end": "2025-07-18T12:52:41.613Z",
-    "duration": 236272,
+    "start": "2025-07-19T11:40:53.680Z",
+    "end": "2025-07-19T11:44:10.149Z",
+    "duration": 196469,
     "testsRegistered": 108,
-    "passPercent": 1.8518518518518516,
+    "passPercent": 0.9259259259259258,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
-    "skipped": 105,
+    "skipped": 106,
     "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "655f4385-e5be-4350-9a0b-3612b8e0db9f",
+      "uuid": "28de11e5-4e08-4347-8a4d-3d4ce898a777",
       "title": "",
       "fullFile": "cypress/e2e/1-getting-started/abbaco_sanity_test.cy.js",
       "file": "cypress/e2e/1-getting-started/abbaco_sanity_test.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "92872c4f-a3e8-46ac-9da2-0e8b14c5f70f",
+          "uuid": "13d8eab8-829b-4600-9312-2e61d4f758bf",
           "title": "|Precondición|",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Iniciar sesión en Abbaco",
               "fullTitle": "|Precondición| Iniciar sesión en Abbaco",
               "timedOut": null,
-              "duration": 8777,
+              "duration": 9917,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,26 +47,26 @@
               "context": null,
               "code": "cy.clearAllCookies();\ncy.clearAllLocalStorage();\ncy.clearAllSessionStorage();\ncy.LoginAbbaco();",
               "err": {},
-              "uuid": "3f1ac4be-7e85-4f57-9b22-6b25ef792d33",
-              "parentUUID": "92872c4f-a3e8-46ac-9da2-0e8b14c5f70f",
+              "uuid": "697e6faf-eb7f-468a-b86b-1d3637ab18ac",
+              "parentUUID": "13d8eab8-829b-4600-9312-2e61d4f758bf",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "3f1ac4be-7e85-4f57-9b22-6b25ef792d33"
+            "697e6faf-eb7f-468a-b86b-1d3637ab18ac"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 8777,
+          "duration": 9917,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "e8ba39fe-ac19-400d-b762-e5fe69c7343b",
+          "uuid": "a1ad6120-41fd-4066-bd62-23b21f4f1b8b",
           "title": "|Home|",
           "fullFile": "",
           "file": "",
@@ -77,35 +77,39 @@
               "title": "Ingresar al menú Inicio y verificar que se visualicen todos los cuadros",
               "fullTitle": "|Home| Ingresar al menú Inicio y verificar que se visualicen todos los cuadros",
               "timedOut": null,
-              "duration": 42577,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 183293,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "cy.contains('Inicio', {\n  matchCase: false\n}).click();\ncy.get('.card-body').should('exist').and('be.visible');\n// Validación de los distintos cuandros del home\ncy.contains('h6[class=\"text-uppercase text-header card-title\"]', 'Índices').should('be.visible');\ncy.contains('h6[class=\"text-uppercase text-header card-title\"]', 'Tasas').should('be.visible');\ncy.contains('h6[class=\"text-uppercase text-header card-title\"]', 'USD CCL').should('be.visible');\ncy.contains('h6[class=\"text-uppercase text-header card-title\"]', 'USD MEP').should('be.visible');\ncy.get('span.placeholder-glow').should('not.exist');",
-              "err": {},
-              "uuid": "a9d0d09d-1f47-4c1b-a327-ab29bcd96d28",
-              "parentUUID": "e8ba39fe-ac19-400d-b762-e5fe69c7343b",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 180000ms: Expected to find content: 'USD CCL' within the selector: 'h6[class=\"text-uppercase text-header card-title\"]' but never did.",
+                "estack": "AssertionError: Timed out retrying after 180000ms: Expected to find content: 'USD CCL' within the selector: 'h6[class=\"text-uppercase text-header card-title\"]' but never did.\n    at Context.eval (webpack://cypress/./cypress/e2e/1-getting-started/abbaco_sanity_test.cy.js:25:84)",
+                "diff": null
+              },
+              "uuid": "fc3cbda2-8dec-4554-a229-cf2ff345f1bd",
+              "parentUUID": "a1ad6120-41fd-4066-bd62-23b21f4f1b8b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "a9d0d09d-1f47-4c1b-a327-ab29bcd96d28"
+          "passes": [],
+          "failures": [
+            "fc3cbda2-8dec-4554-a229-cf2ff345f1bd"
           ],
-          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 42577,
+          "duration": 183293,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "88e37dd7-2029-4060-a3da-5f754875f5e2",
+          "uuid": "6bb340ae-41f4-4351-a449-eee3e5a4eeda",
           "title": "|Análisis del bono HARD_DOLLAR AL30|",
           "fullFile": "",
           "file": "",
@@ -116,23 +120,19 @@
               "title": "Ingreso de especie AL30 para Analizar",
               "fullTitle": "|Análisis del bono HARD_DOLLAR AL30| Ingreso de especie AL30 para Analizar",
               "timedOut": null,
-              "duration": 181590,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('input[class=\"input-sm border-0 p-0 shadow-none form-control\"]').should('exist').and('be.visible').click().type(_constants.default.HARD_DOLLAR);\ncy.get('span.placeholder-glow').should('not.exist');\ncy.get('[id=\"search-item-AL30 - BYMA - ARS\"]').should('exist').and('be.visible').click();\ncy.get('span.placeholder-glow').should('not.exist');\ncy.contains('Analizar').click({\n  force: true\n});\ncy.get('li.nav-item').should('exist').and('be.visible');\ncy.get('.card-body').should('exist').and('be.visible');\n// Guardar en una variable la versión de Abbaco\ncy.get('#app-version').invoke('text').then(text => {\n  const ABBACO_VERSION = text.trim();\n  cy.writeFile('abbaco-version.txt', ABBACO_VERSION);\n});",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 180000ms: Expected to find element: `li.nav-item`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 180000ms: Expected to find element: `li.nav-item`, but never found it.\n    at Context.eval (webpack://cypress/./cypress/e2e/1-getting-started/abbaco_sanity_test.cy.js:43:30)",
-                "diff": null
-              },
-              "uuid": "cfcebc78-6439-4a94-ab66-f26dffb7daf8",
-              "parentUUID": "88e37dd7-2029-4060-a3da-5f754875f5e2",
+              "err": {},
+              "uuid": "d9597fa6-2bb6-4b76-bcce-05f5885b049a",
+              "parentUUID": "6bb340ae-41f4-4351-a449-eee3e5a4eeda",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             },
             {
               "title": "Valida que se muestren las cartas con sus títulos de TIR, M. Duration, Paridad y Última Cotización, en la pestaña \"General\"",
@@ -147,8 +147,8 @@
               "context": null,
               "code": "cy.contains('h6.text-uppercase.card-title', 'TIR', {\n  matchCase: false\n}).should('exist').and('have.text', 'TIR% TEA');\ncy.log('El cuadro de TIR ha sido validado correctamente.');\ncy.contains('h6.text-uppercase.card-title', 'M. Duration', {\n  matchCase: false\n}).should('exist').and('have.text', 'M. Durationaños');\ncy.log('El cuadro de Duration ha sido validado correctamente.');\ncy.contains('h6.text-uppercase.card-title', 'Paridad', {\n  matchCase: false\n}).should('exist').and('have.text', 'Paridad%');\ncy.log('El cuadro de Paridad ha sido validado correctamente.');\ncy.contains('h6.text-uppercase.card-title', 'Última Cotización', {\n  matchCase: false\n}).should('exist').and($el => {\n  // Obtiene el texto del elemento y elimina los espacios innecesarios\n  const text = $el.text().replace(/\\s/g, '');\n  // Verifica que el texto sea \"Última CotizaciónARS\" o \"Última CotizaciónUSD\"\n  expect(text).to.match(/ÚltimaCotización(ARS|USD)$/);\n});\ncy.log('El cuadro de Última Cotización ha sido validado correctamente.');",
               "err": {},
-              "uuid": "894eb397-470a-4074-ac03-ce5ea5517935",
-              "parentUUID": "88e37dd7-2029-4060-a3da-5f754875f5e2",
+              "uuid": "17395125-2d5a-452d-82be-698305e49b73",
+              "parentUUID": "6bb340ae-41f4-4351-a449-eee3e5a4eeda",
               "isHook": false,
               "skipped": true
             },
@@ -165,8 +165,8 @@
               "context": null,
               "code": "cy.get('td.text-end.small').should('not.contain', 'N/A');",
               "err": {},
-              "uuid": "0ed35457-20f3-4421-b106-3ffe2b033448",
-              "parentUUID": "88e37dd7-2029-4060-a3da-5f754875f5e2",
+              "uuid": "25649b46-7a5b-49fc-afc0-be737cb6afb1",
+              "parentUUID": "6bb340ae-41f4-4351-a449-eee3e5a4eeda",
               "isHook": false,
               "skipped": true
             },
@@ -183,8 +183,8 @@
               "context": null,
               "code": "cy.get('div.d-flex.justify-content-end').should('not.contain', 'N/A');",
               "err": {},
-              "uuid": "8a4b1a56-ec5d-42fe-87fa-7c11fc7b28cf",
-              "parentUUID": "88e37dd7-2029-4060-a3da-5f754875f5e2",
+              "uuid": "be26811e-49e0-4401-bf60-722692f5ae79",
+              "parentUUID": "6bb340ae-41f4-4351-a449-eee3e5a4eeda",
               "isHook": false,
               "skipped": true
             },
@@ -201,8 +201,8 @@
               "context": null,
               "code": "cy.ValidarCotizacionTirDurationParidad();",
               "err": {},
-              "uuid": "630cb5ce-7275-4f4c-b8f1-72b6f6c97df4",
-              "parentUUID": "88e37dd7-2029-4060-a3da-5f754875f5e2",
+              "uuid": "0df098f3-b95f-4f4a-953a-cfd151ff4b83",
+              "parentUUID": "6bb340ae-41f4-4351-a449-eee3e5a4eeda",
               "isHook": false,
               "skipped": true
             },
@@ -219,8 +219,8 @@
               "context": null,
               "code": "cy.contains('Condiciones de Emisión').click({\n  force: true\n});\ncy.get('.card-body').should('exist').and('be.visible');\ncy.get('div.table-responsive').should('exist').and('be.visible');\ncy.contains('h6.text-uppercase.card-title', 'Información Básica', {\n  matchCase: false\n}).should('exist').and('have.text', 'Información Básica');\ncy.log('El cuadro de Información Básica ha sido validado correctamente.');\ncy.contains('h6.text-uppercase.card-title', 'Cupones', {\n  matchCase: false\n}).should('exist').and('have.text', 'Cupones');\ncy.log('El cuadro de Cupones ha sido validado correctamente.');\ncy.contains('h6.text-uppercase.card-title', 'Pagos', {\n  matchCase: false\n}).should('exist').and('have.text', 'Pagos');\ncy.log('El cuadro de Pagos ha sido validado correctamente.');",
               "err": {},
-              "uuid": "781b3781-11c3-4df6-8a10-f21f14085ad2",
-              "parentUUID": "88e37dd7-2029-4060-a3da-5f754875f5e2",
+              "uuid": "dc646a65-b21d-478b-a9ec-c1aefdab6447",
+              "parentUUID": "6bb340ae-41f4-4351-a449-eee3e5a4eeda",
               "isHook": false,
               "skipped": true
             },
@@ -237,8 +237,8 @@
               "context": null,
               "code": "//Guarda el precio de la última cotización en la pestaña General\n// cy.guardarUltimaCotizacion()\ncy.contains('Análisis de sensibilidad', {\n  matchCase: false\n}).click({\n  force: true\n});\ncy.get('div[role=\"alert\"]').then($alerts => {\n  const alertaSensibilidad = $alerts.filter((_, el) => el.innerText.includes('No se pudo realizar el análisis de sensibilidad.'));\n  if (alertaSensibilidad.length) {\n    throw new Error('Se está mostrando el cartel de \"No se pudo realizar el análisis de sensibilidad\".');\n  }\n});\ncy.get('div[class=\"d-flex align-items-center col-xxl-9 col-sm-12\"]').should('exist').and('be.visible');\ncy.get('#scenarios').should('exist').and('be.visible').click().type('4');\ncy.get('#spreadVariation').should('exist').and('be.visible').click().type('4');\ncy.get('.col-xxl-1 > .mb-3').should('exist').and('be.visible').and('have.text', 'Calcular').click();\ncy.get('div.table-responsive').should('exist').and('be.visible').then($el => {\n  if (!$el.length || !$el.is(':visible')) {\n    throw new Error('No se está mostrando la tabla con los escenarios cargados.');\n  }\n});\ncy.get('path.highcharts-tracker-line').should('exist').and('be.visible').then($el => {\n  if (!$el.length || !$el.is(':visible')) {\n    throw new Error('No se está mostrando el gráfico con las variaciones cargadas');\n  }\n});\n//Validacion de ultima cotización con el precio base de la grilla en análisis de sensibilidad\n// cy.get('@valorUltimaCotización').then((valor) => {\n//  cy.log('El (valor de la última cotización es:', valor)\n// cy.get('tr.fw-bolder').should('have.contain',valor )\n// })",
               "err": {},
-              "uuid": "25001a44-156e-41b6-a458-701e14c19bfd",
-              "parentUUID": "88e37dd7-2029-4060-a3da-5f754875f5e2",
+              "uuid": "46db8c6d-4930-4194-8742-5085b97cc4f8",
+              "parentUUID": "6bb340ae-41f4-4351-a449-eee3e5a4eeda",
               "isHook": false,
               "skipped": true
             },
@@ -255,8 +255,8 @@
               "context": null,
               "code": "cy.contains('TIR Históricas', {\n  matchCase: false\n}).click({\n  force: true\n});\ncy.get('rect[class=\"highcharts-background\"]').should('exist').and('be.visible');\ncy.get('path.highcharts-tracker-line').should('exist').and('be.visible');\ncy.contains('Paridades Históricas').click({\n  force: true\n});\ncy.get('rect[class=\"highcharts-background\"]').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "38d7b547-db9f-4ea2-9498-9fc4ded05e4b",
-              "parentUUID": "88e37dd7-2029-4060-a3da-5f754875f5e2",
+              "uuid": "812b8816-093b-437a-91de-b1e5420ae2b7",
+              "parentUUID": "6bb340ae-41f4-4351-a449-eee3e5a4eeda",
               "isHook": false,
               "skipped": true
             },
@@ -273,8 +273,8 @@
               "context": null,
               "code": "//Guarda el precio de la última cotización en la pestaña General \n// cy.guardarUltimaCotizacion()\ncy.contains('Simular Inversión', {\n  matchCase: false\n}).click({\n  force: true\n});\ncy.get('div[class=\"gy-4 row\"]').should('exist').and('be.visible');\ncy.get('button[class=\"float-end btn btn-primary\"]').eq(0).should('exist').and('be.visible').and('have.text', 'Simular');\ncy.get('#investmentAmount').should('exist').and('be.visible').click({\n  force: true\n}).type('100');\n//Valida que el campo valor tenga el mismo precio que el de ultima cotización\n// cy.get('@valorUltimaCotización').then((valor) => {\n// cy.get('#value') \n// .invoke('val') \n// .then((texto) => {\n// expect(texto).to.equal(valor)})})\ncy.get('#value').should('exist').and('be.visible').click({\n  force: true\n}).clear().type('50');\ncy.get(':nth-child(5) > #exchangeRate').should('exist').and('be.visible').click({\n  force: true\n}).type('1000');\ncy.get('button[class=\"float-end btn btn-primary\"]').eq(0).should('exist').and('be.visible').and('have.text', 'Simular').click({\n  force: true\n});\ncy.get('.col-xl-4 > .card > .card-body > .table-responsive > .my-3 > tbody > :nth-child(1) > :nth-child(1) > .small').then($el => {\n  if (!$el.length || !$el.is(':visible')) {\n    throw new Error('Los cuadros de resultados de la inversión no se generaron correctamente.');\n  }\n});\ncy.get('.col-xl-4').then($el => {\n  if (!$el.length || !$el.is(':visible')) {\n    throw new Error('Los cuadros de resultados de la inversión no se generaron correctamente.');\n  }\n});\ncy.get('.col-xl-5').then($el => {\n  if (!$el.length || !$el.is(':visible')) {\n    throw new Error('Los cuadros de resultados de la inversión no se generaron correctamente.');\n  }\n});\ncy.get('td.text-end.small').then($cells => {\n  const hasNA = [...$cells].some(cell => cell.innerText.trim() === 'N/A');\n  if (hasNA) {\n    throw new Error('Se encontró algún valor inválido en el resultado de la inversión.');\n  }\n});",
               "err": {},
-              "uuid": "ba28f84d-e2f3-4579-9316-7ffba805c081",
-              "parentUUID": "88e37dd7-2029-4060-a3da-5f754875f5e2",
+              "uuid": "6f350a00-2c2f-45af-9bd4-f2eeabda5fc8",
+              "parentUUID": "6bb340ae-41f4-4351-a449-eee3e5a4eeda",
               "isHook": false,
               "skipped": true
             },
@@ -291,8 +291,8 @@
               "context": null,
               "code": "cy.get('td.text-end.small').should('not.contain', 'N/A');",
               "err": {},
-              "uuid": "54bc91cf-1b45-46be-bfc1-0aee2384b4dc",
-              "parentUUID": "88e37dd7-2029-4060-a3da-5f754875f5e2",
+              "uuid": "dde8baa2-ff94-48d7-ae2c-e2ea54088b21",
+              "parentUUID": "6bb340ae-41f4-4351-a449-eee3e5a4eeda",
               "isHook": false,
               "skipped": true
             },
@@ -309,37 +309,36 @@
               "context": null,
               "code": "cy.get('div.d-flex.justify-content-end').should('not.contain', 'N/A');",
               "err": {},
-              "uuid": "8bd0ca4f-d8cb-456d-a873-cc31dbece292",
-              "parentUUID": "88e37dd7-2029-4060-a3da-5f754875f5e2",
+              "uuid": "04e0169c-abed-4390-a9e5-a4bc75e03bd4",
+              "parentUUID": "6bb340ae-41f4-4351-a449-eee3e5a4eeda",
               "isHook": false,
               "skipped": true
             }
           ],
           "suites": [],
           "passes": [],
-          "failures": [
-            "cfcebc78-6439-4a94-ab66-f26dffb7daf8"
-          ],
+          "failures": [],
           "pending": [],
           "skipped": [
-            "894eb397-470a-4074-ac03-ce5ea5517935",
-            "0ed35457-20f3-4421-b106-3ffe2b033448",
-            "8a4b1a56-ec5d-42fe-87fa-7c11fc7b28cf",
-            "630cb5ce-7275-4f4c-b8f1-72b6f6c97df4",
-            "781b3781-11c3-4df6-8a10-f21f14085ad2",
-            "25001a44-156e-41b6-a458-701e14c19bfd",
-            "38d7b547-db9f-4ea2-9498-9fc4ded05e4b",
-            "ba28f84d-e2f3-4579-9316-7ffba805c081",
-            "54bc91cf-1b45-46be-bfc1-0aee2384b4dc",
-            "8bd0ca4f-d8cb-456d-a873-cc31dbece292"
+            "d9597fa6-2bb6-4b76-bcce-05f5885b049a",
+            "17395125-2d5a-452d-82be-698305e49b73",
+            "25649b46-7a5b-49fc-afc0-be737cb6afb1",
+            "be26811e-49e0-4401-bf60-722692f5ae79",
+            "0df098f3-b95f-4f4a-953a-cfd151ff4b83",
+            "dc646a65-b21d-478b-a9ec-c1aefdab6447",
+            "46db8c6d-4930-4194-8742-5085b97cc4f8",
+            "812b8816-093b-437a-91de-b1e5420ae2b7",
+            "6f350a00-2c2f-45af-9bd4-f2eeabda5fc8",
+            "dde8baa2-ff94-48d7-ae2c-e2ea54088b21",
+            "04e0169c-abed-4390-a9e5-a4bc75e03bd4"
           ],
-          "duration": 181590,
+          "duration": 0,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "e6e94d36-5d63-4a45-a684-e24bef302552",
+          "uuid": "8980c2b9-8fa0-444f-a6e8-f31a296ac8b6",
           "title": "|Análisis del bono DOLLAR_LINKED PNRCO|",
           "fullFile": "",
           "file": "",
@@ -359,7 +358,7 @@
               "context": null,
               "code": "cy.get('input[class=\"input-sm border-0 p-0 shadow-none form-control\"]').should('exist').and('be.visible').click().type(_constants.default.DOLLAR_LINKED);\ncy.get('[id=\"search-item-PNRCO - BYMA - ARS\"]').should('exist').and('be.visible').click();\ncy.contains('Analizar').click({\n  force: true\n});\ncy.get('li.nav-item').should('exist').and('be.visible');\ncy.get('.card-body').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "3f4f896c-4f55-4057-a1fd-9dfa550262ac",
+              "uuid": "b49485ae-8461-44a7-9d8c-ca114891a192",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -377,7 +376,7 @@
               "context": null,
               "code": "cy.contains('h6.text-uppercase.card-title', 'TIR', {\n  matchCase: false\n}).should('exist').and('have.text', 'TIR% TEA');\ncy.log('El cuadro de TIR ha sido validado correctamente.');\ncy.contains('h6.text-uppercase.card-title', 'M. Duration', {\n  matchCase: false\n}).should('exist').and('have.text', 'M. Durationaños');\ncy.log('El cuadro de Duration ha sido validado correctamente.');\ncy.contains('h6.text-uppercase.card-title', 'Paridad', {\n  matchCase: false\n}).should('exist').and('have.text', 'Paridad%');\ncy.log('El cuadro de Paridad ha sido validado correctamente.');\ncy.contains('h6.text-uppercase.card-title', 'Última Cotización', {\n  matchCase: false\n}).should('exist').and($el => {\n  // Obtiene el texto del elemento y elimina los espacios innecesarios\n  const text = $el.text().replace(/\\s/g, '');\n  // Verifica que el texto sea \"Última CotizaciónARS\" o \"Última CotizaciónUSD\"\n  expect(text).to.match(/ÚltimaCotización(ARS|USD)$/);\n});\ncy.log('El cuadro de Última Cotización ha sido validado correctamente.');",
               "err": {},
-              "uuid": "c11be60a-3d7b-4968-918e-887d8bbfdd3e",
+              "uuid": "8ac3602b-7de5-4449-a049-8fafa5977a41",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -395,7 +394,7 @@
               "context": null,
               "code": "cy.get('td.text-end.small').should('not.contain', 'N/A');",
               "err": {},
-              "uuid": "54cb62e2-b41a-4b33-9a82-5ae3153cbdd2",
+              "uuid": "fe622d48-925f-4b65-9568-854670a3102f",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -413,7 +412,7 @@
               "context": null,
               "code": "cy.get('div.d-flex.justify-content-end').should('not.contain', 'N/A');",
               "err": {},
-              "uuid": "d189980d-4197-4761-811a-ca41ce672bbf",
+              "uuid": "b1a0a8dc-bee4-4233-803d-bfd819b3c4d9",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -431,7 +430,7 @@
               "context": null,
               "code": "cy.ValidarCotizacionTirDurationParidad();",
               "err": {},
-              "uuid": "5d1b1278-ab3f-4db5-83d1-eea27addd56f",
+              "uuid": "eb11960e-3407-4f46-9c86-0cfef22df2aa",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -449,7 +448,7 @@
               "context": null,
               "code": "cy.contains('Condiciones de Emisión').click({\n  force: true\n});\ncy.get('.card-body').should('exist').and('be.visible');\ncy.get('div.table-responsive').should('exist').and('be.visible');\ncy.contains('h6.text-uppercase.card-title', 'Información Básica', {\n  matchCase: false\n}).should('exist').and('have.text', 'Información Básica');\ncy.log('El cuadro de Información Básica ha sido validado correctamente.');\ncy.contains('h6.text-uppercase.card-title', 'Cupones', {\n  matchCase: false\n}).should('exist').and('have.text', 'Cupones');\ncy.log('El cuadro de Cupones ha sido validado correctamente.');\ncy.contains('h6.text-uppercase.card-title', 'Pagos', {\n  matchCase: false\n}).should('exist').and('have.text', 'Pagos');\ncy.log('El cuadro de Pagos ha sido validado correctamente.');",
               "err": {},
-              "uuid": "d7b63692-7b5f-421b-8151-90398cf98a8d",
+              "uuid": "dd3ffaaf-c4ab-450e-83b7-b06415d91d05",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -467,7 +466,7 @@
               "context": null,
               "code": "//Guarda el precio de la última cotización en la pestaña General\n// cy.guardarUltimaCotizacion()\ncy.contains('Análisis de sensibilidad', {\n  matchCase: false\n}).click({\n  force: true\n});\ncy.get('div[role=\"alert\"]').then($alerts => {\n  const alertaSensibilidad = $alerts.filter((_, el) => el.innerText.includes('No se pudo realizar el análisis de sensibilidad.'));\n  if (alertaSensibilidad.length) {\n    throw new Error('Se está mostrando el cartel de \"No se pudo realizar el análisis de sensibilidad\".');\n  }\n});\ncy.get('div[class=\"d-flex align-items-center col-xxl-9 col-sm-12\"]').should('exist').and('be.visible');\ncy.get('#scenarios').should('exist').and('be.visible').click().type('4');\ncy.get('#spreadVariation').should('exist').and('be.visible').click().type('4');\ncy.get('.col-xxl-1 > .mb-3').should('exist').and('be.visible').and('have.text', 'Calcular').click();\ncy.get('div.table-responsive').should('exist').and('be.visible').then($el => {\n  if (!$el.length || !$el.is(':visible')) {\n    throw new Error('No se está mostrando la tabla con los escenarios cargados.');\n  }\n});\ncy.get('path.highcharts-tracker-line').should('exist').and('be.visible').then($el => {\n  if (!$el.length || !$el.is(':visible')) {\n    throw new Error('No se está mostrando el gráfico con las variaciones cargadas');\n  }\n});\n//Validacion de ultima cotización con el precio base de la grilla en análisis de sensibilidad\n// cy.get('@valorUltimaCotización').then((valor) => {\n// cy.log('El (valor de la última cotización es:', valor)\n// cy.get('tr.fw-bolder').should('have.contain',valor )\n// })",
               "err": {},
-              "uuid": "583fdd36-4fa3-4ec4-b41c-7349a42a0e19",
+              "uuid": "b6715d32-e0b7-4339-b34f-79a5c89a9118",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -485,7 +484,7 @@
               "context": null,
               "code": "cy.contains('TIR Históricas', {\n  matchCase: false\n}).click({\n  force: true\n});\ncy.get('rect[class=\"highcharts-background\"]').should('exist').and('be.visible');\ncy.get('path.highcharts-tracker-line').should('exist').and('be.visible');\ncy.contains('Paridades Históricas').click({\n  force: true\n});\ncy.get('rect[class=\"highcharts-background\"]').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "f21f96f9-d81d-4ea0-8dbe-efdd789720ff",
+              "uuid": "fa843897-83d3-4aaa-a826-6ed5d3a7f3ca",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -503,7 +502,7 @@
               "context": null,
               "code": "//Guarda el precio de la última cotización en la pestaña General \n// cy.guardarUltimaCotizacion()\ncy.contains('Simular Inversión', {\n  matchCase: false\n}).click({\n  force: true\n});\ncy.get('div[class=\"gy-4 row\"]').should('exist').and('be.visible');\ncy.get('button[class=\"float-end btn btn-primary\"]').eq(0).should('exist').and('be.visible').and('have.text', 'Simular');\ncy.get('#investmentAmount').should('exist').and('be.visible').click({\n  force: true\n}).type('100');\n//Valida que el campo valor tenga el mismo precio que el de ultima cotización\n// cy.get('@valorUltimaCotización').then((valor) => {\n// cy.get('#value') \n// .invoke('val') \n// .then((texto) => {\n// expect(texto).to.equal(valor)})})\ncy.get('#value').should('exist').and('be.visible').click({\n  force: true\n}).clear().type('50');\n// Como esta especie no tiene el campo Tipo de cambio (\"exchangeRate\") editable, se comenta este paso\n// cy.get(':nth-child(5) > #exchangeRate').should('exist').and('be.visible').click({force: true}).type('2000')\ncy.get('button[class=\"float-end btn btn-primary\"]').eq(0).should('exist').and('be.visible').and('have.text', 'Simular').click({\n  force: true\n});\ncy.get('.col-xl-4 > .card > .card-body > .table-responsive > .my-3 > tbody > :nth-child(1) > :nth-child(1) > .small').then($el => {\n  if (!$el.length || !$el.is(':visible')) {\n    throw new Error('Los cuadros de resultados de la inversión no se generaron correctamente.');\n  }\n});\ncy.get('.col-xl-4').then($el => {\n  if (!$el.length || !$el.is(':visible')) {\n    throw new Error('Los cuadros de resultados de la inversión no se generaron correctamente.');\n  }\n});\ncy.get('.col-xl-5').then($el => {\n  if (!$el.length || !$el.is(':visible')) {\n    throw new Error('Los cuadros de resultados de la inversión no se generaron correctamente.');\n  }\n});\ncy.get('td.text-end.small').then($cells => {\n  const hasNA = [...$cells].some(cell => cell.innerText.trim() === 'N/A');\n  if (hasNA) {\n    throw new Error('Se encontró algún valor inválido en el resultado de la inversión.');\n  }\n});\n// Para este tipo de bonos el cuadro de cashflow tiene para elegir ARS o USD, las siguientes validaciones corroboran esto\ncy.get('input[name=\"radioGroup\"][value=\"option2\"]').should('exist').should('be.visible').should('have.class', 'form-check-input').should('be.checked').and('have.value', 'option2');\ncy.get('input[name=\"radioGroup\"][value=\"option1\"]').should('exist').should('be.visible').should('have.class', 'form-check-input').and('have.value', 'option1').and('not.be.checked').eq(1).click({\n  force: true\n});\n// Valida que el botón se haya seleccionado correctamente\ncy.get('input[name=\"radioGroup\"][value=\"option1\"]').should('be.checked');\n// Valida que el cuadro de cashflow pase de ARS a USD\ncy.get('h6.text-uppercase.card-title').should('exist').should('be.visible').and('contain.text', `${_constants.default.DOLLAR_LINKED} - Cashflow en USD`);",
               "err": {},
-              "uuid": "447c9b22-5ec9-4426-914f-28aeeaea829d",
+              "uuid": "171feee6-de2f-4a55-8d04-74e6f469434f",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -521,7 +520,7 @@
               "context": null,
               "code": "cy.get('td.text-end.small').should('not.contain', 'N/A');",
               "err": {},
-              "uuid": "2c1cb23f-d11c-4bf2-83c6-5c46f7224539",
+              "uuid": "d623de59-777a-4efb-bcf7-2a867ccafefe",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -539,7 +538,7 @@
               "context": null,
               "code": "cy.get('div.d-flex.justify-content-end').should('not.contain', 'N/A');",
               "err": {},
-              "uuid": "ed772c60-582c-47ab-9d6e-1dc5b236e1d1",
+              "uuid": "ed06465f-ecb6-4d10-88ca-bd3735f18665",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -550,17 +549,17 @@
           "failures": [],
           "pending": [],
           "skipped": [
-            "3f4f896c-4f55-4057-a1fd-9dfa550262ac",
-            "c11be60a-3d7b-4968-918e-887d8bbfdd3e",
-            "54cb62e2-b41a-4b33-9a82-5ae3153cbdd2",
-            "d189980d-4197-4761-811a-ca41ce672bbf",
-            "5d1b1278-ab3f-4db5-83d1-eea27addd56f",
-            "d7b63692-7b5f-421b-8151-90398cf98a8d",
-            "583fdd36-4fa3-4ec4-b41c-7349a42a0e19",
-            "f21f96f9-d81d-4ea0-8dbe-efdd789720ff",
-            "447c9b22-5ec9-4426-914f-28aeeaea829d",
-            "2c1cb23f-d11c-4bf2-83c6-5c46f7224539",
-            "ed772c60-582c-47ab-9d6e-1dc5b236e1d1"
+            "b49485ae-8461-44a7-9d8c-ca114891a192",
+            "8ac3602b-7de5-4449-a049-8fafa5977a41",
+            "fe622d48-925f-4b65-9568-854670a3102f",
+            "b1a0a8dc-bee4-4233-803d-bfd819b3c4d9",
+            "eb11960e-3407-4f46-9c86-0cfef22df2aa",
+            "dd3ffaaf-c4ab-450e-83b7-b06415d91d05",
+            "b6715d32-e0b7-4339-b34f-79a5c89a9118",
+            "fa843897-83d3-4aaa-a826-6ed5d3a7f3ca",
+            "171feee6-de2f-4a55-8d04-74e6f469434f",
+            "d623de59-777a-4efb-bcf7-2a867ccafefe",
+            "ed06465f-ecb6-4d10-88ca-bd3735f18665"
           ],
           "duration": 0,
           "root": false,
@@ -568,7 +567,7 @@
           "_timeout": 2000
         },
         {
-          "uuid": "be8fbd0b-dc98-448e-916c-5c895582a09b",
+          "uuid": "7f4c8a4b-1751-4104-b10d-a2109be3a1d1",
           "title": "|Análisis del bono TASA_VARIABLE OZC4O|",
           "fullFile": "",
           "file": "",
@@ -588,7 +587,7 @@
               "context": null,
               "code": "cy.get('input[class=\"input-sm border-0 p-0 shadow-none form-control\"]').should('exist').and('be.visible').click().type(_constants.default.TASA_VARIABLE);\ncy.get('[id=\"search-item-OZC4O - BYMA - ARS\"]').should('exist').and('be.visible').click();\ncy.contains('Analizar').click({\n  force: true\n});\ncy.get('li.nav-item').should('exist').and('be.visible');\ncy.get('.card-body').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "89e673e1-e239-4350-89fa-943b712ba4a0",
+              "uuid": "f08b5ef2-c8dc-4a02-9ad5-3d5ac49077c4",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -606,7 +605,7 @@
               "context": null,
               "code": "cy.contains('h6.text-uppercase.card-title', 'TIR', {\n  matchCase: false\n}).should('exist').and('have.text', 'TIR% TEA');\ncy.log('El cuadro de TIR ha sido validado correctamente.');\ncy.contains('h6.text-uppercase.card-title', 'M. Duration', {\n  matchCase: false\n}).should('exist').and('have.text', 'M. Durationaños');\ncy.log('El cuadro de Duration ha sido validado correctamente.');\ncy.contains('h6.text-uppercase.card-title', 'Paridad', {\n  matchCase: false\n}).should('exist').and('have.text', 'Paridad%');\ncy.log('El cuadro de Paridad ha sido validado correctamente.');\ncy.contains('h6.text-uppercase.card-title', 'Última Cotización', {\n  matchCase: false\n}).should('exist').and($el => {\n  // Obtiene el texto del elemento y elimina los espacios innecesarios\n  const text = $el.text().replace(/\\s/g, '');\n  // Verifica que el texto sea \"Última CotizaciónARS\" o \"Última CotizaciónUSD\"\n  expect(text).to.match(/ÚltimaCotización(ARS|USD)$/);\n});\ncy.log('El cuadro de Última Cotización ha sido validado correctamente.');",
               "err": {},
-              "uuid": "9ae987ea-7a50-47e4-991b-5ef2b0120d51",
+              "uuid": "5e4e58a4-85f5-4a27-919a-42dd9c39c2bc",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -624,7 +623,7 @@
               "context": null,
               "code": "cy.get('td.text-end.small').should('not.contain', 'N/A');",
               "err": {},
-              "uuid": "0eb5b9a9-97e6-430c-a57b-c17927f3a86a",
+              "uuid": "0d992d4a-2248-467f-8b7c-c6f332947307",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -642,7 +641,7 @@
               "context": null,
               "code": "cy.get('div.d-flex.justify-content-end').should('not.contain', 'N/A');",
               "err": {},
-              "uuid": "0f1d00ea-8f17-419d-b402-b7ca184e03af",
+              "uuid": "8fd4228e-c749-461d-9ee0-0f4ced0382aa",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -660,7 +659,7 @@
               "context": null,
               "code": "cy.ValidarCotizacionTirDurationParidad();",
               "err": {},
-              "uuid": "89cbb9b4-2b65-44e0-9704-f7aa839c1a0d",
+              "uuid": "a8edc9fa-f660-4f4e-a376-5ee1776cff36",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -678,7 +677,7 @@
               "context": null,
               "code": "cy.contains('Condiciones de Emisión').click({\n  force: true\n});\ncy.get('.card-body').should('exist').and('be.visible');\ncy.get('div.table-responsive').should('exist').and('be.visible');\ncy.contains('h6.text-uppercase.card-title', 'Información Básica', {\n  matchCase: false\n}).should('exist').and('have.text', 'Información Básica');\ncy.log('El cuadro de Información Básica ha sido validado correctamente.');\ncy.contains('h6.text-uppercase.card-title', 'Cupones', {\n  matchCase: false\n}).should('exist').and('have.text', 'Cupones');\ncy.log('El cuadro de Cupones ha sido validado correctamente.');\ncy.contains('h6.text-uppercase.card-title', 'Pagos', {\n  matchCase: false\n}).should('exist').and('have.text', 'Pagos');\ncy.log('El cuadro de Pagos ha sido validado correctamente.');",
               "err": {},
-              "uuid": "055d7506-a188-4eee-8d8c-792ad5952a03",
+              "uuid": "f6809266-4bcc-47fc-b6b4-a5f83b5615eb",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -696,7 +695,7 @@
               "context": null,
               "code": "//Guarda el precio de la última cotización en la pestaña General\n// cy.guardarUltimaCotizacion()\ncy.contains('Análisis de sensibilidad', {\n  matchCase: false\n}).click({\n  force: true\n});\ncy.get('div[role=\"alert\"]').then($alerts => {\n  const alertaSensibilidad = $alerts.filter((_, el) => el.innerText.includes('No se pudo realizar el análisis de sensibilidad.'));\n  if (alertaSensibilidad.length) {\n    throw new Error('Se está mostrando el cartel de \"No se pudo realizar el análisis de sensibilidad\".');\n  }\n});\ncy.get('div[class=\"d-flex align-items-center col-xxl-9 col-sm-12\"]').should('exist').and('be.visible');\ncy.get('#scenarios').should('exist').and('be.visible').click().type('4');\ncy.get('#spreadVariation').should('exist').and('be.visible').click().type('4');\ncy.get('.col-xxl-1 > .mb-3').should('exist').and('be.visible').and('have.text', 'Calcular').click();\ncy.get('div.table-responsive').should('exist').and('be.visible').then($el => {\n  if (!$el.length || !$el.is(':visible')) {\n    throw new Error('No se está mostrando la tabla con los escenarios cargados.');\n  }\n});\ncy.get('path.highcharts-tracker-line').should('exist').and('be.visible').then($el => {\n  if (!$el.length || !$el.is(':visible')) {\n    throw new Error('No se está mostrando el gráfico con las variaciones cargadas');\n  }\n});\n//Validacion de ultima cotización con el precio base de la grilla en análisis de sensibilidad\n// cy.get('@valorUltimaCotización').then((valor) => {\n//  cy.log('El (valor de la última cotización es:', valor)\n// cy.get('tr.fw-bolder').should('have.contain',valor )\n// })",
               "err": {},
-              "uuid": "6ec10ada-3c70-4c9b-a66f-f1c3b6459b63",
+              "uuid": "d5e01f5d-8366-4254-a889-c17d43b6a62b",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -714,7 +713,7 @@
               "context": null,
               "code": "cy.contains('TIR Históricas', {\n  matchCase: false\n}).click({\n  force: true\n});\ncy.get('rect[class=\"highcharts-background\"]').should('exist').and('be.visible');\ncy.get('path.highcharts-tracker-line').should('exist').and('be.visible');\ncy.contains('Paridades Históricas').click({\n  force: true\n});\ncy.get('rect[class=\"highcharts-background\"]').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "c25b5fc9-51f4-4ef3-b5a7-5eb4bafeae0f",
+              "uuid": "a10ff6b3-1779-4997-b9d1-899e62741b75",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -732,7 +731,7 @@
               "context": null,
               "code": "//Guarda el precio de la última cotización en la pestaña General \n// cy.guardarUltimaCotizacion()\ncy.contains('Simular Inversión', {\n  matchCase: false\n}).click({\n  force: true\n});\ncy.get('div[class=\"gy-4 row\"]').should('exist').and('be.visible');\ncy.get('button[class=\"float-end btn btn-primary\"]').eq(0).should('exist').and('be.visible').and('have.text', 'Simular');\ncy.get('#investmentAmount').should('exist').and('be.visible').click({\n  force: true\n}).type('100');\n//Valida que el campo valor tenga el mismo precio que el de ultima cotización\n// cy.get('@valorUltimaCotización').then((valor) => {\n// cy.get('#value') \n// .invoke('val') \n// .then((texto) => {\n// expect(texto).to.equal(valor)})})\ncy.get('#value').should('exist').and('be.visible').click({\n  force: true\n}).clear().type('50');\n// Como esta especie no tiene el campo Tipo de cambio (\"exchangeRate\") editable, se comenta este paso\n// cy.get(':nth-child(5) > #exchangeRate').should('exist').and('be.visible').click({force: true}).type('2000')\ncy.get('button[class=\"float-end btn btn-primary\"]').eq(0).should('exist').and('be.visible').and('have.text', 'Simular').click({\n  force: true\n});\ncy.get('.col-xl-4 > .card > .card-body > .table-responsive > .my-3 > tbody > :nth-child(1) > :nth-child(1) > .small').then($el => {\n  if (!$el.length || !$el.is(':visible')) {\n    throw new Error('Los cuadros de resultados de la inversión no se generaron correctamente.');\n  }\n});\ncy.get('.col-xl-4').then($el => {\n  if (!$el.length || !$el.is(':visible')) {\n    throw new Error('Los cuadros de resultados de la inversión no se generaron correctamente.');\n  }\n});\ncy.get('.col-xl-5').then($el => {\n  if (!$el.length || !$el.is(':visible')) {\n    throw new Error('Los cuadros de resultados de la inversión no se generaron correctamente.');\n  }\n});\ncy.get('td.text-end.small').then($cells => {\n  const hasNA = [...$cells].some(cell => cell.innerText.trim() === 'N/A');\n  if (hasNA) {\n    throw new Error('Se encontró algún valor inválido en el resultado de la inversión.');\n  }\n});",
               "err": {},
-              "uuid": "bd32a3af-0f52-4c6c-9119-e740c46a861b",
+              "uuid": "b98899e7-ccd8-4ec9-9d41-88f585942ab4",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -750,7 +749,7 @@
               "context": null,
               "code": "cy.get('td.text-end.small').should('not.contain', 'N/A');",
               "err": {},
-              "uuid": "8e51eac0-72fb-463a-918a-49c21ba6e09c",
+              "uuid": "f8f1df4a-c0ec-4fc4-9662-b91530cce58d",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -768,7 +767,7 @@
               "context": null,
               "code": "cy.get('div.d-flex.justify-content-end').should('not.contain', 'N/A');",
               "err": {},
-              "uuid": "0cdc5ef0-552e-4834-9706-ade7bb9254f8",
+              "uuid": "a2d3c991-dc30-4764-a982-f6d3d3ebe870",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -779,17 +778,17 @@
           "failures": [],
           "pending": [],
           "skipped": [
-            "89e673e1-e239-4350-89fa-943b712ba4a0",
-            "9ae987ea-7a50-47e4-991b-5ef2b0120d51",
-            "0eb5b9a9-97e6-430c-a57b-c17927f3a86a",
-            "0f1d00ea-8f17-419d-b402-b7ca184e03af",
-            "89cbb9b4-2b65-44e0-9704-f7aa839c1a0d",
-            "055d7506-a188-4eee-8d8c-792ad5952a03",
-            "6ec10ada-3c70-4c9b-a66f-f1c3b6459b63",
-            "c25b5fc9-51f4-4ef3-b5a7-5eb4bafeae0f",
-            "bd32a3af-0f52-4c6c-9119-e740c46a861b",
-            "8e51eac0-72fb-463a-918a-49c21ba6e09c",
-            "0cdc5ef0-552e-4834-9706-ade7bb9254f8"
+            "f08b5ef2-c8dc-4a02-9ad5-3d5ac49077c4",
+            "5e4e58a4-85f5-4a27-919a-42dd9c39c2bc",
+            "0d992d4a-2248-467f-8b7c-c6f332947307",
+            "8fd4228e-c749-461d-9ee0-0f4ced0382aa",
+            "a8edc9fa-f660-4f4e-a376-5ee1776cff36",
+            "f6809266-4bcc-47fc-b6b4-a5f83b5615eb",
+            "d5e01f5d-8366-4254-a889-c17d43b6a62b",
+            "a10ff6b3-1779-4997-b9d1-899e62741b75",
+            "b98899e7-ccd8-4ec9-9d41-88f585942ab4",
+            "f8f1df4a-c0ec-4fc4-9662-b91530cce58d",
+            "a2d3c991-dc30-4764-a982-f6d3d3ebe870"
           ],
           "duration": 0,
           "root": false,
@@ -797,7 +796,7 @@
           "_timeout": 2000
         },
         {
-          "uuid": "15a88f0a-d63c-48e6-8eb4-348fb35d0b10",
+          "uuid": "f801566c-c776-4865-929e-2fcc8ed9f75e",
           "title": "|Análisis del bono CER TX28|",
           "fullFile": "",
           "file": "",
@@ -817,7 +816,7 @@
               "context": null,
               "code": "cy.get('input[class=\"input-sm border-0 p-0 shadow-none form-control\"]').should('exist').and('be.visible').click().type(_constants.default.CER);\ncy.get('[id=\"search-item-TX28 - BYMA - ARS\"]').should('exist').and('be.visible').click();\ncy.contains('Analizar').click({\n  force: true\n});\ncy.get('li.nav-item').should('exist').and('be.visible');\ncy.get('.card-body').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "162a2b86-a18c-4349-b65e-5df1f420dcd4",
+              "uuid": "c6406bf4-4ea8-433c-bb3d-cac4deceba28",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -835,7 +834,7 @@
               "context": null,
               "code": "cy.contains('h6.text-uppercase.card-title', 'TIR', {\n  matchCase: false\n}).should('exist').and('have.text', 'TIR% TEA');\ncy.log('El cuadro de TIR ha sido validado correctamente.');\ncy.contains('h6.text-uppercase.card-title', 'M. Duration', {\n  matchCase: false\n}).should('exist').and('have.text', 'M. Durationaños');\ncy.log('El cuadro de Duration ha sido validado correctamente.');\ncy.contains('h6.text-uppercase.card-title', 'Paridad', {\n  matchCase: false\n}).should('exist').and('have.text', 'Paridad%');\ncy.log('El cuadro de Paridad ha sido validado correctamente.');\ncy.contains('h6.text-uppercase.card-title', 'Última Cotización', {\n  matchCase: false\n}).should('exist').and($el => {\n  // Obtiene el texto del elemento y elimina los espacios innecesarios\n  const text = $el.text().replace(/\\s/g, '');\n  // Verifica que el texto sea \"Última CotizaciónARS\" o \"Última CotizaciónUSD\"\n  expect(text).to.match(/ÚltimaCotización(ARS|USD)$/);\n});\ncy.log('El cuadro de Última Cotización ha sido validado correctamente.');",
               "err": {},
-              "uuid": "e4879f14-a6b0-4461-aad7-8c76e7c89cdf",
+              "uuid": "54c271dc-5110-403f-a0d8-7ea4165bb8ed",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -853,7 +852,7 @@
               "context": null,
               "code": "cy.get('td.text-end.small').should('not.contain', 'N/A');",
               "err": {},
-              "uuid": "1482182d-ed3d-44df-8d7e-f622cd2f5a31",
+              "uuid": "8a4d4491-4988-42f5-919b-0d9509d1522e",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -871,7 +870,7 @@
               "context": null,
               "code": "cy.get('div.d-flex.justify-content-end').should('not.contain', 'N/A');",
               "err": {},
-              "uuid": "402edf10-1af5-40d3-b486-72a94e5a73c4",
+              "uuid": "5094584c-a826-4cbe-940a-3fb51e2cd2a3",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -889,7 +888,7 @@
               "context": null,
               "code": "cy.ValidarCotizacionTirDurationParidad();",
               "err": {},
-              "uuid": "6451097b-c31a-4c76-a9b8-469911cb24c6",
+              "uuid": "2735a67f-541f-4c7c-8be4-d6d39f273704",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -907,7 +906,7 @@
               "context": null,
               "code": "cy.contains('Condiciones de Emisión').click({\n  force: true\n});\ncy.get('.card-body').should('exist').and('be.visible');\ncy.get('div.table-responsive').should('exist').and('be.visible');\ncy.contains('h6.text-uppercase.card-title', 'Información Básica', {\n  matchCase: false\n}).should('exist').and('have.text', 'Información Básica');\ncy.log('El cuadro de Información Básica ha sido validado correctamente.');\ncy.contains('h6.text-uppercase.card-title', 'Cupones', {\n  matchCase: false\n}).should('exist').and('have.text', 'Cupones');\ncy.log('El cuadro de Cupones ha sido validado correctamente.');\ncy.contains('h6.text-uppercase.card-title', 'Pagos', {\n  matchCase: false\n}).should('exist').and('have.text', 'Pagos');\ncy.log('El cuadro de Pagos ha sido validado correctamente.');",
               "err": {},
-              "uuid": "5454ec87-b22f-48c6-8557-bd50516d9292",
+              "uuid": "c65ba471-6af7-4172-8830-9a3777bba12d",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -925,7 +924,7 @@
               "context": null,
               "code": "//Guarda el precio de la última cotización en la pestaña General\n// cy.guardarUltimaCotizacion()\ncy.contains('Análisis de sensibilidad', {\n  matchCase: false\n}).click({\n  force: true\n});\ncy.get('div[role=\"alert\"]').then($alerts => {\n  const alertaSensibilidad = $alerts.filter((_, el) => el.innerText.includes('No se pudo realizar el análisis de sensibilidad.'));\n  if (alertaSensibilidad.length) {\n    throw new Error('Se está mostrando el cartel de \"No se pudo realizar el análisis de sensibilidad\".');\n  }\n});\ncy.get('div[class=\"d-flex align-items-center col-xxl-9 col-sm-12\"]').should('exist').and('be.visible');\ncy.get('#scenarios').should('exist').and('be.visible').click().type('4');\ncy.get('#spreadVariation').should('exist').and('be.visible').click().type('4');\ncy.get('.col-xxl-1 > .mb-3').should('exist').and('be.visible').and('have.text', 'Calcular').click();\ncy.get('div.table-responsive').should('exist').and('be.visible').then($el => {\n  if (!$el.length || !$el.is(':visible')) {\n    throw new Error('No se está mostrando la tabla con los escenarios cargados.');\n  }\n});\ncy.get('path.highcharts-tracker-line').should('exist').and('be.visible').then($el => {\n  if (!$el.length || !$el.is(':visible')) {\n    throw new Error('No se está mostrando el gráfico con las variaciones cargadas');\n  }\n});\n//Validacion de ultima cotización con el precio base de la grilla en análisis de sensibilidad\n// cy.get('@valorUltimaCotización').then((valor) => {\n//  cy.log('El (valor de la última cotización es:', valor)\n// cy.get('tr.fw-bolder').should('have.contain',valor )\n// })",
               "err": {},
-              "uuid": "92ee5e14-d84a-4682-8dbc-c923667f1390",
+              "uuid": "b83b27cc-2918-4ede-a956-1079c3422fcc",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -943,7 +942,7 @@
               "context": null,
               "code": "cy.contains('TIR Históricas', {\n  matchCase: false\n}).click({\n  force: true\n});\ncy.get('rect[class=\"highcharts-background\"]').should('exist').and('be.visible');\ncy.get('path.highcharts-tracker-line').should('exist').and('be.visible');\ncy.contains('Paridades Históricas').click({\n  force: true\n});\ncy.get('rect[class=\"highcharts-background\"]').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "dcfedde7-df32-415a-b419-72a6039d195f",
+              "uuid": "82a6eac4-7fcc-4e83-a309-13bba99150e2",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -961,7 +960,7 @@
               "context": null,
               "code": "//Guarda el precio de la última cotización en la pestaña General \n// cy.guardarUltimaCotizacion()\ncy.contains('Simular Inversión', {\n  matchCase: false\n}).click({\n  force: true\n});\ncy.get('div[class=\"gy-4 row\"]').should('exist').and('be.visible');\ncy.get('button[class=\"float-end btn btn-primary\"]').eq(0).should('exist').and('be.visible').and('have.text', 'Simular');\ncy.get('#investmentAmount').should('exist').and('be.visible').click({\n  force: true\n}).type('100');\n//Valida que el campo valor tenga el mismo precio que el de ultima cotización\n// cy.get('@valorUltimaCotización').then((valor) => {\n// cy.get('#value') \n// .invoke('val') \n// .then((texto) => {\n// expect(texto).to.equal(valor)})})\ncy.get('#value').should('exist').and('be.visible').click({\n  force: true\n}).clear().type('50');\n// Como esta especie no tiene el campo Tipo de cambio (\"exchangeRate\") editable, se comenta este paso\n// cy.get(':nth-child(5) > #exchangeRate').should('exist').and('be.visible').click({force: true}).type('2000')\ncy.get('button[class=\"float-end btn btn-primary\"]').eq(0).should('exist').and('be.visible').and('have.text', 'Simular').click({\n  force: true\n});\ncy.get('.col-xl-4 > .card > .card-body > .table-responsive > .my-3 > tbody > :nth-child(1) > :nth-child(1) > .small').then($el => {\n  if (!$el.length || !$el.is(':visible')) {\n    throw new Error('Los cuadros de resultados de la inversión no se generaron correctamente.');\n  }\n});\ncy.get('.col-xl-4').then($el => {\n  if (!$el.length || !$el.is(':visible')) {\n    throw new Error('Los cuadros de resultados de la inversión no se generaron correctamente.');\n  }\n});\ncy.get('.col-xl-5').then($el => {\n  if (!$el.length || !$el.is(':visible')) {\n    throw new Error('Los cuadros de resultados de la inversión no se generaron correctamente.');\n  }\n});\ncy.get('td.text-end.small').then($cells => {\n  const hasNA = [...$cells].some(cell => cell.innerText.trim() === 'N/A');\n  if (hasNA) {\n    throw new Error('Se encontró algún valor inválido en el resultado de la inversión.');\n  }\n});",
               "err": {},
-              "uuid": "8af63285-d128-435d-ac68-f398a4d6aa3c",
+              "uuid": "3357894c-2bfd-4d81-bf5f-c17fcb2e7a35",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -979,7 +978,7 @@
               "context": null,
               "code": "cy.get('td.text-end.small').should('not.contain', 'N/A');",
               "err": {},
-              "uuid": "845e249f-89fb-4780-b70f-d0f95aeb6731",
+              "uuid": "f6fef423-0894-4296-adee-9833df1c2a7e",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -997,7 +996,7 @@
               "context": null,
               "code": "cy.get('div.d-flex.justify-content-end').should('not.contain', 'N/A');",
               "err": {},
-              "uuid": "531322ea-0efb-45c1-ac57-a3b8ec9fe329",
+              "uuid": "978f406e-cb11-4a82-b796-cf2fbc94273c",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1008,17 +1007,17 @@
           "failures": [],
           "pending": [],
           "skipped": [
-            "162a2b86-a18c-4349-b65e-5df1f420dcd4",
-            "e4879f14-a6b0-4461-aad7-8c76e7c89cdf",
-            "1482182d-ed3d-44df-8d7e-f622cd2f5a31",
-            "402edf10-1af5-40d3-b486-72a94e5a73c4",
-            "6451097b-c31a-4c76-a9b8-469911cb24c6",
-            "5454ec87-b22f-48c6-8557-bd50516d9292",
-            "92ee5e14-d84a-4682-8dbc-c923667f1390",
-            "dcfedde7-df32-415a-b419-72a6039d195f",
-            "8af63285-d128-435d-ac68-f398a4d6aa3c",
-            "845e249f-89fb-4780-b70f-d0f95aeb6731",
-            "531322ea-0efb-45c1-ac57-a3b8ec9fe329"
+            "c6406bf4-4ea8-433c-bb3d-cac4deceba28",
+            "54c271dc-5110-403f-a0d8-7ea4165bb8ed",
+            "8a4d4491-4988-42f5-919b-0d9509d1522e",
+            "5094584c-a826-4cbe-940a-3fb51e2cd2a3",
+            "2735a67f-541f-4c7c-8be4-d6d39f273704",
+            "c65ba471-6af7-4172-8830-9a3777bba12d",
+            "b83b27cc-2918-4ede-a956-1079c3422fcc",
+            "82a6eac4-7fcc-4e83-a309-13bba99150e2",
+            "3357894c-2bfd-4d81-bf5f-c17fcb2e7a35",
+            "f6fef423-0894-4296-adee-9833df1c2a7e",
+            "978f406e-cb11-4a82-b796-cf2fbc94273c"
           ],
           "duration": 0,
           "root": false,
@@ -1026,7 +1025,7 @@
           "_timeout": 2000
         },
         {
-          "uuid": "8943543e-8b04-4920-9e78-dda97416015b",
+          "uuid": "91d8cef1-33c3-4d22-8ad5-4fd5ebbd7809",
           "title": "|Mi Portafolio|",
           "fullFile": "",
           "file": "",
@@ -1046,7 +1045,7 @@
               "context": null,
               "code": "cy.contains('MI PORTAFOLIO', {\n  matchCase: false\n}).should('exist').and('be.visible').click();\ncy.get('.table-responsive').should('exist').and('be.visible').and('contain.text', 'Bono').and('contain.text', 'Nombre').and('contain.text', 'Moneda').and('contain.text', 'Nominales').and('contain.text', 'Precio').and('contain.text', 'Valorizado');",
               "err": {},
-              "uuid": "ff66c0a9-79cd-4bf5-bacd-74c26c2c8e92",
+              "uuid": "aacbaa67-f53c-4857-8c44-82117be5a045",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1064,7 +1063,7 @@
               "context": null,
               "code": "cy.get('#bond').should('exist').and('be.visible').click({\n  force: true\n}).type(_constants.default.HARD_DOLLAR);\ncy.get('a[class=\"text-truncate overflow-hidden text-break  list-group-item list-group-item-action dropdown-item\"]').should('exist').and('be.visible').click({\n  force: true\n});\ncy.get('#nominals').should('exist').and('be.visible').click({\n  force: true\n}).type('1000');\ncy.contains('Agregar', {\n  matchCase: false\n}).should('exist').and('be.visible').click({\n  force: true\n});\ncy.get('span.placeholder-glow').should('be.visible');\ncy.get('button.p-0.text-link.border-0.btn.btn-none').should('be.visible');\ncy.get('.mb-3 > .card > .card-body').should('exist').and('be.visible');\ncy.get('.col-lg-6 > .card > .card-body').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "025c05b0-1da3-478a-9e51-31052b57fdb3",
+              "uuid": "7023f6f4-bf79-4aa5-bd84-f3db3f7b270b",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1082,7 +1081,7 @@
               "context": null,
               "code": "cy.get('#bond').should('exist').and('be.visible').click({\n  force: true\n}).type(_constants.default.DOLLAR_LINKED);\ncy.get('a[class=\"text-truncate overflow-hidden text-break  list-group-item list-group-item-action dropdown-item\"]').should('exist').and('be.visible').click({\n  force: true\n});\ncy.get('#nominals').should('exist').and('be.visible').click({\n  force: true\n}).type('1000');\ncy.contains('Agregar', {\n  matchCase: false\n}).should('exist').and('be.visible').click({\n  force: true\n});\ncy.get('span.placeholder-glow').should('be.visible');\ncy.get('button.p-0.text-link.border-0.btn.btn-none').should('be.visible');\ncy.get('.mb-3 > .card > .card-body').should('exist').and('be.visible');\ncy.get('.col-lg-6 > .card > .card-body').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "a16177f6-fa4c-4da2-b26c-cfd53d5873c9",
+              "uuid": "1de58c93-8b47-4b28-b8e9-0d0018c81c1b",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1100,7 +1099,7 @@
               "context": null,
               "code": "cy.get('#bond').should('exist').and('be.visible').click({\n  force: true\n}).type(_constants.default.TASA_VARIABLE);\ncy.get('a[class=\"text-truncate overflow-hidden text-break  list-group-item list-group-item-action dropdown-item\"]').should('exist').and('be.visible').click({\n  force: true\n});\ncy.get('#nominals').should('exist').and('be.visible').click({\n  force: true\n}).type('1000');\ncy.contains('Agregar', {\n  matchCase: false\n}).should('exist').and('be.visible').click({\n  force: true\n});\ncy.get('span.placeholder-glow').should('be.visible');\ncy.get('button.p-0.text-link.border-0.btn.btn-none').should('be.visible');\ncy.get('.mb-3 > .card > .card-body').should('exist').and('be.visible');\ncy.get('.col-lg-6 > .card > .card-body').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "4ff74728-d15e-47cd-8a0c-4428de87b06a",
+              "uuid": "ebecc11e-fbd0-411f-a476-9662bdb74bc8",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1118,7 +1117,7 @@
               "context": null,
               "code": "cy.get('#bond').should('exist').and('be.visible').click({\n  force: true\n}).type(_constants.default.CER);\ncy.get('a[class=\"text-truncate overflow-hidden text-break  list-group-item list-group-item-action dropdown-item\"]').should('exist').and('be.visible').click({\n  force: true\n});\ncy.get('#nominals').should('exist').and('be.visible').click({\n  force: true\n}).type('1000');\ncy.contains('Agregar', {\n  matchCase: false\n}).should('exist').and('be.visible').click({\n  force: true\n});\ncy.get('span.placeholder-glow').should('be.visible');\ncy.get('button.p-0.text-link.border-0.btn.btn-none').should('be.visible');\ncy.get('.mb-3 > .card > .card-body').should('exist').and('be.visible');\ncy.get('.col-lg-6 > .card > .card-body').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "6d2f64fd-f960-4c9e-af6b-796245f167cc",
+              "uuid": "05b404d9-23f1-411e-968c-9cc1b975ac0d",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1136,7 +1135,7 @@
               "context": null,
               "code": "const maxAttempts = 3;\nfunction validarBonosConError(attempt = 1, bonosInvalidos = new Set()) {\n  cy.get('tr').then($rows => {\n    let nuevosBonosInvalidos = new Set();\n    $rows.each((_, row) => {\n      const $row = Cypress.$(row);\n      const tieneError = $row.find('svg.tabler-icon-info-triangle.text-primary').length > 0;\n      if (tieneError) {\n        const bono = $row.find('button.text-link').text().trim();\n        if (bono) {\n          nuevosBonosInvalidos.add(bono);\n          cy.log(`Intento ${attempt}: Error de valuación en bono \"${bono}\"`);\n        }\n      }\n    });\n    nuevosBonosInvalidos.forEach(bono => bonosInvalidos.add(bono));\n    if (nuevosBonosInvalidos.size > 0) {\n      if (attempt < maxAttempts) {\n        cy.wait(95000);\n        cy.reload();\n        cy.get('div.table-responsive').should('be.visible');\n        validarBonosConError(attempt + 1, bonosInvalidos);\n      } else {\n        const listaBonos = Array.from(bonosInvalidos).join(', ');\n        throw new Error(`Después de ${attempt} intentos no fue posible valuar los siguientes bonos: ${listaBonos}.`);\n      }\n    } else {\n      cy.log('Todos los bonos están correctamente valuados.');\n    }\n  });\n}\nvalidarBonosConError();",
               "err": {},
-              "uuid": "81944af6-f1c0-437f-93cc-8ce1a5451709",
+              "uuid": "2253dba7-af95-430c-a670-bb75ab7b8964",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1154,7 +1153,7 @@
               "context": null,
               "code": "cy.contains('Proyección', {\n  matchCase: false\n}).should('exist').and('be.visible').click({\n  force: true\n});\ncy.get('tbody > :nth-child(3) > :nth-child(1) > div').should('exist').and('be.visible');\ncy.get('.card-body').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "6793c047-37b9-463e-b5aa-b49c02c46bc9",
+              "uuid": "c50c3b0d-2e05-41f6-85c1-b5dee796c229",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1172,7 +1171,7 @@
               "context": null,
               "code": "cy.contains('Agenda de Cortes', {\n  matchCase: false\n}).should('exist').and('be.visible').click({\n  force: true\n});\ncy.get('span[class=\"float-end badge rounded-pill bg-primary\"]').should('exist').and('be.visible');\ncy.get('.card-body').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "4524f770-c00b-4697-b1cb-27af68da525b",
+              "uuid": "f9ec5244-64dd-4466-bdac-4e8c2b61670b",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1190,7 +1189,7 @@
               "context": null,
               "code": "cy.get('.abbaco-home > img').should('exist').and('be.visible').click();\ncy.get('rect[class=\"highcharts-background\"]').should('exist').and('be.visible');\n// Lista de valores que esperamos encontrar\nconst valoresEsperados = [`${_constants.default.HARD_DOLLAR}`, `${_constants.default.DOLLAR_LINKED}`, `${_constants.default.TASA_VARIABLE}`, `${_constants.default.CER}`];\n// Objeto para rastrear valores encontrados\nconst valoresEncontrados = {};\n// Inicializar el objeto con valores esperados\nvaloresEsperados.forEach(valor => {\n  valoresEncontrados[valor] = false;\n});\n// Seleccionar el contenedor de la serie del gráfico\ncy.get('g.highcharts-series-group').find('rect').should('exist').and('be.visible').each($rect => {\n  cy.wrap($rect).invoke('attr', 'aria-label').then(ariaLabel => {\n    valoresEsperados.forEach(valor => {\n      if (ariaLabel.includes(valor)) {\n        valoresEncontrados[valor] = true;\n        cy.log(`✅ Valor encontrado: ${valor}`);\n      }\n    });\n  });\n}).then(() => {\n  // Buscar valores no encontrados\n  const noEncontrados = valoresEsperados.filter(valor => !valoresEncontrados[valor]);\n  if (noEncontrados.length > 0) {\n    const mensajeError = `❌ Las siguientes especies no se encontraron en la posición valuada en el menú Inicio: ${noEncontrados.join(', ')}`;\n    cy.log(mensajeError);\n    throw new Error(mensajeError);\n  } else {\n    cy.log('✅ Todos los valores esperados fueron encontrados en el gráfico.');\n  }\n});",
               "err": {},
-              "uuid": "9a4e51a2-035d-45c6-b6ed-251e001dd54d",
+              "uuid": "4b335838-d8e9-41bf-9079-169d1517aad1",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1208,7 +1207,7 @@
               "context": null,
               "code": "cy.contains('MI PORTAFOLIO', {\n  matchCase: false\n}).should('exist').and('be.visible').click();\ncy.get('tbody tr').contains('button', _constants.default.HARD_DOLLAR).parents('tr').within(() => {\n  // Paso 2: Dentro de este <tr>, encuentra y hace clic en el botón de eliminar\n  cy.get('button.badge.px-1.py-1.text-danger.btn.btn-none').click();\n});\n// Verificar que la fila con \"AL30\" ya no existe\ncy.get('tbody tr').contains('button', _constants.default.HARD_DOLLAR).should('not.exist');",
               "err": {},
-              "uuid": "05c18c54-344c-4c2e-bad4-30c7e8496271",
+              "uuid": "9bd56c2d-7a0e-419d-bc8b-c7bff6b6b6ce",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1226,7 +1225,7 @@
               "context": null,
               "code": "cy.get('tbody tr').contains('button', _constants.default.DOLLAR_LINKED).parents('tr').within(() => {\n  cy.get('button.badge.px-1.py-1.text-danger.btn.btn-none').click();\n});\ncy.get('tbody tr').contains('button', _constants.default.DOLLAR_LINKED).should('not.exist');",
               "err": {},
-              "uuid": "aa727ad2-b4e1-46d8-b8e6-4ffbf7fcb6c6",
+              "uuid": "5683eabb-55c6-4080-af5f-f78fa036b9f1",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1244,7 +1243,7 @@
               "context": null,
               "code": "cy.get('tbody tr').contains('button', _constants.default.TASA_VARIABLE).parents('tr').within(() => {\n  cy.get('button.badge.px-1.py-1.text-danger.btn.btn-none').click();\n});\ncy.get('tbody tr').contains('button', _constants.default.TASA_VARIABLE).should('not.exist');",
               "err": {},
-              "uuid": "52e9a654-2dda-471c-bdf3-2b45989cc820",
+              "uuid": "2b5909f2-4c0b-4643-9d01-66f1122d59ad",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1262,7 +1261,7 @@
               "context": null,
               "code": "cy.get('tbody tr').contains('button', _constants.default.CER).parents('tr').within(() => {\n  cy.get('button.badge.px-1.py-1.text-danger.btn.btn-none').click();\n});\ncy.get('tbody tr').contains('button', _constants.default.CER).should('not.exist');",
               "err": {},
-              "uuid": "b084e635-ea1a-48ed-a6d5-341377678390",
+              "uuid": "ba43a3e9-df7c-4cfa-b7ac-71ee48321baf",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1280,7 +1279,7 @@
               "context": null,
               "code": "cy.get('td.text-center').should('exist').and('be.visible').and('have.text', 'Añada especies utilizando el formulario de arriba para comenzar');",
               "err": {},
-              "uuid": "182a84f0-4c4c-4237-bb7e-d7cb80f30148",
+              "uuid": "8abab452-b314-448a-931e-abe1ec676c39",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1298,7 +1297,7 @@
               "context": null,
               "code": "cy.get('.abbaco-home > img').should('exist').and('be.visible').click();\ncy.get('span.placeholder-glow').should('not.exist');\ncy.get('.card-body').should('exist').and('be.visible');\ncy.contains('No olvide registrar su posición').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "e7be22cb-676b-4e0d-ae46-40821c13f72e",
+              "uuid": "671c02e5-76d8-42ca-b07c-605dd63acff7",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1309,21 +1308,21 @@
           "failures": [],
           "pending": [],
           "skipped": [
-            "ff66c0a9-79cd-4bf5-bacd-74c26c2c8e92",
-            "025c05b0-1da3-478a-9e51-31052b57fdb3",
-            "a16177f6-fa4c-4da2-b26c-cfd53d5873c9",
-            "4ff74728-d15e-47cd-8a0c-4428de87b06a",
-            "6d2f64fd-f960-4c9e-af6b-796245f167cc",
-            "81944af6-f1c0-437f-93cc-8ce1a5451709",
-            "6793c047-37b9-463e-b5aa-b49c02c46bc9",
-            "4524f770-c00b-4697-b1cb-27af68da525b",
-            "9a4e51a2-035d-45c6-b6ed-251e001dd54d",
-            "05c18c54-344c-4c2e-bad4-30c7e8496271",
-            "aa727ad2-b4e1-46d8-b8e6-4ffbf7fcb6c6",
-            "52e9a654-2dda-471c-bdf3-2b45989cc820",
-            "b084e635-ea1a-48ed-a6d5-341377678390",
-            "182a84f0-4c4c-4237-bb7e-d7cb80f30148",
-            "e7be22cb-676b-4e0d-ae46-40821c13f72e"
+            "aacbaa67-f53c-4857-8c44-82117be5a045",
+            "7023f6f4-bf79-4aa5-bd84-f3db3f7b270b",
+            "1de58c93-8b47-4b28-b8e9-0d0018c81c1b",
+            "ebecc11e-fbd0-411f-a476-9662bdb74bc8",
+            "05b404d9-23f1-411e-968c-9cc1b975ac0d",
+            "2253dba7-af95-430c-a670-bb75ab7b8964",
+            "c50c3b0d-2e05-41f6-85c1-b5dee796c229",
+            "f9ec5244-64dd-4466-bdac-4e8c2b61670b",
+            "4b335838-d8e9-41bf-9079-169d1517aad1",
+            "9bd56c2d-7a0e-419d-bc8b-c7bff6b6b6ce",
+            "5683eabb-55c6-4080-af5f-f78fa036b9f1",
+            "2b5909f2-4c0b-4643-9d01-66f1122d59ad",
+            "ba43a3e9-df7c-4cfa-b7ac-71ee48321baf",
+            "8abab452-b314-448a-931e-abe1ec676c39",
+            "671c02e5-76d8-42ca-b07c-605dd63acff7"
           ],
           "duration": 0,
           "root": false,
@@ -1331,7 +1330,7 @@
           "_timeout": 2000
         },
         {
-          "uuid": "edd307cf-fa5f-4fe2-9445-18c2ed162042",
+          "uuid": "8c9b3d1a-b48d-410d-ac6f-faeaf99c1219",
           "title": "|Ingreso a la curva Argentina - ONs - Dollar Linked|",
           "fullFile": "",
           "file": "",
@@ -1351,7 +1350,7 @@
               "context": null,
               "code": "cy.contains('CURVAS', {\n  matchCase: false\n}).should('be.visible').click({\n  force: true\n});\ncy.get('span.placeholder-glow').should('not.exist');\ncy.get('.ball-loader').should('not.exist');\ncy.get('.card-body').should('exist').and('be.visible');\ncy.get('ul.list-group').should('exist').and('be.visible');\ncy.get('.ball-loader').should('not.exist');\ncy.get('span.placeholder-glow').should('not.exist');",
               "err": {},
-              "uuid": "931da3d1-1504-47eb-ac4a-610eb2c0f79a",
+              "uuid": "1479ee31-0a67-46b0-8e63-3d77e333a61c",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1369,7 +1368,7 @@
               "context": null,
               "code": "cy.contains('a', 'Argentina - ONs - Dollar Linked').click();",
               "err": {},
-              "uuid": "848d87f3-956f-4b71-a189-ff008de259ae",
+              "uuid": "e2c845c4-8531-4104-bab1-4cd831a51f7e",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1387,7 +1386,7 @@
               "context": null,
               "code": "cy.get('span.placeholder-glow').should('not.exist');\ncy.get('rect[class=\"highcharts-background\"]').should('exist').and('be.visible');\ncy.get('path[class=\"highcharts-tracker-line\"]').should('exist').and('be.visible');\ncy.get('button.highcharts-a11y-proxy-button').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "1e5a5efd-258a-49aa-8760-743f9e5029d5",
+              "uuid": "36be3a94-2ae1-43b9-b4c5-eb4d9c705242",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1405,7 +1404,7 @@
               "context": null,
               "code": "cy.get('div.table-responsive').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "f08ed454-e4f2-4afe-a21a-25d5bd0fe042",
+              "uuid": "a017c2bf-185d-4a36-b0e6-9f91a92ea35e",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1423,7 +1422,7 @@
               "context": null,
               "code": "cy.get('button.p-0.text-link.border-0.btn.btn-none').last().scrollIntoView().should('be.visible').click({\n  force: true\n});\ncy.get('li[class=\"d-flex justify-content-between align-items-start border-0 border-bottom  list-group-item\"]').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "76be8bd8-08cd-4a91-bb5b-6acbe9427bd5",
+              "uuid": "9bd3fb0f-9ae7-49cd-9449-cb2e7179bd52",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1441,7 +1440,7 @@
               "context": null,
               "code": "cy.contains('Análisis online', {\n  matchCase: false\n}).should('exist').and('be.visible').click({\n  force: true\n});\ncy.get('div.card-body').should('be.visible');\ncy.get('div.table-responsive').should('be.visible');",
               "err": {},
-              "uuid": "89429a0b-b2dc-4342-a3fa-ff9c38f3691b",
+              "uuid": "26291c74-1cc4-438f-b18a-15ae5d557eda",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1459,7 +1458,7 @@
               "context": null,
               "code": "cy.get('button.p-0.text-link.border-0.btn.btn-none').last().scrollIntoView().should('be.visible').click({\n  force: true\n});\ncy.get('li[class=\"d-flex justify-content-between align-items-start border-0 border-bottom  list-group-item\"]').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "6673f15c-f639-4b25-a54c-119e43c70a14",
+              "uuid": "1556c62c-d3f0-41cd-aa0a-b9f4adb1865c",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1477,7 +1476,7 @@
               "context": null,
               "code": "cy.contains('Bonos fuera de la Curva', {\n  matchCase: false\n}).should('be.visible').click();\ncy.get('td.text-center.text-header', {\n  timeout: 10000\n}).should('not.have.text', 'No hay información para mostrar');",
               "err": {},
-              "uuid": "103b9bfe-68e9-478e-a626-0954f0a18c33",
+              "uuid": "5455f486-640a-4719-87dd-b430e3603425",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1495,7 +1494,7 @@
               "context": null,
               "code": "cy.contains('CURVAS', {\n  matchCase: false\n}).should('be.visible').click({\n  force: true\n});\ncy.get('span.placeholder-glow').should('not.exist');\ncy.get('.card-body').should('exist').and('be.visible');\ncy.get('ul.list-group').should('exist').and('be.visible');\ncy.get('.ball-loader').should('not.exist');\ncy.get('span.placeholder-glow').should('not.exist');",
               "err": {},
-              "uuid": "81e634f4-d326-4f65-998e-0d68b2814272",
+              "uuid": "f44b79ba-ed5e-4ad7-b538-0823cdcb8f8f",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1506,15 +1505,15 @@
           "failures": [],
           "pending": [],
           "skipped": [
-            "931da3d1-1504-47eb-ac4a-610eb2c0f79a",
-            "848d87f3-956f-4b71-a189-ff008de259ae",
-            "1e5a5efd-258a-49aa-8760-743f9e5029d5",
-            "f08ed454-e4f2-4afe-a21a-25d5bd0fe042",
-            "76be8bd8-08cd-4a91-bb5b-6acbe9427bd5",
-            "89429a0b-b2dc-4342-a3fa-ff9c38f3691b",
-            "6673f15c-f639-4b25-a54c-119e43c70a14",
-            "103b9bfe-68e9-478e-a626-0954f0a18c33",
-            "81e634f4-d326-4f65-998e-0d68b2814272"
+            "1479ee31-0a67-46b0-8e63-3d77e333a61c",
+            "e2c845c4-8531-4104-bab1-4cd831a51f7e",
+            "36be3a94-2ae1-43b9-b4c5-eb4d9c705242",
+            "a017c2bf-185d-4a36-b0e6-9f91a92ea35e",
+            "9bd3fb0f-9ae7-49cd-9449-cb2e7179bd52",
+            "26291c74-1cc4-438f-b18a-15ae5d557eda",
+            "1556c62c-d3f0-41cd-aa0a-b9f4adb1865c",
+            "5455f486-640a-4719-87dd-b430e3603425",
+            "f44b79ba-ed5e-4ad7-b538-0823cdcb8f8f"
           ],
           "duration": 0,
           "root": false,
@@ -1522,7 +1521,7 @@
           "_timeout": 2000
         },
         {
-          "uuid": "44072653-91e5-439f-86d6-40c35b6fd5f1",
+          "uuid": "07591300-a51c-40e5-9261-942f1374a886",
           "title": "|Ingreso a la curva Argentina - Soberanos - Tasa Fija + CER - ARS|",
           "fullFile": "",
           "file": "",
@@ -1542,7 +1541,7 @@
               "context": null,
               "code": "cy.contains('a', 'Argentina - Soberanos - Tasa Fija + CER - ARS').click();",
               "err": {},
-              "uuid": "eb94d249-6b84-4fef-a764-ad1a4cd539a7",
+              "uuid": "8cd9141f-7887-4706-a87c-80847c6acb56",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1560,7 +1559,7 @@
               "context": null,
               "code": "cy.get('span.placeholder-glow').should('not.exist');\ncy.get('rect[class=\"highcharts-background\"]').should('exist').and('be.visible');\ncy.get('path[class=\"highcharts-tracker-line\"]').should('exist').and('be.visible');\ncy.get('button.highcharts-a11y-proxy-button').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "11921415-bcc7-4c56-b2b4-7288eb6d9121",
+              "uuid": "b9521886-660a-4afd-b247-bcf4db18af6b",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1578,7 +1577,7 @@
               "context": null,
               "code": "cy.get('div.table-responsive').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "3aebf3d8-e78f-4d88-90a9-dcd7121a97c1",
+              "uuid": "f348085a-0407-443f-bfb0-88e6fa49e2ff",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1596,7 +1595,7 @@
               "context": null,
               "code": "cy.get('button.p-0.text-link.border-0.btn.btn-none').last().scrollIntoView().should('be.visible').click({\n  force: true\n});\ncy.get('li[class=\"d-flex justify-content-between align-items-start border-0 border-bottom  list-group-item\"]').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "fe96904c-d335-4b73-9225-0ce60933d0b6",
+              "uuid": "f40012f2-66a3-452b-9d18-593f581a9fb6",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1614,7 +1613,7 @@
               "context": null,
               "code": "cy.contains('Análisis online', {\n  matchCase: false\n}).should('exist').and('be.visible').click({\n  force: true\n});\ncy.get('div.card-body').should('be.visible');\ncy.get('div.table-responsive').should('be.visible');",
               "err": {},
-              "uuid": "afe4ad86-830d-46d5-9cb5-4cb9bead367c",
+              "uuid": "c32575e2-6b52-4f45-85d1-a2913477f5ab",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1632,7 +1631,7 @@
               "context": null,
               "code": "cy.get('button.p-0.text-link.border-0.btn.btn-none').last().scrollIntoView().should('be.visible').click({\n  force: true\n});\ncy.get('li[class=\"d-flex justify-content-between align-items-start border-0 border-bottom  list-group-item\"]').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "d81634f1-af7e-48f8-ac80-50a8a7f5809f",
+              "uuid": "29a0dfe0-aab7-48f9-b1af-6a947430a8e4",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1650,7 +1649,7 @@
               "context": null,
               "code": "cy.contains('Bonos fuera de la curva', {\n  matchCase: false\n}).should('exist').and('be.visible').click({\n  force: true\n});\ncy.get('div.card-body').should('be.visible');\ncy.get('div.table-responsive').should('be.visible');",
               "err": {},
-              "uuid": "c03019b9-8130-4756-95a5-8e075bff0427",
+              "uuid": "ebcbe236-7a9d-4924-bfcb-f96b8284ef62",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1668,7 +1667,7 @@
               "context": null,
               "code": "cy.ValidarBonosFueraDeLaCurva();",
               "err": {},
-              "uuid": "9bcd91d6-57b0-4714-95c3-0a132689b855",
+              "uuid": "30963545-b57b-47eb-bca4-730b4d25700f",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1686,7 +1685,7 @@
               "context": null,
               "code": "cy.contains('CURVAS', {\n  matchCase: false\n}).should('be.visible').click({\n  force: true\n});\ncy.get('span.placeholder-glow').should('not.exist');\ncy.get('.card-body').should('exist').and('be.visible');\ncy.get('ul.list-group').should('exist').and('be.visible');\ncy.get('.ball-loader').should('not.exist');\ncy.get('span.placeholder-glow').should('not.exist');",
               "err": {},
-              "uuid": "e1a48782-558d-41a2-8da5-9746e8cc3dd8",
+              "uuid": "9faccb86-695c-488f-a1af-d928b3c678d3",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1697,15 +1696,15 @@
           "failures": [],
           "pending": [],
           "skipped": [
-            "eb94d249-6b84-4fef-a764-ad1a4cd539a7",
-            "11921415-bcc7-4c56-b2b4-7288eb6d9121",
-            "3aebf3d8-e78f-4d88-90a9-dcd7121a97c1",
-            "fe96904c-d335-4b73-9225-0ce60933d0b6",
-            "afe4ad86-830d-46d5-9cb5-4cb9bead367c",
-            "d81634f1-af7e-48f8-ac80-50a8a7f5809f",
-            "c03019b9-8130-4756-95a5-8e075bff0427",
-            "9bcd91d6-57b0-4714-95c3-0a132689b855",
-            "e1a48782-558d-41a2-8da5-9746e8cc3dd8"
+            "8cd9141f-7887-4706-a87c-80847c6acb56",
+            "b9521886-660a-4afd-b247-bcf4db18af6b",
+            "f348085a-0407-443f-bfb0-88e6fa49e2ff",
+            "f40012f2-66a3-452b-9d18-593f581a9fb6",
+            "c32575e2-6b52-4f45-85d1-a2913477f5ab",
+            "29a0dfe0-aab7-48f9-b1af-6a947430a8e4",
+            "ebcbe236-7a9d-4924-bfcb-f96b8284ef62",
+            "30963545-b57b-47eb-bca4-730b4d25700f",
+            "9faccb86-695c-488f-a1af-d928b3c678d3"
           ],
           "duration": 0,
           "root": false,
@@ -1713,7 +1712,7 @@
           "_timeout": 2000
         },
         {
-          "uuid": "706e8de4-c2cf-473d-8daf-a02e48139059",
+          "uuid": "7fde7ed3-164d-428f-8fff-c0d539e0f584",
           "title": "|Ingreso a la curva: Argentina - Soberanos - USD - Ley Arg|",
           "fullFile": "",
           "file": "",
@@ -1733,7 +1732,7 @@
               "context": null,
               "code": "cy.contains('a', 'Argentina - Soberanos - USD - Ley Arg').click();",
               "err": {},
-              "uuid": "25dc6e4a-d6d6-4878-b1d3-eb53cde0fc68",
+              "uuid": "6c407a32-c168-409d-b1b7-1ff55ef21014",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1751,7 +1750,7 @@
               "context": null,
               "code": "cy.get('span.placeholder-glow').should('not.exist');\ncy.get('rect[class=\"highcharts-background\"]').should('exist').and('be.visible');\ncy.get('path[class=\"highcharts-tracker-line\"]').should('exist').and('be.visible');\ncy.get('button.highcharts-a11y-proxy-button').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "0cb0f55b-0f94-4f54-8397-c9a8ad9c48d8",
+              "uuid": "8c5ace09-7cf0-4b42-9228-1df9436334c0",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1769,7 +1768,7 @@
               "context": null,
               "code": "cy.get('div.table-responsive').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "35c258d1-7a24-434f-8d62-222081767e35",
+              "uuid": "1c1e1f47-cdb7-4c8a-9966-96e82abec6ce",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1787,7 +1786,7 @@
               "context": null,
               "code": "cy.get('button.p-0.text-link.border-0.btn.btn-none').last().scrollIntoView().should('be.visible').click({\n  force: true\n});\ncy.get('li[class=\"d-flex justify-content-between align-items-start border-0 border-bottom  list-group-item\"]').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "38a58950-bf87-4dd6-9e76-9c36a2049397",
+              "uuid": "ada3553a-cc46-4847-a841-022d610f9801",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1805,7 +1804,7 @@
               "context": null,
               "code": "cy.contains('Análisis online', {\n  matchCase: false\n}).should('exist').and('be.visible').click({\n  force: true\n});\ncy.get('div.card-body').should('be.visible');\ncy.get('div.table-responsive').should('be.visible');",
               "err": {},
-              "uuid": "a25759b2-77a4-4220-a23a-3b3d40824dc6",
+              "uuid": "b6d88a5d-c9a1-4f33-bfd0-fe7965e41375",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1823,7 +1822,7 @@
               "context": null,
               "code": "cy.get('button.p-0.text-link.border-0.btn.btn-none').last().scrollIntoView().should('be.visible').click({\n  force: true\n});\ncy.get('li[class=\"d-flex justify-content-between align-items-start border-0 border-bottom  list-group-item\"]').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "33ba5c55-110e-4410-8f9e-fa6ac08f18cc",
+              "uuid": "25687c37-a8f6-4bf2-a9bf-dff58b87dc04",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1841,7 +1840,7 @@
               "context": null,
               "code": "cy.contains('Bonos fuera de la curva', {\n  matchCase: false\n}).should('exist').and('be.visible').click({\n  force: true\n});\ncy.get('div.card-body').should('be.visible');\ncy.get('div.table-responsive').should('be.visible');",
               "err": {},
-              "uuid": "e2733ab5-fe1a-445b-9264-8492c19a64d0",
+              "uuid": "6a03e015-01ae-41c5-9b47-bc3165a45ecb",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1859,7 +1858,7 @@
               "context": null,
               "code": "cy.ValidarBonosFueraDeLaCurva();",
               "err": {},
-              "uuid": "163f382c-df92-47cd-8faa-827877388182",
+              "uuid": "e381f59c-7299-431b-80ef-b52217f0765f",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1877,7 +1876,7 @@
               "context": null,
               "code": "cy.contains('CURVAS', {\n  matchCase: false\n}).should('be.visible').click({\n  force: true\n});\ncy.get('span.placeholder-glow').should('not.exist');\ncy.get('.card-body').should('exist').and('be.visible');\ncy.get('ul.list-group').should('exist').and('be.visible');\ncy.get('.ball-loader').should('not.exist');\ncy.get('span.placeholder-glow').should('not.exist');",
               "err": {},
-              "uuid": "5b039471-2883-443f-ab5b-8cb5c230fcd6",
+              "uuid": "fc3aacea-4913-4bd9-9a7c-03408bc8200f",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1888,15 +1887,15 @@
           "failures": [],
           "pending": [],
           "skipped": [
-            "25dc6e4a-d6d6-4878-b1d3-eb53cde0fc68",
-            "0cb0f55b-0f94-4f54-8397-c9a8ad9c48d8",
-            "35c258d1-7a24-434f-8d62-222081767e35",
-            "38a58950-bf87-4dd6-9e76-9c36a2049397",
-            "a25759b2-77a4-4220-a23a-3b3d40824dc6",
-            "33ba5c55-110e-4410-8f9e-fa6ac08f18cc",
-            "e2733ab5-fe1a-445b-9264-8492c19a64d0",
-            "163f382c-df92-47cd-8faa-827877388182",
-            "5b039471-2883-443f-ab5b-8cb5c230fcd6"
+            "6c407a32-c168-409d-b1b7-1ff55ef21014",
+            "8c5ace09-7cf0-4b42-9228-1df9436334c0",
+            "1c1e1f47-cdb7-4c8a-9966-96e82abec6ce",
+            "ada3553a-cc46-4847-a841-022d610f9801",
+            "b6d88a5d-c9a1-4f33-bfd0-fe7965e41375",
+            "25687c37-a8f6-4bf2-a9bf-dff58b87dc04",
+            "6a03e015-01ae-41c5-9b47-bc3165a45ecb",
+            "e381f59c-7299-431b-80ef-b52217f0765f",
+            "fc3aacea-4913-4bd9-9a7c-03408bc8200f"
           ],
           "duration": 0,
           "root": false,
@@ -1904,7 +1903,7 @@
           "_timeout": 2000
         },
         {
-          "uuid": "a5580ff3-21ad-4878-b9a9-e0bf24c153bd",
+          "uuid": "821327fe-a47d-41e4-b774-5b0cfbc8b2a8",
           "title": "|Ingreso a la curva: Argentina - Soberanos - Letras del Tesoro Capitalizables (LECAP) - ARS|",
           "fullFile": "",
           "file": "",
@@ -1924,7 +1923,7 @@
               "context": null,
               "code": "cy.contains('a', 'Argentina - Soberanos - Letras del Tesoro Capitalizables (LECAP) - ARS').click();",
               "err": {},
-              "uuid": "d356b76b-8c2a-42b1-87f9-eaee4b610217",
+              "uuid": "98726b5a-9059-4795-8295-1849164ddc13",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1942,7 +1941,7 @@
               "context": null,
               "code": "cy.get('span.placeholder-glow').should('not.exist');\ncy.get('rect[class=\"highcharts-background\"]').should('exist').and('be.visible');\ncy.get('path[class=\"highcharts-tracker-line\"]').should('exist').and('be.visible');\ncy.get('button.highcharts-a11y-proxy-button').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "49f5857d-3769-43b2-967e-97d379c5bcab",
+              "uuid": "7aa2b741-e9fb-4378-8fb1-9acf61d86825",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1960,7 +1959,7 @@
               "context": null,
               "code": "cy.get('div.table-responsive').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "9f0b8435-0a5e-4c25-b2b8-b528affbac4a",
+              "uuid": "9b4991ca-932d-451e-bd01-b62e46b1edf4",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1978,7 +1977,7 @@
               "context": null,
               "code": "cy.get('button.p-0.text-link.border-0.btn.btn-none').last().scrollIntoView().should('be.visible').click({\n  force: true\n});\ncy.get('li[class=\"d-flex justify-content-between align-items-start border-0 border-bottom  list-group-item\"]').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "e1dca350-cfa3-47e9-9015-efc9598af038",
+              "uuid": "48ec6b19-9ebd-49bb-944f-463197440791",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -1996,7 +1995,7 @@
               "context": null,
               "code": "cy.contains('Análisis online', {\n  matchCase: false\n}).should('exist').and('be.visible').click({\n  force: true\n});\ncy.get('div.card-body').should('be.visible');\ncy.get('div.table-responsive').should('be.visible');",
               "err": {},
-              "uuid": "2c02cea1-f63e-47a9-bf2d-0859278adc5f",
+              "uuid": "1a54b2cd-518f-43ef-a150-91759d864193",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -2014,7 +2013,7 @@
               "context": null,
               "code": "cy.get('button.p-0.text-link.border-0.btn.btn-none').last().scrollIntoView().should('be.visible').click({\n  force: true\n});\ncy.get('li[class=\"d-flex justify-content-between align-items-start border-0 border-bottom  list-group-item\"]').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "c148fbb6-97f8-49fb-8816-c5948ac396dd",
+              "uuid": "16b40a9a-5644-4cd6-b1e1-47a2ab9ce3d8",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -2032,7 +2031,7 @@
               "context": null,
               "code": "cy.contains('Bonos fuera de la curva', {\n  matchCase: false\n}).should('exist').and('be.visible').click({\n  force: true\n});\ncy.get('div.card-body').should('be.visible');\ncy.get('div.table-responsive').should('be.visible');",
               "err": {},
-              "uuid": "946a84bf-1727-4cd3-b667-f22a53ea6614",
+              "uuid": "69d9a5f1-9a0b-4209-8c78-dc3e701f36de",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -2050,7 +2049,7 @@
               "context": null,
               "code": "cy.ValidarBonosFueraDeLaCurva();",
               "err": {},
-              "uuid": "0d63cf85-9618-43f3-925f-9d98bac82d89",
+              "uuid": "b3aa2d36-d952-470a-8d85-674abf4a37a1",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -2068,7 +2067,7 @@
               "context": null,
               "code": "cy.contains('CURVAS', {\n  matchCase: false\n}).should('be.visible').click({\n  force: true\n});\ncy.get('span.placeholder-glow').should('not.exist');\ncy.get('.card-body').should('exist').and('be.visible');\ncy.get('ul.list-group').should('exist').and('be.visible');\ncy.get('.ball-loader').should('not.exist');\ncy.get('span.placeholder-glow').should('not.exist');",
               "err": {},
-              "uuid": "81e7e28b-6301-4ed3-bf79-45b61b6faebb",
+              "uuid": "21eaa99c-f7c5-40c1-8420-d291cc1c743c",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -2079,15 +2078,15 @@
           "failures": [],
           "pending": [],
           "skipped": [
-            "d356b76b-8c2a-42b1-87f9-eaee4b610217",
-            "49f5857d-3769-43b2-967e-97d379c5bcab",
-            "9f0b8435-0a5e-4c25-b2b8-b528affbac4a",
-            "e1dca350-cfa3-47e9-9015-efc9598af038",
-            "2c02cea1-f63e-47a9-bf2d-0859278adc5f",
-            "c148fbb6-97f8-49fb-8816-c5948ac396dd",
-            "946a84bf-1727-4cd3-b667-f22a53ea6614",
-            "0d63cf85-9618-43f3-925f-9d98bac82d89",
-            "81e7e28b-6301-4ed3-bf79-45b61b6faebb"
+            "98726b5a-9059-4795-8295-1849164ddc13",
+            "7aa2b741-e9fb-4378-8fb1-9acf61d86825",
+            "9b4991ca-932d-451e-bd01-b62e46b1edf4",
+            "48ec6b19-9ebd-49bb-944f-463197440791",
+            "1a54b2cd-518f-43ef-a150-91759d864193",
+            "16b40a9a-5644-4cd6-b1e1-47a2ab9ce3d8",
+            "69d9a5f1-9a0b-4209-8c78-dc3e701f36de",
+            "b3aa2d36-d952-470a-8d85-674abf4a37a1",
+            "21eaa99c-f7c5-40c1-8420-d291cc1c743c"
           ],
           "duration": 0,
           "root": false,
@@ -2095,7 +2094,7 @@
           "_timeout": 2000
         },
         {
-          "uuid": "782b2773-ee35-4289-95ac-660a0b7b22a4",
+          "uuid": "414e799a-d932-425c-a832-c4f37880a64b",
           "title": "|Ingreso a la curva: Argentina - BCRA - BOPREALs - USD|",
           "fullFile": "",
           "file": "",
@@ -2115,7 +2114,7 @@
               "context": null,
               "code": "cy.contains('a', 'Argentina - BCRA - BOPREALs - USD').click();",
               "err": {},
-              "uuid": "abfd5f87-fa1c-482c-8690-da5a79b201fb",
+              "uuid": "65863da6-3d3a-423c-b395-9e2c57212a52",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -2133,7 +2132,7 @@
               "context": null,
               "code": "cy.get('span.placeholder-glow').should('not.exist');\ncy.get('rect[class=\"highcharts-background\"]').should('exist').and('be.visible');\ncy.get('path[class=\"highcharts-tracker-line\"]').should('exist').and('be.visible');\ncy.get('button.highcharts-a11y-proxy-button').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "40ee45e8-1348-400b-940d-a7d03cd560b6",
+              "uuid": "94b78de2-2dd0-461f-be9d-9ac90330735d",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -2151,7 +2150,7 @@
               "context": null,
               "code": "cy.get('div.table-responsive').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "ff9043ea-43a9-4eec-960c-0566bf682c78",
+              "uuid": "e7a98add-d722-4ee7-8d08-29c4b0ec3ec4",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -2169,7 +2168,7 @@
               "context": null,
               "code": "cy.get('button.p-0.text-link.border-0.btn.btn-none').last().scrollIntoView().should('be.visible').click({\n  force: true\n});\ncy.get('li[class=\"d-flex justify-content-between align-items-start border-0 border-bottom  list-group-item\"]').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "d553bc57-db4a-4e09-acb5-d9bb2e681683",
+              "uuid": "a40645cd-645c-417b-b390-b11261f7bc49",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -2187,7 +2186,7 @@
               "context": null,
               "code": "cy.contains('Análisis online', {\n  matchCase: false\n}).should('exist').and('be.visible').click({\n  force: true\n});\ncy.get('div.card-body').should('be.visible');\ncy.get('div.table-responsive').should('be.visible');",
               "err": {},
-              "uuid": "b777e29e-6c80-4873-808f-392392b6a670",
+              "uuid": "82c525a1-8a6d-4021-bf48-522c432b29f5",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -2205,7 +2204,7 @@
               "context": null,
               "code": "cy.get('button.p-0.text-link.border-0.btn.btn-none').last().scrollIntoView().should('be.visible').click({\n  force: true\n});\ncy.get('li[class=\"d-flex justify-content-between align-items-start border-0 border-bottom  list-group-item\"]').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "b3d107d5-337d-4f6e-87cd-f83e23b718d9",
+              "uuid": "8b9dd842-487d-4541-95c3-47336e695c40",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -2223,7 +2222,7 @@
               "context": null,
               "code": "cy.contains('Bonos fuera de la curva', {\n  matchCase: false\n}).should('exist').and('be.visible').click({\n  force: true\n});\ncy.get('div.card-body').should('be.visible');\ncy.get('div.table-responsive').should('be.visible');",
               "err": {},
-              "uuid": "ca4664b7-1d91-4727-bc65-f58f61b3f80d",
+              "uuid": "6719df8e-b397-418f-8b1a-2b21a553f76a",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -2241,7 +2240,7 @@
               "context": null,
               "code": "cy.ValidarBonosFueraDeLaCurva();",
               "err": {},
-              "uuid": "716153db-9c2f-4206-af77-2d6e7d41f043",
+              "uuid": "3591d6bb-d8a9-4b80-8c73-f5b945257433",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -2252,14 +2251,14 @@
           "failures": [],
           "pending": [],
           "skipped": [
-            "abfd5f87-fa1c-482c-8690-da5a79b201fb",
-            "40ee45e8-1348-400b-940d-a7d03cd560b6",
-            "ff9043ea-43a9-4eec-960c-0566bf682c78",
-            "d553bc57-db4a-4e09-acb5-d9bb2e681683",
-            "b777e29e-6c80-4873-808f-392392b6a670",
-            "b3d107d5-337d-4f6e-87cd-f83e23b718d9",
-            "ca4664b7-1d91-4727-bc65-f58f61b3f80d",
-            "716153db-9c2f-4206-af77-2d6e7d41f043"
+            "65863da6-3d3a-423c-b395-9e2c57212a52",
+            "94b78de2-2dd0-461f-be9d-9ac90330735d",
+            "e7a98add-d722-4ee7-8d08-29c4b0ec3ec4",
+            "a40645cd-645c-417b-b390-b11261f7bc49",
+            "82c525a1-8a6d-4021-bf48-522c432b29f5",
+            "8b9dd842-487d-4541-95c3-47336e695c40",
+            "6719df8e-b397-418f-8b1a-2b21a553f76a",
+            "3591d6bb-d8a9-4b80-8c73-f5b945257433"
           ],
           "duration": 0,
           "root": false,
@@ -2267,7 +2266,7 @@
           "_timeout": 2000
         },
         {
-          "uuid": "239ec8b9-e5df-4f69-8a53-8525da78f8ed",
+          "uuid": "7eeb2e75-beb0-42d5-a7ec-fe8d34b63f4b",
           "title": "|Curvas|",
           "fullFile": "",
           "file": "",
@@ -2287,7 +2286,7 @@
               "context": null,
               "code": "cy.contains('CURVAS', {\n  matchCase: false\n}).should('be.visible').click({\n  force: true\n});",
               "err": {},
-              "uuid": "7cd4fc6c-21e1-49c9-9099-06840612aa69",
+              "uuid": "e39a2b5a-1263-43b3-a683-9be0d5e1a2c7",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -2305,7 +2304,7 @@
               "context": null,
               "code": "cy.get('span.placeholder-glow').should('not.exist');\ncy.get('.ball-loader').should('not.exist');\ncy.get('.card-body').should('exist').and('be.visible');\ncy.get('ul.list-group').should('exist').and('be.visible');\ncy.get('.ball-loader').should('not.exist');\ncy.get('span.placeholder-glow').should('not.exist');",
               "err": {},
-              "uuid": "9249b366-1150-4d9e-ae2a-995f333cb507",
+              "uuid": "416e7bbf-adec-4473-a290-2c6224a4504f",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -2323,7 +2322,7 @@
               "context": null,
               "code": "curvas.forEach(curva => {\n  cy.contains('a', curva).then($el => {\n    if ($el.length > 0) {\n      cy.wrap($el).should('be.visible');\n    } else {\n      cy.log(`No se encontró la curva: \"${curva}\"`);\n    }\n  });\n});",
               "err": {},
-              "uuid": "cc3def74-8008-4643-b815-e9ecceae3b03",
+              "uuid": "c640ceef-241b-452d-93e2-e22649e81442",
               "parentUUID": null,
               "isHook": false,
               "skipped": true
@@ -2334,9 +2333,9 @@
           "failures": [],
           "pending": [],
           "skipped": [
-            "7cd4fc6c-21e1-49c9-9099-06840612aa69",
-            "9249b366-1150-4d9e-ae2a-995f333cb507",
-            "cc3def74-8008-4643-b815-e9ecceae3b03"
+            "e39a2b5a-1263-43b3-a683-9be0d5e1a2c7",
+            "416e7bbf-adec-4473-a290-2c6224a4504f",
+            "c640ceef-241b-452d-93e2-e22649e81442"
           ],
           "duration": 0,
           "root": false,
