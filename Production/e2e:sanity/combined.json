@@ -1,0 +1,113 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2025-09-09T15:30:14.297Z",
+    "end": "2025-09-09T15:31:21.459Z",
+    "duration": 67162
+  },
+  "results": [
+    {
+      "uuid": "a7627173-90f2-4755-9254-2f5a68b1f997",
+      "title": "",
+      "fullFile": "cypress/e2e/sanity/01_login.cy.js",
+      "file": "cypress/e2e/sanity/01_login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6988e422-46fa-4a43-8dfc-bf314fca9bd3",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login Abbaco",
+              "fullTitle": "Login Login Abbaco",
+              "timedOut": null,
+              "duration": 64572,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.clearAllLocalStorage();\ncy.clearAllCookies();\ncy.clearAllSessionStorage();\ncy.SessionAbbaco();",
+              "err": {
+                "message": "CypressError: Timed out retrying after 60000ms: The command was expected to run against origin `https://bonds.mercapabbaco.com` but the application is at origin `https://auth.mercapabbaco.com`.\n\nThis commonly happens when you have either not navigated to the expected origin or have navigated away unexpectedly.\n\nUsing `cy.origin()` to wrap the commands run on `https://auth.mercapabbaco.com` will likely fix this issue.\n\n`cy.origin('https://auth.mercapabbaco.com', () => {`\n`  <commands targeting https://auth.mercapabbaco.com go here>`\n`})`\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nhttps://on.cypress.io/cy-visit-succeeded-but-commands-fail",
+                "estack": "CypressError: Timed out retrying after 60000ms: The command was expected to run against origin `https://bonds.mercapabbaco.com` but the application is at origin `https://auth.mercapabbaco.com`.\n\nThis commonly happens when you have either not navigated to the expected origin or have navigated away unexpectedly.\n\nUsing `cy.origin()` to wrap the commands run on `https://auth.mercapabbaco.com` will likely fix this issue.\n\n`cy.origin('https://auth.mercapabbaco.com', () => {`\n`  <commands targeting https://auth.mercapabbaco.com go here>`\n`})`\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nhttps://on.cypress.io/cy-visit-succeeded-but-commands-fail\n    at cypressErr (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:77664:18)\n    at Object.errByPath (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:77718:10)\n    at Object.commandCanCommunicateWithAUT (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:148461:90)\n    at <unknown> (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:135345:22)\n    at Object.subjectFn (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:147303:16)\n    at $Cy.verifyUpcomingAssertions (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:146631:31)\n    at onRetry (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:147294:15)\n    at tryCatcher (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:4285:29)\n    at whenStable (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:147181:68)\n    at <unknown> (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:147122:14)\n    at tryCatcher (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1671:18)\n    at Promise._fulfill (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1615:18)\n    at <unknown> (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:5420:46)\nFrom Your Spec Code:\n    at Object.usernameInput (webpack://cypress/./cypress/support/pages/loginPage.js:4:28)\n    at Login.typeUsername (webpack://cypress/./cypress/support/pages/loginPage.js:18:18)\n    at cy.session.cacheAcrossSpecs [as setup] (webpack://cypress/./cypress/support/commands.js:38:12)\n    at Context.<anonymous> (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:136486:38)\n    at getRet (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:121549:20)\n    at tryCatcher (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:121560:66)\n    at Context.then (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:121811:21)",
+                "diff": null
+              },
+              "uuid": "5284c6f5-9fb6-4523-9f17-c5eb35ea79e2",
+              "parentUUID": "6988e422-46fa-4a43-8dfc-bf314fca9bd3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "5284c6f5-9fb6-4523-9f17-c5eb35ea79e2"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 64572,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
