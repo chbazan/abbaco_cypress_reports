@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 0,
-    "start": "2025-09-09T13:37:25.530Z",
-    "end": "2025-09-09T13:37:44.799Z",
-    "duration": 19269,
+    "failures": 1,
+    "start": "2025-09-09T13:42:19.991Z",
+    "end": "2025-09-09T13:42:31.082Z",
+    "duration": 11091,
     "testsRegistered": 1,
-    "passPercent": 100,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "e5628ff2-005c-456b-9079-82bb7e9db79b",
+      "uuid": "397bed9a-5ee9-432b-874a-2d599d94fe77",
       "title": "",
       "fullFile": "cypress/e2e/sanity/01_login.cy.js",
       "file": "cypress/e2e/sanity/01_login.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "f3f51ec2-5a08-415a-92d5-57da825d6301",
+          "uuid": "7f76cff7-bbb2-4f05-9f57-cd8a91663882",
           "title": "Login",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,33 @@
               "title": "Login Abbaco",
               "fullTitle": "Login Login Abbaco",
               "timedOut": null,
-              "duration": 16664,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 8645,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "cy.clearAllLocalStorage();\ncy.clearAllCookies();\ncy.clearAllSessionStorage();\ncy.SessionAbbaco();",
-              "err": {},
-              "uuid": "e748b7b1-bf9e-4b47-b5db-31b7a477ca07",
-              "parentUUID": "f3f51ec2-5a08-415a-92d5-57da825d6301",
+              "err": {
+                "message": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > error loading dynamically imported module: https://bonds.mercapabbaco.com/assets/ArgentinianTopCards-a010ae2f.js\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.",
+                "estack": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > error loading dynamically imported module: https://bonds.mercapabbaco.com/assets/ArgentinianTopCards-a010ae2f.js\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.",
+                "diff": null
+              },
+              "uuid": "0ef847e9-8522-4768-ab50-8044f75a4800",
+              "parentUUID": "7f76cff7-bbb2-4f05-9f57-cd8a91663882",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "e748b7b1-bf9e-4b47-b5db-31b7a477ca07"
+          "passes": [],
+          "failures": [
+            "0ef847e9-8522-4768-ab50-8044f75a4800"
           ],
-          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 16664,
+          "duration": 8645,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
