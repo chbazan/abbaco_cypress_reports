@@ -1,0 +1,286 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 8,
+    "passes": 2,
+    "pending": 0,
+    "failures": 6,
+    "start": "2025-09-25T21:51:34.041Z",
+    "end": "2025-09-25T21:54:43.364Z",
+    "duration": 189323,
+    "testsRegistered": 8,
+    "passPercent": 25,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ef8e9970-f1c4-4b4d-8717-585711df11c0",
+      "title": "",
+      "fullFile": "cypress/e2e/smoke/portafolios.cy.js",
+      "file": "cypress/e2e/smoke/portafolios.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e39d1657-13d2-46e3-a774-8889c8f1d985",
+          "title": "Mi Portafolio",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "fb70a1ad-c0ce-4e16-9010-56932f1e21b3",
+              "title": "Mi portafolio",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Ingresar al menú Mi portafolio",
+                  "fullTitle": "Mi Portafolio Mi portafolio Ingresar al menú Mi portafolio",
+                  "timedOut": null,
+                  "duration": 898,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit(`${_constants.default.ABBACO_LOCATION}/security-position`);",
+                  "err": {},
+                  "uuid": "ad7b0d2f-e16f-4fe5-a9da-668babf06932",
+                  "parentUUID": "fb70a1ad-c0ce-4e16-9010-56932f1e21b3",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Crear un nuevo portafolio",
+                  "fullTitle": "Mi Portafolio Mi portafolio Crear un nuevo portafolio",
+                  "timedOut": null,
+                  "duration": 4485,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.crearPortafolioBR('Portafolio Cypress');\n// Ingresar al portafolio creado\n_portafolioPage.portafolio.clickCreatedPortfolio();\n_portafolioPage.portafolio.elements.tableElements().should('be.visible');",
+                  "err": {},
+                  "uuid": "f674e0a1-4d7d-4580-887a-477d7a57f8dc",
+                  "parentUUID": "fb70a1ad-c0ce-4e16-9010-56932f1e21b3",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Agregar las especie NTEN11, ELET42, NEOE26 y ENTV12 al portafolio",
+                  "fullTitle": "Mi Portafolio Mi portafolio Agregar las especie NTEN11, ELET42, NEOE26 y ENTV12 al portafolio",
+                  "timedOut": null,
+                  "duration": 30951,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "_portafolioPage.portafolio.elements.tableElements().should('be.visible');\n// Agregar primera especie\ncy.agregarBonoPortafolioBR(_constants.default.HARD_DOLLAR);\n// Agregar segunda especie\ncy.agregarBonoPortafolioBR(_constants.default.DOLLAR_LINKED);\n// Agregar tercera especie\ncy.agregarBonoPortafolioBR(_constants.default.TASA_VARIABLE);\n// Agregar cuarta especie\ncy.agregarBonoPortafolioBR(_constants.default.CER);",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `div[class=\"d-flex justify-content-start align-items-start column-gap-3\"]`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `div[class=\"d-flex justify-content-start align-items-start column-gap-3\"]`, but never found it.\n    at Context.eval (webpack://cypress/./cypress/support/commands.js:444:5)\n    at wrapped (https://bonds.mercapabbaco.com.br/__cypress/runner/cypress_runner.js:141588:43)",
+                    "diff": null
+                  },
+                  "uuid": "d9b4bc5c-03b7-4fa2-a868-be65606515de",
+                  "parentUUID": "fb70a1ad-c0ce-4e16-9010-56932f1e21b3",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Verificar que las especies NTEN11, ELET42, NEOE26 y ENTV12 tengan precio y se encuentren valorizadas",
+                  "fullTitle": "Mi Portafolio Mi portafolio Verificar que las especies NTEN11, ELET42, NEOE26 y ENTV12 tengan precio y se encuentren valorizadas",
+                  "timedOut": null,
+                  "duration": 30150,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.verificarValuacionPortfolio();",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `tr`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `tr`, but never found it.\n    at validarBonosConError (webpack://cypress/./cypress/support/commands.js:477:7)\n    at Context.eval (webpack://cypress/./cypress/support/commands.js:513:2)\n    at wrapped (https://bonds.mercapabbaco.com.br/__cypress/runner/cypress_runner.js:141588:43)",
+                    "diff": null
+                  },
+                  "uuid": "347cef00-f876-4f8d-b036-6fcd1336e8cb",
+                  "parentUUID": "fb70a1ad-c0ce-4e16-9010-56932f1e21b3",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Recorrer las pestañas Proyección y Agenda de pagos teniendo las especies NTEN11, ELET42, NEOE26 y ENTV12 en el portafolio",
+                  "fullTitle": "Mi Portafolio Mi portafolio Recorrer las pestañas Proyección y Agenda de pagos teniendo las especies NTEN11, ELET42, NEOE26 y ENTV12 en el portafolio",
+                  "timedOut": null,
+                  "duration": 30150,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "_portafolioPage.portafolio.clickProyeccionButton();\n_portafolioPage.portafolio.elements.tableProyeccion().should('be.visible');\n_sharedElements.sharedElements.cardBody().should('be.visible');\n_portafolioPage.portafolio.clickAgendaCortesButton();\n_portafolioPage.portafolio.elements.agendaCorteElements().should('be.visible');\n_sharedElements.sharedElements.cardBody().should('be.visible');",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `button[data-rr-ui-event-key=\"forecast\"]`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `button[data-rr-ui-event-key=\"forecast\"]`, but never found it.\n    at Object.proyeccionButton (webpack://cypress/./cypress/support/pages/portafolioPage.js:5:35)\n    at Portafolio.clickProyeccionButton (webpack://cypress/./cypress/support/pages/portafolioPage.js:26:22)\n    at Context.eval (webpack://cypress/./cypress/e2e/smoke/portafolios.cy.js:55:23)",
+                    "diff": null
+                  },
+                  "uuid": "8a8ecc03-bf17-4b2e-8280-eee5c5e13d37",
+                  "parentUUID": "fb70a1ad-c0ce-4e16-9010-56932f1e21b3",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Editar el portafolio creado",
+                  "fullTitle": "Mi Portafolio Mi portafolio Editar el portafolio creado",
+                  "timedOut": null,
+                  "duration": 30144,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "_portafolioPage.portafolio.editPortfolio('Portafolio Cypress Modificado');\n_sharedElements.sharedElements.ballLoader().should('not.exist');\n_portafolioPage.portafolio.elements.newPortfolioName().should('be.visible');",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `svg.tabler-icon.tabler-icon-dots `, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `svg.tabler-icon.tabler-icon-dots `, but never found it.\n    at Object.menuOptions (webpack://cypress/./cypress/support/pages/portafolioPage.js:11:30)\n    at Portafolio.editPortfolio (webpack://cypress/./cypress/support/pages/portafolioPage.js:32:22)\n    at Context.eval (webpack://cypress/./cypress/e2e/smoke/portafolios.cy.js:70:23)",
+                    "diff": null
+                  },
+                  "uuid": "ab5855bb-41b3-4921-a447-834f6dbaea39",
+                  "parentUUID": "fb70a1ad-c0ce-4e16-9010-56932f1e21b3",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Eliminar las especies NTEN11, ELET42, NEOE26 y ENTV12 del portafolio",
+                  "fullTitle": "Mi Portafolio Mi portafolio Eliminar las especies NTEN11, ELET42, NEOE26 y ENTV12 del portafolio",
+                  "timedOut": null,
+                  "duration": 30150,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "_portafolioPage.portafolio.deleteEspecies(...especies);",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `button[data-rr-ui-event-key=\"position\"]`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `button[data-rr-ui-event-key=\"position\"]`, but never found it.\n    at Object.posicionButton (webpack://cypress/./cypress/support/pages/portafolioPage.js:7:33)\n    at Portafolio.deleteEspecies (webpack://cypress/./cypress/support/pages/portafolioPage.js:39:22)\n    at Context.eval (webpack://cypress/./cypress/e2e/smoke/portafolios.cy.js:78:23)",
+                    "diff": null
+                  },
+                  "uuid": "63582a0a-1c01-430f-a478-403b40aa7192",
+                  "parentUUID": "fb70a1ad-c0ce-4e16-9010-56932f1e21b3",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Eliminar el portafolio creado",
+                  "fullTitle": "Mi Portafolio Mi portafolio Eliminar el portafolio creado",
+                  "timedOut": null,
+                  "duration": 30144,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "_portafolioPage.portafolio.deletePortfolio();\n_portafolioPage.portafolio.elements.newPortfolioName().should('not.exist');\n_sharedElements.sharedElements.ballLoader().should('not.exist');",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `svg.tabler-icon.tabler-icon-dots `, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `svg.tabler-icon.tabler-icon-dots `, but never found it.\n    at Object.menuOptions (webpack://cypress/./cypress/support/pages/portafolioPage.js:11:30)\n    at Portafolio.deletePortfolio (webpack://cypress/./cypress/support/pages/portafolioPage.js:55:22)\n    at Context.eval (webpack://cypress/./cypress/e2e/smoke/portafolios.cy.js:82:23)",
+                    "diff": null
+                  },
+                  "uuid": "d675fdb0-f57f-4888-b61b-95e03032ca3e",
+                  "parentUUID": "fb70a1ad-c0ce-4e16-9010-56932f1e21b3",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "ad7b0d2f-e16f-4fe5-a9da-668babf06932",
+                "f674e0a1-4d7d-4580-887a-477d7a57f8dc"
+              ],
+              "failures": [
+                "d9b4bc5c-03b7-4fa2-a868-be65606515de",
+                "347cef00-f876-4f8d-b036-6fcd1336e8cb",
+                "8a8ecc03-bf17-4b2e-8280-eee5c5e13d37",
+                "ab5855bb-41b3-4921-a447-834f6dbaea39",
+                "63582a0a-1c01-430f-a478-403b40aa7192",
+                "d675fdb0-f57f-4888-b61b-95e03032ca3e"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 187072,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

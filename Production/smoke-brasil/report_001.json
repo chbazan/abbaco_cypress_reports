@@ -1,0 +1,221 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 5,
+    "passes": 1,
+    "pending": 0,
+    "failures": 4,
+    "start": "2025-09-25T21:43:13.454Z",
+    "end": "2025-09-25T21:45:23.086Z",
+    "duration": 129632,
+    "testsRegistered": 5,
+    "passPercent": 20,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "063f2aff-89fe-41fe-9db4-dc092c6041f0",
+      "title": "",
+      "fullFile": "cypress/e2e/smoke/arbitraje.cy.js",
+      "file": "cypress/e2e/smoke/arbitraje.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f5322f39-20ea-4a70-9cca-21cd0778d99c",
+          "title": "Arbitraje",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "72055417-abb0-4ff5-8c73-4c8f0762cdf8",
+              "title": "Arbitraje de las especies NTEN11 y ENTV12",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Ingreso al menú \"Arbitraje\"",
+                  "fullTitle": "Arbitraje Arbitraje de las especies NTEN11 y ENTV12 Ingreso al menú \"Arbitraje\"",
+                  "timedOut": null,
+                  "duration": 819,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit(_constants.default.ABBACO_LOCATION + /arbitrage/);",
+                  "err": {},
+                  "uuid": "5460faa7-eb49-40ba-8331-438f86468b31",
+                  "parentUUID": "72055417-abb0-4ff5-8c73-4c8f0762cdf8",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Cargar las especies NTEN11 y ENTV12 para arbitrar",
+                  "fullTitle": "Arbitraje Arbitraje de las especies NTEN11 y ENTV12 Cargar las especies NTEN11 y ENTV12 para arbitrar",
+                  "timedOut": null,
+                  "duration": 35946,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('#first-security > .d-flex > .input-sm').should('exist').and('be.visible').click({\n  force: true\n}).type(_constants.default.HARD_DOLLAR);\ncy.get(`[id=\"search-item-${_constants.default.HARD_DOLLAR} - B3 - BRL\"]`).should('exist').and('be.visible').should('exist').and('be.visible').click({\n  force: true\n});\ncy.get('#second-security > .d-flex > .input-sm').should('exist').and('be.visible').click({\n  force: true\n}).type(_constants.default.CER);\ncy.get(`[id=\"search-item-${_constants.default.CER} - B3 - BRL\"]`).should('exist').and('be.visible').should('exist').and('be.visible').click({\n  force: true\n});\n// Hacer clic en Arbitrar y validar que se muestren sus elementos correspondientes\ncy.contains('Arbitrar', {\n  matchCase: false\n}).should('exist').and('be.visible').click({\n  force: true\n});\ncy.get('div.card').should('exist').and('be.visible');\ncy.get('.highcharts-menu-wrapper').should('exist').and('be.visible');\ncy.get('rect.highcharts-background').should('exist').and('be.visible');",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `.highcharts-menu-wrapper`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `.highcharts-menu-wrapper`, but never found it.\n    at Context.eval (webpack://cypress/./cypress/e2e/smoke/arbitraje.cy.js:46:17)",
+                    "diff": null
+                  },
+                  "uuid": "b00fc9ab-0fbc-4f83-aa41-3bb2b29e0235",
+                  "parentUUID": "72055417-abb0-4ff5-8c73-4c8f0762cdf8",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Ir a la pestaña \"Paridad\" y validar sus elementos",
+                  "fullTitle": "Arbitraje Arbitraje de las especies NTEN11 y ENTV12 Ir a la pestaña \"Paridad\" y validar sus elementos",
+                  "timedOut": null,
+                  "duration": 30224,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.contains('Paridade', {\n  matchCase: false\n}).should('exist').and('be.visible').click({\n  force: true\n});\ncy.get('div.card').should('exist').and('be.visible');\ncy.get('.highcharts-menu-wrapper').should('exist').and('be.visible');",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `.highcharts-menu-wrapper`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `.highcharts-menu-wrapper`, but never found it.\n    at Context.eval (webpack://cypress/./cypress/e2e/smoke/arbitraje.cy.js:64:17)",
+                    "diff": null
+                  },
+                  "uuid": "0ffd26a9-b0b6-4d7f-a9de-063635fb82ec",
+                  "parentUUID": "72055417-abb0-4ff5-8c73-4c8f0762cdf8",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Ir a la pestaña \"Inversión\" y validar sus elementos",
+                  "fullTitle": "Arbitraje Arbitraje de las especies NTEN11 y ENTV12 Ir a la pestaña \"Inversión\" y validar sus elementos",
+                  "timedOut": null,
+                  "duration": 30221,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.contains('Investimento', {\n  matchCase: false\n}).should('exist').and('be.visible').click({\n  force: true\n});\ncy.get('.table-responsive').should('exist').and('be.visible');\ncy.contains('h6.text-uppercase.card-title', `Investimento - ${_constants.default.HARD_DOLLAR} VS ${_constants.default.CER}`, {\n  matchCase: false\n}).should('exist');\ncy.contains('h6.text-uppercase.card-title', `${_constants.default.HARD_DOLLAR} - Fluxo de Caixa em BRL`, {\n  matchCase: false\n}).should('exist');\ncy.contains('h6.text-uppercase.card-title', `${_constants.default.CER} - Fluxo de Caixa em BRL`, {\n  matchCase: false\n}).should('exist');\ncy.get('span.placeholder-glow').should('not.exist');",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `.table-responsive`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `.table-responsive`, but never found it.\n    at Context.eval (webpack://cypress/./cypress/e2e/smoke/arbitraje.cy.js:76:17)",
+                    "diff": null
+                  },
+                  "uuid": "0af610e3-fb5c-4df2-b8f2-b283ac6ca6bd",
+                  "parentUUID": "72055417-abb0-4ff5-8c73-4c8f0762cdf8",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Ir a la pestaña \"Scatter\" y validar sus elementos",
+                  "fullTitle": "Arbitraje Arbitraje de las especies NTEN11 y ENTV12 Ir a la pestaña \"Scatter\" y validar sus elementos",
+                  "timedOut": null,
+                  "duration": 30240,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.contains('Dispersão', {\n  matchCase: false\n}).should('exist').and('be.visible').click({\n  force: true\n});\ncy.get('div.card').should('exist').and('be.visible');\ncy.get('rect[class=\"highcharts-background\"]').should('exist').and('be.visible');\ncy.get('path[class=\"highcharts-point highcharts-color-0\"]').should('exist').and('be.visible');",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `rect[class=\"highcharts-background\"]`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `rect[class=\"highcharts-background\"]`, but never found it.\n    at Context.eval (webpack://cypress/./cypress/e2e/smoke/arbitraje.cy.js:97:17)",
+                    "diff": null
+                  },
+                  "uuid": "d0634ab7-ede8-4f74-8980-abc73deaf1c2",
+                  "parentUUID": "72055417-abb0-4ff5-8c73-4c8f0762cdf8",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "5460faa7-eb49-40ba-8331-438f86468b31"
+              ],
+              "failures": [
+                "b00fc9ab-0fbc-4f83-aa41-3bb2b29e0235",
+                "0ffd26a9-b0b6-4d7f-a9de-063635fb82ec",
+                "0af610e3-fb5c-4df2-b8f2-b283ac6ca6bd",
+                "d0634ab7-ede8-4f74-8980-abc73deaf1c2"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 127450,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
