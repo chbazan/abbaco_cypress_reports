@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 5,
-    "start": "2025-09-26T12:15:57.919Z",
-    "end": "2025-09-26T12:21:05.482Z",
-    "duration": 307563,
+    "start": "2025-09-27T12:16:59.274Z",
+    "end": "2025-09-27T12:22:06.672Z",
+    "duration": 307398,
     "testsRegistered": 7,
     "passPercent": 28.57142857142857,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "e78e242b-f42d-4b55-9578-0108c48c46b2",
+      "uuid": "b7c59b81-3bc2-40f9-ada3-ed499fec8246",
       "title": "",
       "fullFile": "cypress/e2e/smoke/screener.cy.js",
       "file": "cypress/e2e/smoke/screener.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "0e5cf58f-1ea0-444e-9b49-ef396c633795",
+          "uuid": "bac039e1-3922-448a-846f-58c0ba6a96fc",
           "title": "Screener",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "4ef2e66b-6a3e-4588-82d9-85d89f61a52a",
+              "uuid": "c941f1f2-5894-45d2-b73e-7427b169919f",
               "title": "Realizar una búsqueda de screener filtrando por tipo de deuda, moneda de emisión, ley y emisor",
               "fullFile": "",
               "file": "",
@@ -47,7 +47,7 @@
                   "title": "Ingresar al menú \"Screener\"",
                   "fullTitle": "Screener Realizar una búsqueda de screener filtrando por tipo de deuda, moneda de emisión, ley y emisor Ingresar al menú \"Screener\"",
                   "timedOut": null,
-                  "duration": 4002,
+                  "duration": 3833,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -56,8 +56,8 @@
                   "context": null,
                   "code": "cy.visit(_constants.default.ABBACO_LOCATION + /bond-screener/);\ncy.get('button.accordion-button').should('be.visible');\ncy.get('div.accordion-body').should('be.visible');",
                   "err": {},
-                  "uuid": "bcd1f9a8-6a4b-4170-ae01-f49d37755526",
-                  "parentUUID": "4ef2e66b-6a3e-4588-82d9-85d89f61a52a",
+                  "uuid": "90e03551-8827-42bb-b8fc-e6eafc7532d3",
+                  "parentUUID": "c941f1f2-5894-45d2-b73e-7427b169919f",
                   "isHook": false,
                   "skipped": false
                 },
@@ -65,7 +65,7 @@
                   "title": "Selecciona tipo de deuda \"Debenture\"",
                   "fullTitle": "Screener Realizar una búsqueda de screener filtrando por tipo de deuda, moneda de emisión, ley y emisor Selecciona tipo de deuda \"Debenture\"",
                   "timedOut": null,
-                  "duration": 60247,
+                  "duration": 60212,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
@@ -78,8 +78,8 @@
                     "estack": "AssertionError: Timed out retrying after 60000ms: Expected to find element: `[for=\"Debenture\"]`, but never found it.\n    at Context.eval (webpack://cypress/./cypress/e2e/smoke/screener.cy.js:25:17)",
                     "diff": null
                   },
-                  "uuid": "393c9171-4606-43ce-b51e-616b29484f75",
-                  "parentUUID": "4ef2e66b-6a3e-4588-82d9-85d89f61a52a",
+                  "uuid": "77c08262-7c6e-4c22-97e4-2555c0e96173",
+                  "parentUUID": "c941f1f2-5894-45d2-b73e-7427b169919f",
                   "isHook": false,
                   "skipped": false
                 },
@@ -87,7 +87,7 @@
                   "title": "Selecciona BRL en \"Moneda de Pago\"",
                   "fullTitle": "Screener Realizar una búsqueda de screener filtrando por tipo de deuda, moneda de emisión, ley y emisor Selecciona BRL en \"Moneda de Pago\"",
                   "timedOut": null,
-                  "duration": 60182,
+                  "duration": 60213,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
@@ -100,8 +100,8 @@
                     "estack": "AssertionError: Timed out retrying after 60000ms: Expected to find content: 'Selecionar Moeda de pagamento' but never did.\n    at Context.eval (webpack://cypress/./cypress/e2e/smoke/screener.cy.js:33:17)",
                     "diff": null
                   },
-                  "uuid": "abab90fa-fe84-46b3-bd5f-71756c0c1bad",
-                  "parentUUID": "4ef2e66b-6a3e-4588-82d9-85d89f61a52a",
+                  "uuid": "a2e73851-3170-4b40-ad4a-3f763fe368da",
+                  "parentUUID": "c941f1f2-5894-45d2-b73e-7427b169919f",
                   "isHook": false,
                   "skipped": false
                 },
@@ -109,7 +109,7 @@
                   "title": "Selecciona Ley Brasileira en \"Ley\"",
                   "fullTitle": "Screener Realizar una búsqueda de screener filtrando por tipo de deuda, moneda de emisión, ley y emisor Selecciona Ley Brasileira en \"Ley\"",
                   "timedOut": null,
-                  "duration": 60179,
+                  "duration": 60191,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
@@ -122,8 +122,8 @@
                     "estack": "AssertionError: Timed out retrying after 60000ms: Expected to find content: 'Selecionar Lei' but never did.\n    at Context.eval (webpack://cypress/./cypress/e2e/smoke/screener.cy.js:44:17)",
                     "diff": null
                   },
-                  "uuid": "0d89a8c7-2a1b-4f19-a4c8-7cc1a7decd23",
-                  "parentUUID": "4ef2e66b-6a3e-4588-82d9-85d89f61a52a",
+                  "uuid": "f80ba9b6-ff90-47ad-815a-d035e8089e6f",
+                  "parentUUID": "c941f1f2-5894-45d2-b73e-7427b169919f",
                   "isHook": false,
                   "skipped": false
                 },
@@ -131,7 +131,7 @@
                   "title": "Selecciona Companhia de Eletricidade do Estado da Bahia COELBA en \"Seleccionar Emisor\"",
                   "fullTitle": "Screener Realizar una búsqueda de screener filtrando por tipo de deuda, moneda de emisión, ley y emisor Selecciona Companhia de Eletricidade do Estado da Bahia COELBA en \"Seleccionar Emisor\"",
                   "timedOut": null,
-                  "duration": 60201,
+                  "duration": 60177,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
@@ -144,8 +144,8 @@
                     "estack": "AssertionError: Timed out retrying after 60000ms: Expected to find content: 'Selecionar Emissor' but never did.\n    at Context.eval (webpack://cypress/./cypress/e2e/smoke/screener.cy.js:56:17)",
                     "diff": null
                   },
-                  "uuid": "7fffc1bf-4261-440c-bcfd-173033cfd886",
-                  "parentUUID": "4ef2e66b-6a3e-4588-82d9-85d89f61a52a",
+                  "uuid": "1d9b88eb-e4f8-406c-895b-a9a925d09748",
+                  "parentUUID": "c941f1f2-5894-45d2-b73e-7427b169919f",
                   "isHook": false,
                   "skipped": false
                 },
@@ -162,8 +162,8 @@
                   "context": null,
                   "code": "cy.contains('Buscar').should('exist').and('be.visible').click({\n  force: true\n});",
                   "err": {},
-                  "uuid": "1f218b7f-bfbc-4858-8f2a-ce35ee0e4b0a",
-                  "parentUUID": "4ef2e66b-6a3e-4588-82d9-85d89f61a52a",
+                  "uuid": "aaeded27-ab17-4e00-95f2-b12083865275",
+                  "parentUUID": "c941f1f2-5894-45d2-b73e-7427b169919f",
                   "isHook": false,
                   "skipped": false
                 },
@@ -171,7 +171,7 @@
                   "title": "Verifica que se encuentre el bono 9ANBN8 en el resultado de la búsqueda",
                   "fullTitle": "Screener Realizar una búsqueda de screener filtrando por tipo de deuda, moneda de emisión, ley y emisor Verifica que se encuentre el bono 9ANBN8 en el resultado de la búsqueda",
                   "timedOut": null,
-                  "duration": 60187,
+                  "duration": 60179,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
@@ -184,27 +184,27 @@
                     "estack": "AssertionError: Timed out retrying after 60000ms: Expected to find element: `div.card`, but never found it.\n    at Context.eval (webpack://cypress/./cypress/e2e/smoke/screener.cy.js:81:17)",
                     "diff": null
                   },
-                  "uuid": "3483c732-ea52-4fc5-9273-c26d17ef719f",
-                  "parentUUID": "4ef2e66b-6a3e-4588-82d9-85d89f61a52a",
+                  "uuid": "136bf3e4-caad-4a35-9c2d-0f13d0612b62",
+                  "parentUUID": "c941f1f2-5894-45d2-b73e-7427b169919f",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "bcd1f9a8-6a4b-4170-ae01-f49d37755526",
-                "1f218b7f-bfbc-4858-8f2a-ce35ee0e4b0a"
+                "90e03551-8827-42bb-b8fc-e6eafc7532d3",
+                "aaeded27-ab17-4e00-95f2-b12083865275"
               ],
               "failures": [
-                "393c9171-4606-43ce-b51e-616b29484f75",
-                "abab90fa-fe84-46b3-bd5f-71756c0c1bad",
-                "0d89a8c7-2a1b-4f19-a4c8-7cc1a7decd23",
-                "7fffc1bf-4261-440c-bcfd-173033cfd886",
-                "3483c732-ea52-4fc5-9273-c26d17ef719f"
+                "77c08262-7c6e-4c22-97e4-2555c0e96173",
+                "a2e73851-3170-4b40-ad4a-3f763fe368da",
+                "f80ba9b6-ff90-47ad-815a-d035e8089e6f",
+                "1d9b88eb-e4f8-406c-895b-a9a925d09748",
+                "136bf3e4-caad-4a35-9c2d-0f13d0612b62"
               ],
               "pending": [],
               "skipped": [],
-              "duration": 305095,
+              "duration": 304902,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
