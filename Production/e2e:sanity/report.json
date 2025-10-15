@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 0,
+    "passes": 1,
     "pending": 0,
-    "failures": 1,
-    "start": "2025-10-15T18:30:56.462Z",
-    "end": "2025-10-15T18:33:07.220Z",
-    "duration": 130758,
+    "failures": 0,
+    "start": "2025-10-15T18:47:04.646Z",
+    "end": "2025-10-15T18:47:23.117Z",
+    "duration": 18471,
     "testsRegistered": 1,
-    "passPercent": 0,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "cded1538-7cf6-4bde-aefc-cf23e467c9c9",
+      "uuid": "7c695ebf-fef8-42ec-8a95-6e30ec7b2490",
       "title": "",
       "fullFile": "cypress/e2e/sanity/01_login.cy.js",
       "file": "cypress/e2e/sanity/01_login.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "05f4211f-9af0-4dd1-b9bb-925c43749f0a",
+          "uuid": "d323f529-f70f-4957-8661-3f791bd3048f",
           "title": "Login",
           "fullFile": "",
           "file": "",
@@ -38,33 +38,29 @@
               "title": "Login Abbaco",
               "fullTitle": "Login Login Abbaco",
               "timedOut": null,
-              "duration": 128298,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 16098,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.clearAllLocalStorage();\ncy.clearAllCookies();\ncy.clearAllSessionStorage();\ncy.SessionAbbaco();",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 120000ms: expected 'https://auth.mercapabbaco.com/u/login?state=hKFo2SB5Rmhrc3RKN2xVcVVpaUhyd1hIN21UVDVpWWkzOW9rOKFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFZZaFB1T0s1SDlsX1FOZkRZRnRYQ09wTTZqbnFOeXB2o2NpZNkgM00zSGNzNUhsVXd0eG5KMm9rYjR6WmE1RmhoNEVxNDA' to include 'https://bonds.mercapabbaco.com'\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.",
-                "estack": "AssertionError: Timed out retrying after 120000ms: expected 'https://auth.mercapabbaco.com/u/login?state=hKFo2SB5Rmhrc3RKN2xVcVVpaUhyd1hIN21UVDVpWWkzOW9rOKFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFZZaFB1T0s1SDlsX1FOZkRZRnRYQ09wTTZqbnFOeXB2o2NpZNkgM00zSGNzNUhsVXd0eG5KMm9rYjR6WmE1RmhoNEVxNDA' to include 'https://bonds.mercapabbaco.com'\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n    at cy.session.cacheAcrossSpecs [as setup] (webpack://cypress/./cypress/support/commands.js:73:15)\n    at Context.<anonymous> (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:136486:38)\n    at getRet (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:121549:20)\n    at tryCatcher (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:121560:66)\n    at Context.then (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:121811:21)\n    at wrapped (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:141517:19)",
-                "diff": null
-              },
-              "uuid": "4108b3fb-0b6c-43fa-8c13-68411941c822",
-              "parentUUID": "05f4211f-9af0-4dd1-b9bb-925c43749f0a",
+              "err": {},
+              "uuid": "088a8de1-0781-4f3b-a078-97419fc0a2a3",
+              "parentUUID": "d323f529-f70f-4957-8661-3f791bd3048f",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "4108b3fb-0b6c-43fa-8c13-68411941c822"
+          "passes": [
+            "088a8de1-0781-4f3b-a078-97419fc0a2a3"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 128298,
+          "duration": 16098,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
