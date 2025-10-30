@@ -1,0 +1,223 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-10-30T12:22:25.843Z",
+    "end": "2025-10-30T12:22:54.848Z",
+    "duration": 29005,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1129b68d-30a1-4d0a-b6ab-922db515024f",
+      "title": "",
+      "fullFile": "cypress/e2e/smoke/arbitraje.cy.js",
+      "file": "cypress/e2e/smoke/arbitraje.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9b653783-29c8-443c-886e-7f66837e09c0",
+          "title": "Arbitraje",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "0c3f8528-627a-45cc-9460-224a0545d141",
+              "title": "Arbitraje de Especies",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Ingresar al menú \"Arbitraje\"",
+                  "fullTitle": "Arbitraje Arbitraje de Especies Ingresar al menú \"Arbitraje\"",
+                  "timedOut": null,
+                  "duration": 1275,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit(`${_constants.default.ABBACO_LOCATION}/arbitrage`);",
+                  "err": {},
+                  "uuid": "e3e1fc69-8690-4423-8daf-71037c4764b7",
+                  "parentUUID": "0c3f8528-627a-45cc-9460-224a0545d141",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Carga las especies AL30 y TX28 a arbitrar",
+                  "fullTitle": "Arbitraje Arbitraje de Especies Carga las especies AL30 y TX28 a arbitrar",
+                  "timedOut": null,
+                  "duration": 5986,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_arbitrajePage.arbitraje.addEspecies(`${_constants.default.HARD_DOLLAR}`, `${_constants.default.CER}`);",
+                  "err": {},
+                  "uuid": "df569d1d-94fb-48f3-987f-980c68c50811",
+                  "parentUUID": "0c3f8528-627a-45cc-9460-224a0545d141",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Hace clic en Arbitrar y valida que se muestren sus elementos correspondientes",
+                  "fullTitle": "Arbitraje Arbitraje de Especies Hace clic en Arbitrar y valida que se muestren sus elementos correspondientes",
+                  "timedOut": null,
+                  "duration": 4501,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_arbitrajePage.arbitraje.clickArbitrarButton();\n_sharedElements.sharedElements.cardBody().should('be.visible');\n_sharedElements.sharedElements.highchartsMenu().should('be.visible');\n_sharedElements.sharedElements.chartBackground().should('be.visible');\n_sharedElements.sharedElements.chartTrackerLine().should('be.visible');",
+                  "err": {},
+                  "uuid": "d5323184-234e-4e40-8a73-894afd51504b",
+                  "parentUUID": "0c3f8528-627a-45cc-9460-224a0545d141",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Va a la pestaña \"Paridad\" y valida sus elementos",
+                  "fullTitle": "Arbitraje Arbitraje de Especies Va a la pestaña \"Paridad\" y valida sus elementos",
+                  "timedOut": null,
+                  "duration": 5144,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_arbitrajePage.arbitraje.goToTab('Paridad');\n_sharedElements.sharedElements.cardBody().should('be.visible');\n_sharedElements.sharedElements.highchartsMenu().should('be.visible');\n_sharedElements.sharedElements.chartTrackerLine().should('be.visible');",
+                  "err": {},
+                  "uuid": "61b1642e-db23-4b0c-bd9c-7d1f2bdbe8bf",
+                  "parentUUID": "0c3f8528-627a-45cc-9460-224a0545d141",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Va a la pestaña \"Inversión\" y valida sus elementos",
+                  "fullTitle": "Arbitraje Arbitraje de Especies Va a la pestaña \"Inversión\" y valida sus elementos",
+                  "timedOut": null,
+                  "duration": 1973,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_arbitrajePage.arbitraje.goToTab('Inversión');\n_sharedElements.sharedElements.tableResponsive().should('be.visible');\n_arbitrajePage.arbitraje.elements.cardTitle(_constants.default.HARD_DOLLAR, _constants.default.CER).should('be.visible');\n_arbitrajePage.arbitraje.elements.bondCashflow(_constants.default.HARD_DOLLAR).should('be.visible');\n_arbitrajePage.arbitraje.elements.bondCashflow(_constants.default.CER).should('be.visible');\n_sharedElements.sharedElements.placeholderGlow().should('not.exist');",
+                  "err": {},
+                  "uuid": "cd63eb09-4a6a-4780-85fc-89b0ec54768c",
+                  "parentUUID": "0c3f8528-627a-45cc-9460-224a0545d141",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Va a la pestaña \"Scatter\" y valida sus elementos",
+                  "fullTitle": "Arbitraje Arbitraje de Especies Va a la pestaña \"Scatter\" y valida sus elementos",
+                  "timedOut": null,
+                  "duration": 5722,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_arbitrajePage.arbitraje.goToTab('Scatter');\n_sharedElements.sharedElements.cardBody().should('be.visible');\n_arbitrajePage.arbitraje.elements.scatterPoints().should('be.visible');\n_sharedElements.sharedElements.chartBackground().should('be.visible');",
+                  "err": {},
+                  "uuid": "63d785bb-1a76-4ced-894e-f2ac0a9c1416",
+                  "parentUUID": "0c3f8528-627a-45cc-9460-224a0545d141",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "e3e1fc69-8690-4423-8daf-71037c4764b7",
+                "df569d1d-94fb-48f3-987f-980c68c50811",
+                "d5323184-234e-4e40-8a73-894afd51504b",
+                "61b1642e-db23-4b0c-bd9c-7d1f2bdbe8bf",
+                "cd63eb09-4a6a-4780-85fc-89b0ec54768c",
+                "63d785bb-1a76-4ced-894e-f2ac0a9c1416"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 24601,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
