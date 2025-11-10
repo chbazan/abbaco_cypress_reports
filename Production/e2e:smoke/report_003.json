@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2025-11-09T12:17:50.093Z",
-    "end": "2025-11-09T12:18:09.277Z",
-    "duration": 19184,
+    "start": "2025-11-10T12:20:54.829Z",
+    "end": "2025-11-10T12:21:21.547Z",
+    "duration": 26718,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "99f0fec3-7fbe-4227-a6cb-607bc83bb307",
+      "uuid": "b6691d6a-6c56-4e02-878d-5acc53a245ee",
       "title": "",
       "fullFile": "cypress/e2e/smoke/graficador.cy.js",
       "file": "cypress/e2e/smoke/graficador.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "2699c1ff-361f-4316-bb11-b99065e377ef",
+          "uuid": "e939c47d-1aa5-4684-af6c-67d97aed5c47",
           "title": "Graficador",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Selecciona todas las curvas, hace clic en \"Graficar\" y espera que se muestren sus elementos correspondientes",
               "fullTitle": "Graficador Selecciona todas las curvas, hace clic en \"Graficar\" y espera que se muestren sus elementos correspondientes",
               "timedOut": null,
-              "duration": 10296,
+              "duration": 16670,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.visit(`${_constants.default.ABBACO_LOCATION}/plotter`);\n_graficadorPage.graficador.elements.selectCurvesDropdown().should('be.visible');\n_graficadorPage.graficador.clickCurvesDropdown();\n_graficadorPage.graficador.elements.firstCurve().should('be.visible');\n_graficadorPage.graficador.selectAllcurves();\n_graficadorPage.graficador.elements.chartElementsLegend().should('be.visible');\n_graficadorPage.graficador.elements.chartCardLegend().should('be.visible');",
               "err": {},
-              "uuid": "68d28c92-f1be-47a7-bae8-971377c6428f",
-              "parentUUID": "2699c1ff-361f-4316-bb11-b99065e377ef",
+              "uuid": "3c751134-212f-4d98-a962-27b56d257c31",
+              "parentUUID": "e939c47d-1aa5-4684-af6c-67d97aed5c47",
               "isHook": false,
               "skipped": false
             },
@@ -56,30 +56,30 @@
               "title": "Va a la pestaña Especies ingresa un bono, hace clic en \"Graficar\" y espera que se muestren sus elementos correspondientes ",
               "fullTitle": "Graficador Va a la pestaña Especies ingresa un bono, hace clic en \"Graficar\" y espera que se muestren sus elementos correspondientes ",
               "timedOut": null,
-              "duration": 5638,
+              "duration": 4047,
               "state": "passed",
-              "speed": "medium",
+              "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "_graficadorPage.graficador.goToTab('Especies');\n_graficadorPage.graficador.searchAndAddEspecie(_constants.default.HARD_DOLLAR);\n_sharedElements.sharedElements.highchartsMenu().should('be.visible');",
               "err": {},
-              "uuid": "48f4e0cc-7aae-4652-b928-6f7baeebc71c",
-              "parentUUID": "2699c1ff-361f-4316-bb11-b99065e377ef",
+              "uuid": "4c515f80-5a15-488d-a1eb-92eff66a6b83",
+              "parentUUID": "e939c47d-1aa5-4684-af6c-67d97aed5c47",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "68d28c92-f1be-47a7-bae8-971377c6428f",
-            "48f4e0cc-7aae-4652-b928-6f7baeebc71c"
+            "3c751134-212f-4d98-a962-27b56d257c31",
+            "4c515f80-5a15-488d-a1eb-92eff66a6b83"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 15934,
+          "duration": 20717,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
