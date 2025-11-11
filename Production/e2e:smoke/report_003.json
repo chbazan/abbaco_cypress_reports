@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2025-11-10T12:20:54.829Z",
-    "end": "2025-11-10T12:21:21.547Z",
-    "duration": 26718,
+    "start": "2025-11-11T12:20:28.704Z",
+    "end": "2025-11-11T12:21:02.026Z",
+    "duration": 33322,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "b6691d6a-6c56-4e02-878d-5acc53a245ee",
+      "uuid": "c905533c-9a6e-4bb3-be4c-b9d446430e45",
       "title": "",
       "fullFile": "cypress/e2e/smoke/graficador.cy.js",
       "file": "cypress/e2e/smoke/graficador.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "e939c47d-1aa5-4684-af6c-67d97aed5c47",
+          "uuid": "d2ff4b40-4940-446e-9d62-ab4a0251b5f1",
           "title": "Graficador",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Selecciona todas las curvas, hace clic en \"Graficar\" y espera que se muestren sus elementos correspondientes",
               "fullTitle": "Graficador Selecciona todas las curvas, hace clic en \"Graficar\" y espera que se muestren sus elementos correspondientes",
               "timedOut": null,
-              "duration": 16670,
+              "duration": 22906,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.visit(`${_constants.default.ABBACO_LOCATION}/plotter`);\n_graficadorPage.graficador.elements.selectCurvesDropdown().should('be.visible');\n_graficadorPage.graficador.clickCurvesDropdown();\n_graficadorPage.graficador.elements.firstCurve().should('be.visible');\n_graficadorPage.graficador.selectAllcurves();\n_graficadorPage.graficador.elements.chartElementsLegend().should('be.visible');\n_graficadorPage.graficador.elements.chartCardLegend().should('be.visible');",
               "err": {},
-              "uuid": "3c751134-212f-4d98-a962-27b56d257c31",
-              "parentUUID": "e939c47d-1aa5-4684-af6c-67d97aed5c47",
+              "uuid": "92c79ae6-1730-4f6c-88d1-bd41e5e7979e",
+              "parentUUID": "d2ff4b40-4940-446e-9d62-ab4a0251b5f1",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Va a la pestaña Especies ingresa un bono, hace clic en \"Graficar\" y espera que se muestren sus elementos correspondientes ",
               "fullTitle": "Graficador Va a la pestaña Especies ingresa un bono, hace clic en \"Graficar\" y espera que se muestren sus elementos correspondientes ",
               "timedOut": null,
-              "duration": 4047,
+              "duration": 4019,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "_graficadorPage.graficador.goToTab('Especies');\n_graficadorPage.graficador.searchAndAddEspecie(_constants.default.HARD_DOLLAR);\n_sharedElements.sharedElements.highchartsMenu().should('be.visible');",
               "err": {},
-              "uuid": "4c515f80-5a15-488d-a1eb-92eff66a6b83",
-              "parentUUID": "e939c47d-1aa5-4684-af6c-67d97aed5c47",
+              "uuid": "292e4a5f-eabc-49c5-b200-e5d123ccf78f",
+              "parentUUID": "d2ff4b40-4940-446e-9d62-ab4a0251b5f1",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "3c751134-212f-4d98-a962-27b56d257c31",
-            "4c515f80-5a15-488d-a1eb-92eff66a6b83"
+            "92c79ae6-1730-4f6c-88d1-bd41e5e7979e",
+            "292e4a5f-eabc-49c5-b200-e5d123ccf78f"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 20717,
+          "duration": 26925,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
