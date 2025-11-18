@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 0,
+    "passes": 1,
     "pending": 0,
-    "failures": 1,
-    "start": "2025-11-18T11:38:21.707Z",
-    "end": "2025-11-18T11:38:22.341Z",
-    "duration": 634,
+    "failures": 0,
+    "start": "2025-11-18T18:39:52.076Z",
+    "end": "2025-11-18T18:40:11.557Z",
+    "duration": 19481,
     "testsRegistered": 1,
-    "passPercent": 0,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "98eea729-b2f2-49f2-8bef-09c2251438ce",
+      "uuid": "9273c87a-9594-49b3-9c08-ea7bb1818784",
       "title": "",
       "fullFile": "cypress/e2e/sanity/01_login.cy.js",
       "file": "cypress/e2e/sanity/01_login.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "4925c30a-c268-4ac4-b23e-228d13a88097",
+          "uuid": "f0c697f8-b77b-4d75-9230-34638846e397",
           "title": "Login",
           "fullFile": "",
           "file": "",
@@ -38,33 +38,29 @@
               "title": "Login Abbaco",
               "fullTitle": "Login Login Abbaco",
               "timedOut": null,
-              "duration": 573,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 17177,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.clearAllLocalStorage();\ncy.clearAllCookies();\ncy.clearAllSessionStorage();\ncy.SessionAbbaco();",
-              "err": {
-                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://bonds.mercapabbaco.com/\n\nThe response we received from your web server was:\n\n  > 500: Internal Server Error\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.",
-                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://bonds.mercapabbaco.com/\n\nThe response we received from your web server was:\n\n  > 500: Internal Server Error\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n    at <unknown> (http://localhost:43285/__cypress/runner/cypress_runner.js:134966:76)\n    at visitFailedByErr (http://localhost:43285/__cypress/runner/cypress_runner.js:134536:12)\n    at <unknown> (http://localhost:43285/__cypress/runner/cypress_runner.js:134949:13)\n    at tryCatcher (http://localhost:43285/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (http://localhost:43285/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (http://localhost:43285/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (http://localhost:43285/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (http://localhost:43285/__cypress/runner/cypress_runner.js:1667:18)\n    at _drainQueueStep (http://localhost:43285/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (http://localhost:43285/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (http://localhost:43285/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (http://localhost:43285/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at cy.session.cacheAcrossSpecs [as setup] (webpack://cypress/./cypress/support/commands.js:60:9)\n    at Context.<anonymous> (http://localhost:43285/__cypress/runner/cypress_runner.js:136486:38)\n    at getRet (http://localhost:43285/__cypress/runner/cypress_runner.js:121549:20)\n    at tryCatcher (http://localhost:43285/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (http://localhost:43285/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (http://localhost:43285/__cypress/runner/cypress_runner.js:121560:66)\n    at Context.then (http://localhost:43285/__cypress/runner/cypress_runner.js:121811:21)\n    at wrapped (http://localhost:43285/__cypress/runner/cypress_runner.js:141517:19)",
-                "diff": null
-              },
-              "uuid": "baba0bd8-0cba-4cd7-a73a-f1e7e60aee54",
-              "parentUUID": "4925c30a-c268-4ac4-b23e-228d13a88097",
+              "err": {},
+              "uuid": "37ea6e4a-1956-4315-a24f-1411fc8945c7",
+              "parentUUID": "f0c697f8-b77b-4d75-9230-34638846e397",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "baba0bd8-0cba-4cd7-a73a-f1e7e60aee54"
+          "passes": [
+            "37ea6e4a-1956-4315-a24f-1411fc8945c7"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 573,
+          "duration": 17177,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
