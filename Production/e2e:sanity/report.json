@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 1,
+    "suites": 0,
     "tests": 1,
-    "passes": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 0,
-    "start": "2025-12-15T18:13:57.093Z",
-    "end": "2025-12-15T18:14:13.635Z",
-    "duration": 16542,
+    "failures": 1,
+    "start": "2025-12-16T11:35:27.705Z",
+    "end": "2025-12-16T11:35:27.935Z",
+    "duration": 230,
     "testsRegistered": 1,
-    "passPercent": 100,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,61 +18,46 @@
   },
   "results": [
     {
-      "uuid": "45088087-0fa0-490d-b09e-3b8eb7adda94",
+      "uuid": "776dd2d9-673d-48ba-9933-f42c8de69aa5",
       "title": "",
-      "fullFile": "cypress/e2e/sanity/01_login.cy.js",
-      "file": "cypress/e2e/sanity/01_login.cy.js",
+      "fullFile": "cypress/e2e/cotizaciones/cleaner.cy.js",
+      "file": "cypress/e2e/cotizaciones/cleaner.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
-      "tests": [],
-      "suites": [
+      "tests": [
         {
-          "uuid": "9dcec83e-5629-4425-a361-5f6d3c672cb9",
-          "title": "Login",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "Login Abbaco",
-              "fullTitle": "Login Login Abbaco",
-              "timedOut": null,
-              "duration": 14123,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "cy.clearAllLocalStorage();\ncy.clearAllCookies();\ncy.clearAllSessionStorage();\ncy.SessionAbbaco();",
-              "err": {},
-              "uuid": "5614af70-db21-4e4f-8e43-809853efba1a",
-              "parentUUID": "9dcec83e-5629-4425-a361-5f6d3c672cb9",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "5614af70-db21-4e4f-8e43-809853efba1a"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 14123,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
+          "title": "An uncaught error was detected outside of a test",
+          "fullTitle": "An uncaught error was detected outside of a test",
+          "timedOut": null,
+          "duration": 165,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "throw err;",
+          "err": {
+            "message": "Error: The following error originated from your test code, not from Cypress.\n\n  > Environment variable: PEPPER_LOCATION, is not set\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.",
+            "estack": "Error: The following error originated from your test code, not from Cypress.\n\n  > Environment variable: PEPPER_LOCATION, is not set\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.\n    at eval (webpack://cypress/./cypress/support/constants.js:41:10)\n    at Array.forEach (<anonymous>)\n    at ./cypress/support/constants.js (webpack://cypress/./cypress/support/constants.js:38:15)\n    at __webpack_require__ (webpack://cypress/webpack/bootstrap:19:0)\n    at ./cypress/support/commands.js (webpack://cypress/./cypress/support/commands.js:27:0)\n    at __webpack_require__ (webpack://cypress/webpack/bootstrap:19:0)\n    at eval (webpack://cypress/./cypress/support/e2e.js:17:0)\n    at eval (http://localhost:39579/__cypress/tests?p=cypress/support/e2e.js:24879:3)\n    at eval (http://localhost:39579/__cypress/tests?p=cypress/support/e2e.js:24881:12)\n    at eval (<anonymous>)",
+            "diff": null
+          },
+          "uuid": "816db975-7d89-4a56-9b29-bc16a571089d",
+          "parentUUID": "776dd2d9-673d-48ba-9933-f42c8de69aa5",
+          "isHook": false,
+          "skipped": false
         }
       ],
+      "suites": [],
       "passes": [],
-      "failures": [],
+      "failures": [
+        "816db975-7d89-4a56-9b29-bc16a571089d"
+      ],
       "pending": [],
       "skipped": [],
-      "duration": 0,
+      "duration": 165,
       "root": true,
-      "rootEmpty": true,
+      "rootEmpty": false,
       "_timeout": 2000
     }
   ],
