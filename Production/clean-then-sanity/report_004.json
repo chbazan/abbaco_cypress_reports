@@ -5,20 +5,20 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-12-18T11:39:44.064Z",
-    "end": "2025-12-18T11:39:44.126Z",
-    "duration": 62,
-    "testsRegistered": 5,
-    "passPercent": 20,
+    "start": "2025-12-18T18:18:14.875Z",
+    "end": "2025-12-18T18:18:14.932Z",
+    "duration": 57,
+    "testsRegistered": 6,
+    "passPercent": 16.666666666666664,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
-    "skipped": 4,
+    "skipped": 5,
     "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "64614d0f-8ebe-4a3c-86c2-fb2a61c3a7f3",
+      "uuid": "f2662c8e-0ee4-40fc-8bc7-4a6fab832462",
       "title": "",
       "fullFile": "cypress/e2e/sanity/favoritos.cy.js",
       "file": "cypress/e2e/sanity/favoritos.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a610a4fa-06ff-4506-9366-502d5f775b02",
+          "uuid": "1bcef4db-15b8-47e1-89be-270fddcc129c",
           "title": "Favoritos",
           "fullFile": "",
           "file": "",
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.visit(_constants.default.ABBACO_LOCATION);\ncy.buscarYAnalizarEspecie(_constants.default.HARD_DOLLAR);\n_favoritosPage.favoritos.saveFavorite();\n_favoritosPage.favoritos.elements.favoriteSavedButton().should('be.visible');",
               "err": {},
-              "uuid": "6c7c0a82-2f9b-4b18-ba16-5791d01e2460",
-              "parentUUID": "a610a4fa-06ff-4506-9366-502d5f775b02",
+              "uuid": "fb997298-568c-4eac-83d5-95ab7dd07c6f",
+              "parentUUID": "1bcef4db-15b8-47e1-89be-270fddcc129c",
               "isHook": false,
               "skipped": false
             },
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.buscarYAnalizarEspecie(_constants.default.DOLLAR_LINKED);\n_favoritosPage.favoritos.saveFavorite();\n_favoritosPage.favoritos.elements.favoriteSavedButton().should('be.visible');",
               "err": {},
-              "uuid": "bc8a339a-6858-4153-a1ce-8523d6c279d3",
-              "parentUUID": "a610a4fa-06ff-4506-9366-502d5f775b02",
+              "uuid": "5b87e231-d43f-4e77-96f1-4379b31cf5c7",
+              "parentUUID": "1bcef4db-15b8-47e1-89be-270fddcc129c",
               "isHook": false,
               "skipped": true
             },
@@ -83,8 +83,8 @@
               "context": null,
               "code": "cy.buscarYAnalizarEspecie(_constants.default.TASA_VARIABLE);\n_favoritosPage.favoritos.saveFavorite();\n_favoritosPage.favoritos.elements.favoriteSavedButton().should('be.visible');",
               "err": {},
-              "uuid": "7f92ee5c-bde7-4576-98f0-110ed17a22e8",
-              "parentUUID": "a610a4fa-06ff-4506-9366-502d5f775b02",
+              "uuid": "46e50820-3a4d-450e-b45d-7135c0deec05",
+              "parentUUID": "1bcef4db-15b8-47e1-89be-270fddcc129c",
               "isHook": false,
               "skipped": true
             },
@@ -101,8 +101,8 @@
               "context": null,
               "code": "cy.buscarYAnalizarEspecie(_constants.default.CER);\n_favoritosPage.favoritos.saveFavorite();\n_favoritosPage.favoritos.elements.favoriteSavedButton().should('be.visible');",
               "err": {},
-              "uuid": "07d9238e-47a9-49a1-acac-f37ddd2e8993",
-              "parentUUID": "a610a4fa-06ff-4506-9366-502d5f775b02",
+              "uuid": "4814d134-d156-40d2-93af-5bcbb9ee41ba",
+              "parentUUID": "1bcef4db-15b8-47e1-89be-270fddcc129c",
               "isHook": false,
               "skipped": true
             },
@@ -119,23 +119,42 @@
               "context": null,
               "code": "cy.visit(_constants.default.ABBACO_LOCATION);\ncy.validarFavoritosHome(bonos);",
               "err": {},
-              "uuid": "ca70a3c6-47da-43e7-84cb-185d7f3286f3",
-              "parentUUID": "a610a4fa-06ff-4506-9366-502d5f775b02",
+              "uuid": "87e56ad9-0f32-43e3-a9e8-b8dadd39098d",
+              "parentUUID": "1bcef4db-15b8-47e1-89be-270fddcc129c",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Eliminar de favoritos las especies AL30, BDC28, TX28 y PNRCO",
+              "fullTitle": "Favoritos Eliminar de favoritos las especies AL30, BDC28, TX28 y PNRCO",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.cleanFavoritosHome(bonos);",
+              "err": {},
+              "uuid": "82516512-0951-44fa-bfcd-fdcd55d11821",
+              "parentUUID": "1bcef4db-15b8-47e1-89be-270fddcc129c",
               "isHook": false,
               "skipped": true
             }
           ],
           "suites": [],
           "passes": [
-            "6c7c0a82-2f9b-4b18-ba16-5791d01e2460"
+            "fb997298-568c-4eac-83d5-95ab7dd07c6f"
           ],
           "failures": [],
           "pending": [],
           "skipped": [
-            "bc8a339a-6858-4153-a1ce-8523d6c279d3",
-            "7f92ee5c-bde7-4576-98f0-110ed17a22e8",
-            "07d9238e-47a9-49a1-acac-f37ddd2e8993",
-            "ca70a3c6-47da-43e7-84cb-185d7f3286f3"
+            "5b87e231-d43f-4e77-96f1-4379b31cf5c7",
+            "46e50820-3a4d-450e-b45d-7135c0deec05",
+            "4814d134-d156-40d2-93af-5bcbb9ee41ba",
+            "87e56ad9-0f32-43e3-a9e8-b8dadd39098d",
+            "82516512-0951-44fa-bfcd-fdcd55d11821"
           ],
           "duration": 0,
           "root": false,
