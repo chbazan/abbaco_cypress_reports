@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 2,
-    "passes": 0,
-    "pending": 1,
-    "failures": 1,
-    "start": "2025-12-17T18:18:43.490Z",
-    "end": "2025-12-17T18:20:54.327Z",
-    "duration": 130837,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-12-18T11:39:44.064Z",
+    "end": "2025-12-18T11:39:44.126Z",
+    "duration": 62,
     "testsRegistered": 5,
-    "passPercent": 0,
-    "pendingPercent": 20,
+    "passPercent": 20,
+    "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
-    "skipped": 3,
+    "skipped": 4,
     "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "846b6511-f04a-42e5-8345-33062aaf47a9",
+      "uuid": "64614d0f-8ebe-4a3c-86c2-fb2a61c3a7f3",
       "title": "",
       "fullFile": "cypress/e2e/sanity/favoritos.cy.js",
       "file": "cypress/e2e/sanity/favoritos.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "7b61e094-f87f-4bf2-8098-39d32b1ad538",
+          "uuid": "a610a4fa-06ff-4506-9366-502d5f775b02",
           "title": "Favoritos",
           "fullFile": "",
           "file": "",
@@ -38,21 +38,17 @@
               "title": "Guardar como favorita la especie AL30",
               "fullTitle": "Favoritos Guardar como favorita la especie AL30",
               "timedOut": null,
-              "duration": 128419,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.visit(_constants.default.ABBACO_LOCATION);\ncy.buscarYAnalizarEspecie(_constants.default.HARD_DOLLAR);\n_favoritosPage.favoritos.saveFavorite();\n_favoritosPage.favoritos.elements.favoriteSavedButton().should('be.visible');",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 120000ms: Expected to find content: 'Guardar como favorito' within the selector: 'button' but never did.",
-                "estack": "AssertionError: Timed out retrying after 120000ms: Expected to find content: 'Guardar como favorito' within the selector: 'button' but never did.\n    at Object.favoriteButton (webpack://cypress/./cypress/support/pages/favoritosPage.js:4:33)\n    at Favoritos.saveFavorite (webpack://cypress/./cypress/support/pages/favoritosPage.js:15:22)\n    at Context.eval (webpack://cypress/./cypress/e2e/sanity/favoritos.cy.js:14:14)",
-                "diff": null
-              },
-              "uuid": "2d3da3c6-af3f-4810-9a48-30ff790b3f80",
-              "parentUUID": "7b61e094-f87f-4bf2-8098-39d32b1ad538",
+              "err": {},
+              "uuid": "6c7c0a82-2f9b-4b18-ba16-5791d01e2460",
+              "parentUUID": "a610a4fa-06ff-4506-9366-502d5f775b02",
               "isHook": false,
               "skipped": false
             },
@@ -61,18 +57,18 @@
               "fullTitle": "Favoritos Guardar como favorita la especie PNRCO",
               "timedOut": null,
               "duration": 0,
-              "state": "pending",
+              "state": "skipped",
               "speed": null,
               "pass": false,
               "fail": false,
-              "pending": true,
+              "pending": false,
               "context": null,
               "code": "cy.buscarYAnalizarEspecie(_constants.default.DOLLAR_LINKED);\n_favoritosPage.favoritos.saveFavorite();\n_favoritosPage.favoritos.elements.favoriteSavedButton().should('be.visible');",
               "err": {},
-              "uuid": "a96814f6-4951-46d7-a109-dcf8c3fb331e",
-              "parentUUID": "7b61e094-f87f-4bf2-8098-39d32b1ad538",
+              "uuid": "bc8a339a-6858-4153-a1ce-8523d6c279d3",
+              "parentUUID": "a610a4fa-06ff-4506-9366-502d5f775b02",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             },
             {
               "title": "Guardar como favorita la especie BDC28",
@@ -87,8 +83,8 @@
               "context": null,
               "code": "cy.buscarYAnalizarEspecie(_constants.default.TASA_VARIABLE);\n_favoritosPage.favoritos.saveFavorite();\n_favoritosPage.favoritos.elements.favoriteSavedButton().should('be.visible');",
               "err": {},
-              "uuid": "6475c144-3dc5-44b5-a097-464f74844215",
-              "parentUUID": "7b61e094-f87f-4bf2-8098-39d32b1ad538",
+              "uuid": "7f92ee5c-bde7-4576-98f0-110ed17a22e8",
+              "parentUUID": "a610a4fa-06ff-4506-9366-502d5f775b02",
               "isHook": false,
               "skipped": true
             },
@@ -105,8 +101,8 @@
               "context": null,
               "code": "cy.buscarYAnalizarEspecie(_constants.default.CER);\n_favoritosPage.favoritos.saveFavorite();\n_favoritosPage.favoritos.elements.favoriteSavedButton().should('be.visible');",
               "err": {},
-              "uuid": "6a13faa0-807b-4847-aba2-9e17f68b5bc5",
-              "parentUUID": "7b61e094-f87f-4bf2-8098-39d32b1ad538",
+              "uuid": "07d9238e-47a9-49a1-acac-f37ddd2e8993",
+              "parentUUID": "a610a4fa-06ff-4506-9366-502d5f775b02",
               "isHook": false,
               "skipped": true
             },
@@ -123,26 +119,25 @@
               "context": null,
               "code": "cy.visit(_constants.default.ABBACO_LOCATION);\ncy.validarFavoritosHome(bonos);",
               "err": {},
-              "uuid": "74b5c841-bc0a-4658-82f6-9810252fbc5d",
-              "parentUUID": "7b61e094-f87f-4bf2-8098-39d32b1ad538",
+              "uuid": "ca70a3c6-47da-43e7-84cb-185d7f3286f3",
+              "parentUUID": "a610a4fa-06ff-4506-9366-502d5f775b02",
               "isHook": false,
               "skipped": true
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "2d3da3c6-af3f-4810-9a48-30ff790b3f80"
+          "passes": [
+            "6c7c0a82-2f9b-4b18-ba16-5791d01e2460"
           ],
-          "pending": [
-            "a96814f6-4951-46d7-a109-dcf8c3fb331e"
-          ],
+          "failures": [],
+          "pending": [],
           "skipped": [
-            "6475c144-3dc5-44b5-a097-464f74844215",
-            "6a13faa0-807b-4847-aba2-9e17f68b5bc5",
-            "74b5c841-bc0a-4658-82f6-9810252fbc5d"
+            "bc8a339a-6858-4153-a1ce-8523d6c279d3",
+            "7f92ee5c-bde7-4576-98f0-110ed17a22e8",
+            "07d9238e-47a9-49a1-acac-f37ddd2e8993",
+            "ca70a3c6-47da-43e7-84cb-185d7f3286f3"
           ],
-          "duration": 128419,
+          "duration": 0,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
