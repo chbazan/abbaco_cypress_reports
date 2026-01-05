@@ -1,0 +1,224 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-01-05T14:38:27.168Z",
+    "end": "2026-01-05T14:38:27.224Z",
+    "duration": 56,
+    "testsRegistered": 7,
+    "passPercent": 14.285714285714285,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 6,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "bca50c00-9af9-4f5c-a024-851579a41434",
+      "title": "",
+      "fullFile": "cypress/e2e/staging/argentina/smoke/screener.cy.js",
+      "file": "cypress/e2e/staging/argentina/smoke/screener.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "eda9de74-2f40-4a4f-8553-b6e1050436d5",
+          "title": "Screener",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ingresar al menú Screener",
+              "fullTitle": "Screener Ingresar al menú Screener",
+              "timedOut": null,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(_constants.default.ABBACO_LOCATION);\n_screenerPage.screener.clickMenuScreener();\n_screenerPage.screener.elements.termsButtonAccordion().should('be.visible');\n_screenerPage.screener.elements.accordionBody().should('be.visible');",
+              "err": {},
+              "uuid": "bb57a527-f619-4062-833d-fac66c5c1052",
+              "parentUUID": "eda9de74-2f40-4a4f-8553-b6e1050436d5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Selecciona tipo de deuda \"Obligación Negociable\"",
+              "fullTitle": "Screener Selecciona tipo de deuda \"Obligación Negociable\"",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_screenerPage.screener.clickNegotiableObligation();\n_screenerPage.screener.elements.negotiableObligationOption().should('be.visible');",
+              "err": {},
+              "uuid": "4e35cd1c-9bae-4d3d-836d-efe0cc0f524b",
+              "parentUUID": "eda9de74-2f40-4a4f-8553-b6e1050436d5",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Selecciona USD en \"Moneda de Pago\"",
+              "fullTitle": "Screener Selecciona USD en \"Moneda de Pago\"",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_screenerPage.screener.addcurrencyPayment();\n_screenerPage.screener.elements.USDCurrencyOption().should('be.visible');",
+              "err": {},
+              "uuid": "83d18092-ce1c-463f-9f47-d17499c01456",
+              "parentUUID": "eda9de74-2f40-4a4f-8553-b6e1050436d5",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Selecciona Ley Argentina en \"Ley\"",
+              "fullTitle": "Screener Selecciona Ley Argentina en \"Ley\"",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_screenerPage.screener.addlaw();\n_screenerPage.screener.elements.argentinaLawOption().should('be.visible');",
+              "err": {},
+              "uuid": "ead6b723-3137-4eae-a234-df5b6cfc8165",
+              "parentUUID": "eda9de74-2f40-4a4f-8553-b6e1050436d5",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Selecciona YPF S.A. en \"Seleccionar Emisor\"",
+              "fullTitle": "Screener Selecciona YPF S.A. en \"Seleccionar Emisor\"",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_screenerPage.screener.addBondIssuer();\n_screenerPage.screener.elements.issuer().should('be.visible');",
+              "err": {},
+              "uuid": "4e792346-c908-4fb9-9705-236bae2b9b69",
+              "parentUUID": "eda9de74-2f40-4a4f-8553-b6e1050436d5",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Hacer clic en \"Buscar\" luego de haber seleccionado los filtros",
+              "fullTitle": "Screener Hacer clic en \"Buscar\" luego de haber seleccionado los filtros",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_screenerPage.screener.clickSearchButton();",
+              "err": {},
+              "uuid": "897f7e07-76a6-4797-809d-ff029795ebc9",
+              "parentUUID": "eda9de74-2f40-4a4f-8553-b6e1050436d5",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Verifica que se encuentre el bono YMC1O en el resultado de la búsqueda",
+              "fullTitle": "Screener Verifica que se encuentre el bono YMC1O en el resultado de la búsqueda",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_sharedElements.sharedElements.cardBody().should('be.visible');\n_screenerPage.screener.elements.ONbond().should('be.visible');",
+              "err": {},
+              "uuid": "95531718-d605-4ae0-9409-57dc9daa893b",
+              "parentUUID": "eda9de74-2f40-4a4f-8553-b6e1050436d5",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bb57a527-f619-4062-833d-fac66c5c1052"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [
+            "4e35cd1c-9bae-4d3d-836d-efe0cc0f524b",
+            "83d18092-ce1c-463f-9f47-d17499c01456",
+            "ead6b723-3137-4eae-a234-df5b6cfc8165",
+            "4e792346-c908-4fb9-9705-236bae2b9b69",
+            "897f7e07-76a6-4797-809d-ff029795ebc9",
+            "95531718-d605-4ae0-9409-57dc9daa893b"
+          ],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

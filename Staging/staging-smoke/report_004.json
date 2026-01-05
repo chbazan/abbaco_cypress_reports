@@ -1,0 +1,185 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-01-05T14:33:41.617Z",
+    "end": "2026-01-05T14:33:53.130Z",
+    "duration": 11513,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c6f68805-c7f3-4a65-9bce-b412b2525c03",
+      "title": "",
+      "fullFile": "cypress/e2e/staging/argentina/smoke/comparar.cy.js",
+      "file": "cypress/e2e/staging/argentina/smoke/comparar.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "29cb414f-908d-4a0e-9f59-9cc70aa71fe8",
+          "title": "Comparar",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ingresar al menú \"Comparar\"",
+              "fullTitle": "Comparar Ingresar al menú \"Comparar\"",
+              "timedOut": null,
+              "duration": 848,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(`${_constants.default.ABBACO_LOCATION}/security-comparison`);",
+              "err": {},
+              "uuid": "ba007358-dfa8-49bc-873f-b459cd0f146b",
+              "parentUUID": "29cb414f-908d-4a0e-9f59-9cc70aa71fe8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Añadir las especies AL30 y TX28",
+              "fullTitle": "Comparar Añadir las especies AL30 y TX28",
+              "timedOut": null,
+              "duration": 5841,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_compararPage.comparar.searchAndAddEspecie(`${_constants.default.HARD_DOLLAR}`);\n//Valida que no esté el título cuando se agregó la especie\ncy.contains('Agregue especies utilizando el formulario para comenzar').should('not.exist');\n_compararPage.comparar.searchAndAddEspecie(`${_constants.default.CER}`);\n_sharedElements.sharedElements.placeholderGlow().should('not.exist');\n_sharedElements.sharedElements.tableRow().should('contain.text', `${_constants.default.HARD_DOLLAR}`);\n_sharedElements.sharedElements.tableRow().should('contain.text', `${_constants.default.CER}`);",
+              "err": {},
+              "uuid": "c1ee8565-df91-4c44-931e-2332bf61933d",
+              "parentUUID": "29cb414f-908d-4a0e-9f59-9cc70aa71fe8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ir a \"Condiciones de Emisión\" y validar",
+              "fullTitle": "Comparar Ir a \"Condiciones de Emisión\" y validar",
+              "timedOut": null,
+              "duration": 1314,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_compararPage.comparar.goToTab('Condiciones de Emisión');\n//validaciones\n_sharedElements.sharedElements.placeholderGlow().should('not.exist');\n_sharedElements.sharedElements.tableRow().should('contain.text', `${_constants.default.HARD_DOLLAR}`);\n_sharedElements.sharedElements.tableRow().should('contain.text', `${_constants.default.CER}`);",
+              "err": {},
+              "uuid": "904560b1-e5d8-4357-bbd8-2dcd910b2946",
+              "parentUUID": "29cb414f-908d-4a0e-9f59-9cc70aa71fe8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Eliminar especie AL30",
+              "fullTitle": "Comparar Eliminar especie AL30",
+              "timedOut": null,
+              "duration": 434,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_compararPage.comparar.goToTab('Análisis');\n_compararPage.comparar.deleteEspecie(`${_constants.default.HARD_DOLLAR}`);\n//Validaciones\n_sharedElements.sharedElements.tableRows().contains('button', `${_constants.default.HARD_DOLLAR}`).should('not.exist');",
+              "err": {},
+              "uuid": "25fe282a-3cc1-4202-9ce9-22e352f59bf8",
+              "parentUUID": "29cb414f-908d-4a0e-9f59-9cc70aa71fe8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Eliminar especie TX28 y validar mensaje vacío",
+              "fullTitle": "Comparar Eliminar especie TX28 y validar mensaje vacío",
+              "timedOut": null,
+              "duration": 713,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_compararPage.comparar.deleteEspecie(`${_constants.default.CER}`);\n//Validaciones\n_sharedElements.sharedElements.tableRows().contains('button', `${_constants.default.CER}`).should('not.exist');\ncy.contains('Agregue especies utilizando el formulario para comenzar').should('be.visible');",
+              "err": {},
+              "uuid": "b71af37c-3f61-4cdc-95cd-9c57fc6563b8",
+              "parentUUID": "29cb414f-908d-4a0e-9f59-9cc70aa71fe8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ba007358-dfa8-49bc-873f-b459cd0f146b",
+            "c1ee8565-df91-4c44-931e-2332bf61933d",
+            "904560b1-e5d8-4357-bbd8-2dcd910b2946",
+            "25fe282a-3cc1-4202-9ce9-22e352f59bf8",
+            "b71af37c-3f61-4cdc-95cd-9c57fc6563b8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9150,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-01-05T14:31:32.919Z",
+    "end": "2026-01-05T14:33:39.325Z",
+    "duration": 126406,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4dbf5925-b269-4850-b7d9-872eee2d23f2",
+      "title": "",
+      "fullFile": "cypress/e2e/staging/argentina/smoke/calculadora.cy.js",
+      "file": "cypress/e2e/staging/argentina/smoke/calculadora.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "96526f43-a06a-4fba-b466-ad3ff6b23828",
+          "title": "Calculadora",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ingresar al Home e ingresar al menú \"Calculadora\"",
+              "fullTitle": "Calculadora Ingresar al Home e ingresar al menú \"Calculadora\"",
+              "timedOut": null,
+              "duration": 4605,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(`${_constants.default.ABBACO_LOCATION}/calculator`);\n_calculadoraPage.calculadora.elements.calculadoraTitle().should('be.visible');\n_sharedElements.sharedElements.cardBody().should('be.visible');\n_calculadoraPage.calculadora.elements.addSimulationButton().should('be.visible');",
+              "err": {},
+              "uuid": "ee3d26c5-9c6d-4d48-82f0-e7821e442ef7",
+              "parentUUID": "96526f43-a06a-4fba-b466-ad3ff6b23828",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Simular inversiones de la especie AL30 y validar que se muestren correctamente",
+              "fullTitle": "Calculadora Simular inversiones de la especie AL30 y validar que se muestren correctamente",
+              "timedOut": null,
+              "duration": 111609,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_calculadoraPage.calculadora.elements.calculadoraTitle().should('be.visible');\ncy.crearSimulacion({\n  especie: _constants.default.HARD_DOLLAR,\n  fecha: 'C.I',\n  tipo: 'Dirty',\n  cantidad: 10000,\n  valor: 83210,\n  tipoCambio: 1420\n});\ncy.crearSimulacion({\n  especie: _constants.default.HARD_DOLLAR,\n  fecha: '24Hs',\n  tipo: 'Yield',\n  cantidad: 1000,\n  valor: 20,\n  tipoCambio: 1420\n});\ncy.crearSimulacion({\n  especie: _constants.default.HARD_DOLLAR,\n  fecha: 'C.I',\n  tipo: 'Dirty',\n  cantidad: 5000,\n  valor: 83210,\n  tipoCambio: 1420\n});\ncy.crearSimulacion({\n  especie: _constants.default.HARD_DOLLAR,\n  fecha: 'C.I',\n  tipo: 'Yield',\n  cantidad: 10000,\n  valor: 20,\n  tipoCambio: 1420\n});\ncy.crearSimulacion({\n  especie: _constants.default.HARD_DOLLAR,\n  fecha: 'C.I',\n  tipo: 'Dirty',\n  cantidad: 2000,\n  valor: 83210,\n  tipoCambio: 1420\n});\ncy.crearSimulacion({\n  especie: _constants.default.HARD_DOLLAR,\n  fecha: '24Hs',\n  tipo: 'Yield',\n  cantidad: 1000,\n  valor: 20,\n  tipoCambio: 1420\n});\ncy.crearSimulacion({\n  especie: _constants.default.HARD_DOLLAR,\n  fecha: 'C.I',\n  tipo: 'Dirty',\n  cantidad: 1500,\n  valor: 83210,\n  tipoCambio: 1420\n});\ncy.crearSimulacion({\n  especie: _constants.default.HARD_DOLLAR,\n  fecha: 'C.I',\n  tipo: 'Yield',\n  cantidad: 50000,\n  valor: 20,\n  tipoCambio: 1420\n});\ncy.crearSimulacion({\n  especie: _constants.default.HARD_DOLLAR,\n  fecha: 'C.I.',\n  tipo: 'Dirty',\n  valor: 83210,\n  cantidad: '10',\n  tipoCambio: 1420,\n  conComision: true,\n  tipoComision: 'ARS',\n  valorComision: 100\n});\ncy.crearSimulacion({\n  especie: _constants.default.HARD_DOLLAR,\n  fecha: '24Hs',\n  tipo: 'Dirty',\n  valor: 83210,\n  cantidad: '10',\n  tipoCambio: 1420,\n  conComision: true,\n  tipoComision: '%',\n  valorComision: 2\n});\ncy.crearSimulacion({\n  especie: _constants.default.HARD_DOLLAR,\n  fecha: 'C.I.',\n  tipo: 'Dirty',\n  valor: 83210,\n  cantidad: '10',\n  tipoCambio: 1420,\n  conComision: true,\n  tipoComision: '%',\n  valorComision: '1.5'\n});\ncy.crearSimulacion({\n  especie: _constants.default.HARD_DOLLAR,\n  fecha: 'C.I.',\n  tipo: 'Dirty',\n  valor: 83210,\n  cantidad: '10',\n  tipoCambio: 1420,\n  conComision: true,\n  tipoComision: 'ARS',\n  valorComision: 200\n});\n_calculadoraPage.calculadora.elements.tableSimulations().should('be.visible');\ncy.validarGraficoSimulaciones();",
+              "err": {},
+              "uuid": "8582758a-2225-4c1d-89fd-7a49e9a131b6",
+              "parentUUID": "96526f43-a06a-4fba-b466-ad3ff6b23828",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Editar P. Simulado, de la primera simulación y verificar en la tabla de Simulaciones",
+              "fullTitle": "Calculadora Editar P. Simulado, de la primera simulación y verificar en la tabla de Simulaciones",
+              "timedOut": null,
+              "duration": 3199,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.editarPrecioSimulado('90.000,00');\n_calculadoraPage.calculadora.elements.tableSimulations().should('be.visible');",
+              "err": {},
+              "uuid": "33b860be-bf3f-4958-af9a-d4a2c4a8c632",
+              "parentUUID": "96526f43-a06a-4fba-b466-ad3ff6b23828",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Editar la TIR de la primera simulación y verificar en la tabla de Simulaciones",
+              "fullTitle": "Calculadora Editar la TIR de la primera simulación y verificar en la tabla de Simulaciones",
+              "timedOut": null,
+              "duration": 3006,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.editarTIR('15');\n_calculadoraPage.calculadora.elements.tableSimulations().should('be.visible');",
+              "err": {},
+              "uuid": "4d8aebc4-d2ae-4e00-8209-616936145282",
+              "parentUUID": "96526f43-a06a-4fba-b466-ad3ff6b23828",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ocultar gŕafico de simulaciones",
+              "fullTitle": "Calculadora Ocultar gŕafico de simulaciones",
+              "timedOut": null,
+              "duration": 525,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_calculadoraPage.calculadora.elements.hideChartButton().click();\n_calculadoraPage.calculadora.elements.chartContainer().should('not.exist');\n_calculadoraPage.calculadora.elements.showChartButton().click();\n_calculadoraPage.calculadora.elements.chartContainer().should('be.visible');",
+              "err": {},
+              "uuid": "3d60f5a5-affc-40b6-a6ae-6f72f6749abf",
+              "parentUUID": "96526f43-a06a-4fba-b466-ad3ff6b23828",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Eliminar una simulación de la tabla de Simulaciones",
+              "fullTitle": "Calculadora Eliminar una simulación de la tabla de Simulaciones",
+              "timedOut": null,
+              "duration": 251,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.eliminarSimulacion();\n_calculadoraPage.calculadora.elements.pointsButton().should('have.length', 11);",
+              "err": {},
+              "uuid": "f97e1c6e-f760-40e8-b41c-1b46ad515537",
+              "parentUUID": "96526f43-a06a-4fba-b466-ad3ff6b23828",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Eliminar todas las simulaciones",
+              "fullTitle": "Calculadora Eliminar todas las simulaciones",
+              "timedOut": null,
+              "duration": 210,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_calculadoraPage.calculadora.deleteAllSimulations();\n_calculadoraPage.calculadora.elements.noSimulationsTitle().should('be.visible');",
+              "err": {},
+              "uuid": "0fb5ee4a-26c1-40ac-9165-ef04ffa76ce3",
+              "parentUUID": "96526f43-a06a-4fba-b466-ad3ff6b23828",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ee3d26c5-9c6d-4d48-82f0-e7821e442ef7",
+            "8582758a-2225-4c1d-89fd-7a49e9a131b6",
+            "33b860be-bf3f-4958-af9a-d4a2c4a8c632",
+            "4d8aebc4-d2ae-4e00-8209-616936145282",
+            "3d60f5a5-affc-40b6-a6ae-6f72f6749abf",
+            "f97e1c6e-f760-40e8-b41c-1b46ad515537",
+            "0fb5ee4a-26c1-40ac-9165-ef04ffa76ce3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 123405,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
