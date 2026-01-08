@@ -12,13 +12,13 @@
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
-    "start": "2026-01-08T11:36:28.764Z",
-    "end": "2026-01-08T11:37:27.320Z",
-    "duration": 58556
+    "start": "2026-01-08T18:12:28.000Z",
+    "end": "2026-01-08T18:13:30.107Z",
+    "duration": 62107
   },
   "results": [
     {
-      "uuid": "6d53a587-f50a-4103-8527-a7c05108571f",
+      "uuid": "f616aec1-9142-4b3b-a775-405893dc790d",
       "title": "",
       "fullFile": "cypress/e2e/cleaner.cy.js",
       "file": "cypress/e2e/cleaner.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "be1067d4-7715-4f8a-b2fb-8e8951e5af8b",
+          "uuid": "a8e0a573-8245-4847-a9a6-29b93182fe39",
           "title": "Cleaner",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Eliminar todos los bonos favoritos en el Home",
               "fullTitle": "Cleaner Eliminar todos los bonos favoritos en el Home",
               "timedOut": null,
-              "duration": 20992,
+              "duration": 25077,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.visit(_constants.default.ABBACO_LOCATION);\ncy.pageIsLoaded();\n// El ambiente de testing/staging no suele tener todos los cuadros del home, para usar el cleaner en staging hay que comentar validacionesHome\ncy.validacionesHome();\ncy.cleanFavoritosHome(bonos);",
               "err": {},
-              "uuid": "7dde89a1-4ec3-48ea-bcb2-6cb462ab042c",
-              "parentUUID": "be1067d4-7715-4f8a-b2fb-8e8951e5af8b",
+              "uuid": "c8f69c30-a73e-4789-bee7-2e54cdc2a356",
+              "parentUUID": "a8e0a573-8245-4847-a9a6-29b93182fe39",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Eliminar los portafolios creados",
               "fullTitle": "Cleaner Eliminar los portafolios creados",
               "timedOut": null,
-              "duration": 4419,
+              "duration": 3788,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.visit(`${_constants.default.ABBACO_LOCATION}/security-position`);\n_portafolioPage.portafolio.cleanPortfoliosHome();",
               "err": {},
-              "uuid": "b2d8d182-2e20-46c7-8552-a96580912ee2",
-              "parentUUID": "be1067d4-7715-4f8a-b2fb-8e8951e5af8b",
+              "uuid": "e3926d1c-c13a-473d-b165-510191edfd1a",
+              "parentUUID": "a8e0a573-8245-4847-a9a6-29b93182fe39",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Eliminar todas las curvas favoritas",
               "fullTitle": "Cleaner Eliminar todas las curvas favoritas",
               "timedOut": null,
-              "duration": 30560,
+              "duration": 30581,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -87,23 +87,23 @@
                 "estack": "AssertionError: Timed out retrying after 30000ms: Expected to find content: 'Corporativos - ONs Dollar Linked - ARS' within the selector: 'ul.list-group li a.text-link' but never did.\n    at eval (webpack://cypress/./cypress/support/commands.js:1721:7)\nat Array.forEach (<anonymous>)\n    at Context.eval (webpack://cypress/./cypress/support/commands.js:1719:12)\n    at wrapped (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:141509:43)",
                 "diff": null
               },
-              "uuid": "23a339a4-40d0-4423-a64b-1b89dd35efa0",
-              "parentUUID": "be1067d4-7715-4f8a-b2fb-8e8951e5af8b",
+              "uuid": "ae23fdd0-a15a-46b0-8a2b-1eeec83feeaa",
+              "parentUUID": "a8e0a573-8245-4847-a9a6-29b93182fe39",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "7dde89a1-4ec3-48ea-bcb2-6cb462ab042c",
-            "b2d8d182-2e20-46c7-8552-a96580912ee2"
+            "c8f69c30-a73e-4789-bee7-2e54cdc2a356",
+            "e3926d1c-c13a-473d-b165-510191edfd1a"
           ],
           "failures": [
-            "23a339a4-40d0-4423-a64b-1b89dd35efa0"
+            "ae23fdd0-a15a-46b0-8a2b-1eeec83feeaa"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 55971,
+          "duration": 59446,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
