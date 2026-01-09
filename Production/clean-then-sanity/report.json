@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 3,
-    "passes": 2,
+    "passes": 3,
     "pending": 0,
-    "failures": 1,
-    "start": "2026-01-08T18:12:28.000Z",
-    "end": "2026-01-08T18:13:30.107Z",
-    "duration": 62107,
+    "failures": 0,
+    "start": "2026-01-09T11:35:57.473Z",
+    "end": "2026-01-09T11:36:33.163Z",
+    "duration": 35690,
     "testsRegistered": 3,
-    "passPercent": 66.66666666666666,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "f616aec1-9142-4b3b-a775-405893dc790d",
+      "uuid": "9d1f6eb9-0ef7-4388-928f-c4a8e3223024",
       "title": "",
       "fullFile": "cypress/e2e/cleaner.cy.js",
       "file": "cypress/e2e/cleaner.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a8e0a573-8245-4847-a9a6-29b93182fe39",
+          "uuid": "8945ddf1-93e2-49d2-ac41-75aed308baa0",
           "title": "Cleaner",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Eliminar todos los bonos favoritos en el Home",
               "fullTitle": "Cleaner Eliminar todos los bonos favoritos en el Home",
               "timedOut": null,
-              "duration": 25077,
+              "duration": 23785,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.visit(_constants.default.ABBACO_LOCATION);\ncy.pageIsLoaded();\n// El ambiente de testing/staging no suele tener todos los cuadros del home, para usar el cleaner en staging hay que comentar validacionesHome\ncy.validacionesHome();\ncy.cleanFavoritosHome(bonos);",
               "err": {},
-              "uuid": "c8f69c30-a73e-4789-bee7-2e54cdc2a356",
-              "parentUUID": "a8e0a573-8245-4847-a9a6-29b93182fe39",
+              "uuid": "b75349c6-9e85-4443-8e8d-27eb771a3505",
+              "parentUUID": "8945ddf1-93e2-49d2-ac41-75aed308baa0",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Eliminar los portafolios creados",
               "fullTitle": "Cleaner Eliminar los portafolios creados",
               "timedOut": null,
-              "duration": 3788,
+              "duration": 4197,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.visit(`${_constants.default.ABBACO_LOCATION}/security-position`);\n_portafolioPage.portafolio.cleanPortfoliosHome();",
               "err": {},
-              "uuid": "e3926d1c-c13a-473d-b165-510191edfd1a",
-              "parentUUID": "a8e0a573-8245-4847-a9a6-29b93182fe39",
+              "uuid": "58143ae7-5cbe-4cf6-b513-fb0cc1207aac",
+              "parentUUID": "8945ddf1-93e2-49d2-ac41-75aed308baa0",
               "isHook": false,
               "skipped": false
             },
@@ -74,36 +74,31 @@
               "title": "Eliminar todas las curvas favoritas",
               "fullTitle": "Cleaner Eliminar todas las curvas favoritas",
               "timedOut": null,
-              "duration": 30581,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 5103,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.visit(`${_constants.default.ABBACO_LOCATION}/curves`);\ncy.cleanFavoritosCurvas(CURVAS_FAVORITAS);",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 30000ms: Expected to find content: 'Corporativos - ONs Dollar Linked - ARS' within the selector: 'ul.list-group li a.text-link' but never did.",
-                "estack": "AssertionError: Timed out retrying after 30000ms: Expected to find content: 'Corporativos - ONs Dollar Linked - ARS' within the selector: 'ul.list-group li a.text-link' but never did.\n    at eval (webpack://cypress/./cypress/support/commands.js:1721:7)\nat Array.forEach (<anonymous>)\n    at Context.eval (webpack://cypress/./cypress/support/commands.js:1719:12)\n    at wrapped (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:141509:43)",
-                "diff": null
-              },
-              "uuid": "ae23fdd0-a15a-46b0-8a2b-1eeec83feeaa",
-              "parentUUID": "a8e0a573-8245-4847-a9a6-29b93182fe39",
+              "err": {},
+              "uuid": "f11b31ff-8858-4c3b-8aa8-c46c342b558c",
+              "parentUUID": "8945ddf1-93e2-49d2-ac41-75aed308baa0",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "c8f69c30-a73e-4789-bee7-2e54cdc2a356",
-            "e3926d1c-c13a-473d-b165-510191edfd1a"
+            "b75349c6-9e85-4443-8e8d-27eb771a3505",
+            "58143ae7-5cbe-4cf6-b513-fb0cc1207aac",
+            "f11b31ff-8858-4c3b-8aa8-c46c342b558c"
           ],
-          "failures": [
-            "ae23fdd0-a15a-46b0-8a2b-1eeec83feeaa"
-          ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 59446,
+          "duration": 33085,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
