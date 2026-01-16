@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 2,
-    "passes": 2,
+    "tests": 1,
+    "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-01-05T15:08:27.342Z",
-    "end": "2026-01-05T15:08:44.717Z",
-    "duration": 17375,
+    "start": "2026-01-16T19:52:09.708Z",
+    "end": "2026-01-16T19:52:09.762Z",
+    "duration": 54,
     "testsRegistered": 2,
-    "passPercent": 100,
+    "passPercent": 50,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
-    "skipped": 0,
-    "hasSkipped": false
+    "skipped": 1,
+    "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "08454ba1-34e5-4dfa-89df-91fb8ce5e917",
+      "uuid": "e0da5044-c688-4a11-a7ce-a91c70096636",
       "title": "",
       "fullFile": "cypress/e2e/staging/argentina/smoke/graficador.cy.js",
       "file": "cypress/e2e/staging/argentina/smoke/graficador.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "d168c82a-7505-401a-ab03-d966097c030e",
+          "uuid": "7250e122-d67c-46f7-9b4e-7633b5f5907a",
           "title": "Graficador",
           "fullFile": "",
           "file": "",
@@ -38,17 +38,17 @@
               "title": "Selecciona todas las curvas, hace clic en \"Graficar\" y espera que se muestren sus elementos correspondientes",
               "fullTitle": "Graficador Selecciona todas las curvas, hace clic en \"Graficar\" y espera que se muestren sus elementos correspondientes",
               "timedOut": null,
-              "duration": 10330,
+              "duration": 0,
               "state": "passed",
-              "speed": "slow",
+              "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.visit(`${_constants.default.ABBACO_LOCATION}/plotter`);\n_graficadorPage.graficador.elements.selectCurvesDropdown().should('be.visible');\n_graficadorPage.graficador.clickCurvesDropdown();\n_graficadorPage.graficador.selectAllcurves();\n_graficadorPage.graficador.elements.chartElementsLegend().should('be.visible');\n_graficadorPage.graficador.elements.chartCardLegend().should('be.visible');",
               "err": {},
-              "uuid": "87895cd2-559a-4c50-ac24-1d544614c10b",
-              "parentUUID": "d168c82a-7505-401a-ab03-d966097c030e",
+              "uuid": "75ad57da-65eb-4a6b-a270-7187ee9b0ccf",
+              "parentUUID": "7250e122-d67c-46f7-9b4e-7633b5f5907a",
               "isHook": false,
               "skipped": false
             },
@@ -56,30 +56,31 @@
               "title": "Va a la pestaña Especies ingresa AL30, hace clic en \"Graficar\" y espera que se muestren sus elementos correspondientes",
               "fullTitle": "Graficador Va a la pestaña Especies ingresa AL30, hace clic en \"Graficar\" y espera que se muestren sus elementos correspondientes",
               "timedOut": null,
-              "duration": 2700,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "_graficadorPage.graficador.goToTab('Especies');\n_graficadorPage.graficador.searchAndAddEspecie(_constants.default.HARD_DOLLAR);\n_sharedElements.sharedElements.highchartsMenu().should('be.visible');",
               "err": {},
-              "uuid": "c9d1f051-6e4f-4a80-9cfd-d29748cd6e68",
-              "parentUUID": "d168c82a-7505-401a-ab03-d966097c030e",
+              "uuid": "d48669b2-5cc6-4594-ab09-502e2bcc1063",
+              "parentUUID": "7250e122-d67c-46f7-9b4e-7633b5f5907a",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             }
           ],
           "suites": [],
           "passes": [
-            "87895cd2-559a-4c50-ac24-1d544614c10b",
-            "c9d1f051-6e4f-4a80-9cfd-d29748cd6e68"
+            "75ad57da-65eb-4a6b-a270-7187ee9b0ccf"
           ],
           "failures": [],
           "pending": [],
-          "skipped": [],
-          "duration": 13030,
+          "skipped": [
+            "d48669b2-5cc6-4594-ab09-502e2bcc1063"
+          ],
+          "duration": 0,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
