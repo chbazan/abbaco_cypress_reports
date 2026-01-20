@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2026-01-20T11:37:40.095Z",
-    "end": "2026-01-20T11:38:07.864Z",
-    "duration": 27769,
+    "start": "2026-01-20T18:04:26.216Z",
+    "end": "2026-01-20T18:05:23.688Z",
+    "duration": 57472,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "9e5be32b-5806-4e5d-a0cf-096bc78f278f",
+      "uuid": "c890d9b6-ae4b-4033-a8cc-a552f445d728",
       "title": "",
       "fullFile": "cypress/e2e/cleaner.cy.js",
       "file": "cypress/e2e/cleaner.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "11412da4-90c8-499f-bd2e-2dc6f4be2b6f",
+          "uuid": "2ed55852-a462-4e0f-8deb-1b3f2c17ad8a",
           "title": "Cleaner",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Eliminar todos los bonos favoritos en el Home",
               "fullTitle": "Cleaner Eliminar todos los bonos favoritos en el Home",
               "timedOut": null,
-              "duration": 21291,
+              "duration": 51243,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.visit(_constants.default.ABBACO_LOCATION);\ncy.pageIsLoaded();\n// El ambiente de testing/staging no suele tener todos los cuadros del home, para usar el cleaner en staging hay que comentar validacionesHome\ncy.validacionesHome();\ncy.cleanFavoritosHome(bonos);",
               "err": {},
-              "uuid": "e2a4cb47-c708-48b9-a976-90e175dcee94",
-              "parentUUID": "11412da4-90c8-499f-bd2e-2dc6f4be2b6f",
+              "uuid": "35ac2732-00b8-4895-b025-63afc617c117",
+              "parentUUID": "2ed55852-a462-4e0f-8deb-1b3f2c17ad8a",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Eliminar los portafolios creados",
               "fullTitle": "Cleaner Eliminar los portafolios creados",
               "timedOut": null,
-              "duration": 3964,
+              "duration": 3597,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "cy.visit(`${_constants.default.ABBACO_LOCATION}/security-position`);\ncy.pageIsLoaded();\n_portafolioPage.portafolio.cleanPortfoliosHome();",
               "err": {},
-              "uuid": "738a5334-92d9-4d7d-91c0-9b8df7a7f6ed",
-              "parentUUID": "11412da4-90c8-499f-bd2e-2dc6f4be2b6f",
+              "uuid": "24fda54f-6f96-43e6-9e32-dc02c0f4ecb6",
+              "parentUUID": "2ed55852-a462-4e0f-8deb-1b3f2c17ad8a",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "e2a4cb47-c708-48b9-a976-90e175dcee94",
-            "738a5334-92d9-4d7d-91c0-9b8df7a7f6ed"
+            "35ac2732-00b8-4895-b025-63afc617c117",
+            "24fda54f-6f96-43e6-9e32-dc02c0f4ecb6"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 25255,
+          "duration": 54840,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
