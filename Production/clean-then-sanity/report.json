@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 1,
-    "tests": 2,
-    "passes": 2,
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 0,
-    "start": "2026-01-20T18:04:26.216Z",
-    "end": "2026-01-20T18:05:23.688Z",
-    "duration": 57472,
-    "testsRegistered": 2,
-    "passPercent": 100,
+    "failures": 1,
+    "start": "2026-01-21T11:38:24.877Z",
+    "end": "2026-01-21T11:38:25.100Z",
+    "duration": 223,
+    "testsRegistered": 1,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,80 +18,46 @@
   },
   "results": [
     {
-      "uuid": "c890d9b6-ae4b-4033-a8cc-a552f445d728",
+      "uuid": "77e9d04e-d04a-43c2-97d9-c177bfd022a1",
       "title": "",
       "fullFile": "cypress/e2e/cleaner.cy.js",
       "file": "cypress/e2e/cleaner.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
-      "tests": [],
-      "suites": [
+      "tests": [
         {
-          "uuid": "2ed55852-a462-4e0f-8deb-1b3f2c17ad8a",
-          "title": "Cleaner",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "Eliminar todos los bonos favoritos en el Home",
-              "fullTitle": "Cleaner Eliminar todos los bonos favoritos en el Home",
-              "timedOut": null,
-              "duration": 51243,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "cy.visit(_constants.default.ABBACO_LOCATION);\ncy.pageIsLoaded();\n// El ambiente de testing/staging no suele tener todos los cuadros del home, para usar el cleaner en staging hay que comentar validacionesHome\ncy.validacionesHome();\ncy.cleanFavoritosHome(bonos);",
-              "err": {},
-              "uuid": "35ac2732-00b8-4895-b025-63afc617c117",
-              "parentUUID": "2ed55852-a462-4e0f-8deb-1b3f2c17ad8a",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "Eliminar los portafolios creados",
-              "fullTitle": "Cleaner Eliminar los portafolios creados",
-              "timedOut": null,
-              "duration": 3597,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "cy.visit(`${_constants.default.ABBACO_LOCATION}/security-position`);\ncy.pageIsLoaded();\n_portafolioPage.portafolio.cleanPortfoliosHome();",
-              "err": {},
-              "uuid": "24fda54f-6f96-43e6-9e32-dc02c0f4ecb6",
-              "parentUUID": "2ed55852-a462-4e0f-8deb-1b3f2c17ad8a",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "35ac2732-00b8-4895-b025-63afc617c117",
-            "24fda54f-6f96-43e6-9e32-dc02c0f4ecb6"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 54840,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
+          "title": "An uncaught error was detected outside of a test",
+          "fullTitle": "An uncaught error was detected outside of a test",
+          "timedOut": null,
+          "duration": 126,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "throw err;",
+          "err": {
+            "message": "Error: The following error originated from your test code, not from Cypress.\n\n  > Environment variable: PEPPER_USER, is not set\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.",
+            "estack": "Error: The following error originated from your test code, not from Cypress.\n\n  > Environment variable: PEPPER_USER, is not set\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.\n    at eval (webpack://cypress/./cypress/support/constants.js:43:10)\n    at Array.forEach (<anonymous>)\n    at ./cypress/support/constants.js (webpack://cypress/./cypress/support/constants.js:40:15)\n    at __webpack_require__ (webpack://cypress/webpack/bootstrap:19:0)\n    at ./cypress/support/commands.js (webpack://cypress/./cypress/support/commands.js:27:0)\n    at __webpack_require__ (webpack://cypress/webpack/bootstrap:19:0)\n    at eval (webpack://cypress/./cypress/support/e2e.js:17:0)\n    at eval (http://localhost:45153/__cypress/tests?p=cypress/support/e2e.js:25310:3)\n    at eval (http://localhost:45153/__cypress/tests?p=cypress/support/e2e.js:25312:12)\n    at eval (<anonymous>)",
+            "diff": null
+          },
+          "uuid": "95a95295-a613-4d2f-a57c-91773ccebf4b",
+          "parentUUID": "77e9d04e-d04a-43c2-97d9-c177bfd022a1",
+          "isHook": false,
+          "skipped": false
         }
       ],
+      "suites": [],
       "passes": [],
-      "failures": [],
+      "failures": [
+        "95a95295-a613-4d2f-a57c-91773ccebf4b"
+      ],
       "pending": [],
       "skipped": [],
-      "duration": 0,
+      "duration": 126,
       "root": true,
-      "rootEmpty": true,
+      "rootEmpty": false,
       "_timeout": 2000
     }
   ],
