@@ -1,0 +1,186 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-02-03T19:21:48.702Z",
+    "end": "2026-02-03T19:21:48.758Z",
+    "duration": 56,
+    "testsRegistered": 5,
+    "passPercent": 20,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 4,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "c1b0dc8a-10c8-4bf9-9e48-3cb41043882b",
+      "title": "",
+      "fullFile": "build/production/argentina/smoke/comparar.cy.js",
+      "file": "build/production/argentina/smoke/comparar.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f33e82ab-d079-4a5d-af52-f46bc1cea8e2",
+          "title": "Comparar",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ingresar al menú \"Comparar\"",
+              "fullTitle": "Comparar Ingresar al menú \"Comparar\"",
+              "timedOut": null,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].ABBACO_LOCATION}/security-comparison`);",
+              "err": {},
+              "uuid": "108a773a-a802-41b2-9462-70ff6456f91e",
+              "parentUUID": "f33e82ab-d079-4a5d-af52-f46bc1cea8e2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Añadir las especies AL30 y TX28",
+              "fullTitle": "Comparar Añadir las especies AL30 y TX28",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.searchAndAddEspecie(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].HARD_DOLLAR}`);\n//Valida que no esté el título cuando se agregó la especie\ncy.contains('Agregue especies utilizando el formulario para comenzar').should('not.exist');\n_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.searchAndAddEspecie(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].CER}`);\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.placeholderGlow().should('not.exist');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.tableRow().should('contain.text', `${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].HARD_DOLLAR}`);\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.tableRow().should('contain.text', `${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].CER}`);",
+              "err": {},
+              "uuid": "eeeedaaa-522d-41f7-b9b0-881137faa74e",
+              "parentUUID": "f33e82ab-d079-4a5d-af52-f46bc1cea8e2",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Ir a \"Condiciones de Emisión\" y validar",
+              "fullTitle": "Comparar Ir a \"Condiciones de Emisión\" y validar",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.goToTab('Condiciones de Emisión');\n//validaciones\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.placeholderGlow().should('not.exist');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.tableRow().should('contain.text', `${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].HARD_DOLLAR}`);\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.tableRow().should('contain.text', `${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].CER}`);",
+              "err": {},
+              "uuid": "8565bc5c-640d-4018-90aa-c2a48e447a67",
+              "parentUUID": "f33e82ab-d079-4a5d-af52-f46bc1cea8e2",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Eliminar especie AL30",
+              "fullTitle": "Comparar Eliminar especie AL30",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.goToTab('Análisis');\n_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.deleteEspecie(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].HARD_DOLLAR}`);\n//Validaciones\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.tableRows().contains('button', `${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].HARD_DOLLAR}`).should('not.exist');",
+              "err": {},
+              "uuid": "7a043602-432a-42bb-9eb7-184197439b9c",
+              "parentUUID": "f33e82ab-d079-4a5d-af52-f46bc1cea8e2",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Eliminar especie TX28 y validar mensaje vacío",
+              "fullTitle": "Comparar Eliminar especie TX28 y validar mensaje vacío",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.deleteEspecie(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].CER}`);\n//Validaciones\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.tableRows().contains('button', `${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].CER}`).should('not.exist');\ncy.contains('Agregue especies utilizando el formulario para comenzar').should('be.visible');",
+              "err": {},
+              "uuid": "28ef8528-e595-4f01-98e1-734e64eb7d7c",
+              "parentUUID": "f33e82ab-d079-4a5d-af52-f46bc1cea8e2",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "108a773a-a802-41b2-9462-70ff6456f91e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [
+            "eeeedaaa-522d-41f7-b9b0-881137faa74e",
+            "8565bc5c-640d-4018-90aa-c2a48e447a67",
+            "7a043602-432a-42bb-9eb7-184197439b9c",
+            "28ef8528-e595-4f01-98e1-734e64eb7d7c"
+          ],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
