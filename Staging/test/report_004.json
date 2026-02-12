@@ -1,0 +1,224 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-02-12T14:06:28.597Z",
+    "end": "2026-02-12T14:06:28.664Z",
+    "duration": 67,
+    "testsRegistered": 7,
+    "passPercent": 14.285714285714285,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 6,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "c4f0c68e-f124-4b96-8004-047434fad13a",
+      "title": "",
+      "fullFile": "build/staging/argentina/smoke/comparar.cy.js",
+      "file": "build/staging/argentina/smoke/comparar.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "975003c8-42b3-4086-94d2-08b9c06dc4e8",
+          "title": "Comparar",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ingresar al menú \"Comparar\"",
+              "fullTitle": "Comparar Ingresar al menú \"Comparar\"",
+              "timedOut": null,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].ABBACO_LOCATION}/security-comparison`);",
+              "err": {},
+              "uuid": "790efa03-35cb-41c3-aa89-77031392c24b",
+              "parentUUID": "975003c8-42b3-4086-94d2-08b9c06dc4e8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Añadir las especies AL30 y TX28",
+              "fullTitle": "Comparar Añadir las especies AL30 y TX28",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.searchAndAddEspecie(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].HARD_DOLLAR}`);\n//Valida que no esté el título cuando se agregó la especie\ncy.contains('Agregue especies utilizando el formulario para comenzar').should('not.exist');\n_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.searchAndAddEspecie(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].CER}`);\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.placeholderGlow().should('not.exist');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.tableRow().should('contain.text', `${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].HARD_DOLLAR}`);\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.tableRow().should('contain.text', `${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].CER}`);",
+              "err": {},
+              "uuid": "68d88154-d9c3-44ed-aedb-deca5d39a0b3",
+              "parentUUID": "975003c8-42b3-4086-94d2-08b9c06dc4e8",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Ir a \"Condiciones de Emisión\" y validar",
+              "fullTitle": "Comparar Ir a \"Condiciones de Emisión\" y validar",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.goToTab('Condiciones de Emisión');\n//validaciones\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.placeholderGlow().should('not.exist');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.tableRow().should('contain.text', `${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].HARD_DOLLAR}`);\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.tableRow().should('contain.text', `${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].CER}`);",
+              "err": {},
+              "uuid": "87130fc8-8dce-4b61-b9ab-fb7ff01a61cd",
+              "parentUUID": "975003c8-42b3-4086-94d2-08b9c06dc4e8",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Recorrida por pestañas gráficas",
+              "fullTitle": "Comparar Recorrida por pestañas gráficas",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.goToTab('TIR Históricas');\n//Validaciones de los gráficos\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.chartBackground().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.chartTrackerLine().should('be.visible');\n_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.goToTab('Paridades Históricas');\n//Validaciones de los gráficos\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.chartBackground().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.chartTrackerLine().should('be.visible');",
+              "err": {},
+              "uuid": "748ed1a3-34c2-4ced-86e6-1b37a84c3e06",
+              "parentUUID": "975003c8-42b3-4086-94d2-08b9c06dc4e8",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Recorrida por pestañas gráficas",
+              "fullTitle": "Comparar Recorrida por pestañas gráficas",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.goToTab('TIR Históricas');\n//Validaciones de los gráficos\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.chartBackground().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.chartTrackerLine().should('be.visible');\n_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.goToTab('Paridades Históricas');\n//Validaciones de los gráficos\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.chartBackground().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.chartTrackerLine().should('be.visible');",
+              "err": {},
+              "uuid": "8398ced7-2f73-445e-b1fa-7ff70f4eae25",
+              "parentUUID": "975003c8-42b3-4086-94d2-08b9c06dc4e8",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Eliminar especie AL30",
+              "fullTitle": "Comparar Eliminar especie AL30",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.goToTab('Análisis');\n_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.deleteEspecie(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].HARD_DOLLAR}`);\n//Validaciones\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.tableRows().contains('button', `${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].HARD_DOLLAR}`).should('not.exist');",
+              "err": {},
+              "uuid": "d7b5b424-e19d-4ac2-b00e-fd952a435f23",
+              "parentUUID": "975003c8-42b3-4086-94d2-08b9c06dc4e8",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Eliminar especie TX28 y validar mensaje vacío",
+              "fullTitle": "Comparar Eliminar especie TX28 y validar mensaje vacío",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.deleteEspecie(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].CER}`);\n//Validaciones\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.tableRows().contains('button', `${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].CER}`).should('not.exist');\ncy.contains('Agregue especies utilizando el formulario para comenzar').should('be.visible');",
+              "err": {},
+              "uuid": "b4eaa4c7-1b45-4172-bd69-70fbdac2307d",
+              "parentUUID": "975003c8-42b3-4086-94d2-08b9c06dc4e8",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "790efa03-35cb-41c3-aa89-77031392c24b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [
+            "68d88154-d9c3-44ed-aedb-deca5d39a0b3",
+            "87130fc8-8dce-4b61-b9ab-fb7ff01a61cd",
+            "748ed1a3-34c2-4ced-86e6-1b37a84c3e06",
+            "8398ced7-2f73-445e-b1fa-7ff70f4eae25",
+            "d7b5b424-e19d-4ac2-b00e-fd952a435f23",
+            "b4eaa4c7-1b45-4172-bd69-70fbdac2307d"
+          ],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
