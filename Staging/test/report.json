@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 1,
     "failures": 1,
-    "start": "2026-02-12T14:04:05.256Z",
-    "end": "2026-02-12T14:06:18.635Z",
-    "duration": 133379,
+    "start": "2026-02-18T15:32:25.513Z",
+    "end": "2026-02-18T15:33:50.521Z",
+    "duration": 85008,
     "testsRegistered": 3,
     "passPercent": 0,
     "pendingPercent": 33.33333333333333,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "e911d4a0-c877-437d-9fb9-1d8c5260bbd9",
+      "uuid": "336263a0-031e-4297-ac26-7b0e4d4617b8",
       "title": "",
       "fullFile": "build/staging/argentina/cleaner/cleaner.cy.js",
       "file": "build/staging/argentina/cleaner/cleaner.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "fdcde256-9429-4518-8409-70b9a37e87df",
+          "uuid": "ff91a9a1-b0d5-440b-a803-9c193c785094",
           "title": "Cleaner",
           "fullFile": "",
           "file": "",
@@ -38,21 +38,21 @@
               "title": "Eliminar todos los bonos favoritos en el Home",
               "fullTitle": "Cleaner Eliminar todos los bonos favoritos en el Home",
               "timedOut": null,
-              "duration": 129791,
+              "duration": 82097,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION);\ncy.pageIsLoaded();\n// El ambiente de testing/staging no suele tener todos los cuadros del home, para usar el cleaner en staging hay que comentar validacionesHome\ncy.validacionesHome();\ncy.cleanFavoritosHome(bonos);",
+              "code": "cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION);\ncy.pageIsLoaded();\ncy.cleanFavoritosHome(bonos);",
               "err": {
-                "message": "AssertionError: \"before all\" hook failed: Timed out retrying after 60000ms: expected 'https://mercap-staging.auth0.com/u/login?state=hKFo2SBTQlVULUVJWk9uZ3FFR1RNWXFGX08wVC1WWUV4azVxMaFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIGo5VC1PZmZSc09LUGRVcFMwV0YxdVpNX2dOUkVRREdlo2NpZNkgRDdCaHJyN0hGQnI5SUxhbXV5QTRZZFJNTmtBcWg2RVY' to include 'https://bonds.staging.mercap.com.ar'\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.",
-                "estack": "AssertionError: \"before all\" hook failed: Timed out retrying after 60000ms: expected 'https://mercap-staging.auth0.com/u/login?state=hKFo2SBTQlVULUVJWk9uZ3FFR1RNWXFGX08wVC1WWUV4azVxMaFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIGo5VC1PZmZSc09LUGRVcFMwV0YxdVpNX2dOUkVRREdlo2NpZNkgRDdCaHJyN0hGQnI5SUxhbXV5QTRZZFJNTmtBcWg2RVY' to include 'https://bonds.staging.mercap.com.ar'\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\nAssertionError: Timed out retrying after 60000ms: expected 'https://mercap-staging.auth0.com/u/login?state=hKFo2SBTQlVULUVJWk9uZ3FFR1RNWXFGX08wVC1WWUV4azVxMaFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIGo5VC1PZmZSc09LUGRVcFMwV0YxdVpNX2dOUkVRREdlo2NpZNkgRDdCaHJyN0hGQnI5SUxhbXV5QTRZZFJNTmtBcWg2RVY' to include 'https://bonds.staging.mercap.com.ar'\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n    at cy.session.cacheAcrossSpecs [as setup] (webpack://cypress/./cypress/support/commands.js:77:0)\n    at Context.<anonymous> (https://bonds.staging.mercap.com.ar/__cypress/runner/cypress_runner.js:136391:38)\n    at getRet (https://bonds.staging.mercap.com.ar/__cypress/runner/cypress_runner.js:122690:20)\n    at tryCatcher (https://bonds.staging.mercap.com.ar/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://bonds.staging.mercap.com.ar/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://bonds.staging.mercap.com.ar/__cypress/runner/cypress_runner.js:122701:66)\n    at Context.then (https://bonds.staging.mercap.com.ar/__cypress/runner/cypress_runner.js:122952:21)\n    at wrapped (https://bonds.staging.mercap.com.ar/__cypress/runner/cypress_runner.js:146050:19)",
+                "message": "AssertionError: Timed out retrying after 60000ms: Expected to find element: `svg.tabler-icon-star.text-body`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 60000ms: Expected to find element: `svg.tabler-icon-star.text-body`, but never found it.\n    at Context.eval (webpack://cypress/./cypress/support/commands.js:1179:0)\n    at withinFn (https://bonds.staging.mercap.com.ar/__cypress/runner/cypress_runner.js:135704:8)\n    at <unknown> (https://bonds.staging.mercap.com.ar/__cypress/runner/cypress_runner.js:135785:16)\n    at __WEBPACK_DEFAULT_EXPORT__ (https://bonds.staging.mercap.com.ar/__cypress/runner/cypress_runner.js:133636:10)\n    at Context.within (https://bonds.staging.mercap.com.ar/__cypress/runner/cypress_runner.js:135771:67)\n    at wrapped (https://bonds.staging.mercap.com.ar/__cypress/runner/cypress_runner.js:146050:19)",
                 "diff": null
               },
-              "uuid": "e4a9e56b-20bf-4b10-9833-482cb00c5c8e",
-              "parentUUID": "fdcde256-9429-4518-8409-70b9a37e87df",
+              "uuid": "7b8679d0-83d8-467e-8837-98231393ec38",
+              "parentUUID": "ff91a9a1-b0d5-440b-a803-9c193c785094",
               "isHook": false,
               "skipped": false
             },
@@ -69,8 +69,8 @@
               "context": null,
               "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/security-position`);\ncy.pageIsLoaded();\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.cleanPortfoliosHome();",
               "err": {},
-              "uuid": "fbecac8c-7fdb-4eb5-af76-9ed24e959d39",
-              "parentUUID": "fdcde256-9429-4518-8409-70b9a37e87df",
+              "uuid": "4d791a41-4911-4b90-815f-6c88a8477577",
+              "parentUUID": "ff91a9a1-b0d5-440b-a803-9c193c785094",
               "isHook": false,
               "skipped": false
             },
@@ -87,8 +87,8 @@
               "context": null,
               "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/curves`);\ncy.pageIsLoaded();\ncy.get('input[class=\"search-input form-control form-control-md\"]').should('be.visible');\ncy.get('ul.list-group').should('be.visible');\ncy.cleanFavoritosCurvas(CURVAS_FAVORITAS);",
               "err": {},
-              "uuid": "1ee5f4f4-c4eb-4e99-afc3-59ac0f471f5e",
-              "parentUUID": "fdcde256-9429-4518-8409-70b9a37e87df",
+              "uuid": "fa0b9304-2141-4c4f-bf44-0788e79535ba",
+              "parentUUID": "ff91a9a1-b0d5-440b-a803-9c193c785094",
               "isHook": false,
               "skipped": true
             }
@@ -96,15 +96,15 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "e4a9e56b-20bf-4b10-9833-482cb00c5c8e"
+            "7b8679d0-83d8-467e-8837-98231393ec38"
           ],
           "pending": [
-            "fbecac8c-7fdb-4eb5-af76-9ed24e959d39"
+            "4d791a41-4911-4b90-815f-6c88a8477577"
           ],
           "skipped": [
-            "1ee5f4f4-c4eb-4e99-afc3-59ac0f471f5e"
+            "fa0b9304-2141-4c4f-bf44-0788e79535ba"
           ],
-          "duration": 129791,
+          "duration": 82097,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
