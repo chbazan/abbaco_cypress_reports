@@ -1,0 +1,242 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-02-20T12:33:05.682Z",
+    "end": "2026-02-20T12:33:36.576Z",
+    "duration": 30894,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4dc4a721-ba79-40df-ab74-b2f86a3869d2",
+      "title": "",
+      "fullFile": "build/production/argentina/smoke/analizar.cy.js",
+      "file": "build/production/argentina/smoke/analizar.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ac1bfbff-6822-4495-810e-c55efb7053db",
+          "title": "Análisis de especies",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "859232e4-c8c7-4186-9b23-f227716e54c9",
+              "title": "Analizar la especie AL30",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Ingresar al home",
+                  "fullTitle": "Análisis de especies Analizar la especie AL30 Ingresar al home",
+                  "timedOut": null,
+                  "duration": 6925,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION);\ncy.validacionesHome();",
+                  "err": {},
+                  "uuid": "81ac3198-060f-489b-91a8-24c5a503d418",
+                  "parentUUID": "859232e4-c8c7-4186-9b23-f227716e54c9",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Ingreso de especie AL30 para Analizar",
+                  "fullTitle": "Análisis de especies Analizar la especie AL30 Ingreso de especie AL30 para Analizar",
+                  "timedOut": null,
+                  "duration": 2071,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.buscarYAnalizarEspecie(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR);",
+                  "err": {},
+                  "uuid": "616f8045-5f39-4798-9263-414d81861abb",
+                  "parentUUID": "859232e4-c8c7-4186-9b23-f227716e54c9",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Validaciones en la pestaña General de la especie AL30",
+                  "fullTitle": "Análisis de especies Analizar la especie AL30 Validaciones en la pestaña General de la especie AL30",
+                  "timedOut": null,
+                  "duration": 141,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "// Validaciones de la pestaña General del bono\ncy.verificarTitulosCartas(metricTitles);\n// Valida que TIR, M. DURATION y PARIDAD tengan valores definidos y que el circulo de Última Cotización se muestre verde, rojo o gris\ncy.validarCotizacionTirDurationParidad();\n// Valida que dentro del cuadro Métricas Secundarias y de Cashflow no se tenga un valor N/A\ncy.verificarValoresNulos();",
+                  "err": {},
+                  "uuid": "42b4d2a3-21a8-4080-983f-6a4495f86ac9",
+                  "parentUUID": "859232e4-c8c7-4186-9b23-f227716e54c9",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Recorrida por los botones \"TIRs\" y \"Paridades Históricas\" de la especie AL30",
+                  "fullTitle": "Análisis de especies Analizar la especie AL30 Recorrida por los botones \"TIRs\" y \"Paridades Históricas\" de la especie AL30",
+                  "timedOut": null,
+                  "duration": 7042,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.verficiarGraficosParidadTIR();",
+                  "err": {},
+                  "uuid": "eae67017-5f5d-43ca-b504-4c174994fcf6",
+                  "parentUUID": "859232e4-c8c7-4186-9b23-f227716e54c9",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Ingreso a la pestaña \"Condiciones de Emisión\" y validación de los cuadros de la especie AL30",
+                  "fullTitle": "Análisis de especies Analizar la especie AL30 Ingreso a la pestaña \"Condiciones de Emisión\" y validación de los cuadros de la especie AL30",
+                  "timedOut": null,
+                  "duration": 432,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.verficarCondicionesDeEmision();",
+                  "err": {},
+                  "uuid": "239ffaef-49fb-466f-a83d-417ca5ff4e32",
+                  "parentUUID": "859232e4-c8c7-4186-9b23-f227716e54c9",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Análisis de Sensibilidad de la especie AL30",
+                  "fullTitle": "Análisis de especies Analizar la especie AL30 Análisis de Sensibilidad de la especie AL30",
+                  "timedOut": null,
+                  "duration": 9668,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "// Ingreso a la pestaña de análisis de sensibilidad\ncy.contains('Análisis de sensibilidad', {\n  matchCase: false\n}).should('be.visible').click();\n// Ingreso y Armado de escenarios en Análisis de Sensibilidad\nquantities.forEach(quantity => {\n  variables.forEach(variable => {\n    cy.realizarAnalisisSensibilidad({\n      quantity,\n      variable,\n      variation\n    });\n  });\n});",
+                  "err": {},
+                  "uuid": "a5d8fa7a-59f2-4547-b131-633044afb0e2",
+                  "parentUUID": "859232e4-c8c7-4186-9b23-f227716e54c9",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Simular inversión de la especie AL30",
+                  "fullTitle": "Análisis de especies Analizar la especie AL30 Simular inversión de la especie AL30",
+                  "timedOut": null,
+                  "duration": 1736,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "// Ingreso a la pestaña de simular inversión\ncy.contains('Simular inversión', {\n  matchCase: false\n}).should('be.visible').click();\n// Uso y validación de Simular Inversión\ncy.verficiarSimularInversion();",
+                  "err": {},
+                  "uuid": "fb2f950a-5486-4039-9330-a9ef5de08fe0",
+                  "parentUUID": "859232e4-c8c7-4186-9b23-f227716e54c9",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "81ac3198-060f-489b-91a8-24c5a503d418",
+                "616f8045-5f39-4798-9263-414d81861abb",
+                "42b4d2a3-21a8-4080-983f-6a4495f86ac9",
+                "eae67017-5f5d-43ca-b504-4c174994fcf6",
+                "239ffaef-49fb-466f-a83d-417ca5ff4e32",
+                "a5d8fa7a-59f2-4547-b131-633044afb0e2",
+                "fb2f950a-5486-4039-9330-a9ef5de08fe0"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 28015,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
