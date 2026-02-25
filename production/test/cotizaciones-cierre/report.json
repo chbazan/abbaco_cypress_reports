@@ -1,0 +1,262 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-02-25T11:56:41.378Z",
+    "end": "2026-02-25T11:57:13.703Z",
+    "duration": 32325,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a087c9bd-84d4-47ea-925b-5caff096d5df",
+      "title": "",
+      "fullFile": "build/production/argentina/cotizaciones-cierre/01_check-closing-quotes-pepper.cy.js",
+      "file": "build/production/argentina/cotizaciones-cierre/01_check-closing-quotes-pepper.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cd82128f-e0dc-4a77-9432-d600da12b074",
+          "title": "Validación de cotizaciones ByMA Admin & APIs Argentina",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "f8650d6e-6de4-4957-95f6-06b6ac18d49f",
+              "title": "Home del admin de Pepper",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Ingresar y hacer login en el admin de Pepper",
+                  "fullTitle": "Validación de cotizaciones ByMA Admin & APIs Argentina Home del admin de Pepper Ingresar y hacer login en el admin de Pepper",
+                  "timedOut": null,
+                  "duration": 7848,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.clearAllCookies();\ncy.clearAllLocalStorage();\ncy.clearAllSessionStorage();\ncy.PepperSessionGS32();",
+                  "err": {},
+                  "uuid": "780ef096-0730-4f70-8fc0-b3ac2ea4f5c3",
+                  "parentUUID": "f8650d6e-6de4-4957-95f6-06b6ac18d49f",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "780ef096-0730-4f70-8fc0-b3ac2ea4f5c3"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 7848,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "f9a7b024-a4aa-4838-9679-70dc50411d34",
+              "title": "Cotizaciones de Securities",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Ingresar en Cotizaciones de Securities",
+                  "fullTitle": "Validación de cotizaciones ByMA Admin & APIs Argentina Cotizaciones de Securities Ingresar en Cotizaciones de Securities",
+                  "timedOut": null,
+                  "duration": 222,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.ingresarAlMenuCotizacionesDeSecurities();\ncy.checkLogoAndReloadSecurities();",
+                  "err": {},
+                  "uuid": "2b66c964-ae0a-4c54-be02-ecb51a03c7a1",
+                  "parentUUID": "f9a7b024-a4aa-4838-9679-70dc50411d34",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Validar que se muestren todos los elementos del menú Cotizaciones de Securities",
+                  "fullTitle": "Validación de cotizaciones ByMA Admin & APIs Argentina Cotizaciones de Securities Validar que se muestren todos los elementos del menú Cotizaciones de Securities",
+                  "timedOut": null,
+                  "duration": 540,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.validacionesMenuCotizacionesDeSecurities();",
+                  "err": {},
+                  "uuid": "f408773e-ca3d-427a-916c-1b6a3eb9d434",
+                  "parentUUID": "f9a7b024-a4aa-4838-9679-70dc50411d34",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Guardar la cotización de cierre del ticker AL30",
+                  "fullTitle": "Validación de cotizaciones ByMA Admin & APIs Argentina Cotizaciones de Securities Guardar la cotización de cierre del ticker AL30",
+                  "timedOut": null,
+                  "duration": 5999,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.ingresarPlazoDesde();\ncy.buscarYGuardarCotizacion(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR}`);",
+                  "err": {},
+                  "uuid": "6a74989b-4bdc-4564-a169-028fc9e95740",
+                  "parentUUID": "f9a7b024-a4aa-4838-9679-70dc50411d34",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Guardar la cotización de cierre del ticker PNRCO",
+                  "fullTitle": "Validación de cotizaciones ByMA Admin & APIs Argentina Cotizaciones de Securities Guardar la cotización de cierre del ticker PNRCO",
+                  "timedOut": null,
+                  "duration": 4706,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.buscarYGuardarCotizacion(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].DOLLAR_LINKED}`);",
+                  "err": {},
+                  "uuid": "81eb740f-5554-4858-9973-ce9571a1a66b",
+                  "parentUUID": "f9a7b024-a4aa-4838-9679-70dc50411d34",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Guardar la cotización de cierre del ticker BDC28",
+                  "fullTitle": "Validación de cotizaciones ByMA Admin & APIs Argentina Cotizaciones de Securities Guardar la cotización de cierre del ticker BDC28",
+                  "timedOut": null,
+                  "duration": 4723,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.buscarYGuardarCotizacion(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].TASA_VARIABLE);",
+                  "err": {},
+                  "uuid": "c2659c03-1c77-46dc-9996-0b7dfa129922",
+                  "parentUUID": "f9a7b024-a4aa-4838-9679-70dc50411d34",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Guardar la cotización de cierre del ticker TX28",
+                  "fullTitle": "Validación de cotizaciones ByMA Admin & APIs Argentina Cotizaciones de Securities Guardar la cotización de cierre del ticker TX28",
+                  "timedOut": null,
+                  "duration": 4765,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.buscarYGuardarCotizacion(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].CER);",
+                  "err": {},
+                  "uuid": "a49f9c79-2d91-4633-a3a7-2e5650c2404c",
+                  "parentUUID": "f9a7b024-a4aa-4838-9679-70dc50411d34",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "2b66c964-ae0a-4c54-be02-ecb51a03c7a1",
+                "f408773e-ca3d-427a-916c-1b6a3eb9d434",
+                "6a74989b-4bdc-4564-a169-028fc9e95740",
+                "81eb740f-5554-4858-9973-ce9571a1a66b",
+                "c2659c03-1c77-46dc-9996-0b7dfa129922",
+                "a49f9c79-2d91-4633-a3a7-2e5650c2404c"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 20955,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
