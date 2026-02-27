@@ -1,0 +1,147 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-02-27T18:17:36.048Z",
+    "end": "2026-02-27T18:18:12.422Z",
+    "duration": 36374,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "676aea2a-4e5c-44e4-b3a7-b0cb06f062a8",
+      "title": "",
+      "fullFile": "build/production/argentina/cleaner/cleaner.cy.js",
+      "file": "build/production/argentina/cleaner/cleaner.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ae648931-2fb7-4b5e-8883-acdda6c3c919",
+          "title": "Cleaner",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Eliminar todos los bonos favoritos en el Home",
+              "fullTitle": "Cleaner Eliminar todos los bonos favoritos en el Home",
+              "timedOut": null,
+              "duration": 20386,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION);\ncy.pageIsLoaded();\n// El ambiente de testing/staging no suele tener todos los cuadros del home, para usar el cleaner en staging hay que comentar validacionesHome\ncy.validacionesHome();\ncy.cleanFavoritosHome(bonos);",
+              "err": {},
+              "uuid": "61e3fbb0-f749-4a1a-8c75-707bf6024d07",
+              "parentUUID": "ae648931-2fb7-4b5e-8883-acdda6c3c919",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Eliminar los portafolios creados",
+              "fullTitle": "Cleaner Eliminar los portafolios creados",
+              "timedOut": null,
+              "duration": 4476,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/security-position`);\ncy.pageIsLoaded();\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.cleanPortfoliosHome();",
+              "err": {},
+              "uuid": "f57ffa07-76c9-49af-afaa-447d2920f55e",
+              "parentUUID": "ae648931-2fb7-4b5e-8883-acdda6c3c919",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Eliminar todas las curvas favoritas",
+              "fullTitle": "Cleaner Eliminar todas las curvas favoritas",
+              "timedOut": null,
+              "duration": 8360,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/curves`);\ncy.pageIsLoaded();\ncy.get('input[class=\"search-input form-control form-control-md\"]').should('be.visible');\ncy.get('ul.list-group').should('be.visible');\ncy.cleanFavoritosCurvas(CURVAS_FAVORITAS);",
+              "err": {},
+              "uuid": "dd46cd9a-a59b-4e91-a2f1-011b87475267",
+              "parentUUID": "ae648931-2fb7-4b5e-8883-acdda6c3c919",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "61e3fbb0-f749-4a1a-8c75-707bf6024d07",
+            "f57ffa07-76c9-49af-afaa-447d2920f55e",
+            "dd46cd9a-a59b-4e91-a2f1-011b87475267"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 33222,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
