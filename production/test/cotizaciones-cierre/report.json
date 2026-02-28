@@ -1,0 +1,262 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-02-28T11:43:48.716Z",
+    "end": "2026-02-28T11:44:18.950Z",
+    "duration": 30234,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bdaaeb26-ad35-4dcf-abd6-f496d3f65660",
+      "title": "",
+      "fullFile": "build/production/argentina/cotizaciones-cierre/01_check-closing-quotes-pepper.cy.js",
+      "file": "build/production/argentina/cotizaciones-cierre/01_check-closing-quotes-pepper.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "43518122-061c-4edf-9cc3-c39a2ccc12a1",
+          "title": "Validación de cotizaciones ByMA",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "476ee337-ad69-4ae2-a24b-3165c9581472",
+              "title": "Home del admin de Pepper",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Ingresar y hacer login en el admin de Pepper",
+                  "fullTitle": "Validación de cotizaciones ByMA Home del admin de Pepper Ingresar y hacer login en el admin de Pepper",
+                  "timedOut": null,
+                  "duration": 7537,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.clearAllCookies();\ncy.clearAllLocalStorage();\ncy.clearAllSessionStorage();\ncy.PepperSessionGS32();",
+                  "err": {},
+                  "uuid": "68a62792-5f27-42cf-9cd4-d5ce932000ee",
+                  "parentUUID": "476ee337-ad69-4ae2-a24b-3165c9581472",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "68a62792-5f27-42cf-9cd4-d5ce932000ee"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 7537,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "c12f5e4f-6ee4-4b28-b95d-fff4f1b42faf",
+              "title": "Cotizaciones de Securities",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Ingresar en Cotizaciones de Securities",
+                  "fullTitle": "Validación de cotizaciones ByMA Cotizaciones de Securities Ingresar en Cotizaciones de Securities",
+                  "timedOut": null,
+                  "duration": 226,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.ingresarAlMenuCotizacionesDeSecurities();\ncy.checkLogoAndReloadSecurities();",
+                  "err": {},
+                  "uuid": "79101ad6-1d67-4b25-825c-60741bdc761a",
+                  "parentUUID": "c12f5e4f-6ee4-4b28-b95d-fff4f1b42faf",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Validar que se muestren todos los elementos del menú Cotizaciones de Securities",
+                  "fullTitle": "Validación de cotizaciones ByMA Cotizaciones de Securities Validar que se muestren todos los elementos del menú Cotizaciones de Securities",
+                  "timedOut": null,
+                  "duration": 261,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.validacionesMenuCotizacionesDeSecurities();",
+                  "err": {},
+                  "uuid": "f190b26f-8390-4d94-ace8-7de46b1ed053",
+                  "parentUUID": "c12f5e4f-6ee4-4b28-b95d-fff4f1b42faf",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Guardar la cotización de cierre del ticker AL30",
+                  "fullTitle": "Validación de cotizaciones ByMA Cotizaciones de Securities Guardar la cotización de cierre del ticker AL30",
+                  "timedOut": null,
+                  "duration": 5297,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.ingresarPlazoDesde();\ncy.buscarYGuardarCotizacion(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR}`);",
+                  "err": {},
+                  "uuid": "abdeb285-1781-4dc5-b47b-ac4729d53908",
+                  "parentUUID": "c12f5e4f-6ee4-4b28-b95d-fff4f1b42faf",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Guardar la cotización de cierre del ticker PNRCO",
+                  "fullTitle": "Validación de cotizaciones ByMA Cotizaciones de Securities Guardar la cotización de cierre del ticker PNRCO",
+                  "timedOut": null,
+                  "duration": 4894,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.buscarYGuardarCotizacion(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].DOLLAR_LINKED}`);",
+                  "err": {},
+                  "uuid": "ad4855a9-e445-466c-b1ea-809f13296484",
+                  "parentUUID": "c12f5e4f-6ee4-4b28-b95d-fff4f1b42faf",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Guardar la cotización de cierre del ticker BDC28",
+                  "fullTitle": "Validación de cotizaciones ByMA Cotizaciones de Securities Guardar la cotización de cierre del ticker BDC28",
+                  "timedOut": null,
+                  "duration": 4720,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.buscarYGuardarCotizacion(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].TASA_VARIABLE);",
+                  "err": {},
+                  "uuid": "834c2b4d-b51d-4b63-8fcc-4a487f7db186",
+                  "parentUUID": "c12f5e4f-6ee4-4b28-b95d-fff4f1b42faf",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Guardar la cotización de cierre del ticker TX28",
+                  "fullTitle": "Validación de cotizaciones ByMA Cotizaciones de Securities Guardar la cotización de cierre del ticker TX28",
+                  "timedOut": null,
+                  "duration": 4488,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.buscarYGuardarCotizacion(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].CER);",
+                  "err": {},
+                  "uuid": "2e86def1-7266-4ca2-81f4-c074f2378b76",
+                  "parentUUID": "c12f5e4f-6ee4-4b28-b95d-fff4f1b42faf",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "79101ad6-1d67-4b25-825c-60741bdc761a",
+                "f190b26f-8390-4d94-ace8-7de46b1ed053",
+                "abdeb285-1781-4dc5-b47b-ac4729d53908",
+                "ad4855a9-e445-466c-b1ea-809f13296484",
+                "834c2b4d-b51d-4b63-8fcc-4a487f7db186",
+                "2e86def1-7266-4ca2-81f4-c074f2378b76"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 19886,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
