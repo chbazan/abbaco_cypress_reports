@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-03-04T11:56:12.924Z",
-    "end": "2026-03-04T11:56:13.015Z",
-    "duration": 91,
+    "start": "2026-03-05T11:57:29.471Z",
+    "end": "2026-03-05T11:57:29.559Z",
+    "duration": 88,
     "testsRegistered": 7,
     "passPercent": 14.285714285714285,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "56c8f98d-0e65-4fd1-9776-30d40c84c418",
+      "uuid": "7c8ab731-0369-4e16-a35e-a8654b427fb1",
       "title": "",
       "fullFile": "build/production/brasil/smoke/portafolio.cy.js",
       "file": "build/production/brasil/smoke/portafolio.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "30899ba3-b09a-4dcd-b707-6487b2e3af98",
+          "uuid": "9ec81c52-b8d0-44e4-858e-0fd579465f3f",
           "title": "Mi portafolio",
           "fullFile": "",
           "file": "",
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/security-position`);",
               "err": {},
-              "uuid": "3dac37b9-a47d-4aab-a1c3-0008b43206ab",
-              "parentUUID": "30899ba3-b09a-4dcd-b707-6487b2e3af98",
+              "uuid": "c6062a25-ce57-4df6-a0e1-08ddb2f5de78",
+              "parentUUID": "9ec81c52-b8d0-44e4-858e-0fd579465f3f",
               "isHook": false,
               "skipped": false
             },
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.crearPortafolio('Portafolio Cypress');\n// Ingresar al portafolio creado\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.clickCreatedPortfolio();\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.elements.tableElements().should('be.visible');",
               "err": {},
-              "uuid": "2968e3f9-34b2-43b2-8b6d-a4b4ce3570a3",
-              "parentUUID": "30899ba3-b09a-4dcd-b707-6487b2e3af98",
+              "uuid": "90c73964-c3da-4a1c-a7df-6820516b1785",
+              "parentUUID": "9ec81c52-b8d0-44e4-858e-0fd579465f3f",
               "isHook": false,
               "skipped": true
             },
@@ -83,8 +83,8 @@
               "context": null,
               "code": "_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.elements.tableElements().should('be.visible');\ncy.agregarBonoPortafolio(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR);",
               "err": {},
-              "uuid": "e7a934cc-f6de-48f2-bc47-0df5556b3ff5",
-              "parentUUID": "30899ba3-b09a-4dcd-b707-6487b2e3af98",
+              "uuid": "320ccff5-23d3-451b-a9aa-a5a433d0432b",
+              "parentUUID": "9ec81c52-b8d0-44e4-858e-0fd579465f3f",
               "isHook": false,
               "skipped": true
             },
@@ -101,8 +101,8 @@
               "context": null,
               "code": "_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.clickProyeccionButton();\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.elements.tableProyeccion().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_2__.sharedElements.cardBody().should('be.visible');\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.clickAgendaCortesButton();\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.elements.agendaCorteElements().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_2__.sharedElements.cardBody().should('be.visible');",
               "err": {},
-              "uuid": "593e26ed-4fcf-4b7e-be97-8fb9a14d5cd9",
-              "parentUUID": "30899ba3-b09a-4dcd-b707-6487b2e3af98",
+              "uuid": "fa2e39aa-68eb-463e-a9ee-f9480d4dcb53",
+              "parentUUID": "9ec81c52-b8d0-44e4-858e-0fd579465f3f",
               "isHook": false,
               "skipped": true
             },
@@ -119,8 +119,8 @@
               "context": null,
               "code": "_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.editPortfolio('Portafolio Cypress Modificado');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_2__.sharedElements.ballLoader().should('not.exist');\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.elements.newPortfolioName().should('be.visible');",
               "err": {},
-              "uuid": "9dd08e8d-9c3a-46d6-887d-701126155784",
-              "parentUUID": "30899ba3-b09a-4dcd-b707-6487b2e3af98",
+              "uuid": "572bc785-13ce-4b89-a0c7-4c5a0b46f8f9",
+              "parentUUID": "9ec81c52-b8d0-44e4-858e-0fd579465f3f",
               "isHook": false,
               "skipped": true
             },
@@ -137,8 +137,8 @@
               "context": null,
               "code": "// Este método hay que revisarlo porque 1) No termina de borrar y validar todas las especies, el múltiple true no me parece bien usado. 2) Es mejor crear un comando/helper para estos casos de \"loop\".\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.deleteEspecies(...especies);",
               "err": {},
-              "uuid": "c0ef5333-452a-45d7-8346-935fa217b90f",
-              "parentUUID": "30899ba3-b09a-4dcd-b707-6487b2e3af98",
+              "uuid": "204dd393-d778-4518-a9ea-51afc7de17ff",
+              "parentUUID": "9ec81c52-b8d0-44e4-858e-0fd579465f3f",
               "isHook": false,
               "skipped": true
             },
@@ -155,25 +155,25 @@
               "context": null,
               "code": "_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.deletePortfolio();\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.elements.newPortfolioName().should('not.exist');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_2__.sharedElements.ballLoader().should('not.exist');",
               "err": {},
-              "uuid": "c04a409b-b44b-4389-a69c-51d84122fdf0",
-              "parentUUID": "30899ba3-b09a-4dcd-b707-6487b2e3af98",
+              "uuid": "5ccf7be4-1a58-4539-8547-3243a48f715f",
+              "parentUUID": "9ec81c52-b8d0-44e4-858e-0fd579465f3f",
               "isHook": false,
               "skipped": true
             }
           ],
           "suites": [],
           "passes": [
-            "3dac37b9-a47d-4aab-a1c3-0008b43206ab"
+            "c6062a25-ce57-4df6-a0e1-08ddb2f5de78"
           ],
           "failures": [],
           "pending": [],
           "skipped": [
-            "2968e3f9-34b2-43b2-8b6d-a4b4ce3570a3",
-            "e7a934cc-f6de-48f2-bc47-0df5556b3ff5",
-            "593e26ed-4fcf-4b7e-be97-8fb9a14d5cd9",
-            "9dd08e8d-9c3a-46d6-887d-701126155784",
-            "c0ef5333-452a-45d7-8346-935fa217b90f",
-            "c04a409b-b44b-4389-a69c-51d84122fdf0"
+            "90c73964-c3da-4a1c-a7df-6820516b1785",
+            "320ccff5-23d3-451b-a9aa-a5a433d0432b",
+            "fa2e39aa-68eb-463e-a9ee-f9480d4dcb53",
+            "572bc785-13ce-4b89-a0c7-4c5a0b46f8f9",
+            "204dd393-d778-4518-a9ea-51afc7de17ff",
+            "5ccf7be4-1a58-4539-8547-3243a48f715f"
           ],
           "duration": 0,
           "root": false,
