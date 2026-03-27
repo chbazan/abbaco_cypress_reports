@@ -1,0 +1,147 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-03-27T16:19:51.717Z",
+    "end": "2026-03-27T16:20:21.623Z",
+    "duration": 29906,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "93ed8701-06e0-4eca-9edc-f0e13150e9c2",
+      "title": "",
+      "fullFile": "build/production/argentina/performance/arbitraje.cy.js",
+      "file": "build/production/argentina/performance/arbitraje.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "67164db5-e2d6-4ce8-86af-a2fcbd89293b",
+          "title": "Arbitraje",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ingresar al menú Arbitraje",
+              "fullTitle": "Arbitraje Ingresar al menú Arbitraje",
+              "timedOut": null,
+              "duration": 846,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].ABBACO_LOCATION}/arbitrage`);",
+              "err": {},
+              "uuid": "1cf6b72e-0334-467c-9b06-12f9b0401112",
+              "parentUUID": "67164db5-e2d6-4ce8-86af-a2fcbd89293b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Arbitraje de las especies AL30 y TX28",
+              "fullTitle": "Arbitraje Arbitraje de las especies AL30 y TX28",
+              "timedOut": null,
+              "duration": 12096,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_arbitrajePage__WEBPACK_IMPORTED_MODULE_0__.arbitraje.addEspecies(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].HARD_DOLLAR}`, `${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].CER}`);\n_pages_arbitrajePage__WEBPACK_IMPORTED_MODULE_0__.arbitraje.clickArbitrarButton();\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.cardBody().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.highchartsMenu().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.chartBackground().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.chartTrackerLine().should('be.visible');",
+              "err": {},
+              "uuid": "16f63e33-fada-43bd-a701-214d151deb19",
+              "parentUUID": "67164db5-e2d6-4ce8-86af-a2fcbd89293b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Navegabilidad entre las pestañas Paridad, Inversión y Scatter",
+              "fullTitle": "Arbitraje Navegabilidad entre las pestañas Paridad, Inversión y Scatter",
+              "timedOut": null,
+              "duration": 13446,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_arbitrajePage__WEBPACK_IMPORTED_MODULE_0__.arbitraje.clickParityMenu();\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.cardBody().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.highchartsMenu().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.chartTrackerLine().should('be.visible');\n//Inversión\n_pages_arbitrajePage__WEBPACK_IMPORTED_MODULE_0__.arbitraje.clickInvestmentMenu();\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.tableResponsive().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.placeholderGlow().should('not.exist');\n//Scatter\n_pages_arbitrajePage__WEBPACK_IMPORTED_MODULE_0__.arbitraje.clickScatterMenu();\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.cardBody().should('be.visible');\n_pages_arbitrajePage__WEBPACK_IMPORTED_MODULE_0__.arbitraje.elements.scatterPoints().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.chartBackground().should('be.visible');",
+              "err": {},
+              "uuid": "7f2edbc0-fabc-4352-a917-99192119a81c",
+              "parentUUID": "67164db5-e2d6-4ce8-86af-a2fcbd89293b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1cf6b72e-0334-467c-9b06-12f9b0401112",
+            "16f63e33-fada-43bd-a701-214d151deb19",
+            "7f2edbc0-fabc-4352-a917-99192119a81c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 26388,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
