@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2026-03-28T11:40:41.676Z",
-    "end": "2026-03-28T11:41:24.982Z",
-    "duration": 43306,
+    "start": "2026-03-28T18:11:06.990Z",
+    "end": "2026-03-28T18:11:50.620Z",
+    "duration": 43630,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "bd8c8f57-64ae-41b9-b5e3-c4c12ac98c88",
+      "uuid": "bf45669b-ae20-4c06-9a1d-e44c7ed9082a",
       "title": "",
       "fullFile": "build/production/argentina/cleaner/cleaner.cy.js",
       "file": "build/production/argentina/cleaner/cleaner.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "022a9eb1-8ce8-429a-b90f-7cc7503cd190",
+          "uuid": "19984f9a-864a-42e6-8012-803ef7fa794c",
           "title": "Cleaner",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Eliminar todos los bonos favoritos en el Home",
               "fullTitle": "Cleaner Eliminar todos los bonos favoritos en el Home",
               "timedOut": null,
-              "duration": 28253,
+              "duration": 28602,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION);\ncy.pageIsLoaded();\n// El ambiente de testing/staging no suele tener todos los cuadros del home, para usar el cleaner en staging hay que comentar validacionesHome\ncy.validacionesHome();\ncy.cleanFavoritosHomeStg(bonos);",
               "err": {},
-              "uuid": "8c37527f-0a38-4f14-b8fb-fc7afb546217",
-              "parentUUID": "022a9eb1-8ce8-429a-b90f-7cc7503cd190",
+              "uuid": "13c98146-9e1d-4e06-9782-d816c6a997f1",
+              "parentUUID": "19984f9a-864a-42e6-8012-803ef7fa794c",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Eliminar los portafolios creados",
               "fullTitle": "Cleaner Eliminar los portafolios creados",
               "timedOut": null,
-              "duration": 2965,
+              "duration": 2685,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/security-position`);\ncy.pageIsLoaded();\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.cleanPortfoliosHome();",
               "err": {},
-              "uuid": "58d89aff-c8e3-434d-bc3b-b7865a811600",
-              "parentUUID": "022a9eb1-8ce8-429a-b90f-7cc7503cd190",
+              "uuid": "462718a3-58aa-49a1-9d74-ca6e0c0c42c5",
+              "parentUUID": "19984f9a-864a-42e6-8012-803ef7fa794c",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Eliminar todas las curvas favoritas",
               "fullTitle": "Cleaner Eliminar todas las curvas favoritas",
               "timedOut": null,
-              "duration": 8595,
+              "duration": 9107,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -83,22 +83,22 @@
               "context": null,
               "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/curves`);\ncy.pageIsLoaded();\ncy.get('input[class=\"search-input form-control form-control-md\"]').should('be.visible');\ncy.get('ul.list-group').should('be.visible');\ncy.cleanFavoritosCurvas(CURVAS_FAVORITAS);",
               "err": {},
-              "uuid": "5fc9f3d4-7f32-4de0-9f36-bd153a993aa3",
-              "parentUUID": "022a9eb1-8ce8-429a-b90f-7cc7503cd190",
+              "uuid": "2928a703-bbf3-4609-8ec0-285675d11400",
+              "parentUUID": "19984f9a-864a-42e6-8012-803ef7fa794c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "8c37527f-0a38-4f14-b8fb-fc7afb546217",
-            "58d89aff-c8e3-434d-bc3b-b7865a811600",
-            "5fc9f3d4-7f32-4de0-9f36-bd153a993aa3"
+            "13c98146-9e1d-4e06-9782-d816c6a997f1",
+            "462718a3-58aa-49a1-9d74-ca6e0c0c42c5",
+            "2928a703-bbf3-4609-8ec0-285675d11400"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 39813,
+          "duration": 40394,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
