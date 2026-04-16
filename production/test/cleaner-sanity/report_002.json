@@ -1,0 +1,166 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-04-16T13:34:12.096Z",
+    "end": "2026-04-16T13:34:20.673Z",
+    "duration": 8577,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e7b62483-936a-400c-872c-5ae528514887",
+      "title": "",
+      "fullFile": "build/production/argentina/sanity/02_notifications.cy.js",
+      "file": "build/production/argentina/sanity/02_notifications.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e5d9ec9d-e0ba-42a9-b0b6-88e42c8d081e",
+          "title": "Anuncios",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ingresar al home",
+              "fullTitle": "Anuncios Ingresar al home",
+              "timedOut": null,
+              "duration": 429,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_1__[\"default\"].ABBACO_LOCATION);",
+              "err": {},
+              "uuid": "824847f6-1f14-4ce7-925b-04bcbd71d342",
+              "parentUUID": "e5d9ec9d-e0ba-42a9-b0b6-88e42c8d081e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Hacer clic en el ícono de anuncios",
+              "fullTitle": "Anuncios Hacer clic en el ícono de anuncios",
+              "timedOut": null,
+              "duration": 4775,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_notificationsPage__WEBPACK_IMPORTED_MODULE_0__.notificationsPage.elements.bellIcon().should('be.visible');\n_pages_notificationsPage__WEBPACK_IMPORTED_MODULE_0__.notificationsPage.openNotificationModal();",
+              "err": {},
+              "uuid": "1ee95776-00af-4abb-ba08-f2636da623b5",
+              "parentUUID": "e5d9ec9d-e0ba-42a9-b0b6-88e42c8d081e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validar el modal de anuncios y verificar su contenido",
+              "fullTitle": "Anuncios Validar el modal de anuncios y verificar su contenido",
+              "timedOut": null,
+              "duration": 316,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_notificationsPage__WEBPACK_IMPORTED_MODULE_0__.notificationsPage.elements.notificationModal().should('be.visible');\n_pages_notificationsPage__WEBPACK_IMPORTED_MODULE_0__.notificationsPage.elements.notificationTitle().should('be.visible');\n_pages_notificationsPage__WEBPACK_IMPORTED_MODULE_0__.notificationsPage.elements.notificationItems().should('have.length.greaterThan', 0);",
+              "err": {},
+              "uuid": "8aa8265a-3cb6-4a27-bfcd-b0c9f3150cd0",
+              "parentUUID": "e5d9ec9d-e0ba-42a9-b0b6-88e42c8d081e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cerrar el modal de anuncios",
+              "fullTitle": "Anuncios Cerrar el modal de anuncios",
+              "timedOut": null,
+              "duration": 548,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_notificationsPage__WEBPACK_IMPORTED_MODULE_0__.notificationsPage.elements.closeButton().should('be.visible');\n_pages_notificationsPage__WEBPACK_IMPORTED_MODULE_0__.notificationsPage.closeNotificationModal();\n_pages_notificationsPage__WEBPACK_IMPORTED_MODULE_0__.notificationsPage.elements.notificationModal().should('not.exist');",
+              "err": {},
+              "uuid": "40eb9be5-6acd-44dc-91f7-3814c84e91ff",
+              "parentUUID": "e5d9ec9d-e0ba-42a9-b0b6-88e42c8d081e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "824847f6-1f14-4ce7-925b-04bcbd71d342",
+            "1ee95776-00af-4abb-ba08-f2636da623b5",
+            "8aa8265a-3cb6-4a27-bfcd-b0c9f3150cd0",
+            "40eb9be5-6acd-44dc-91f7-3814c84e91ff"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6068,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
