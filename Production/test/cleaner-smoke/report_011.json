@@ -1,0 +1,185 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-04-17T12:09:40.928Z",
+    "end": "2026-04-17T12:09:54.852Z",
+    "duration": 13924,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1e9a7689-c7f1-4f62-b725-66cd17e3e30b",
+      "title": "",
+      "fullFile": "build/production/brasil/smoke/sensibilidad.cy.js",
+      "file": "build/production/brasil/smoke/sensibilidad.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a29e21cf-6682-4018-96dd-664a21ba3f58",
+          "title": "Sensibilidad",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ingreso al menú Sensibilidad",
+              "fullTitle": "Sensibilidad Ingreso al menú Sensibilidad",
+              "timedOut": null,
+              "duration": 1429,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/sensitivity`);",
+              "err": {},
+              "uuid": "a8cf9c88-d573-489e-b3ff-86a052704acb",
+              "parentUUID": "a29e21cf-6682-4018-96dd-664a21ba3f58",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Agregar una especie al análisis de sensibilidad",
+              "fullTitle": "Sensibilidad Agregar una especie al análisis de sensibilidad",
+              "timedOut": null,
+              "duration": 5189,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_sensibilidadPage__WEBPACK_IMPORTED_MODULE_1__.sensibilidad.addSpecie(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR}`);",
+              "err": {},
+              "uuid": "baa1a6c3-87fd-4b62-a71e-3e780f7f87e5",
+              "parentUUID": "a29e21cf-6682-4018-96dd-664a21ba3f58",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Agregar un escenario completando los campos necesarios y verificar sus elementos relacionados",
+              "fullTitle": "Sensibilidad Agregar un escenario completando los campos necesarios y verificar sus elementos relacionados",
+              "timedOut": null,
+              "duration": 4088,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_sensibilidadPage__WEBPACK_IMPORTED_MODULE_1__.sensibilidad.addScenario(5);\n_pages_sensibilidadPage__WEBPACK_IMPORTED_MODULE_1__.sensibilidad.elements.cardResult().should('be.visible');\n_pages_sensibilidadPage__WEBPACK_IMPORTED_MODULE_1__.sensibilidad.elements.textSuccess().should('be.visible');",
+              "err": {},
+              "uuid": "2589d40c-2449-461d-a9b3-b1c20fdf00e3",
+              "parentUUID": "a29e21cf-6682-4018-96dd-664a21ba3f58",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Eliminar escenario agregado previamente",
+              "fullTitle": "Sensibilidad Eliminar escenario agregado previamente",
+              "timedOut": null,
+              "duration": 105,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_sensibilidadPage__WEBPACK_IMPORTED_MODULE_1__.sensibilidad.deleteScenario();\n_pages_sensibilidadPage__WEBPACK_IMPORTED_MODULE_1__.sensibilidad.elements.cardResult().should('not.exist');",
+              "err": {},
+              "uuid": "4ca027fb-7797-4476-bf83-4fa8547c0d5a",
+              "parentUUID": "a29e21cf-6682-4018-96dd-664a21ba3f58",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Eliminar especie agregada previamente",
+              "fullTitle": "Sensibilidad Eliminar especie agregada previamente",
+              "timedOut": null,
+              "duration": 113,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_sensibilidadPage__WEBPACK_IMPORTED_MODULE_1__.sensibilidad.deleteSpecie();\n_pages_sensibilidadPage__WEBPACK_IMPORTED_MODULE_1__.sensibilidad.elements.tableSpecies().should('be.visible');\n_pages_sensibilidadPage__WEBPACK_IMPORTED_MODULE_1__.sensibilidad.elements.tableText().should('be.visible');",
+              "err": {},
+              "uuid": "08818ea5-6929-444f-9c38-40bf8b232498",
+              "parentUUID": "a29e21cf-6682-4018-96dd-664a21ba3f58",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a8cf9c88-d573-489e-b3ff-86a052704acb",
+            "baa1a6c3-87fd-4b62-a71e-3e780f7f87e5",
+            "2589d40c-2449-461d-a9b3-b1c20fdf00e3",
+            "4ca027fb-7797-4476-bf83-4fa8547c0d5a",
+            "08818ea5-6929-444f-9c38-40bf8b232498"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10924,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
