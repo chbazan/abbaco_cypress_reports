@@ -2,23 +2,23 @@
   "stats": {
     "suites": 12,
     "tests": 81,
-    "passes": 11,
-    "pending": 1,
+    "passes": 20,
+    "pending": 0,
     "failures": 1,
     "testsRegistered": 81,
-    "passPercent": 13.580246913580247,
-    "pendingPercent": 1.2345679012345678,
+    "passPercent": 24.691358024691358,
+    "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
-    "skipped": 68,
+    "skipped": 60,
     "hasSkipped": true,
-    "start": "2026-04-20T13:33:54.999Z",
-    "end": "2026-04-20T13:36:30.338Z",
-    "duration": 155339
+    "start": "2026-04-20T14:17:02.240Z",
+    "end": "2026-04-20T14:19:01.155Z",
+    "duration": 118915
   },
   "results": [
     {
-      "uuid": "d62efe21-87cc-42df-8bcc-77d9032a2976",
+      "uuid": "2bb8fc37-7a88-49a4-9d07-b4414ae0256f",
       "title": "",
       "fullFile": "build/production/argentina/cleaner/cleaner.cy.js",
       "file": "build/production/argentina/cleaner/cleaner.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "71c7c2e6-00a8-414e-ac96-5cd1be11ff7b",
+          "uuid": "94b86ade-6a85-44f7-bf5d-7ce059929da0",
           "title": "Cleaner",
           "fullFile": "",
           "file": "",
@@ -38,21 +38,17 @@
               "title": "Eliminar todos los bonos favoritos en el Home",
               "fullTitle": "Cleaner Eliminar todos los bonos favoritos en el Home",
               "timedOut": null,
-              "duration": 129981,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 30300,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION);\ncy.pageIsLoaded();\n// El ambiente de testing/staging no suele tener todos los cuadros del home, para usar el cleaner en staging hay que comentar validacionesHome\ncy.validacionesHome();\ncy.cleanFavoritosHomeStg(bonos);",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 90000ms: Expected to find content: 'USD CCL' within the selector: 'h6[class=\"text-uppercase text-header card-title\"]' but never did.",
-                "estack": "AssertionError: Timed out retrying after 90000ms: Expected to find content: 'USD CCL' within the selector: 'h6[class=\"text-uppercase text-header card-title\"]' but never did.\n    at ./cypress/support/commands.js (webpack://cypress/./cypress/support/commands.js:306:6)\n    at __webpack_modules__</addCommand/wrap (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:146042:43)",
-                "diff": null
-              },
-              "uuid": "c22c4cb1-5d1c-4258-a23b-734cf49a9c77",
-              "parentUUID": "71c7c2e6-00a8-414e-ac96-5cd1be11ff7b",
+              "err": {},
+              "uuid": "4e213990-051d-48ce-92ca-10c142fe5fb5",
+              "parentUUID": "94b86ade-6a85-44f7-bf5d-7ce059929da0",
               "isHook": false,
               "skipped": false
             },
@@ -60,17 +56,17 @@
               "title": "Eliminar los portafolios creados",
               "fullTitle": "Cleaner Eliminar los portafolios creados",
               "timedOut": null,
-              "duration": 0,
-              "state": "pending",
-              "speed": null,
-              "pass": false,
+              "duration": 4122,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
               "fail": false,
-              "pending": true,
+              "pending": false,
               "context": null,
               "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/security-position`);\ncy.pageIsLoaded();\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.cleanPortfoliosHome();",
               "err": {},
-              "uuid": "6cbf46e9-c688-4516-bbb2-928566e1fcd7",
-              "parentUUID": "71c7c2e6-00a8-414e-ac96-5cd1be11ff7b",
+              "uuid": "c6c33af7-9ea6-4b77-b667-b2e4e58749c2",
+              "parentUUID": "94b86ade-6a85-44f7-bf5d-7ce059929da0",
               "isHook": false,
               "skipped": false
             },
@@ -78,33 +74,31 @@
               "title": "Eliminar todas las curvas favoritas",
               "fullTitle": "Cleaner Eliminar todas las curvas favoritas",
               "timedOut": null,
-              "duration": 0,
-              "state": "skipped",
-              "speed": null,
-              "pass": false,
+              "duration": 8275,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/curves`);\ncy.pageIsLoaded();\ncy.get('input[class=\"search-input form-control form-control-md\"]').should('be.visible');\ncy.get('ul.list-group').should('be.visible');\ncy.cleanFavoritosCurvas(CURVAS_FAVORITAS);",
               "err": {},
-              "uuid": "ad3ac8ca-3adc-4981-943c-1afd03214795",
-              "parentUUID": "71c7c2e6-00a8-414e-ac96-5cd1be11ff7b",
+              "uuid": "c77ac800-29b3-4e9b-80a1-b6f509dc1573",
+              "parentUUID": "94b86ade-6a85-44f7-bf5d-7ce059929da0",
               "isHook": false,
-              "skipped": true
+              "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "c22c4cb1-5d1c-4258-a23b-734cf49a9c77"
+          "passes": [
+            "4e213990-051d-48ce-92ca-10c142fe5fb5",
+            "c6c33af7-9ea6-4b77-b667-b2e4e58749c2",
+            "c77ac800-29b3-4e9b-80a1-b6f509dc1573"
           ],
-          "pending": [
-            "6cbf46e9-c688-4516-bbb2-928566e1fcd7"
-          ],
-          "skipped": [
-            "ad3ac8ca-3adc-4981-943c-1afd03214795"
-          ],
-          "duration": 129981,
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 42697,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -120,7 +114,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "2731a77f-cae1-4e78-92f1-449b1caa22fe",
+      "uuid": "7164c186-7d96-4da5-9e24-9c4adcf5cadc",
       "title": "",
       "fullFile": "build/production/argentina/smoke/01_login.cy.js",
       "file": "build/production/argentina/smoke/01_login.cy.js",
@@ -129,7 +123,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "fca63cbd-51a7-4906-8793-c9429614fd16",
+          "uuid": "f267181e-2bb3-453b-8947-ea6b12eb70b9",
           "title": "Login",
           "fullFile": "",
           "file": "",
@@ -140,7 +134,7 @@
               "title": "Login Abbaco",
               "fullTitle": "Login Login Abbaco",
               "timedOut": null,
-              "duration": 0,
+              "duration": 606,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -149,20 +143,20 @@
               "context": null,
               "code": "cy.clearAllLocalStorage();\ncy.clearAllCookies();\ncy.clearAllSessionStorage();\ncy.SessionAbbaco();",
               "err": {},
-              "uuid": "21269ed6-076e-4804-a47b-73db6a7f5315",
-              "parentUUID": "fca63cbd-51a7-4906-8793-c9429614fd16",
+              "uuid": "62ca60de-e7a0-44b0-861b-b895de23baf0",
+              "parentUUID": "f267181e-2bb3-453b-8947-ea6b12eb70b9",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "21269ed6-076e-4804-a47b-73db6a7f5315"
+            "62ca60de-e7a0-44b0-861b-b895de23baf0"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 0,
+          "duration": 606,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -178,7 +172,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "d97dba74-bcac-4abf-bdbd-f64dc9ee6d61",
+      "uuid": "7886504d-77f2-43d9-8aae-d2564f06e6f8",
       "title": "",
       "fullFile": "build/production/argentina/smoke/analizar.cy.js",
       "file": "build/production/argentina/smoke/analizar.cy.js",
@@ -187,7 +181,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "71659faa-1881-42b1-a4b8-14b6113d2f77",
+          "uuid": "8e03af25-8395-46f0-9642-d87e4b9941c7",
           "title": "Análisis de especies",
           "fullFile": "",
           "file": "",
@@ -196,7 +190,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "b6cb248d-1e7c-45fe-9196-c9f36802571f",
+              "uuid": "8c95081e-2e01-4e06-b478-02a3e1bb56b9",
               "title": "Analizar la especie AL30",
               "fullFile": "",
               "file": "",
@@ -207,17 +201,17 @@
                   "title": "Ingresar al home",
                   "fullTitle": "Análisis de especies Analizar la especie AL30 Ingresar al home",
                   "timedOut": null,
-                  "duration": 0,
+                  "duration": 11005,
                   "state": "passed",
-                  "speed": "fast",
+                  "speed": "slow",
                   "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION);\ncy.validacionesHome();",
                   "err": {},
-                  "uuid": "38cd9217-d10f-424c-b499-9a356c0b8f5d",
-                  "parentUUID": "b6cb248d-1e7c-45fe-9196-c9f36802571f",
+                  "uuid": "67f5cd04-cc4c-40c6-a6f4-f89a14a66ed6",
+                  "parentUUID": "8c95081e-2e01-4e06-b478-02a3e1bb56b9",
                   "isHook": false,
                   "skipped": false
                 },
@@ -225,145 +219,149 @@
                   "title": "Ingreso de especie AL30 para Analizar",
                   "fullTitle": "Análisis de especies Analizar la especie AL30 Ingreso de especie AL30 para Analizar",
                   "timedOut": null,
-                  "duration": 0,
-                  "state": "skipped",
-                  "speed": null,
-                  "pass": false,
+                  "duration": 2778,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "cy.buscarYAnalizarEspecie(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR);",
                   "err": {},
-                  "uuid": "bd412929-da75-4479-9eec-81ecce9f8ead",
-                  "parentUUID": "b6cb248d-1e7c-45fe-9196-c9f36802571f",
+                  "uuid": "ef5c28aa-7d6d-4e1c-bbb1-e533b3f42fc1",
+                  "parentUUID": "8c95081e-2e01-4e06-b478-02a3e1bb56b9",
                   "isHook": false,
-                  "skipped": true
+                  "skipped": false
                 },
                 {
                   "title": "Validaciones en la pestaña General de la especie AL30",
                   "fullTitle": "Análisis de especies Analizar la especie AL30 Validaciones en la pestaña General de la especie AL30",
                   "timedOut": null,
-                  "duration": 0,
-                  "state": "skipped",
-                  "speed": null,
-                  "pass": false,
+                  "duration": 145,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "// Validaciones de la pestaña General del bono\ncy.verificarTitulosCartas(metricTitles);\n// Valida que TIR, M. DURATION y PARIDAD tengan valores definidos y que el circulo de Última Cotización se muestre verde, rojo o gris\ncy.validarCotizacionTirDurationParidad();\n// Valida que dentro del cuadro Métricas Secundarias y de Cashflow no se tenga un valor N/A\ncy.verificarValoresNulos();",
                   "err": {},
-                  "uuid": "825f28ba-1bcb-4efa-81b8-2ecac8e76c43",
-                  "parentUUID": "b6cb248d-1e7c-45fe-9196-c9f36802571f",
+                  "uuid": "945efc44-4215-4852-9195-be41a95b28b7",
+                  "parentUUID": "8c95081e-2e01-4e06-b478-02a3e1bb56b9",
                   "isHook": false,
-                  "skipped": true
+                  "skipped": false
                 },
                 {
                   "title": "Recorrida por los botones \"TIRs\" y \"Paridades Históricas\" de la especie AL30",
                   "fullTitle": "Análisis de especies Analizar la especie AL30 Recorrida por los botones \"TIRs\" y \"Paridades Históricas\" de la especie AL30",
                   "timedOut": null,
-                  "duration": 0,
-                  "state": "skipped",
-                  "speed": null,
-                  "pass": false,
+                  "duration": 9676,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "cy.verficiarGraficosParidadTIR();",
                   "err": {},
-                  "uuid": "5a980135-d1fd-4949-a20e-c00ffb2db487",
-                  "parentUUID": "b6cb248d-1e7c-45fe-9196-c9f36802571f",
+                  "uuid": "86fb01b2-68d4-4f0f-88c3-74fb8a2311ce",
+                  "parentUUID": "8c95081e-2e01-4e06-b478-02a3e1bb56b9",
                   "isHook": false,
-                  "skipped": true
+                  "skipped": false
                 },
                 {
                   "title": "Ingreso a la pestaña \"Condiciones de Emisión\" y validación de los cuadros de la especie AL30",
                   "fullTitle": "Análisis de especies Analizar la especie AL30 Ingreso a la pestaña \"Condiciones de Emisión\" y validación de los cuadros de la especie AL30",
                   "timedOut": null,
-                  "duration": 0,
-                  "state": "skipped",
-                  "speed": null,
-                  "pass": false,
+                  "duration": 583,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "cy.verficarCondicionesDeEmision();",
                   "err": {},
-                  "uuid": "e1d46f4c-0d9d-4f41-8d6b-b24f468222ae",
-                  "parentUUID": "b6cb248d-1e7c-45fe-9196-c9f36802571f",
+                  "uuid": "26b35318-9733-4ccd-a3ce-a832fe3920dd",
+                  "parentUUID": "8c95081e-2e01-4e06-b478-02a3e1bb56b9",
                   "isHook": false,
-                  "skipped": true
+                  "skipped": false
                 },
                 {
                   "title": "Análisis de Sensibilidad de la especie AL30",
                   "fullTitle": "Análisis de especies Analizar la especie AL30 Análisis de Sensibilidad de la especie AL30",
                   "timedOut": null,
-                  "duration": 0,
-                  "state": "skipped",
-                  "speed": null,
-                  "pass": false,
+                  "duration": 11134,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "// Ingreso a la pestaña de análisis de sensibilidad\ncy.contains('Análisis de sensibilidad', {\n  matchCase: false\n}).should('be.visible').click();\n// Ingreso y Armado de escenarios en Análisis de Sensibilidad\nquantities.forEach(quantity => {\n  variables.forEach(variable => {\n    cy.realizarAnalisisSensibilidad({\n      quantity,\n      variable,\n      variation\n    });\n  });\n});",
                   "err": {},
-                  "uuid": "55399619-f3e7-4e67-b74c-a1258c522479",
-                  "parentUUID": "b6cb248d-1e7c-45fe-9196-c9f36802571f",
+                  "uuid": "fdfb118e-99d6-4ef4-8f90-2f2f7d4de25f",
+                  "parentUUID": "8c95081e-2e01-4e06-b478-02a3e1bb56b9",
                   "isHook": false,
-                  "skipped": true
+                  "skipped": false
                 },
                 {
                   "title": "Simular inversión de la especie AL30",
                   "fullTitle": "Análisis de especies Analizar la especie AL30 Simular inversión de la especie AL30",
                   "timedOut": null,
-                  "duration": 0,
-                  "state": "skipped",
-                  "speed": null,
-                  "pass": false,
+                  "duration": 2142,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "// Ingreso a la pestaña de simular inversión\ncy.contains('Simular inversión', {\n  matchCase: false\n}).should('be.visible').click();\n// Uso y validación de Simular Inversión\ncy.verficiarSimularInversion();",
                   "err": {},
-                  "uuid": "e9686e40-afcd-44d9-b276-263ba8d7b29d",
-                  "parentUUID": "b6cb248d-1e7c-45fe-9196-c9f36802571f",
+                  "uuid": "361cc5d7-435f-4d9d-b96c-2164936f241f",
+                  "parentUUID": "8c95081e-2e01-4e06-b478-02a3e1bb56b9",
                   "isHook": false,
-                  "skipped": true
+                  "skipped": false
                 },
                 {
                   "title": "FALLA INTENCIONAL — prueba de failure report con Gemini AI",
                   "fullTitle": "Análisis de especies Analizar la especie AL30 FALLA INTENCIONAL — prueba de failure report con Gemini AI",
                   "timedOut": null,
-                  "duration": 0,
-                  "state": "skipped",
+                  "duration": 3113,
+                  "state": "failed",
                   "speed": null,
                   "pass": false,
-                  "fail": false,
+                  "fail": true,
                   "pending": false,
                   "context": null,
                   "code": "cy.get('[data-cy=\"elemento-que-no-existe-PRUEBA-FAILURE-REPORT\"]', {\n  timeout: 3000\n}).should('be.visible');",
-                  "err": {},
-                  "uuid": "0a2e26df-5bdd-4eb5-81fe-ea86f63c9840",
-                  "parentUUID": "b6cb248d-1e7c-45fe-9196-c9f36802571f",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 3000ms: Expected to find element: `[data-cy=\"elemento-que-no-existe-PRUEBA-FAILURE-REPORT\"]`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 3000ms: Expected to find element: `[data-cy=\"elemento-que-no-existe-PRUEBA-FAILURE-REPORT\"]`, but never found it.\n    at analizarSmoke/</ (webpack://cypress/./build/production/argentina/flows/analizar_smoke.js:93:9)",
+                    "diff": null
+                  },
+                  "uuid": "c323a300-e975-477c-b240-df1464f84e20",
+                  "parentUUID": "8c95081e-2e01-4e06-b478-02a3e1bb56b9",
                   "isHook": false,
-                  "skipped": true
+                  "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "38cd9217-d10f-424c-b499-9a356c0b8f5d"
+                "67f5cd04-cc4c-40c6-a6f4-f89a14a66ed6",
+                "ef5c28aa-7d6d-4e1c-bbb1-e533b3f42fc1",
+                "945efc44-4215-4852-9195-be41a95b28b7",
+                "86fb01b2-68d4-4f0f-88c3-74fb8a2311ce",
+                "26b35318-9733-4ccd-a3ce-a832fe3920dd",
+                "fdfb118e-99d6-4ef4-8f90-2f2f7d4de25f",
+                "361cc5d7-435f-4d9d-b96c-2164936f241f"
               ],
-              "failures": [],
+              "failures": [
+                "c323a300-e975-477c-b240-df1464f84e20"
+              ],
               "pending": [],
-              "skipped": [
-                "bd412929-da75-4479-9eec-81ecce9f8ead",
-                "825f28ba-1bcb-4efa-81b8-2ecac8e76c43",
-                "5a980135-d1fd-4949-a20e-c00ffb2db487",
-                "e1d46f4c-0d9d-4f41-8d6b-b24f468222ae",
-                "55399619-f3e7-4e67-b74c-a1258c522479",
-                "e9686e40-afcd-44d9-b276-263ba8d7b29d",
-                "0a2e26df-5bdd-4eb5-81fe-ea86f63c9840"
-              ],
-              "duration": 0,
+              "skipped": [],
+              "duration": 40576,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
@@ -389,7 +387,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "1fa2d962-495b-4e45-969d-2e212119360d",
+      "uuid": "6fa70ee8-2264-49ad-83e8-0a9d5d4419f9",
       "title": "",
       "fullFile": "build/production/argentina/smoke/arbitraje.cy.js",
       "file": "build/production/argentina/smoke/arbitraje.cy.js",
@@ -398,7 +396,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "cde8a3de-8ea1-407b-8731-814e3081ac0f",
+          "uuid": "f9078c0c-91e9-4cc6-b5f0-e8d83a77a260",
           "title": "Arbitraje",
           "fullFile": "",
           "file": "",
@@ -418,8 +416,8 @@
               "context": null,
               "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].ABBACO_LOCATION}/arbitrage`);",
               "err": {},
-              "uuid": "b3d8d004-f3e7-4ee4-a40f-17e7dc14d279",
-              "parentUUID": "cde8a3de-8ea1-407b-8731-814e3081ac0f",
+              "uuid": "a0d20870-a0c7-4e57-ae40-2765ba1c86fc",
+              "parentUUID": "f9078c0c-91e9-4cc6-b5f0-e8d83a77a260",
               "isHook": false,
               "skipped": false
             },
@@ -436,8 +434,8 @@
               "context": null,
               "code": "_pages_arbitrajePage__WEBPACK_IMPORTED_MODULE_0__.arbitraje.addEspecies(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].HARD_DOLLAR}`, `${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].CER}`);",
               "err": {},
-              "uuid": "49ae0f7e-7495-4db6-bd17-313ea8152be4",
-              "parentUUID": "cde8a3de-8ea1-407b-8731-814e3081ac0f",
+              "uuid": "0e52c2a4-3e65-46a8-ba73-5c048d3731c1",
+              "parentUUID": "f9078c0c-91e9-4cc6-b5f0-e8d83a77a260",
               "isHook": false,
               "skipped": true
             },
@@ -454,8 +452,8 @@
               "context": null,
               "code": "_pages_arbitrajePage__WEBPACK_IMPORTED_MODULE_0__.arbitraje.clickArbitrarButton();\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.cardBody().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.highchartsMenu().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.chartBackground().should('be.visible');\n// Se comenta validación del gráfico ya que normalmente en staging/testing no contamos con esa información, se deja habilitado para prod\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.chartTrackerLine().should('be.visible');",
               "err": {},
-              "uuid": "449809b9-225f-43af-bcb7-2d6d0e233528",
-              "parentUUID": "cde8a3de-8ea1-407b-8731-814e3081ac0f",
+              "uuid": "740590e7-e313-4b3f-9654-a9a122fd1ba1",
+              "parentUUID": "f9078c0c-91e9-4cc6-b5f0-e8d83a77a260",
               "isHook": false,
               "skipped": true
             },
@@ -472,8 +470,8 @@
               "context": null,
               "code": "_pages_arbitrajePage__WEBPACK_IMPORTED_MODULE_0__.arbitraje.clickParityMenu();\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.cardBody().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.highchartsMenu().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.chartTrackerLine().should('be.visible');",
               "err": {},
-              "uuid": "d2c2b088-5a78-4104-bb2c-0fe94a3b6cd3",
-              "parentUUID": "cde8a3de-8ea1-407b-8731-814e3081ac0f",
+              "uuid": "028c9316-d646-4790-a12d-96fc7ed9c41d",
+              "parentUUID": "f9078c0c-91e9-4cc6-b5f0-e8d83a77a260",
               "isHook": false,
               "skipped": true
             },
@@ -490,8 +488,8 @@
               "context": null,
               "code": "_pages_arbitrajePage__WEBPACK_IMPORTED_MODULE_0__.arbitraje.clickInvestmentMenu();\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.tableResponsive().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.placeholderGlow().should('not.exist');",
               "err": {},
-              "uuid": "1846cae1-bc0b-45b3-801b-07150f0d5fa2",
-              "parentUUID": "cde8a3de-8ea1-407b-8731-814e3081ac0f",
+              "uuid": "9e4e5be7-3e8f-4419-9957-8d6ad89cece0",
+              "parentUUID": "f9078c0c-91e9-4cc6-b5f0-e8d83a77a260",
               "isHook": false,
               "skipped": true
             },
@@ -508,24 +506,24 @@
               "context": null,
               "code": "_pages_arbitrajePage__WEBPACK_IMPORTED_MODULE_0__.arbitraje.clickScatterMenu();\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.cardBody().should('be.visible');\n// Se comenta validación del gráfico ya que normalmente en staging/testing no contamos con esa información, se deja habilitado para prod\n_pages_arbitrajePage__WEBPACK_IMPORTED_MODULE_0__.arbitraje.elements.scatterPoints().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.chartBackground().should('be.visible');",
               "err": {},
-              "uuid": "feb82104-5882-471f-9d56-49ef061775d6",
-              "parentUUID": "cde8a3de-8ea1-407b-8731-814e3081ac0f",
+              "uuid": "ea59b36b-c548-4584-82fc-d45d0b6c20d0",
+              "parentUUID": "f9078c0c-91e9-4cc6-b5f0-e8d83a77a260",
               "isHook": false,
               "skipped": true
             }
           ],
           "suites": [],
           "passes": [
-            "b3d8d004-f3e7-4ee4-a40f-17e7dc14d279"
+            "a0d20870-a0c7-4e57-ae40-2765ba1c86fc"
           ],
           "failures": [],
           "pending": [],
           "skipped": [
-            "49ae0f7e-7495-4db6-bd17-313ea8152be4",
-            "449809b9-225f-43af-bcb7-2d6d0e233528",
-            "d2c2b088-5a78-4104-bb2c-0fe94a3b6cd3",
-            "1846cae1-bc0b-45b3-801b-07150f0d5fa2",
-            "feb82104-5882-471f-9d56-49ef061775d6"
+            "0e52c2a4-3e65-46a8-ba73-5c048d3731c1",
+            "740590e7-e313-4b3f-9654-a9a122fd1ba1",
+            "028c9316-d646-4790-a12d-96fc7ed9c41d",
+            "9e4e5be7-3e8f-4419-9957-8d6ad89cece0",
+            "ea59b36b-c548-4584-82fc-d45d0b6c20d0"
           ],
           "duration": 0,
           "root": false,
@@ -543,7 +541,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "6c20f7d3-874d-4db8-b258-932457c05964",
+      "uuid": "a7e9efbd-1642-42b7-851d-25a8563819a5",
       "title": "",
       "fullFile": "build/production/argentina/smoke/calculadora.cy.js",
       "file": "build/production/argentina/smoke/calculadora.cy.js",
@@ -552,7 +550,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "48680bca-d969-4bd7-bf07-e2c426515170",
+          "uuid": "5397e7e7-c210-41de-80f8-f0771ad48f80",
           "title": "Calculadora",
           "fullFile": "",
           "file": "",
@@ -572,8 +570,8 @@
               "context": null,
               "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/calculator`);\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.calculadoraTitle().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_2__.sharedElements.cardBody().should('be.visible');\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.addSimulationButton().should('be.visible');",
               "err": {},
-              "uuid": "b94e4f51-dcf8-4a76-9589-06ab754066b3",
-              "parentUUID": "48680bca-d969-4bd7-bf07-e2c426515170",
+              "uuid": "6ccdc4b3-ea50-4e95-81c1-1ab2dc45c49c",
+              "parentUUID": "5397e7e7-c210-41de-80f8-f0771ad48f80",
               "isHook": false,
               "skipped": false
             },
@@ -590,8 +588,8 @@
               "context": null,
               "code": "_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.calculadoraTitle().should('be.visible');\ncy.crearSimulacion({\n  especie: _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR,\n  fecha: /C\\.I|E\\.P\\./,\n  tipo: 'Dirty',\n  cantidad: 10000,\n  valor: 83210,\n  tipoCambio: 1420\n});\ncy.crearSimulacion({\n  especie: _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR,\n  fecha: '24Hs',\n  tipo: 'Yield',\n  cantidad: 1000,\n  valor: 20,\n  tipoCambio: 1420\n});\ncy.crearSimulacion({\n  especie: _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR,\n  fecha: /C\\.I|E\\.P\\./,\n  tipo: 'Dirty',\n  cantidad: 5000,\n  valor: 83210,\n  tipoCambio: 1420\n});\ncy.crearSimulacion({\n  especie: _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR,\n  fecha: /C\\.I|E\\.P\\./,\n  tipo: 'Dirty',\n  valor: 83210,\n  cantidad: '10',\n  tipoCambio: 1420,\n  conComision: true,\n  tipoComision: /\\b(ARS|BRL)\\b/,\n  valorComision: 100\n});\ncy.crearSimulacion({\n  especie: _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR,\n  fecha: '24Hs',\n  tipo: 'Dirty',\n  valor: 83210,\n  cantidad: '10',\n  tipoCambio: 1420,\n  conComision: true,\n  tipoComision: '%',\n  valorComision: 2\n});\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.tableSimulations().should('be.visible');",
               "err": {},
-              "uuid": "7bdd5908-ec74-48da-b58f-f85c538e3240",
-              "parentUUID": "48680bca-d969-4bd7-bf07-e2c426515170",
+              "uuid": "5233f17f-d017-48c7-80da-bfee1986876b",
+              "parentUUID": "5397e7e7-c210-41de-80f8-f0771ad48f80",
               "isHook": false,
               "skipped": true
             },
@@ -608,8 +606,8 @@
               "context": null,
               "code": "cy.editarPrecioSimulado('90.000,00');\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.tableSimulations().should('be.visible');",
               "err": {},
-              "uuid": "5de33d7b-91e4-41e7-9182-3d7d7c14040b",
-              "parentUUID": "48680bca-d969-4bd7-bf07-e2c426515170",
+              "uuid": "1caa1bfb-5bb6-429b-8989-cc38693b4ed5",
+              "parentUUID": "5397e7e7-c210-41de-80f8-f0771ad48f80",
               "isHook": false,
               "skipped": true
             },
@@ -626,8 +624,8 @@
               "context": null,
               "code": "cy.editarTIR('15');\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.tableSimulations().should('be.visible');",
               "err": {},
-              "uuid": "7ecbeb13-a3f3-41d3-ad0f-c65cf3034697",
-              "parentUUID": "48680bca-d969-4bd7-bf07-e2c426515170",
+              "uuid": "cab2c165-4120-4db6-bbfa-26c49d70e080",
+              "parentUUID": "5397e7e7-c210-41de-80f8-f0771ad48f80",
               "isHook": false,
               "skipped": true
             },
@@ -644,8 +642,8 @@
               "context": null,
               "code": "_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.hideChartButton().click();\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.chartContainer().should('not.exist');\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.showChartButton().click();\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.chartContainer().should('be.visible');",
               "err": {},
-              "uuid": "ba3bb936-4fbb-44a4-aedc-a062b6d6c015",
-              "parentUUID": "48680bca-d969-4bd7-bf07-e2c426515170",
+              "uuid": "70b38c94-1030-4ddd-9ba5-7ba42906fe01",
+              "parentUUID": "5397e7e7-c210-41de-80f8-f0771ad48f80",
               "isHook": false,
               "skipped": true
             },
@@ -662,8 +660,8 @@
               "context": null,
               "code": "cy.eliminarSimulacion();\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.pointsButton().should('have.length', 4);",
               "err": {},
-              "uuid": "9b8e0232-dadc-45ec-9992-ffc8302d6b03",
-              "parentUUID": "48680bca-d969-4bd7-bf07-e2c426515170",
+              "uuid": "9be85689-8c36-47a5-a3f7-d23e28d74436",
+              "parentUUID": "5397e7e7-c210-41de-80f8-f0771ad48f80",
               "isHook": false,
               "skipped": true
             },
@@ -680,25 +678,25 @@
               "context": null,
               "code": "_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.deleteAllSimulations();\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.noSimulationsTitle().should('be.visible');",
               "err": {},
-              "uuid": "5ad8673e-9b18-4cf2-97eb-62a5b80b13d7",
-              "parentUUID": "48680bca-d969-4bd7-bf07-e2c426515170",
+              "uuid": "8ac78f39-a58b-4413-b162-3bba6be8ff5e",
+              "parentUUID": "5397e7e7-c210-41de-80f8-f0771ad48f80",
               "isHook": false,
               "skipped": true
             }
           ],
           "suites": [],
           "passes": [
-            "b94e4f51-dcf8-4a76-9589-06ab754066b3"
+            "6ccdc4b3-ea50-4e95-81c1-1ab2dc45c49c"
           ],
           "failures": [],
           "pending": [],
           "skipped": [
-            "7bdd5908-ec74-48da-b58f-f85c538e3240",
-            "5de33d7b-91e4-41e7-9182-3d7d7c14040b",
-            "7ecbeb13-a3f3-41d3-ad0f-c65cf3034697",
-            "ba3bb936-4fbb-44a4-aedc-a062b6d6c015",
-            "9b8e0232-dadc-45ec-9992-ffc8302d6b03",
-            "5ad8673e-9b18-4cf2-97eb-62a5b80b13d7"
+            "5233f17f-d017-48c7-80da-bfee1986876b",
+            "1caa1bfb-5bb6-429b-8989-cc38693b4ed5",
+            "cab2c165-4120-4db6-bbfa-26c49d70e080",
+            "70b38c94-1030-4ddd-9ba5-7ba42906fe01",
+            "9be85689-8c36-47a5-a3f7-d23e28d74436",
+            "8ac78f39-a58b-4413-b162-3bba6be8ff5e"
           ],
           "duration": 0,
           "root": false,
@@ -716,7 +714,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "4e907d00-acd3-4063-9f1f-b61738b2fed2",
+      "uuid": "a249e721-24b0-4481-9c51-d5c1884616a3",
       "title": "",
       "fullFile": "build/production/argentina/smoke/comparar.cy.js",
       "file": "build/production/argentina/smoke/comparar.cy.js",
@@ -725,7 +723,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "49f366e7-09f9-44b7-910c-0e144e733a9a",
+          "uuid": "d53e61a9-6a40-4bfc-a3b8-db3ec6449ab3",
           "title": "Comparar",
           "fullFile": "",
           "file": "",
@@ -745,8 +743,8 @@
               "context": null,
               "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].ABBACO_LOCATION}/security-comparison`);",
               "err": {},
-              "uuid": "93d50d30-f4bd-4b7b-8991-03b436524ea3",
-              "parentUUID": "49f366e7-09f9-44b7-910c-0e144e733a9a",
+              "uuid": "361ea2b4-5da1-498b-9b90-fadc1921eff9",
+              "parentUUID": "d53e61a9-6a40-4bfc-a3b8-db3ec6449ab3",
               "isHook": false,
               "skipped": false
             },
@@ -763,8 +761,8 @@
               "context": null,
               "code": "_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.searchAndAddEspecie(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].HARD_DOLLAR}`);\n//Valida que no esté el título cuando se agregó la especie\ncy.contains(new RegExp('(Agregue especies utilizando el formulario para comenzar|Adicione espécies utilizando o formulário para começar)', 'i')).should('not.exist');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.placeholderGlow().should('not.exist');\n_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.elements.validateAddedTicker(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].HARD_DOLLAR}`).should('be.visible');\n_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.searchAndAddEspecie(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].CER}`);\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.placeholderGlow().should('not.exist');\n_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.elements.validateAddedTicker(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].CER}`).should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.tableRow().should('contain.text', `${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].HARD_DOLLAR}`);\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.tableRow().should('contain.text', `${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].CER}`);",
               "err": {},
-              "uuid": "3257bdc1-c37a-41f7-a96b-63e5a2d5ac02",
-              "parentUUID": "49f366e7-09f9-44b7-910c-0e144e733a9a",
+              "uuid": "65c04aff-915d-4d4a-a6e3-54797215032d",
+              "parentUUID": "d53e61a9-6a40-4bfc-a3b8-db3ec6449ab3",
               "isHook": false,
               "skipped": true
             },
@@ -781,8 +779,8 @@
               "context": null,
               "code": "_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.goToTab(new RegExp('(Condiciones de Emisión|Condições de Emissão)', 'i'));\n//validaciones\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.placeholderGlow().should('not.exist');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.tableRow().should('contain.text', `${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].HARD_DOLLAR}`);\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.tableRow().should('contain.text', `${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].CER}`);",
               "err": {},
-              "uuid": "a89d1ac6-1a68-4057-bf98-46913a9d9fc4",
-              "parentUUID": "49f366e7-09f9-44b7-910c-0e144e733a9a",
+              "uuid": "d9ce1e70-11a7-410b-9ca8-370d2c27b5a2",
+              "parentUUID": "d53e61a9-6a40-4bfc-a3b8-db3ec6449ab3",
               "isHook": false,
               "skipped": true
             },
@@ -799,8 +797,8 @@
               "context": null,
               "code": "_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.goToTab('TIR Históricas');\n//Validaciones de los gráficos\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.chartBackground().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.chartTrackerLine().should('be.visible');\n_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.goToTab('Paridades Históricas');\n//Validaciones de los gráficos\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.chartBackground().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.chartTrackerLine().should('be.visible');",
               "err": {},
-              "uuid": "dbd0d064-6e1e-4040-9638-979a502a9cf7",
-              "parentUUID": "49f366e7-09f9-44b7-910c-0e144e733a9a",
+              "uuid": "dfa1a074-3607-465a-90df-f943c25d5cce",
+              "parentUUID": "d53e61a9-6a40-4bfc-a3b8-db3ec6449ab3",
               "isHook": false,
               "skipped": true
             },
@@ -817,8 +815,8 @@
               "context": null,
               "code": "_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.goToTab(new RegExp('^(Análisis|Análise)$', 'i'));\n_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.deleteEspecie(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].HARD_DOLLAR}`);\n//Validaciones\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.tableRows().contains('button', `${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].HARD_DOLLAR}`).should('not.exist');",
               "err": {},
-              "uuid": "5b05cfdd-69b5-4576-87dd-7585925fbd3f",
-              "parentUUID": "49f366e7-09f9-44b7-910c-0e144e733a9a",
+              "uuid": "10fc0fec-29d0-4eb7-aeef-3063536d7de0",
+              "parentUUID": "d53e61a9-6a40-4bfc-a3b8-db3ec6449ab3",
               "isHook": false,
               "skipped": true
             },
@@ -835,24 +833,24 @@
               "context": null,
               "code": "_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.deleteEspecie(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].CER}`);\n//Validaciones\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.tableRows().contains('button', `${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].CER}`).should('not.exist');\ncy.contains(new RegExp('(Agregue especies utilizando el formulario para comenzar|Adicione espécies utilizando o formulário para começar)', 'i')).should('be.visible');",
               "err": {},
-              "uuid": "e6dac271-eedd-45bf-8dff-a1a04128a554",
-              "parentUUID": "49f366e7-09f9-44b7-910c-0e144e733a9a",
+              "uuid": "72576f1a-f346-4205-ad6f-e537886df85f",
+              "parentUUID": "d53e61a9-6a40-4bfc-a3b8-db3ec6449ab3",
               "isHook": false,
               "skipped": true
             }
           ],
           "suites": [],
           "passes": [
-            "93d50d30-f4bd-4b7b-8991-03b436524ea3"
+            "361ea2b4-5da1-498b-9b90-fadc1921eff9"
           ],
           "failures": [],
           "pending": [],
           "skipped": [
-            "3257bdc1-c37a-41f7-a96b-63e5a2d5ac02",
-            "a89d1ac6-1a68-4057-bf98-46913a9d9fc4",
-            "dbd0d064-6e1e-4040-9638-979a502a9cf7",
-            "5b05cfdd-69b5-4576-87dd-7585925fbd3f",
-            "e6dac271-eedd-45bf-8dff-a1a04128a554"
+            "65c04aff-915d-4d4a-a6e3-54797215032d",
+            "d9ce1e70-11a7-410b-9ca8-370d2c27b5a2",
+            "dfa1a074-3607-465a-90df-f943c25d5cce",
+            "10fc0fec-29d0-4eb7-aeef-3063536d7de0",
+            "72576f1a-f346-4205-ad6f-e537886df85f"
           ],
           "duration": 0,
           "root": false,
@@ -870,7 +868,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "abecbe0d-2174-4d8a-9c64-6f3604bf2564",
+      "uuid": "909537fc-2854-489e-8219-c4027567ab8d",
       "title": "",
       "fullFile": "build/production/argentina/smoke/curvas.cy.js",
       "file": "build/production/argentina/smoke/curvas.cy.js",
@@ -879,7 +877,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "7c60be30-575c-4831-bf1d-91b142189adb",
+          "uuid": "21ec450c-8e6b-4d68-a6db-8b66ac12099a",
           "title": "Curvas",
           "fullFile": "",
           "file": "",
@@ -888,7 +886,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "e86f6ce9-ca0e-4f8e-acc4-7b1a73e5e116",
+              "uuid": "caaeba38-778b-4a3f-8f16-9aec86dadf65",
               "title": "Validar que la lista de curvas esté visible",
               "fullFile": "",
               "file": "",
@@ -908,8 +906,8 @@
                   "context": null,
                   "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/curves`);",
                   "err": {},
-                  "uuid": "bb62378d-10ac-49d8-b2bc-05b8069d7196",
-                  "parentUUID": "e86f6ce9-ca0e-4f8e-acc4-7b1a73e5e116",
+                  "uuid": "d00f05d5-0bf1-4626-b649-bc86aaea3b52",
+                  "parentUUID": "caaeba38-778b-4a3f-8f16-9aec86dadf65",
                   "isHook": false,
                   "skipped": false
                 },
@@ -926,20 +924,20 @@
                   "context": null,
                   "code": "cy.pageIsLoaded();\n_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.elements.listLinks().should('be.visible').and('not.be.empty');",
                   "err": {},
-                  "uuid": "fe5b2608-002d-4b96-be22-d767c96e24da",
-                  "parentUUID": "e86f6ce9-ca0e-4f8e-acc4-7b1a73e5e116",
+                  "uuid": "defcb02f-2c72-45ca-8d00-cfcef3404d58",
+                  "parentUUID": "caaeba38-778b-4a3f-8f16-9aec86dadf65",
                   "isHook": false,
                   "skipped": true
                 }
               ],
               "suites": [],
               "passes": [
-                "bb62378d-10ac-49d8-b2bc-05b8069d7196"
+                "d00f05d5-0bf1-4626-b649-bc86aaea3b52"
               ],
               "failures": [],
               "pending": [],
               "skipped": [
-                "fe5b2608-002d-4b96-be22-d767c96e24da"
+                "defcb02f-2c72-45ca-8d00-cfcef3404d58"
               ],
               "duration": 0,
               "root": false,
@@ -947,7 +945,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "30d71963-6564-4a0b-85f8-a8b1e8333c15",
+              "uuid": "d4516aea-43f7-45e9-a896-59316ed01cec",
               "title": "Recorre las pestañas Soberanos, SubSoberanos, Corporativos, BCRA",
               "fullFile": "",
               "file": "",
@@ -967,7 +965,7 @@
                   "context": null,
                   "code": "_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.clickTab(tab);\n_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.elements.tabButton(tab).should('be.visible');",
                   "err": {},
-                  "uuid": "74b9021e-3971-4bb8-bb51-a6b90ff65ec4",
+                  "uuid": "7346611c-18e9-4951-a053-63e56cb83cdc",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -985,7 +983,7 @@
                   "context": null,
                   "code": "_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.clickTab(tab);\n_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.elements.tabButton(tab).should('be.visible');",
                   "err": {},
-                  "uuid": "7520e053-a632-40c3-b79d-b1de6e1073d2",
+                  "uuid": "4395abe2-2da8-44c7-8cc1-55da21811c46",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1003,7 +1001,7 @@
                   "context": null,
                   "code": "_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.clickTab(tab);\n_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.elements.tabButton(tab).should('be.visible');",
                   "err": {},
-                  "uuid": "3463eaca-2083-403c-a625-284178b9d902",
+                  "uuid": "9ab948d2-fd90-47bd-be38-d809a2a1d5c5",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1021,7 +1019,7 @@
                   "context": null,
                   "code": "_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.clickTab(tab);\n_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.elements.tabButton(tab).should('be.visible');",
                   "err": {},
-                  "uuid": "60a86a85-b4b7-44d6-9521-52e2454b9017",
+                  "uuid": "3d751ef8-f6bd-4145-9612-f50cf27ca25d",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1032,10 +1030,10 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "74b9021e-3971-4bb8-bb51-a6b90ff65ec4",
-                "7520e053-a632-40c3-b79d-b1de6e1073d2",
-                "3463eaca-2083-403c-a625-284178b9d902",
-                "60a86a85-b4b7-44d6-9521-52e2454b9017"
+                "7346611c-18e9-4951-a053-63e56cb83cdc",
+                "4395abe2-2da8-44c7-8cc1-55da21811c46",
+                "9ab948d2-fd90-47bd-be38-d809a2a1d5c5",
+                "3d751ef8-f6bd-4145-9612-f50cf27ca25d"
               ],
               "duration": 0,
               "root": false,
@@ -1043,7 +1041,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "8a52f646-0c2b-4fd4-8009-68eaf9cda5d2",
+              "uuid": "c57c9bfc-eb9b-4ce1-b80a-451258fb0cdd",
               "title": "Ingreso a la primera curva de la lista",
               "fullFile": "",
               "file": "",
@@ -1063,7 +1061,7 @@
                   "context": null,
                   "code": "_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.clickTab(/^(Todos|Todas)$/i);\n_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.elements.listLinks().first().click({\n  force: true\n});\ncy.validacionesCurva();",
                   "err": {},
-                  "uuid": "04e2bacb-8d29-4194-80da-3685cec0f371",
+                  "uuid": "8ae7c3ed-5bed-42d6-aab4-1efca77f9040",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1081,7 +1079,7 @@
                   "context": null,
                   "code": "cy.contains(/^(Análisis Online|Análise Online)$/i, {\n  matchCase: false\n}).should('be.visible').click();\ncy.validacionesAnalisisOnline();",
                   "err": {},
-                  "uuid": "9859e358-edeb-4a36-a346-01c2f89dd730",
+                  "uuid": "0a9ff7b7-542e-473a-83ff-0ca21cd8494c",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1092,8 +1090,8 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "04e2bacb-8d29-4194-80da-3685cec0f371",
-                "9859e358-edeb-4a36-a346-01c2f89dd730"
+                "8ae7c3ed-5bed-42d6-aab4-1efca77f9040",
+                "0a9ff7b7-542e-473a-83ff-0ca21cd8494c"
               ],
               "duration": 0,
               "root": false,
@@ -1101,7 +1099,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "dedb84ae-019a-4691-944a-23196fdb65ec",
+              "uuid": "590bb8aa-9177-4875-b659-427e66e04ad5",
               "title": "Validar que la lista de curvas internacionales estén visibles",
               "fullFile": "",
               "file": "",
@@ -1121,7 +1119,7 @@
                   "context": null,
                   "code": "_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.clickArrowLeft();\n_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.clickTab('Internacionales');\n_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.elements.tabButton('Internacionales').should('be.visible');\n_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.clickTab('Todas');\n_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.elements.listLinks().should('be.visible').and('not.be.empty');",
                   "err": {},
-                  "uuid": "c8d91be8-b05a-4a95-ae09-6f26ea5bb7c3",
+                  "uuid": "3bf9c21a-58f8-4d69-bd72-6b009333416b",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1132,7 +1130,7 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "c8d91be8-b05a-4a95-ae09-6f26ea5bb7c3"
+                "3bf9c21a-58f8-4d69-bd72-6b009333416b"
               ],
               "duration": 0,
               "root": false,
@@ -1140,7 +1138,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "df7846e6-a393-476f-8c92-29eee6a40378",
+              "uuid": "e11a02ef-230d-4019-9b65-55de421c41f0",
               "title": "Ingreso a la primera curva internacional",
               "fullFile": "",
               "file": "",
@@ -1160,7 +1158,7 @@
                   "context": null,
                   "code": "_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.clickTab('Todas');\n_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.elements.listLinks().first().click({\n  force: true\n});\ncy.validacionesCurva();",
                   "err": {},
-                  "uuid": "0017e434-7063-4e71-ba8f-0b26735dcf71",
+                  "uuid": "ea8e38a7-9dc0-4e74-bddc-900882f6ab7c",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1171,7 +1169,7 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "0017e434-7063-4e71-ba8f-0b26735dcf71"
+                "ea8e38a7-9dc0-4e74-bddc-900882f6ab7c"
               ],
               "duration": 0,
               "root": false,
@@ -1199,7 +1197,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "ed18bf8d-32ac-4e97-9362-072de3533a2e",
+      "uuid": "7d267c97-3415-4e72-ad68-f51e03be0812",
       "title": "",
       "fullFile": "build/production/argentina/smoke/favoritos.cy.js",
       "file": "build/production/argentina/smoke/favoritos.cy.js",
@@ -1208,7 +1206,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "c90465f7-2264-4782-95b2-fa7e3195f94d",
+          "uuid": "9d530525-9f39-4d38-ad9e-b949cf60e1cf",
           "title": "Favoritos",
           "fullFile": "",
           "file": "",
@@ -1217,7 +1215,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "fb858d08-73c3-446b-8930-fe3dc4d32e1a",
+              "uuid": "20f97dc6-f905-4a90-88d4-a820112fa7b5",
               "title": "Especies favoritas",
               "fullFile": "",
               "file": "",
@@ -1237,8 +1235,8 @@
                   "context": null,
                   "code": "cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION);",
                   "err": {},
-                  "uuid": "08d342d0-2536-4474-9ca9-8dc5bb0028b6",
-                  "parentUUID": "fb858d08-73c3-446b-8930-fe3dc4d32e1a",
+                  "uuid": "3b58591b-5c16-4699-98ee-8c3f54aedd56",
+                  "parentUUID": "20f97dc6-f905-4a90-88d4-a820112fa7b5",
                   "isHook": false,
                   "skipped": false
                 },
@@ -1255,8 +1253,8 @@
                   "context": null,
                   "code": "cy.buscarYAnalizarEspecie(bono);\n_pages_favoritosPage__WEBPACK_IMPORTED_MODULE_1__.favoritos.saveFavorite();\n_pages_favoritosPage__WEBPACK_IMPORTED_MODULE_1__.favoritos.elements.favoriteSavedButton().should('be.visible');",
                   "err": {},
-                  "uuid": "63c8a804-b53a-4f50-8ddc-51cc86fe9b67",
-                  "parentUUID": "fb858d08-73c3-446b-8930-fe3dc4d32e1a",
+                  "uuid": "f7afa404-0764-458a-a036-eb9023d0b979",
+                  "parentUUID": "20f97dc6-f905-4a90-88d4-a820112fa7b5",
                   "isHook": false,
                   "skipped": true
                 },
@@ -1273,8 +1271,8 @@
                   "context": null,
                   "code": "cy.buscarYAnalizarEspecie(bono);\n_pages_favoritosPage__WEBPACK_IMPORTED_MODULE_1__.favoritos.saveFavorite();\n_pages_favoritosPage__WEBPACK_IMPORTED_MODULE_1__.favoritos.elements.favoriteSavedButton().should('be.visible');",
                   "err": {},
-                  "uuid": "39c52e19-6913-4188-b62d-2c0a19d27fcc",
-                  "parentUUID": "fb858d08-73c3-446b-8930-fe3dc4d32e1a",
+                  "uuid": "49c2ed07-498d-4ddc-bbfe-8e64e3acdb72",
+                  "parentUUID": "20f97dc6-f905-4a90-88d4-a820112fa7b5",
                   "isHook": false,
                   "skipped": true
                 },
@@ -1291,8 +1289,8 @@
                   "context": null,
                   "code": "cy.buscarYAnalizarEspecie(bono);\n_pages_favoritosPage__WEBPACK_IMPORTED_MODULE_1__.favoritos.saveFavorite();\n_pages_favoritosPage__WEBPACK_IMPORTED_MODULE_1__.favoritos.elements.favoriteSavedButton().should('be.visible');",
                   "err": {},
-                  "uuid": "97fcc09a-38ca-438c-a983-d24d6e685961",
-                  "parentUUID": "fb858d08-73c3-446b-8930-fe3dc4d32e1a",
+                  "uuid": "1808fd3f-b810-4f87-b707-933753774573",
+                  "parentUUID": "20f97dc6-f905-4a90-88d4-a820112fa7b5",
                   "isHook": false,
                   "skipped": true
                 },
@@ -1309,8 +1307,8 @@
                   "context": null,
                   "code": "cy.buscarYAnalizarEspecie(bono);\n_pages_favoritosPage__WEBPACK_IMPORTED_MODULE_1__.favoritos.saveFavorite();\n_pages_favoritosPage__WEBPACK_IMPORTED_MODULE_1__.favoritos.elements.favoriteSavedButton().should('be.visible');",
                   "err": {},
-                  "uuid": "e66bc52b-e2b6-4598-b1c7-21904e98fa26",
-                  "parentUUID": "fb858d08-73c3-446b-8930-fe3dc4d32e1a",
+                  "uuid": "b9da1c31-4c3c-4277-8110-83fa897fe8f1",
+                  "parentUUID": "20f97dc6-f905-4a90-88d4-a820112fa7b5",
                   "isHook": false,
                   "skipped": true
                 },
@@ -1327,8 +1325,8 @@
                   "context": null,
                   "code": "cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION);\ncy.validarFavoritosHome(bonos);",
                   "err": {},
-                  "uuid": "9ff286c2-8904-4cfb-9e7a-45bd4da6e2ad",
-                  "parentUUID": "fb858d08-73c3-446b-8930-fe3dc4d32e1a",
+                  "uuid": "52431c40-61ac-4749-9d57-11b9b30c1c11",
+                  "parentUUID": "20f97dc6-f905-4a90-88d4-a820112fa7b5",
                   "isHook": false,
                   "skipped": true
                 },
@@ -1345,25 +1343,25 @@
                   "context": null,
                   "code": "cy.cleanFavoritosHomeStg(bonos);",
                   "err": {},
-                  "uuid": "db4fe64a-9d95-4fba-825b-821d8d3d4bff",
-                  "parentUUID": "fb858d08-73c3-446b-8930-fe3dc4d32e1a",
+                  "uuid": "7c3c7c37-6f32-4dd4-b2ee-c19f8dde38b7",
+                  "parentUUID": "20f97dc6-f905-4a90-88d4-a820112fa7b5",
                   "isHook": false,
                   "skipped": true
                 }
               ],
               "suites": [],
               "passes": [
-                "08d342d0-2536-4474-9ca9-8dc5bb0028b6"
+                "3b58591b-5c16-4699-98ee-8c3f54aedd56"
               ],
               "failures": [],
               "pending": [],
               "skipped": [
-                "63c8a804-b53a-4f50-8ddc-51cc86fe9b67",
-                "39c52e19-6913-4188-b62d-2c0a19d27fcc",
-                "97fcc09a-38ca-438c-a983-d24d6e685961",
-                "e66bc52b-e2b6-4598-b1c7-21904e98fa26",
-                "9ff286c2-8904-4cfb-9e7a-45bd4da6e2ad",
-                "db4fe64a-9d95-4fba-825b-821d8d3d4bff"
+                "f7afa404-0764-458a-a036-eb9023d0b979",
+                "49c2ed07-498d-4ddc-bbfe-8e64e3acdb72",
+                "1808fd3f-b810-4f87-b707-933753774573",
+                "b9da1c31-4c3c-4277-8110-83fa897fe8f1",
+                "52431c40-61ac-4749-9d57-11b9b30c1c11",
+                "7c3c7c37-6f32-4dd4-b2ee-c19f8dde38b7"
               ],
               "duration": 0,
               "root": false,
@@ -1371,7 +1369,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "a12b7fcc-506d-49ef-8092-aa089922c43c",
+              "uuid": "c7a791ab-f579-4c69-a027-2d754abb0212",
               "title": "Curvas favoritas",
               "fullFile": "",
               "file": "",
@@ -1391,7 +1389,7 @@
                   "context": null,
                   "code": "// cy.contains('a', 'Curvas', { matchCase: false }).click({ force: true })\ncy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/curves`);\n// cy.pageIsLoaded()\ncy.get('input[class=\"search-input form-control form-control-md\"]').should('be.visible');\ncy.get('ul.list-group').should('be.visible');\ncy.wait(3000);",
                   "err": {},
-                  "uuid": "c2ef2b76-5fc5-4ea6-86eb-c658910f3855",
+                  "uuid": "45cb6c06-9d49-403a-989b-6a415898549b",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1409,7 +1407,7 @@
                   "context": null,
                   "code": "cy.marcarCurvaFavoritaYValidar(curva);",
                   "err": {},
-                  "uuid": "781f8a6f-01d2-49ae-b902-eceb40c1099f",
+                  "uuid": "f0cb867d-26bf-48a1-aeda-4ea2aca7ed9a",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1427,7 +1425,7 @@
                   "context": null,
                   "code": "cy.marcarCurvaFavoritaYValidar(curva);",
                   "err": {},
-                  "uuid": "34c19529-0780-46ce-9a41-fa7e22a0e037",
+                  "uuid": "0cd317a0-881a-49e7-9819-23ff4fa8d00d",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1445,7 +1443,7 @@
                   "context": null,
                   "code": "cy.marcarCurvaFavoritaYValidar(curva);",
                   "err": {},
-                  "uuid": "c53c415f-d197-4034-af0e-22a3d88fef86",
+                  "uuid": "5dfb4dc8-34ab-421d-983b-99f4bd5ee63d",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1463,7 +1461,7 @@
                   "context": null,
                   "code": "cy.marcarCurvaFavoritaYValidar(curva);",
                   "err": {},
-                  "uuid": "c66b439c-325a-4dca-8ff1-54b106eef7fc",
+                  "uuid": "f150f218-4a20-4da7-b684-28c1fe420af8",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1481,7 +1479,7 @@
                   "context": null,
                   "code": "cy.marcarCurvaFavoritaYValidar(curva);",
                   "err": {},
-                  "uuid": "b30d0504-59c1-4592-85ce-80f7804a4fbc",
+                  "uuid": "81d2c953-3593-4e7f-bb00-c9059654d781",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1499,7 +1497,7 @@
                   "context": null,
                   "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/plotter`);\n_pages_graficadorPage__WEBPACK_IMPORTED_MODULE_2__.graficador.elements.selectCurvesDropdown().should('be.visible');\n_pages_graficadorPage__WEBPACK_IMPORTED_MODULE_2__.graficador.clickCurvesDropdown();\nCURVAS_FAVORITAS.forEach(curva => {\n  cy.contains('button.dropdown-item span', curva).closest('button.dropdown-item').within(() => {\n    cy.get('svg.tabler-icon-star-filled.text-body').should('be.visible');\n  });\n});",
                   "err": {},
-                  "uuid": "7fc1e6f3-c6cb-485c-8248-9bbe838866bd",
+                  "uuid": "98232270-d03f-4a09-af54-9594f7dfcc52",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1517,7 +1515,7 @@
                   "context": null,
                   "code": "cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION);\ncy.contains('h6', 'Curvas favoritas', {\n  matchCase: false\n}).closest('.card-body').within(() => {\n  CURVAS_FAVORITAS.forEach(curva => {\n    cy.contains('li.list-group-item a.text-link', curva).closest('li.list-group-item').within(() => {\n      cy.get('svg.tabler-icon-star-filled.text-warning').should('be.visible');\n    });\n  });\n});",
                   "err": {},
-                  "uuid": "56ac8643-9c30-475a-82fb-ed1b13e57687",
+                  "uuid": "72755a18-b703-43ef-9d94-dcfee53ae19e",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1535,7 +1533,7 @@
                   "context": null,
                   "code": "cy.contains('h6', 'Curvas favoritas').closest('.card-body').as('favoritosCard');\nCURVAS_FAVORITAS.forEach(curva => {\n  // Click en la estrella de cada curva\n  cy.get('@favoritosCard').contains('li.list-group-item a.text-link', curva).closest('li.list-group-item').within(() => {\n    cy.get('svg.tabler-icon-star-filled.text-warning').should('be.visible').click();\n  });\n  // Validar que la curva ya no se muestra en el cuadro\n  cy.get('@favoritosCard').contains('a.text-link', curva).should('not.exist');\n});",
                   "err": {},
-                  "uuid": "2df574d2-e454-490d-bb08-320b299fa9cf",
+                  "uuid": "9cf3b67a-af86-4459-bf27-3439a530b1b6",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1553,7 +1551,7 @@
                   "context": null,
                   "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/plotter`);\n_pages_graficadorPage__WEBPACK_IMPORTED_MODULE_2__.graficador.elements.selectCurvesDropdown().should('be.visible');\n_pages_graficadorPage__WEBPACK_IMPORTED_MODULE_2__.graficador.clickCurvesDropdown();\nCURVAS_FAVORITAS.forEach(curva => {\n  cy.contains('button.dropdown-item span', curva).closest('button.dropdown-item').within(() => {\n    cy.get('svg.tabler-icon-star-filled.text-body').should('not.exist');\n  });\n});",
                   "err": {},
-                  "uuid": "5a2447d0-7b18-4d57-8b1c-fc4c3bcbd2de",
+                  "uuid": "fc30e9c6-d277-4f9d-b5ee-97c97ecd132f",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1571,7 +1569,7 @@
                   "context": null,
                   "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/curves`);\ncy.get('ul.list-group li.list-group-item').each($li => {\n  cy.wrap($li).within(() => {\n    cy.get('svg.tabler-icon-star-filled.text-warning').should('not.exist');\n  });\n});",
                   "err": {},
-                  "uuid": "9abd76af-2ca9-409e-9a1e-c1e4417b14d0",
+                  "uuid": "818a001f-c9cc-4726-849c-443258bc9184",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1582,17 +1580,17 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "c2ef2b76-5fc5-4ea6-86eb-c658910f3855",
-                "781f8a6f-01d2-49ae-b902-eceb40c1099f",
-                "34c19529-0780-46ce-9a41-fa7e22a0e037",
-                "c53c415f-d197-4034-af0e-22a3d88fef86",
-                "c66b439c-325a-4dca-8ff1-54b106eef7fc",
-                "b30d0504-59c1-4592-85ce-80f7804a4fbc",
-                "7fc1e6f3-c6cb-485c-8248-9bbe838866bd",
-                "56ac8643-9c30-475a-82fb-ed1b13e57687",
-                "2df574d2-e454-490d-bb08-320b299fa9cf",
-                "5a2447d0-7b18-4d57-8b1c-fc4c3bcbd2de",
-                "9abd76af-2ca9-409e-9a1e-c1e4417b14d0"
+                "45cb6c06-9d49-403a-989b-6a415898549b",
+                "f0cb867d-26bf-48a1-aeda-4ea2aca7ed9a",
+                "0cd317a0-881a-49e7-9819-23ff4fa8d00d",
+                "5dfb4dc8-34ab-421d-983b-99f4bd5ee63d",
+                "f150f218-4a20-4da7-b684-28c1fe420af8",
+                "81d2c953-3593-4e7f-bb00-c9059654d781",
+                "98232270-d03f-4a09-af54-9594f7dfcc52",
+                "72755a18-b703-43ef-9d94-dcfee53ae19e",
+                "9cf3b67a-af86-4459-bf27-3439a530b1b6",
+                "fc30e9c6-d277-4f9d-b5ee-97c97ecd132f",
+                "818a001f-c9cc-4726-849c-443258bc9184"
               ],
               "duration": 0,
               "root": false,
@@ -1620,7 +1618,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "69173e71-9872-4a3e-9bc2-13fb26c09876",
+      "uuid": "8eb9a8c7-5dd5-40c0-866b-0c68ba742d3b",
       "title": "",
       "fullFile": "build/production/argentina/smoke/graficador.cy.js",
       "file": "build/production/argentina/smoke/graficador.cy.js",
@@ -1629,7 +1627,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "e25ce380-bd92-4c48-906a-3b8ab22d4a19",
+          "uuid": "5c33c5df-e4a1-4a6b-907e-9a191abaef7f",
           "title": "Graficador",
           "fullFile": "",
           "file": "",
@@ -1649,8 +1647,8 @@
               "context": null,
               "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].ABBACO_LOCATION}/plotter`);\n_pages_graficadorPage__WEBPACK_IMPORTED_MODULE_0__.graficador.elements.selectCurvesDropdown().should('be.visible');\n_pages_graficadorPage__WEBPACK_IMPORTED_MODULE_0__.graficador.clickCurvesDropdown();\n_pages_graficadorPage__WEBPACK_IMPORTED_MODULE_0__.graficador.elements.curvesList().should('be.visible');\n_pages_graficadorPage__WEBPACK_IMPORTED_MODULE_0__.graficador.selectAllcurves();\n_pages_graficadorPage__WEBPACK_IMPORTED_MODULE_0__.graficador.elements.chartElementsLegend().should('be.visible');\n_pages_graficadorPage__WEBPACK_IMPORTED_MODULE_0__.graficador.elements.chartCardLegend().should('be.visible');",
               "err": {},
-              "uuid": "a024e0c6-5447-4245-9526-cbe5f42f2e7b",
-              "parentUUID": "e25ce380-bd92-4c48-906a-3b8ab22d4a19",
+              "uuid": "03226c0c-bcc4-4821-84c2-b592631762e8",
+              "parentUUID": "5c33c5df-e4a1-4a6b-907e-9a191abaef7f",
               "isHook": false,
               "skipped": false
             },
@@ -1667,20 +1665,20 @@
               "context": null,
               "code": "_pages_graficadorPage__WEBPACK_IMPORTED_MODULE_0__.graficador.goToTab(new RegExp('(Especies|Espécies)', 'i'), {\n  matchCase: false\n});\n_pages_graficadorPage__WEBPACK_IMPORTED_MODULE_0__.graficador.searchAndAddEspecie(_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].HARD_DOLLAR);\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.highchartsMenu().should('be.visible');",
               "err": {},
-              "uuid": "1585d50c-3a87-48ec-b2e8-a7b010d7f736",
-              "parentUUID": "e25ce380-bd92-4c48-906a-3b8ab22d4a19",
+              "uuid": "9afc25ab-ce35-4dc8-b7ac-0b2836780bc0",
+              "parentUUID": "5c33c5df-e4a1-4a6b-907e-9a191abaef7f",
               "isHook": false,
               "skipped": true
             }
           ],
           "suites": [],
           "passes": [
-            "a024e0c6-5447-4245-9526-cbe5f42f2e7b"
+            "03226c0c-bcc4-4821-84c2-b592631762e8"
           ],
           "failures": [],
           "pending": [],
           "skipped": [
-            "1585d50c-3a87-48ec-b2e8-a7b010d7f736"
+            "9afc25ab-ce35-4dc8-b7ac-0b2836780bc0"
           ],
           "duration": 0,
           "root": false,
@@ -1698,7 +1696,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "bb01070d-e8c9-4934-bf4e-2224aa6c2550",
+      "uuid": "8d3ebbda-e67f-4a28-98af-4d2f28a2fa4a",
       "title": "",
       "fullFile": "build/production/argentina/smoke/portafolio.cy.js",
       "file": "build/production/argentina/smoke/portafolio.cy.js",
@@ -1707,7 +1705,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "2f52fe7e-9543-42bf-8c47-ecf48a3ec429",
+          "uuid": "a18ee574-7693-4b05-bc6e-cab94b4b477b",
           "title": "Mi portafolio",
           "fullFile": "",
           "file": "",
@@ -1727,8 +1725,8 @@
               "context": null,
               "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/security-position`);",
               "err": {},
-              "uuid": "71b92caf-a77f-45df-90b5-646d7b065d84",
-              "parentUUID": "2f52fe7e-9543-42bf-8c47-ecf48a3ec429",
+              "uuid": "e485de2e-68ca-4fff-8d0a-893844b24228",
+              "parentUUID": "a18ee574-7693-4b05-bc6e-cab94b4b477b",
               "isHook": false,
               "skipped": false
             },
@@ -1745,8 +1743,8 @@
               "context": null,
               "code": "cy.crearPortafolio('Portafolio Cypress');\n// Ingresar al portafolio creado\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.clickCreatedPortfolio();\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.elements.tableElements().should('be.visible');",
               "err": {},
-              "uuid": "3177f3b1-b098-4a43-8a0e-e050524c42cf",
-              "parentUUID": "2f52fe7e-9543-42bf-8c47-ecf48a3ec429",
+              "uuid": "1dc87643-4690-498e-934c-eb4e900ffb5f",
+              "parentUUID": "a18ee574-7693-4b05-bc6e-cab94b4b477b",
               "isHook": false,
               "skipped": true
             },
@@ -1763,8 +1761,8 @@
               "context": null,
               "code": "_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.elements.tableElements().should('be.visible');\ncy.agregarBonoPortafolio(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR);",
               "err": {},
-              "uuid": "02e89e73-0608-4bdd-84bc-49c4ff8f38df",
-              "parentUUID": "2f52fe7e-9543-42bf-8c47-ecf48a3ec429",
+              "uuid": "77316f85-396b-4a6d-94f8-18f165b2e321",
+              "parentUUID": "a18ee574-7693-4b05-bc6e-cab94b4b477b",
               "isHook": false,
               "skipped": true
             },
@@ -1781,8 +1779,8 @@
               "context": null,
               "code": "cy.verificarValuacionPortfolio();",
               "err": {},
-              "uuid": "f0e4a5c3-e4b6-46be-979d-5d6a4560d594",
-              "parentUUID": "2f52fe7e-9543-42bf-8c47-ecf48a3ec429",
+              "uuid": "15c26d0d-a6e8-4966-916c-4c02f59ef785",
+              "parentUUID": "a18ee574-7693-4b05-bc6e-cab94b4b477b",
               "isHook": false,
               "skipped": true
             },
@@ -1799,8 +1797,8 @@
               "context": null,
               "code": "_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.clickProyeccionButton();\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.elements.tableProyeccion().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_2__.sharedElements.cardBody().should('be.visible');\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.clickAgendaCortesButton();\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.elements.agendaCorteElements().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_2__.sharedElements.cardBody().should('be.visible');",
               "err": {},
-              "uuid": "874e5a34-cb96-4e6e-9b4f-1a8e02621ef5",
-              "parentUUID": "2f52fe7e-9543-42bf-8c47-ecf48a3ec429",
+              "uuid": "27b5d983-bf5e-4117-a702-1526c96418b3",
+              "parentUUID": "a18ee574-7693-4b05-bc6e-cab94b4b477b",
               "isHook": false,
               "skipped": true
             },
@@ -1817,8 +1815,8 @@
               "context": null,
               "code": "_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.editPortfolio('Portafolio Cypress Modificado');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_2__.sharedElements.ballLoader().should('not.exist');\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.elements.newPortfolioName().should('be.visible');",
               "err": {},
-              "uuid": "5a45eb1c-f07a-4e12-a44b-2048422a1c64",
-              "parentUUID": "2f52fe7e-9543-42bf-8c47-ecf48a3ec429",
+              "uuid": "32de60d9-7560-4da4-bc0d-42646210bbce",
+              "parentUUID": "a18ee574-7693-4b05-bc6e-cab94b4b477b",
               "isHook": false,
               "skipped": true
             },
@@ -1835,8 +1833,8 @@
               "context": null,
               "code": "// Este método hay que revisarlo porque 1) No termina de borrar y validar todas las especies, el múltiple true no me parece bien usado. 2) Es mejor crear un comando/helper para estos casos de \"loop\".\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.deleteEspecies(...especies);",
               "err": {},
-              "uuid": "dc7d2339-367e-4b7a-ad8f-aedd71707245",
-              "parentUUID": "2f52fe7e-9543-42bf-8c47-ecf48a3ec429",
+              "uuid": "80859b63-81f6-4c3c-950d-6cfded660323",
+              "parentUUID": "a18ee574-7693-4b05-bc6e-cab94b4b477b",
               "isHook": false,
               "skipped": true
             },
@@ -1853,26 +1851,26 @@
               "context": null,
               "code": "_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.deletePortfolio();\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.elements.newPortfolioName().should('not.exist');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_2__.sharedElements.ballLoader().should('not.exist');",
               "err": {},
-              "uuid": "bb4c9075-7c49-4746-b766-951640ad1c6a",
-              "parentUUID": "2f52fe7e-9543-42bf-8c47-ecf48a3ec429",
+              "uuid": "e41e227e-29d1-464a-a813-727a8f7ac2c6",
+              "parentUUID": "a18ee574-7693-4b05-bc6e-cab94b4b477b",
               "isHook": false,
               "skipped": true
             }
           ],
           "suites": [],
           "passes": [
-            "71b92caf-a77f-45df-90b5-646d7b065d84"
+            "e485de2e-68ca-4fff-8d0a-893844b24228"
           ],
           "failures": [],
           "pending": [],
           "skipped": [
-            "3177f3b1-b098-4a43-8a0e-e050524c42cf",
-            "02e89e73-0608-4bdd-84bc-49c4ff8f38df",
-            "f0e4a5c3-e4b6-46be-979d-5d6a4560d594",
-            "874e5a34-cb96-4e6e-9b4f-1a8e02621ef5",
-            "5a45eb1c-f07a-4e12-a44b-2048422a1c64",
-            "dc7d2339-367e-4b7a-ad8f-aedd71707245",
-            "bb4c9075-7c49-4746-b766-951640ad1c6a"
+            "1dc87643-4690-498e-934c-eb4e900ffb5f",
+            "77316f85-396b-4a6d-94f8-18f165b2e321",
+            "15c26d0d-a6e8-4966-916c-4c02f59ef785",
+            "27b5d983-bf5e-4117-a702-1526c96418b3",
+            "32de60d9-7560-4da4-bc0d-42646210bbce",
+            "80859b63-81f6-4c3c-950d-6cfded660323",
+            "e41e227e-29d1-464a-a813-727a8f7ac2c6"
           ],
           "duration": 0,
           "root": false,
@@ -1890,7 +1888,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "629c3dfb-150e-44bf-bfdd-5eff303e76ed",
+      "uuid": "9dcd9040-4152-40e7-ad25-f5f0072ce828",
       "title": "",
       "fullFile": "build/production/argentina/smoke/screener.cy.js",
       "file": "build/production/argentina/smoke/screener.cy.js",
@@ -1899,7 +1897,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "bfc3600d-591d-44cb-905b-b6f4df052a8f",
+          "uuid": "e42e14f4-8640-4a84-aa6b-ce20dbfb3f21",
           "title": "Screener ARG",
           "fullFile": "",
           "file": "",
@@ -1919,8 +1917,8 @@
               "context": null,
               "code": "cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].ABBACO_LOCATION);\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.clickMenuScreener();\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.termsButtonAccordion().should('be.visible');\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.accordionBody().should('be.visible');",
               "err": {},
-              "uuid": "ba25230f-1cb9-4115-8cdf-a390369073e5",
-              "parentUUID": "bfc3600d-591d-44cb-905b-b6f4df052a8f",
+              "uuid": "10bbd2e6-5ca2-4c9f-bff9-bdb2919798a0",
+              "parentUUID": "e42e14f4-8640-4a84-aa6b-ce20dbfb3f21",
               "isHook": false,
               "skipped": false
             },
@@ -1937,8 +1935,8 @@
               "context": null,
               "code": "_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.clickNegotiableObligation();\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.negotiableObligationOption().should('be.visible');",
               "err": {},
-              "uuid": "ad9dd88b-ece7-43a9-b7ec-e383296ea8d4",
-              "parentUUID": "bfc3600d-591d-44cb-905b-b6f4df052a8f",
+              "uuid": "0d2ef9df-f57e-46f4-9172-a7254b09bf0b",
+              "parentUUID": "e42e14f4-8640-4a84-aa6b-ce20dbfb3f21",
               "isHook": false,
               "skipped": true
             },
@@ -1955,8 +1953,8 @@
               "context": null,
               "code": "_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.addcurrencyPayment();\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.USDCurrencyOption().should('be.visible');",
               "err": {},
-              "uuid": "0f26819b-6217-489a-b9dd-9dba57a0b133",
-              "parentUUID": "bfc3600d-591d-44cb-905b-b6f4df052a8f",
+              "uuid": "1e4e11cc-a994-48be-a71d-24881df8ffd5",
+              "parentUUID": "e42e14f4-8640-4a84-aa6b-ce20dbfb3f21",
               "isHook": false,
               "skipped": true
             },
@@ -1973,8 +1971,8 @@
               "context": null,
               "code": "_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.addlaw();\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.argentinaLawOption().should('be.visible');",
               "err": {},
-              "uuid": "7ecfe413-9b21-4fa7-876f-44ff99a02692",
-              "parentUUID": "bfc3600d-591d-44cb-905b-b6f4df052a8f",
+              "uuid": "9b6fe4d0-287c-4bb0-966c-a1b8878c660f",
+              "parentUUID": "e42e14f4-8640-4a84-aa6b-ce20dbfb3f21",
               "isHook": false,
               "skipped": true
             },
@@ -1991,8 +1989,8 @@
               "context": null,
               "code": "_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.addBondIssuer();\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.issuer().should('be.visible');",
               "err": {},
-              "uuid": "613d356c-982c-4e04-a9e9-3cefca058297",
-              "parentUUID": "bfc3600d-591d-44cb-905b-b6f4df052a8f",
+              "uuid": "b985a2ac-9ddb-426f-946c-8728cb337fa3",
+              "parentUUID": "e42e14f4-8640-4a84-aa6b-ce20dbfb3f21",
               "isHook": false,
               "skipped": true
             },
@@ -2009,8 +2007,8 @@
               "context": null,
               "code": "_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.clickSearchButton();",
               "err": {},
-              "uuid": "fb996e8b-6c69-4f8b-982e-4a3763133897",
-              "parentUUID": "bfc3600d-591d-44cb-905b-b6f4df052a8f",
+              "uuid": "22c9dac4-1a7d-40b8-981e-2b571f8085f7",
+              "parentUUID": "e42e14f4-8640-4a84-aa6b-ce20dbfb3f21",
               "isHook": false,
               "skipped": true
             },
@@ -2027,25 +2025,25 @@
               "context": null,
               "code": "_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.cardBody().should('be.visible');\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.ONbond().should('be.visible');",
               "err": {},
-              "uuid": "dc24ffa9-948c-4c76-bbff-55b6ea429d9a",
-              "parentUUID": "bfc3600d-591d-44cb-905b-b6f4df052a8f",
+              "uuid": "086bf87f-2d63-467f-a903-a920f9b2f9fa",
+              "parentUUID": "e42e14f4-8640-4a84-aa6b-ce20dbfb3f21",
               "isHook": false,
               "skipped": true
             }
           ],
           "suites": [],
           "passes": [
-            "ba25230f-1cb9-4115-8cdf-a390369073e5"
+            "10bbd2e6-5ca2-4c9f-bff9-bdb2919798a0"
           ],
           "failures": [],
           "pending": [],
           "skipped": [
-            "ad9dd88b-ece7-43a9-b7ec-e383296ea8d4",
-            "0f26819b-6217-489a-b9dd-9dba57a0b133",
-            "7ecfe413-9b21-4fa7-876f-44ff99a02692",
-            "613d356c-982c-4e04-a9e9-3cefca058297",
-            "fb996e8b-6c69-4f8b-982e-4a3763133897",
-            "dc24ffa9-948c-4c76-bbff-55b6ea429d9a"
+            "0d2ef9df-f57e-46f4-9172-a7254b09bf0b",
+            "1e4e11cc-a994-48be-a71d-24881df8ffd5",
+            "9b6fe4d0-287c-4bb0-966c-a1b8878c660f",
+            "b985a2ac-9ddb-426f-946c-8728cb337fa3",
+            "22c9dac4-1a7d-40b8-981e-2b571f8085f7",
+            "086bf87f-2d63-467f-a903-a920f9b2f9fa"
           ],
           "duration": 0,
           "root": false,
@@ -2063,7 +2061,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "4c56dace-d8f9-4e68-94fd-41146803456a",
+      "uuid": "b421daf2-1ffb-4368-9bbe-3d419e541ec4",
       "title": "",
       "fullFile": "build/production/argentina/smoke/sensibilidad.cy.js",
       "file": "build/production/argentina/smoke/sensibilidad.cy.js",
@@ -2072,7 +2070,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "2318acfe-2b6f-43db-a503-02bec055ac20",
+          "uuid": "9c00c7ac-0e35-4e64-847e-6686fae7d803",
           "title": "Sensibilidad",
           "fullFile": "",
           "file": "",
@@ -2092,8 +2090,8 @@
               "context": null,
               "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/sensitivity`);",
               "err": {},
-              "uuid": "7e65caab-84ba-483f-b7a6-9af677d7ebdc",
-              "parentUUID": "2318acfe-2b6f-43db-a503-02bec055ac20",
+              "uuid": "d9898b2d-ecab-48b1-ab4d-4f82ab99c327",
+              "parentUUID": "9c00c7ac-0e35-4e64-847e-6686fae7d803",
               "isHook": false,
               "skipped": false
             },
@@ -2110,8 +2108,8 @@
               "context": null,
               "code": "_pages_sensibilidadPage__WEBPACK_IMPORTED_MODULE_1__.sensibilidad.addSpecie(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR}`);",
               "err": {},
-              "uuid": "fc5a9295-d313-487d-9726-a19465cd28db",
-              "parentUUID": "2318acfe-2b6f-43db-a503-02bec055ac20",
+              "uuid": "e318f7b7-f203-4e15-b3b2-d4eae852a90a",
+              "parentUUID": "9c00c7ac-0e35-4e64-847e-6686fae7d803",
               "isHook": false,
               "skipped": true
             },
@@ -2128,8 +2126,8 @@
               "context": null,
               "code": "_pages_sensibilidadPage__WEBPACK_IMPORTED_MODULE_1__.sensibilidad.addScenario(5);\n_pages_sensibilidadPage__WEBPACK_IMPORTED_MODULE_1__.sensibilidad.elements.cardResult().should('be.visible');\n_pages_sensibilidadPage__WEBPACK_IMPORTED_MODULE_1__.sensibilidad.elements.textSuccess().should('be.visible');",
               "err": {},
-              "uuid": "5d415936-5a14-483c-b831-1603e29c0db6",
-              "parentUUID": "2318acfe-2b6f-43db-a503-02bec055ac20",
+              "uuid": "c6bd731f-3ff7-4ccf-8a30-5e41c4250492",
+              "parentUUID": "9c00c7ac-0e35-4e64-847e-6686fae7d803",
               "isHook": false,
               "skipped": true
             },
@@ -2146,8 +2144,8 @@
               "context": null,
               "code": "_pages_sensibilidadPage__WEBPACK_IMPORTED_MODULE_1__.sensibilidad.deleteScenario();\n_pages_sensibilidadPage__WEBPACK_IMPORTED_MODULE_1__.sensibilidad.elements.cardResult().should('not.exist');",
               "err": {},
-              "uuid": "e19a77de-20db-4e4b-b3b3-dcdeb1d885b9",
-              "parentUUID": "2318acfe-2b6f-43db-a503-02bec055ac20",
+              "uuid": "ae67668b-5c53-49b8-b270-abb017e14351",
+              "parentUUID": "9c00c7ac-0e35-4e64-847e-6686fae7d803",
               "isHook": false,
               "skipped": true
             },
@@ -2164,23 +2162,23 @@
               "context": null,
               "code": "_pages_sensibilidadPage__WEBPACK_IMPORTED_MODULE_1__.sensibilidad.deleteSpecie();\n_pages_sensibilidadPage__WEBPACK_IMPORTED_MODULE_1__.sensibilidad.elements.tableSpecies().should('be.visible');\n_pages_sensibilidadPage__WEBPACK_IMPORTED_MODULE_1__.sensibilidad.elements.tableText().should('be.visible');",
               "err": {},
-              "uuid": "04a02589-6ec1-41bd-b069-9fd38e83747f",
-              "parentUUID": "2318acfe-2b6f-43db-a503-02bec055ac20",
+              "uuid": "4b293deb-7311-4b69-8875-2ded231c6c96",
+              "parentUUID": "9c00c7ac-0e35-4e64-847e-6686fae7d803",
               "isHook": false,
               "skipped": true
             }
           ],
           "suites": [],
           "passes": [
-            "7e65caab-84ba-483f-b7a6-9af677d7ebdc"
+            "d9898b2d-ecab-48b1-ab4d-4f82ab99c327"
           ],
           "failures": [],
           "pending": [],
           "skipped": [
-            "fc5a9295-d313-487d-9726-a19465cd28db",
-            "5d415936-5a14-483c-b831-1603e29c0db6",
-            "e19a77de-20db-4e4b-b3b3-dcdeb1d885b9",
-            "04a02589-6ec1-41bd-b069-9fd38e83747f"
+            "e318f7b7-f203-4e15-b3b2-d4eae852a90a",
+            "c6bd731f-3ff7-4ccf-8a30-5e41c4250492",
+            "ae67668b-5c53-49b8-b270-abb017e14351",
+            "4b293deb-7311-4b69-8875-2ded231c6c96"
           ],
           "duration": 0,
           "root": false,
