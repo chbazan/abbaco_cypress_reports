@@ -1,0 +1,242 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-04-20T12:05:52.513Z",
+    "end": "2026-04-20T12:06:54.666Z",
+    "duration": 62153,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f641456b-f87b-4678-9733-a48de816672a",
+      "title": "",
+      "fullFile": "build/production/brasil/smoke/analizar.cy.js",
+      "file": "build/production/brasil/smoke/analizar.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9418784b-68d7-49cc-975f-48d758036dc8",
+          "title": "Análisis de especies",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "af22ca73-e79f-4c56-9f23-3503b30b226f",
+              "title": "Analizar la especie RESA15",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Ingresar al home",
+                  "fullTitle": "Análisis de especies Analizar la especie RESA15 Ingresar al home",
+                  "timedOut": null,
+                  "duration": 20935,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION);\ncy.validacionesHomeBR();",
+                  "err": {},
+                  "uuid": "ef443724-9ebb-49c8-9fa3-e4833cabc2e5",
+                  "parentUUID": "af22ca73-e79f-4c56-9f23-3503b30b226f",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Ingreso de especie RESA15 para Analizar",
+                  "fullTitle": "Análisis de especies Analizar la especie RESA15 Ingreso de especie RESA15 para Analizar",
+                  "timedOut": null,
+                  "duration": 3353,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.buscarYAnalizarEspecieBR(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR);",
+                  "err": {},
+                  "uuid": "9f16a614-96a1-453d-b392-216c73f9b9f3",
+                  "parentUUID": "af22ca73-e79f-4c56-9f23-3503b30b226f",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Validaciones en la pestaña General de la especie RESA15",
+                  "fullTitle": "Análisis de especies Analizar la especie RESA15 Validaciones en la pestaña General de la especie RESA15",
+                  "timedOut": null,
+                  "duration": 1005,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "// Validaciones de la pestaña General del bono\ncy.verificarTitulosCartas(metricTitlesBR);\n// Valida que TIR, M. DURATION y PARIDAD tengan valores definidos y que el circulo de Última Cotización se muestre verde, rojo o gris\ncy.validarCotizacionTirDurationParidad();\n// Valida que dentro del cuadro Métricas Secundarias y de Cashflow no se tenga un valor N/A\ncy.verificarValoresNulos();",
+                  "err": {},
+                  "uuid": "cb09c00d-52f3-405e-b22b-0acd4fa11506",
+                  "parentUUID": "af22ca73-e79f-4c56-9f23-3503b30b226f",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Recorrida por los botones \"TIRs\" y \"Paridades Históricas\" de la especie RESA15",
+                  "fullTitle": "Análisis de especies Analizar la especie RESA15 Recorrida por los botones \"TIRs\" y \"Paridades Históricas\" de la especie RESA15",
+                  "timedOut": null,
+                  "duration": 3768,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.verficiarGraficosParidadTIR();",
+                  "err": {},
+                  "uuid": "68b463e3-f330-4e5d-8dfd-bc16c592ca61",
+                  "parentUUID": "af22ca73-e79f-4c56-9f23-3503b30b226f",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Ingreso a la pestaña \"Condiciones de Emisión\" y validación de los cuadros de la especie RESA15",
+                  "fullTitle": "Análisis de especies Analizar la especie RESA15 Ingreso a la pestaña \"Condiciones de Emisión\" y validación de los cuadros de la especie RESA15",
+                  "timedOut": null,
+                  "duration": 2485,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.verficiarCondicionesDeEmisionBR();",
+                  "err": {},
+                  "uuid": "2e9ddf79-400e-4f71-939c-a36a9689b6bc",
+                  "parentUUID": "af22ca73-e79f-4c56-9f23-3503b30b226f",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Análisis de Sensibilidad de la especie RESA15",
+                  "fullTitle": "Análisis de especies Analizar la especie RESA15 Análisis de Sensibilidad de la especie RESA15",
+                  "timedOut": null,
+                  "duration": 16929,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "// Ingreso a la pestaña de análisis de sensibilidad\ncy.get('button[data-rr-ui-event-key=\"sensitivityAnalysis\"]').click();\n// Ingreso y Armado de escenarios en Análisis de Sensibilidad\nquantities.forEach(quantity => {\n  specialVariablesBR.forEach(variable => {\n    cy.realizarAnalisisSensibilidadBR({\n      quantity,\n      variable,\n      variation\n    });\n  });\n});",
+                  "err": {},
+                  "uuid": "e2299e41-0d0d-4c81-89ba-8be6f30c3c56",
+                  "parentUUID": "af22ca73-e79f-4c56-9f23-3503b30b226f",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Simular inversión de la especie RESA15",
+                  "fullTitle": "Análisis de especies Analizar la especie RESA15 Simular inversión de la especie RESA15",
+                  "timedOut": null,
+                  "duration": 8407,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.verficiarSimularInversionBR();",
+                  "err": {},
+                  "uuid": "a4494389-8497-4380-97d5-97979a5736e2",
+                  "parentUUID": "af22ca73-e79f-4c56-9f23-3503b30b226f",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "ef443724-9ebb-49c8-9fa3-e4833cabc2e5",
+                "9f16a614-96a1-453d-b392-216c73f9b9f3",
+                "cb09c00d-52f3-405e-b22b-0acd4fa11506",
+                "68b463e3-f330-4e5d-8dfd-bc16c592ca61",
+                "2e9ddf79-400e-4f71-939c-a36a9689b6bc",
+                "e2299e41-0d0d-4c81-89ba-8be6f30c3c56",
+                "a4494389-8497-4380-97d5-97979a5736e2"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 56882,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
