@@ -1,0 +1,224 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-04-21T12:07:43.084Z",
+    "end": "2026-04-21T12:07:43.174Z",
+    "duration": 90,
+    "testsRegistered": 7,
+    "passPercent": 14.285714285714285,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 6,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "989eee13-8f05-4d93-af80-9aa63cc30f8f",
+      "title": "",
+      "fullFile": "build/production/brasil/smoke/portafolio.cy.js",
+      "file": "build/production/brasil/smoke/portafolio.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7114b4f6-6fe9-4bf1-8685-57a66b2b23f8",
+          "title": "Mi portafolio",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ingresar al menú Mi portafolio",
+              "fullTitle": "Mi portafolio Ingresar al menú Mi portafolio",
+              "timedOut": null,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/security-position`);",
+              "err": {},
+              "uuid": "8bca3dc3-c7bf-4dc3-894b-2ea20c1cb7c5",
+              "parentUUID": "7114b4f6-6fe9-4bf1-8685-57a66b2b23f8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Crear un nuevo portafolio",
+              "fullTitle": "Mi portafolio Crear un nuevo portafolio",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.crearPortafolio('Portafolio Cypress');\n// Ingresar al portafolio creado\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.clickCreatedPortfolio();\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.elements.tableElements().should('be.visible');",
+              "err": {},
+              "uuid": "d25070d8-86d0-440a-ad57-dcd6c61c1466",
+              "parentUUID": "7114b4f6-6fe9-4bf1-8685-57a66b2b23f8",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Agregar el bono RESA15 al portafolio",
+              "fullTitle": "Mi portafolio Agregar el bono RESA15 al portafolio",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.elements.tableElements().should('be.visible');\ncy.agregarBonoPortafolio(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR);",
+              "err": {},
+              "uuid": "c713db85-544c-4f2f-92c2-7621c3f74546",
+              "parentUUID": "7114b4f6-6fe9-4bf1-8685-57a66b2b23f8",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Recorrer las pestañas Proyección y Agenda de pagos del portafolio",
+              "fullTitle": "Mi portafolio Recorrer las pestañas Proyección y Agenda de pagos del portafolio",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.clickProyeccionButton();\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.elements.tableProyeccion().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_2__.sharedElements.cardBody().should('be.visible');\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.clickAgendaCortesButton();\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.elements.agendaCorteElements().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_2__.sharedElements.cardBody().should('be.visible');",
+              "err": {},
+              "uuid": "14c2677d-95a2-45a4-a02b-7ac41c86313d",
+              "parentUUID": "7114b4f6-6fe9-4bf1-8685-57a66b2b23f8",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Editar el portafolio creado",
+              "fullTitle": "Mi portafolio Editar el portafolio creado",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.editPortfolio('Portafolio Cypress Modificado');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_2__.sharedElements.ballLoader().should('not.exist');\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.elements.newPortfolioName().should('be.visible');",
+              "err": {},
+              "uuid": "ef5eb907-8ef5-443e-a9e8-ca204dca8a59",
+              "parentUUID": "7114b4f6-6fe9-4bf1-8685-57a66b2b23f8",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Eliminar el bono RESA15 del portafolio",
+              "fullTitle": "Mi portafolio Eliminar el bono RESA15 del portafolio",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Este método hay que revisarlo porque 1) No termina de borrar y validar todas las especies, el múltiple true no me parece bien usado. 2) Es mejor crear un comando/helper para estos casos de \"loop\".\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.deleteEspecies(...especies);",
+              "err": {},
+              "uuid": "c74cdd30-bb7b-4b75-b78f-30826369f3f7",
+              "parentUUID": "7114b4f6-6fe9-4bf1-8685-57a66b2b23f8",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Eliminar el portafolio creado",
+              "fullTitle": "Mi portafolio Eliminar el portafolio creado",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.deletePortfolioBR();\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.elements.newPortfolioName().should('not.exist');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_2__.sharedElements.ballLoader().should('not.exist');",
+              "err": {},
+              "uuid": "7c3fb3a1-12cd-46db-8af7-b13550cd6705",
+              "parentUUID": "7114b4f6-6fe9-4bf1-8685-57a66b2b23f8",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8bca3dc3-c7bf-4dc3-894b-2ea20c1cb7c5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [
+            "d25070d8-86d0-440a-ad57-dcd6c61c1466",
+            "c713db85-544c-4f2f-92c2-7621c3f74546",
+            "14c2677d-95a2-45a4-a02b-7ac41c86313d",
+            "ef5eb907-8ef5-443e-a9e8-ca204dca8a59",
+            "c74cdd30-bb7b-4b75-b78f-30826369f3f7",
+            "7c3fb3a1-12cd-46db-8af7-b13550cd6705"
+          ],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

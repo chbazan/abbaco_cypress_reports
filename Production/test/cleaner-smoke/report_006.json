@@ -1,0 +1,380 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-04-21T12:07:37.012Z",
+    "end": "2026-04-21T12:07:37.115Z",
+    "duration": 103,
+    "testsRegistered": 10,
+    "passPercent": 10,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 9,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "6ea403b3-3ba0-4d9b-abfa-1b85628b724b",
+      "title": "",
+      "fullFile": "build/production/brasil/smoke/curvas.cy.js",
+      "file": "build/production/brasil/smoke/curvas.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d8366de7-a730-4b04-863a-886072506296",
+          "title": "Curvas",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "f5f0a903-0fab-4b8d-8788-6e66e0bc462a",
+              "title": "Validar que la lista de curvas esté visible",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Ingresar al menú Curvas",
+                  "fullTitle": "Curvas Validar que la lista de curvas esté visible Ingresar al menú Curvas",
+                  "timedOut": null,
+                  "duration": 0,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/curves`);",
+                  "err": {},
+                  "uuid": "d7e4db45-d366-4b7b-9002-20287aee7860",
+                  "parentUUID": "f5f0a903-0fab-4b8d-8788-6e66e0bc462a",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Validar que el listado de curvas no esté vacío",
+                  "fullTitle": "Curvas Validar que la lista de curvas esté visible Validar que el listado de curvas no esté vacío",
+                  "timedOut": null,
+                  "duration": 0,
+                  "state": "skipped",
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.pageIsLoaded();\n_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.elements.listLinks().should('be.visible').and('not.be.empty');",
+                  "err": {},
+                  "uuid": "1a7659b6-6285-4e69-9868-7891b989ff97",
+                  "parentUUID": "f5f0a903-0fab-4b8d-8788-6e66e0bc462a",
+                  "isHook": false,
+                  "skipped": true
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "d7e4db45-d366-4b7b-9002-20287aee7860"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [
+                "1a7659b6-6285-4e69-9868-7891b989ff97"
+              ],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "21f12c6d-beec-4661-b85c-5c92e7decca7",
+              "title": "Recorre las pestañas Soberanos, SubSoberanos, Corporativos, BCB",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Ingreso a la pestaña \"Soberanos\" y valida que el botón esté visible",
+                  "fullTitle": "Curvas Recorre las pestañas Soberanos, SubSoberanos, Corporativos, BCB Ingreso a la pestaña \"Soberanos\" y valida que el botón esté visible",
+                  "timedOut": null,
+                  "duration": 0,
+                  "state": "skipped",
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.clickTab(tab);\n_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.elements.tabButton(tab).should('be.visible');",
+                  "err": {},
+                  "uuid": "d8119976-183a-4451-9d3e-67da9377fcae",
+                  "parentUUID": null,
+                  "isHook": false,
+                  "skipped": true
+                },
+                {
+                  "title": "Ingreso a la pestaña \"SubSoberanos\" y valida que el botón esté visible",
+                  "fullTitle": "Curvas Recorre las pestañas Soberanos, SubSoberanos, Corporativos, BCB Ingreso a la pestaña \"SubSoberanos\" y valida que el botón esté visible",
+                  "timedOut": null,
+                  "duration": 0,
+                  "state": "skipped",
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.clickTab(tab);\n_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.elements.tabButton(tab).should('be.visible');",
+                  "err": {},
+                  "uuid": "a8d81af3-f134-4948-bd4a-b462a7850da3",
+                  "parentUUID": null,
+                  "isHook": false,
+                  "skipped": true
+                },
+                {
+                  "title": "Ingreso a la pestaña \"Corporativos\" y valida que el botón esté visible",
+                  "fullTitle": "Curvas Recorre las pestañas Soberanos, SubSoberanos, Corporativos, BCB Ingreso a la pestaña \"Corporativos\" y valida que el botón esté visible",
+                  "timedOut": null,
+                  "duration": 0,
+                  "state": "skipped",
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.clickTab(tab);\n_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.elements.tabButton(tab).should('be.visible');",
+                  "err": {},
+                  "uuid": "64e25232-f3a3-4a44-ac08-33bfc2ea0bc7",
+                  "parentUUID": null,
+                  "isHook": false,
+                  "skipped": true
+                },
+                {
+                  "title": "Ingreso a la pestaña \"BCB\" y valida que el botón esté visible",
+                  "fullTitle": "Curvas Recorre las pestañas Soberanos, SubSoberanos, Corporativos, BCB Ingreso a la pestaña \"BCB\" y valida que el botón esté visible",
+                  "timedOut": null,
+                  "duration": 0,
+                  "state": "skipped",
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.clickTab(tab);\n_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.elements.tabButton(tab).should('be.visible');",
+                  "err": {},
+                  "uuid": "1d05ac9a-2222-4820-8562-085644f945be",
+                  "parentUUID": null,
+                  "isHook": false,
+                  "skipped": true
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [],
+              "pending": [],
+              "skipped": [
+                "d8119976-183a-4451-9d3e-67da9377fcae",
+                "a8d81af3-f134-4948-bd4a-b462a7850da3",
+                "64e25232-f3a3-4a44-ac08-33bfc2ea0bc7",
+                "1d05ac9a-2222-4820-8562-085644f945be"
+              ],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "730c667b-10cc-4423-b6bb-674686b11b0a",
+              "title": "Ingreso a la primera curva de la lista",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Ingreso a la primera curva del listado y validar el cuadro de bonos",
+                  "fullTitle": "Curvas Ingreso a la primera curva de la lista Ingreso a la primera curva del listado y validar el cuadro de bonos",
+                  "timedOut": null,
+                  "duration": 0,
+                  "state": "skipped",
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.clickTab(/^(Todos|Todas)$/i);\n_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.elements.listLinks().first().click({\n  force: true\n});\ncy.validacionesCurva();",
+                  "err": {},
+                  "uuid": "0ca87559-b9ec-4b0f-a447-6d4f9d2b0681",
+                  "parentUUID": null,
+                  "isHook": false,
+                  "skipped": true
+                },
+                {
+                  "title": "Ingreso en \"Análisis online\" de la primera curva de la lista",
+                  "fullTitle": "Curvas Ingreso a la primera curva de la lista Ingreso en \"Análisis online\" de la primera curva de la lista",
+                  "timedOut": null,
+                  "duration": 0,
+                  "state": "skipped",
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.contains(/^(Análisis Online|Análise Online)$/i, {\n  matchCase: false\n}).should('be.visible').click();\ncy.validacionesAnalisisOnline();",
+                  "err": {},
+                  "uuid": "28eed632-c490-4e4c-ab75-0922e395569e",
+                  "parentUUID": null,
+                  "isHook": false,
+                  "skipped": true
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [],
+              "pending": [],
+              "skipped": [
+                "0ca87559-b9ec-4b0f-a447-6d4f9d2b0681",
+                "28eed632-c490-4e4c-ab75-0922e395569e"
+              ],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "15e0f650-73be-411d-a289-cc651b470d19",
+              "title": "Validar que la lista de curvas internacionales estén visibles",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Ingreso a la pestaña “Internacionales” y Validar que el listado de curvas no esté vacío",
+                  "fullTitle": "Curvas Validar que la lista de curvas internacionales estén visibles Ingreso a la pestaña “Internacionales” y Validar que el listado de curvas no esté vacío",
+                  "timedOut": null,
+                  "duration": 0,
+                  "state": "skipped",
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.clickArrowLeft();\n_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.clickTab('Internacionales');\n_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.elements.tabButton('Internacionales').should('be.visible');\n_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.clickTab('Todas');\n_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.elements.listLinks().should('be.visible').and('not.be.empty');",
+                  "err": {},
+                  "uuid": "0c15046e-c83d-4371-9468-24b4218510a5",
+                  "parentUUID": null,
+                  "isHook": false,
+                  "skipped": true
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [],
+              "pending": [],
+              "skipped": [
+                "0c15046e-c83d-4371-9468-24b4218510a5"
+              ],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "c0542d15-8cf4-44a8-9caa-640ad191e040",
+              "title": "Ingreso a la primera curva internacional",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Ingreso a la curva Brasil - Soberanos - Bonos Globales - USD y validar cuadro de bonos",
+                  "fullTitle": "Curvas Ingreso a la primera curva internacional Ingreso a la curva Brasil - Soberanos - Bonos Globales - USD y validar cuadro de bonos",
+                  "timedOut": null,
+                  "duration": 0,
+                  "state": "skipped",
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.clickTab('Todas');\n_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.elements.listLinks().first().click({\n  force: true\n});\ncy.validacionesCurva();",
+                  "err": {},
+                  "uuid": "6d92c18f-21f8-4a3d-a906-a8286791f7a1",
+                  "parentUUID": null,
+                  "isHook": false,
+                  "skipped": true
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [],
+              "pending": [],
+              "skipped": [
+                "6d92c18f-21f8-4a3d-a906-a8286791f7a1"
+              ],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
