@@ -1,0 +1,48 @@
+{
+  "spec": "build/production/argentina/smoke/screener.cy.js",
+  "specName": "smoke_screener",
+  "timestamp": "2026-04-24T11:37:40.848Z",
+  "environment": {
+    "TARGET_ENV": "production",
+    "TARGET_CLIENT": "argentina",
+    "browser": "firefox"
+  },
+  "stats": {
+    "duration": 101003,
+    "endedAt": "2026-04-24T11:37:40.804Z",
+    "failures": 1,
+    "passes": 1,
+    "pending": 1,
+    "skipped": 4,
+    "startedAt": "2026-04-24T11:35:59.801Z",
+    "suites": 1,
+    "tests": 7
+  },
+  "failedTests": [
+    {
+      "title": [
+        "Screener ARG",
+        "Selecciona tipo de deuda \"Obligación Negociable\""
+      ],
+      "fullTitle": "Screener ARG > Selecciona tipo de deuda \"Obligación Negociable\"",
+      "state": "failed",
+      "duration": 90430,
+      "error": "AssertionError: Timed out retrying after 90000ms: Expected to find element: `[for=\"Obligación Negociable\"]`, but never found it.\n    at negotiableObligationOption (webpack://cypress/./cypress/support/pages/screenerPage.js:6:0)\n    at clickNegotiableObligation (webpack://cypress/./cypress/support/pages/screenerPage.js:28:0)\n    at screener/ (webpack://cypress/./build/production/argentina/flows/screener.js:19:18)",
+      "attempts": [
+        {
+          "state": "failed",
+          "error": null
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "height": 720,
+      "name": null,
+      "path": "/home/runner/work/abbaco-cypress/abbaco-cypress/cypress/reports/screenshots/smoke/screener.cy.js/Screener ARG -- Selecciona tipo de deuda Obligación Negociable (failed).png",
+      "takenAt": "2026-04-24T11:37:40.323Z",
+      "width": 1280
+    }
+  ]
+}
