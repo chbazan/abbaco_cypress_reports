@@ -1,0 +1,128 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-04-25T11:25:08.338Z",
+    "end": "2026-04-25T11:25:41.581Z",
+    "duration": 33243,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7b32f253-6416-41ce-a9b9-bad89fc691eb",
+      "title": "",
+      "fullFile": "build/production/argentina/smoke/graficador.cy.js",
+      "file": "build/production/argentina/smoke/graficador.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8d5ce882-1898-4906-8262-78819613ebb8",
+          "title": "Graficador",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Selecciona todas las curvas, hace clic en \"Graficar\" y espera que se muestren sus elementos correspondientes",
+              "fullTitle": "Graficador Selecciona todas las curvas, hace clic en \"Graficar\" y espera que se muestren sus elementos correspondientes",
+              "timedOut": null,
+              "duration": 20728,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].ABBACO_LOCATION}/plotter`);\n_pages_graficadorPage__WEBPACK_IMPORTED_MODULE_0__.graficador.elements.selectCurvesDropdown().should('be.visible');\n_pages_graficadorPage__WEBPACK_IMPORTED_MODULE_0__.graficador.clickCurvesDropdown();\n_pages_graficadorPage__WEBPACK_IMPORTED_MODULE_0__.graficador.elements.curvesList().should('be.visible');\n_pages_graficadorPage__WEBPACK_IMPORTED_MODULE_0__.graficador.selectAllcurves();\n_pages_graficadorPage__WEBPACK_IMPORTED_MODULE_0__.graficador.elements.chartElementsLegend().should('be.visible');\n_pages_graficadorPage__WEBPACK_IMPORTED_MODULE_0__.graficador.elements.chartCardLegend().should('be.visible');",
+              "err": {},
+              "uuid": "65dfe88f-b390-47a9-9992-66508390117e",
+              "parentUUID": "8d5ce882-1898-4906-8262-78819613ebb8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Va a la pestaña Especies ingresa AL30, hace clic en \"Graficar\" y espera que se muestren sus elementos correspondientes",
+              "fullTitle": "Graficador Va a la pestaña Especies ingresa AL30, hace clic en \"Graficar\" y espera que se muestren sus elementos correspondientes",
+              "timedOut": null,
+              "duration": 4390,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_graficadorPage__WEBPACK_IMPORTED_MODULE_0__.graficador.goToTab(new RegExp('(Especies|Espécies)', 'i'), {\n  matchCase: false\n});\n_pages_graficadorPage__WEBPACK_IMPORTED_MODULE_0__.graficador.searchAndAddEspecie(_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].HARD_DOLLAR);\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.highchartsMenu().should('be.visible');",
+              "err": {},
+              "uuid": "e7824f2d-955c-420e-806a-dc1ee51eba51",
+              "parentUUID": "8d5ce882-1898-4906-8262-78819613ebb8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "65dfe88f-b390-47a9-9992-66508390117e",
+            "e7824f2d-955c-420e-806a-dc1ee51eba51"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 25118,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
