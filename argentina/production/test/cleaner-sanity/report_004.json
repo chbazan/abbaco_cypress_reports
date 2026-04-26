@@ -1,24 +1,24 @@
 {
   "stats": {
-    "suites": 2,
-    "tests": 1,
+    "suites": 3,
+    "tests": 3,
     "passes": 1,
-    "pending": 0,
-    "failures": 0,
-    "start": "2026-04-26T11:50:02.449Z",
-    "end": "2026-04-26T11:50:02.558Z",
-    "duration": 109,
+    "pending": 1,
+    "failures": 1,
+    "start": "2026-04-26T18:21:23.884Z",
+    "end": "2026-04-26T18:21:38.662Z",
+    "duration": 14778,
     "testsRegistered": 23,
-    "passPercent": 4.3478260869565215,
-    "pendingPercent": 0,
+    "passPercent": 4.545454545454546,
+    "pendingPercent": 4.3478260869565215,
     "other": 0,
     "hasOther": false,
-    "skipped": 22,
+    "skipped": 20,
     "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "a5a58e43-e2d5-41e3-b8ca-b0dc135f82dc",
+      "uuid": "9b504d83-1e67-4c01-9492-16e9165491b3",
       "title": "",
       "fullFile": "build/production/argentina/sanity/curvas.cy.js",
       "file": "build/production/argentina/sanity/curvas.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "54269276-4d8c-4438-9577-af8ca0bf3d6b",
+          "uuid": "c7bf6691-3224-43f5-b166-7579ceb3ac5e",
           "title": "Curvas",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "3b8ea366-8312-4c8c-ab29-e801fd1a122c",
+              "uuid": "62f38217-bbc2-4d99-82da-87b30a10cdc2",
               "title": "Curvas Argentina | Validar que todas las curvas estén visibles en la pestaña Todas",
               "fullFile": "",
               "file": "",
@@ -47,7 +47,7 @@
                   "title": "Ingresar al menú Curvas",
                   "fullTitle": "Curvas Curvas Argentina | Validar que todas las curvas estén visibles en la pestaña Todas Ingresar al menú Curvas",
                   "timedOut": null,
-                  "duration": 0,
+                  "duration": 1575,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -56,8 +56,8 @@
                   "context": null,
                   "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/curves`);",
                   "err": {},
-                  "uuid": "aae510b1-2f7d-41f0-aee4-586a312bce9f",
-                  "parentUUID": "3b8ea366-8312-4c8c-ab29-e801fd1a122c",
+                  "uuid": "8f881ca7-f44c-4e4c-9161-875a5e3c699e",
+                  "parentUUID": "62f38217-bbc2-4d99-82da-87b30a10cdc2",
                   "isHook": false,
                   "skipped": false
                 },
@@ -65,37 +65,41 @@
                   "title": "Validar que se muestren todas las curvas esperadas en la pestaña Todas",
                   "fullTitle": "Curvas Curvas Argentina | Validar que todas las curvas estén visibles en la pestaña Todas Validar que se muestren todas las curvas esperadas en la pestaña Todas",
                   "timedOut": null,
-                  "duration": 0,
-                  "state": "skipped",
+                  "duration": 8530,
+                  "state": "failed",
                   "speed": null,
                   "pass": false,
-                  "fail": false,
+                  "fail": true,
                   "pending": false,
                   "context": null,
                   "code": "cy.pageIsLoaded();\ncy.validarCurvasEsperadas(_data_curvas__WEBPACK_IMPORTED_MODULE_2__.curvas);",
-                  "err": {},
-                  "uuid": "651a58cd-f65e-4f7f-8777-05a96a957361",
-                  "parentUUID": "3b8ea366-8312-4c8c-ab29-e801fd1a122c",
+                  "err": {
+                    "message": "Error: ❌ Las siguientes curvas NO se encontraron:\n- Soberanos - Letras del Tesoro vinculadas al u$s (LELINK) - ARS",
+                    "estack": "Error: ❌ Las siguientes curvas NO se encontraron:\n- Soberanos - Letras del Tesoro vinculadas al u$s (LELINK) - ARS\nat ./cypress/support/commands.js/ (webpack://cypress/./cypress/support/commands.js:227:0)\nat getRet (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:122690:20)\nat tryCatcher (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1777:23)\nat __webpack_modules__</module.exports/Promise.try (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:4285:29)\nat thenFn (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:122701:60)\nat then (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:122952:21)\nat wrapped (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:146050:19)\nat __webpack_modules__</runCommand (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:152018:15)\nat tryCatcher (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1777:23)\nat __webpack_modules__</module.exports/Promise.prototype._settlePromiseFromHandler (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1489:31)\nat __webpack_modules__</module.exports/Promise.prototype._settlePromise (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1546:18)\nat __webpack_modules__</module.exports/Promise.prototype._settlePromiseCtx (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1583:10)\nat _drainQueueStep (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:2381:12)\nat _drainQueue (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:2370:24)\nat __webpack_modules__</Async.prototype._drainQueues (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:2386:16)\nat __webpack_modules__</Async/this.drainQueues (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:2256:14)",
+                    "diff": null
+                  },
+                  "uuid": "2f2b9cf4-ceeb-4266-9d5e-3327c39b343a",
+                  "parentUUID": "62f38217-bbc2-4d99-82da-87b30a10cdc2",
                   "isHook": false,
-                  "skipped": true
+                  "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "aae510b1-2f7d-41f0-aee4-586a312bce9f"
+                "8f881ca7-f44c-4e4c-9161-875a5e3c699e"
               ],
-              "failures": [],
+              "failures": [
+                "2f2b9cf4-ceeb-4266-9d5e-3327c39b343a"
+              ],
               "pending": [],
-              "skipped": [
-                "651a58cd-f65e-4f7f-8777-05a96a957361"
-              ],
-              "duration": 0,
+              "skipped": [],
+              "duration": 10105,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "caf858c3-2563-4ee7-844c-e56bf0d0e829",
+              "uuid": "6e64f5ba-4f99-4653-a3af-9688c1c3c32b",
               "title": "Curvas Argentina | Recorre las pestañas Soberanos, SubSoberanos, Corporativos, BCRA",
               "fullFile": "",
               "file": "",
@@ -107,18 +111,18 @@
                   "fullTitle": "Curvas Curvas Argentina | Recorre las pestañas Soberanos, SubSoberanos, Corporativos, BCRA Ingreso a la pestaña \"Soberanos\" y valida que el botón esté visible",
                   "timedOut": null,
                   "duration": 0,
-                  "state": "skipped",
+                  "state": "pending",
                   "speed": null,
                   "pass": false,
                   "fail": false,
-                  "pending": false,
+                  "pending": true,
                   "context": null,
                   "code": "_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.clickTab(tab);\n_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.elements.tabButton(tab).should('be.visible');",
                   "err": {},
-                  "uuid": "fc4233b0-5d72-4833-843e-607f9100d92f",
-                  "parentUUID": null,
+                  "uuid": "7f2ce0b2-75b8-4e2c-8fcc-1fb578a6ab9d",
+                  "parentUUID": "6e64f5ba-4f99-4653-a3af-9688c1c3c32b",
                   "isHook": false,
-                  "skipped": true
+                  "skipped": false
                 },
                 {
                   "title": "Ingreso a la pestaña \"SubSoberanos\" y valida que el botón esté visible",
@@ -133,8 +137,8 @@
                   "context": null,
                   "code": "_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.clickTab(tab);\n_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.elements.tabButton(tab).should('be.visible');",
                   "err": {},
-                  "uuid": "f56b93dc-bf55-4863-af52-709afb04185d",
-                  "parentUUID": null,
+                  "uuid": "7e899576-3d80-4e58-a2c2-ac19b109b84e",
+                  "parentUUID": "6e64f5ba-4f99-4653-a3af-9688c1c3c32b",
                   "isHook": false,
                   "skipped": true
                 },
@@ -151,8 +155,8 @@
                   "context": null,
                   "code": "_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.clickTab(tab);\n_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.elements.tabButton(tab).should('be.visible');",
                   "err": {},
-                  "uuid": "0b831ab6-e835-4f4b-b8f2-5e859eb9af18",
-                  "parentUUID": null,
+                  "uuid": "65d2a05f-959b-4502-8c2d-e25680208039",
+                  "parentUUID": "6e64f5ba-4f99-4653-a3af-9688c1c3c32b",
                   "isHook": false,
                   "skipped": true
                 },
@@ -169,8 +173,8 @@
                   "context": null,
                   "code": "_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.clickTab(tab);\n_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.elements.tabButton(tab).should('be.visible');",
                   "err": {},
-                  "uuid": "2a96a57c-7cf7-40e0-8e9e-0d4c57f43323",
-                  "parentUUID": null,
+                  "uuid": "e922e032-d003-4b53-b0c3-5bed3f169d74",
+                  "parentUUID": "6e64f5ba-4f99-4653-a3af-9688c1c3c32b",
                   "isHook": false,
                   "skipped": true
                 }
@@ -178,12 +182,13 @@
               "suites": [],
               "passes": [],
               "failures": [],
-              "pending": [],
+              "pending": [
+                "7f2ce0b2-75b8-4e2c-8fcc-1fb578a6ab9d"
+              ],
               "skipped": [
-                "fc4233b0-5d72-4833-843e-607f9100d92f",
-                "f56b93dc-bf55-4863-af52-709afb04185d",
-                "0b831ab6-e835-4f4b-b8f2-5e859eb9af18",
-                "2a96a57c-7cf7-40e0-8e9e-0d4c57f43323"
+                "7e899576-3d80-4e58-a2c2-ac19b109b84e",
+                "65d2a05f-959b-4502-8c2d-e25680208039",
+                "e922e032-d003-4b53-b0c3-5bed3f169d74"
               ],
               "duration": 0,
               "root": false,
@@ -191,7 +196,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "304ea0c9-afa3-4033-b052-ab96a1e975bc",
+              "uuid": "971735b4-c8ab-47db-9f87-a12329e2ba96",
               "title": "Curvas Argentina | Ingreso a curvas específicas",
               "fullFile": "",
               "file": "",
@@ -211,7 +216,7 @@
                   "context": null,
                   "code": "_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.clickTab('Todas');\ncy.contains('a', `${_data_curvas__WEBPACK_IMPORTED_MODULE_2__.CURVA_1}`).click();\ncy.validacionesCurva();",
                   "err": {},
-                  "uuid": "619c5c85-dc07-413a-8b37-3fbe51b34f42",
+                  "uuid": "461e64ec-bb18-4439-bc3d-472f95fa8eed",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -229,7 +234,7 @@
                   "context": null,
                   "code": "cy.contains('Análisis Online', {\n  matchCase: false\n}).should('be.visible').click();\ncy.validacionesAnalisisOnline();",
                   "err": {},
-                  "uuid": "1318c2f0-c153-49b2-a726-6a65c18baf71",
+                  "uuid": "5b1da9cc-137b-4051-a7cb-43f9caacbb06",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -247,7 +252,7 @@
                   "context": null,
                   "code": "cy.contains('Curvas', {\n  matchCase: false\n}).should('be.visible').click();\ncy.contains('a', `${_data_curvas__WEBPACK_IMPORTED_MODULE_2__.CURVA_1}`).click();\ncy.validacionesCurva();",
                   "err": {},
-                  "uuid": "8fe9325f-4087-48c5-9d78-a774b83b0edb",
+                  "uuid": "0a02ce2e-308a-4afc-9793-824c8ea950ea",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -265,7 +270,7 @@
                   "context": null,
                   "code": "cy.contains('Análisis Online', {\n  matchCase: false\n}).should('be.visible').click();\ncy.validacionesAnalisisOnline();",
                   "err": {},
-                  "uuid": "03733f21-023f-4fb3-a3d5-42ae063f8123",
+                  "uuid": "ef5169b0-aade-4978-bfed-3f29285b7e02",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -283,7 +288,7 @@
                   "context": null,
                   "code": "cy.contains('Curvas', {\n  matchCase: false\n}).should('be.visible').click();\ncy.contains('a', `${_data_curvas__WEBPACK_IMPORTED_MODULE_2__.CURVA_3}`).click();\ncy.validacionesCurva();",
                   "err": {},
-                  "uuid": "9020614e-586e-4fdd-9376-fde596434835",
+                  "uuid": "4678fb46-a58b-473d-a9a7-66e6e527ff1a",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -301,7 +306,7 @@
                   "context": null,
                   "code": "cy.contains('Análisis Online', {\n  matchCase: false\n}).should('be.visible').click();\ncy.validacionesAnalisisOnline();",
                   "err": {},
-                  "uuid": "30f7818b-e633-48d8-aa11-37c899bf3feb",
+                  "uuid": "9dbe564c-3dfa-4e7d-980d-592d58f4dcf4",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -319,7 +324,7 @@
                   "context": null,
                   "code": "cy.contains('Curvas', {\n  matchCase: false\n}).should('be.visible').click();\ncy.contains('a', `${_data_curvas__WEBPACK_IMPORTED_MODULE_2__.CURVA_4}`).click();\ncy.validacionesCurva();",
                   "err": {},
-                  "uuid": "85daa7ec-d102-4950-86c5-86612acde60f",
+                  "uuid": "6a85aabf-8f0b-426b-bd81-98bfb401478b",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -337,7 +342,7 @@
                   "context": null,
                   "code": "cy.contains('Análisis Online', {\n  matchCase: false\n}).should('be.visible').click();\ncy.validacionesAnalisisOnline();",
                   "err": {},
-                  "uuid": "f4d64d71-0d56-4159-892e-220a4fd1a2de",
+                  "uuid": "8ed86e4d-a3ce-49d7-b65b-e66f7edcac44",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -355,7 +360,7 @@
                   "context": null,
                   "code": "cy.contains('Curvas', {\n  matchCase: false\n}).should('be.visible').click();\ncy.contains('a', `${_data_curvas__WEBPACK_IMPORTED_MODULE_2__.CURVA_5}`).click();\ncy.validacionesCurva();",
                   "err": {},
-                  "uuid": "2af264d1-247e-46a2-80b6-fdb1954877e8",
+                  "uuid": "7b1509ea-4b99-4c95-b60e-3be11a78e564",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -373,7 +378,7 @@
                   "context": null,
                   "code": "cy.contains('Análisis Online', {\n  matchCase: false\n}).should('be.visible').click();\ncy.validacionesAnalisisOnline();",
                   "err": {},
-                  "uuid": "6bc15af5-980f-45a1-97b9-0bca7bcff8b9",
+                  "uuid": "3300255d-308c-48a4-a844-e5d109f34f7e",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -384,16 +389,16 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "619c5c85-dc07-413a-8b37-3fbe51b34f42",
-                "1318c2f0-c153-49b2-a726-6a65c18baf71",
-                "8fe9325f-4087-48c5-9d78-a774b83b0edb",
-                "03733f21-023f-4fb3-a3d5-42ae063f8123",
-                "9020614e-586e-4fdd-9376-fde596434835",
-                "30f7818b-e633-48d8-aa11-37c899bf3feb",
-                "85daa7ec-d102-4950-86c5-86612acde60f",
-                "f4d64d71-0d56-4159-892e-220a4fd1a2de",
-                "2af264d1-247e-46a2-80b6-fdb1954877e8",
-                "6bc15af5-980f-45a1-97b9-0bca7bcff8b9"
+                "461e64ec-bb18-4439-bc3d-472f95fa8eed",
+                "5b1da9cc-137b-4051-a7cb-43f9caacbb06",
+                "0a02ce2e-308a-4afc-9793-824c8ea950ea",
+                "ef5169b0-aade-4978-bfed-3f29285b7e02",
+                "4678fb46-a58b-473d-a9a7-66e6e527ff1a",
+                "9dbe564c-3dfa-4e7d-980d-592d58f4dcf4",
+                "6a85aabf-8f0b-426b-bd81-98bfb401478b",
+                "8ed86e4d-a3ce-49d7-b65b-e66f7edcac44",
+                "7b1509ea-4b99-4c95-b60e-3be11a78e564",
+                "3300255d-308c-48a4-a844-e5d109f34f7e"
               ],
               "duration": 0,
               "root": false,
@@ -401,7 +406,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "3616583e-1014-4988-ab20-2f04588bf96b",
+              "uuid": "abf2f965-9159-45f9-ab31-f9790bcfc349",
               "title": "Curvas Internacionales | Validar que se muestren todas las curvas esperadas en la pestaña Todas",
               "fullFile": "",
               "file": "",
@@ -421,7 +426,7 @@
                   "context": null,
                   "code": "_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.clickArrowLeft();\n_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.clickTab('Internacionales');\n_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.elements.tabButton('Internacionales').should('be.visible');\n_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.clickTab('Todas');\ncy.validarCurvasEsperadas(_data_curvas__WEBPACK_IMPORTED_MODULE_2__.curvasInternacionales);",
                   "err": {},
-                  "uuid": "55f351f7-d977-4529-9bd5-191d485dd848",
+                  "uuid": "41b6a953-1195-4179-b54a-0bb4f63c743c",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -432,7 +437,7 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "55f351f7-d977-4529-9bd5-191d485dd848"
+                "41b6a953-1195-4179-b54a-0bb4f63c743c"
               ],
               "duration": 0,
               "root": false,
@@ -440,7 +445,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "69e40304-0d00-4e02-8459-1186c2b8739b",
+              "uuid": "eb7015a5-1f4c-43f6-a7d5-d90af39349cf",
               "title": "Curvas Internacionales | Ingreso a curvas específicas",
               "fullFile": "",
               "file": "",
@@ -460,7 +465,7 @@
                   "context": null,
                   "code": "_pages_curvasPage__WEBPACK_IMPORTED_MODULE_1__.curves.clickTab('Todas');\ncy.contains('a', `${_data_curvas__WEBPACK_IMPORTED_MODULE_2__.CURVAINT_1}`).click();\ncy.validacionesCurva();",
                   "err": {},
-                  "uuid": "4b453d6c-0320-4187-abb7-22bd9ac55b48",
+                  "uuid": "414b1d3d-71bd-40d3-8f99-7c87453004b5",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -478,7 +483,7 @@
                   "context": null,
                   "code": "cy.contains('Curvas', {\n  matchCase: false\n}).should('be.visible').click();\ncy.contains('a', `${_data_curvas__WEBPACK_IMPORTED_MODULE_2__.CURVAINT_2}`).click();\ncy.validacionesCurva();",
                   "err": {},
-                  "uuid": "d67e3142-faaa-4157-8a9c-77ac30cc01cf",
+                  "uuid": "803f7e79-d104-4332-bb1f-ece8d6a4ee60",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -496,7 +501,7 @@
                   "context": null,
                   "code": "cy.contains('Curvas', {\n  matchCase: false\n}).should('be.visible').click();\ncy.contains('a', `${_data_curvas__WEBPACK_IMPORTED_MODULE_2__.CURVAINT_3}`).click();\ncy.validacionesCurva();",
                   "err": {},
-                  "uuid": "dc1e0f85-eea9-4ea6-80a9-2d8841911080",
+                  "uuid": "7c078b85-e007-45a1-a807-75823d99830f",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -514,7 +519,7 @@
                   "context": null,
                   "code": "cy.contains('Curvas', {\n  matchCase: false\n}).should('be.visible').click();\ncy.contains('a', `${_data_curvas__WEBPACK_IMPORTED_MODULE_2__.CURVAINT_4}`).click();\ncy.validacionesCurva();",
                   "err": {},
-                  "uuid": "e3e21725-d904-455b-a934-c63bb7f77991",
+                  "uuid": "d8d1ee88-c518-4e3c-84e3-b0a19da173b2",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -532,7 +537,7 @@
                   "context": null,
                   "code": "cy.contains('Curvas', {\n  matchCase: false\n}).should('be.visible').click();\ncy.contains('a', `${_data_curvas__WEBPACK_IMPORTED_MODULE_2__.CURVAINT_5}`).click();\ncy.validacionesCurva();",
                   "err": {},
-                  "uuid": "a5d0b16a-c85f-479b-aaba-eccf62e926d0",
+                  "uuid": "255afe41-984e-47d6-afa1-e31af51a6516",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -550,7 +555,7 @@
                   "context": null,
                   "code": "cy.contains('Curvas', {\n  matchCase: false\n}).should('be.visible').click();\ncy.contains('a', `${_data_curvas__WEBPACK_IMPORTED_MODULE_2__.CURVAINT_6}`).click();\ncy.validacionesCurva();",
                   "err": {},
-                  "uuid": "265f7675-e585-4773-add4-4d4def9f27f5",
+                  "uuid": "ba34808d-29a2-446e-b94d-1f9efa899fbf",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -561,12 +566,12 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "4b453d6c-0320-4187-abb7-22bd9ac55b48",
-                "d67e3142-faaa-4157-8a9c-77ac30cc01cf",
-                "dc1e0f85-eea9-4ea6-80a9-2d8841911080",
-                "e3e21725-d904-455b-a934-c63bb7f77991",
-                "a5d0b16a-c85f-479b-aaba-eccf62e926d0",
-                "265f7675-e585-4773-add4-4d4def9f27f5"
+                "414b1d3d-71bd-40d3-8f99-7c87453004b5",
+                "803f7e79-d104-4332-bb1f-ece8d6a4ee60",
+                "7c078b85-e007-45a1-a807-75823d99830f",
+                "d8d1ee88-c518-4e3c-84e3-b0a19da173b2",
+                "255afe41-984e-47d6-afa1-e31af51a6516",
+                "ba34808d-29a2-446e-b94d-1f9efa899fbf"
               ],
               "duration": 0,
               "root": false,
