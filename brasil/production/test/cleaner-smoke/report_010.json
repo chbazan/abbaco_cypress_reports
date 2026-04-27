@@ -1,0 +1,224 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-04-27T12:15:47.718Z",
+    "end": "2026-04-27T12:15:47.814Z",
+    "duration": 96,
+    "testsRegistered": 7,
+    "passPercent": 14.285714285714285,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 6,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "949e2bf8-8b0d-4bbf-b20b-a24e36da8575",
+      "title": "",
+      "fullFile": "build/production/brasil/smoke/screener.cy.js",
+      "file": "build/production/brasil/smoke/screener.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3b094f55-3e1f-400a-9557-60bfb1664591",
+          "title": "Screener BR",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ingresar al menú \"Screener\"",
+              "fullTitle": "Screener BR Ingresar al menú \"Screener\"",
+              "timedOut": null,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].ABBACO_LOCATION + /bond-screener/);\ncy.get('button.accordion-button').should('be.visible');\ncy.get('div.accordion-body').should('be.visible');",
+              "err": {},
+              "uuid": "2e91fa04-9435-485a-9eab-efd29dafb837",
+              "parentUUID": "3b094f55-3e1f-400a-9557-60bfb1664591",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Selecciona tipo de deuda \"Debenture\"",
+              "fullTitle": "Screener BR Selecciona tipo de deuda \"Debenture\"",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[for=\"Debenture\"]').should('exist').and('be.visible').click();",
+              "err": {},
+              "uuid": "0b9197b1-68c0-4411-be37-c79a0251cf58",
+              "parentUUID": "3b094f55-3e1f-400a-9557-60bfb1664591",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Selecciona BRL en \"Moneda de Pago\"",
+              "fullTitle": "Screener BR Selecciona BRL en \"Moneda de Pago\"",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Selecionar Moeda de pagamento', {\n  matchCase: false\n}).should('exist').and('be.visible').click({\n  force: true\n});\ncy.get('input[id=\"form-control-Moeda de pagamento\"]').should('be.visible');\ncy.contains('button[class=\"dropdown-item dropdown-item btn btn-outline-primary\"]', 'BRL').click();",
+              "err": {},
+              "uuid": "4a92c593-98c0-4bdc-8a7d-44bdcdca599e",
+              "parentUUID": "3b094f55-3e1f-400a-9557-60bfb1664591",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Selecciona Ley Brasileira en \"Ley\"",
+              "fullTitle": "Screener BR Selecciona Ley Brasileira en \"Ley\"",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Selecionar Lei', {\n  matchCase: false\n}).should('exist').and('be.visible').click({\n  force: true\n});\ncy.contains('Lei Brasileira', {\n  matchCase: false\n}).should('exist').and('be.visible').click({\n  force: true\n});",
+              "err": {},
+              "uuid": "f79b7709-7326-434e-97d6-e3bcd399d32c",
+              "parentUUID": "3b094f55-3e1f-400a-9557-60bfb1664591",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Selecciona Companhia de Eletricidade do Estado da Bahia COELBA en \"Seleccionar Emisor\"",
+              "fullTitle": "Screener BR Selecciona Companhia de Eletricidade do Estado da Bahia COELBA en \"Seleccionar Emisor\"",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Selecionar Emissor', {\n  matchCase: false\n}).should('exist').and('be.visible').click({\n  force: true\n});\ncy.get('#form-control-Emissor').should('exist').and('be.visible').click({\n  force: true\n}).type('Companhia de Eletricidade do Estado da Bahia COELBA');\ncy.contains('Companhia de Eletricidade do Estado da Bahia COELBA', {\n  matchCase: false\n}).should('exist').and('be.visible').click({\n  force: true\n});",
+              "err": {},
+              "uuid": "bd4fb25b-05e2-49b2-ac8c-57a3023a33b5",
+              "parentUUID": "3b094f55-3e1f-400a-9557-60bfb1664591",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Hacer clic en \"Buscar\" luego de haber seleccionado los filtros",
+              "fullTitle": "Screener BR Hacer clic en \"Buscar\" luego de haber seleccionado los filtros",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Buscar').should('exist').and('be.visible').click({\n  force: true\n});",
+              "err": {},
+              "uuid": "41af0a49-a65a-4483-aed4-e9343a26a6de",
+              "parentUUID": "3b094f55-3e1f-400a-9557-60bfb1664591",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Verifica que se encuentre el bono 9ANBN8 en el resultado de la búsqueda",
+              "fullTitle": "Screener BR Verifica que se encuentre el bono 9ANBN8 en el resultado de la búsqueda",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('div.card').should('exist').and('be.visible');\ncy.contains('9ANBN8').should('exist').and('be.visible');",
+              "err": {},
+              "uuid": "6dfed5e0-dc49-4c7b-8356-610a98077ec4",
+              "parentUUID": "3b094f55-3e1f-400a-9557-60bfb1664591",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2e91fa04-9435-485a-9eab-efd29dafb837"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [
+            "0b9197b1-68c0-4411-be37-c79a0251cf58",
+            "4a92c593-98c0-4bdc-8a7d-44bdcdca599e",
+            "f79b7709-7326-434e-97d6-e3bcd399d32c",
+            "bd4fb25b-05e2-49b2-ac8c-57a3023a33b5",
+            "41af0a49-a65a-4483-aed4-e9343a26a6de",
+            "6dfed5e0-dc49-4c7b-8356-610a98077ec4"
+          ],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
