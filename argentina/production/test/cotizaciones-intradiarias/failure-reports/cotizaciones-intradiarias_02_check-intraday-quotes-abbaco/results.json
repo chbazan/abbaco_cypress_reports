@@ -1,34 +1,38 @@
 {
   "spec": "build/production/argentina/cotizaciones-intradiarias/02_check-intraday-quotes-abbaco.cy.js",
   "specName": "cotizaciones-intradiarias_02_check-intraday-quotes-abbaco",
-  "timestamp": "2026-04-27T15:28:46.248Z",
+  "timestamp": "2026-04-28T17:05:35.792Z",
   "environment": {
     "TARGET_ENV": "production",
     "TARGET_CLIENT": "argentina",
     "browser": "firefox"
   },
   "stats": {
-    "duration": 96437,
-    "endedAt": "2026-04-27T15:28:46.175Z",
+    "duration": 176871,
+    "endedAt": "2026-04-28T17:05:35.729Z",
     "failures": 1,
-    "passes": 3,
-    "pending": 3,
-    "skipped": 21,
-    "startedAt": "2026-04-27T15:27:09.738Z",
+    "passes": 10,
+    "pending": 5,
+    "skipped": 12,
+    "startedAt": "2026-04-28T17:02:38.858Z",
     "suites": 4,
     "tests": 28
   },
   "failedTests": [
     {
       "title": [
-        "Validación de las cotizaciones ByMA en Analizar de Abbaco Argentina",
-        "Validar en Abbaco que la cotización intradiaria del bono LECHO sea la correcta"
+        "Validar cotizaciones intradiarias en la sección de Bonos Favoritos en el Home",
+        "Validar la cotización intradiaria del bono AL30 en la sección Bonos Favoritos"
       ],
-      "fullTitle": "Validación de las cotizaciones ByMA en Analizar de Abbaco Argentina > Validar en Abbaco que la cotización intradiaria del bono LECHO sea la correcta",
+      "fullTitle": "Validar cotizaciones intradiarias en la sección de Bonos Favoritos en el Home > Validar la cotización intradiaria del bono AL30 en la sección Bonos Favoritos",
       "state": "failed",
-      "duration": 33633,
-      "error": "Error: ❌ La cotización de LECHO en Abbaco \"27600.0027\" no coincide con la de Pepper \"30200\"\nat ./cypress/support/commands.js/</ (webpack://cypress/./cypress/support/commands.js:1169:0)\nat getRet (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:122690:20)\nat tryCatcher (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1777:23)\nat __webpack_modules__</module.exports/Promise.try (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:4285:29)\nat thenFn (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:122701:60)\nat then (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:122952:21)\nat wrapped (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:146050:19)\nat __webpack_modules__</runCommand (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:152018:15)\nat tryCatcher (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1777:23)\nat __webpack_modules__</module.exports/Promise.prototype._settlePromiseFromHandler (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1489:31)\nat __webpack_modules__</module.exports/Promise.prototype._settlePromise (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1546:18)\nat __webpack_modules__</module.exports/Promise.prototype._settlePromiseCtx (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1583:10)\nat _drainQueueStep (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:2381:12)\nat _drainQueue (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:2370:24)\nat __webpack_modules__</Async.prototype._drainQueues (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:2386:16)\nat __webpack_modules__</Async/this.drainQueues (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:2256:14)",
+      "duration": 11275,
+      "error": "AssertionError: expected 91150 to equal 91250\n    at validarCard/</ (webpack://cypress/./cypress/support/commands.js:1703:0)\n    at getRet (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:122690:20)\n    at tryCatcher (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1777:23)\n    at __webpack_modules__</module.exports/Promise.try (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:4285:29)\n    at thenFn (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:122701:60)\n    at then (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:122952:21)\n    at wrapped (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:146050:19)",
       "attempts": [
+        {
+          "state": "failed",
+          "error": null
+        },
         {
           "state": "failed",
           "error": null
@@ -40,8 +44,15 @@
     {
       "height": 720,
       "name": null,
-      "path": "/home/runner/work/abbaco-cypress/abbaco-cypress/cypress/reports/screenshots/02_check-intraday-quotes-abbaco.cy.js/Validación de las cotizaciones ByMA en Analizar de Abbaco Argentina -- Validar en Abbaco que la cotización intradiaria del bono LECHO sea la correcta (failed).png",
-      "takenAt": "2026-04-27T15:28:45.513Z",
+      "path": "/home/runner/work/abbaco-cypress/abbaco-cypress/cypress/reports/screenshots/02_check-intraday-quotes-abbaco.cy.js/Validar cotizaciones intradiarias en la sección de Bonos Favoritos en el Home -- Validar la cotización intradiaria del bono AL30 en la sección Bonos Favoritos (failed).png",
+      "takenAt": "2026-04-28T17:05:32.982Z",
+      "width": 1280
+    },
+    {
+      "height": 720,
+      "name": null,
+      "path": "/home/runner/work/abbaco-cypress/abbaco-cypress/cypress/reports/screenshots/02_check-intraday-quotes-abbaco.cy.js/Validar cotizaciones intradiarias en la sección de Bonos Favoritos en el Home -- Validar la cotización intradiaria del bono AL30 en la sección Bonos Favoritos (failed) (attempt 2).png",
+      "takenAt": "2026-04-28T17:05:34.524Z",
       "width": 1280
     }
   ]
