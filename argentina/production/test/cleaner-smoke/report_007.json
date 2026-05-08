@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 2,
-    "tests": 4,
-    "passes": 2,
+    "tests": 3,
+    "passes": 1,
     "pending": 1,
     "failures": 1,
-    "start": "2026-05-08T04:20:53.199Z",
-    "end": "2026-05-08T04:24:15.149Z",
-    "duration": 201950,
+    "start": "2026-05-08T11:46:45.718Z",
+    "end": "2026-05-08T11:50:19.339Z",
+    "duration": 213621,
     "testsRegistered": 18,
-    "passPercent": 11.76470588235294,
+    "passPercent": 5.88235294117647,
     "pendingPercent": 5.555555555555555,
     "other": 0,
     "hasOther": false,
-    "skipped": 14,
+    "skipped": 15,
     "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "20a3a839-c608-46b5-a85c-e172882e86b6",
+      "uuid": "14af3867-492b-40cd-8905-cdd9c351ecb7",
       "title": "",
       "fullFile": "build/production/argentina/smoke/favoritos.cy.js",
       "file": "build/production/argentina/smoke/favoritos.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "bd4bf34c-5e45-4ae3-81e7-1688a21cabd9",
+          "uuid": "e0442bb4-87ed-47e1-8602-4132f7bde9e6",
           "title": "Favoritos",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "95bf003c-8abb-41c5-ac91-afd26153e1ea",
+              "uuid": "380ea8af-ce1e-4d90-87dd-8d4e3ded2ffd",
               "title": "Especies favoritas",
               "fullFile": "",
               "file": "",
@@ -47,7 +47,7 @@
                   "title": "Ingresar al Home",
                   "fullTitle": "Favoritos Especies favoritas Ingresar al Home",
                   "timedOut": null,
-                  "duration": 1270,
+                  "duration": 1494,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -56,8 +56,8 @@
                   "context": null,
                   "code": "cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION);",
                   "err": {},
-                  "uuid": "39bbf9c5-1062-4550-8d84-499f248b203c",
-                  "parentUUID": "95bf003c-8abb-41c5-ac91-afd26153e1ea",
+                  "uuid": "7f814662-b7ce-4d01-935a-f22833db4a3c",
+                  "parentUUID": "380ea8af-ce1e-4d90-87dd-8d4e3ded2ffd",
                   "isHook": false,
                   "skipped": false
                 },
@@ -65,25 +65,7 @@
                   "title": "Guardar como favorita la especie AL30",
                   "fullTitle": "Favoritos Especies favoritas Guardar como favorita la especie AL30",
                   "timedOut": null,
-                  "duration": 12668,
-                  "state": "passed",
-                  "speed": "slow",
-                  "pass": true,
-                  "fail": false,
-                  "pending": false,
-                  "context": null,
-                  "code": "cy.buscarYAnalizarEspecie(bono);\n_pages_favoritosPage__WEBPACK_IMPORTED_MODULE_1__.favoritos.saveFavorite();\n_pages_favoritosPage__WEBPACK_IMPORTED_MODULE_1__.favoritos.elements.favoriteSavedButton().should('be.visible');",
-                  "err": {},
-                  "uuid": "e865400f-4621-418f-bbf8-8748264e6c3b",
-                  "parentUUID": "95bf003c-8abb-41c5-ac91-afd26153e1ea",
-                  "isHook": false,
-                  "skipped": false
-                },
-                {
-                  "title": "Guardar como favorita la especie BDC28",
-                  "fullTitle": "Favoritos Especies favoritas Guardar como favorita la especie BDC28",
-                  "timedOut": null,
-                  "duration": 90265,
+                  "duration": 102304,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
@@ -92,18 +74,18 @@
                   "context": null,
                   "code": "cy.buscarYAnalizarEspecie(bono);\n_pages_favoritosPage__WEBPACK_IMPORTED_MODULE_1__.favoritos.saveFavorite();\n_pages_favoritosPage__WEBPACK_IMPORTED_MODULE_1__.favoritos.elements.favoriteSavedButton().should('be.visible');",
                   "err": {
-                    "message": "AssertionError: Timed out retrying after 90000ms: Expected to find element: `input[class=\"input-sm border-0 p-0 shadow-none form-control\"]`, but never found it.",
-                    "estack": "AssertionError: Timed out retrying after 90000ms: Expected to find element: `input[class=\"input-sm border-0 p-0 shadow-none form-control\"]`, but never found it.\n    at ./cypress/support/commands.js (webpack://cypress/./cypress/support/commands.js:447:0)\n    at __webpack_modules__</addCommand/wrap (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:146042:43)",
+                    "message": "AssertionError: Timed out retrying after 90000ms: Expected to find content: '/(Guardar como favorito|Salvar como favorito)/i' within the selector: 'button' but never did.",
+                    "estack": "AssertionError: Timed out retrying after 90000ms: Expected to find content: '/(Guardar como favorito|Salvar como favorito)/i' within the selector: 'button' but never did.\n    at favoriteButton (webpack://cypress/./cypress/support/pages/favoritosPage.js:4:0)\n    at saveFavorite (webpack://cypress/./cypress/support/pages/favoritosPage.js:17:0)\n    at favoritos/</</ (webpack://cypress/./build/production/argentina/flows/favoritos.js:27:23)",
                     "diff": null
                   },
-                  "uuid": "c57160ab-c1d9-44be-869f-77dec8f786ef",
-                  "parentUUID": "95bf003c-8abb-41c5-ac91-afd26153e1ea",
+                  "uuid": "531247f5-2168-413b-9bb4-a394f30c9064",
+                  "parentUUID": "380ea8af-ce1e-4d90-87dd-8d4e3ded2ffd",
                   "isHook": false,
                   "skipped": false
                 },
                 {
-                  "title": "Guardar como favorita la especie TX28",
-                  "fullTitle": "Favoritos Especies favoritas Guardar como favorita la especie TX28",
+                  "title": "Guardar como favorita la especie BDC28",
+                  "fullTitle": "Favoritos Especies favoritas Guardar como favorita la especie BDC28",
                   "timedOut": null,
                   "duration": 0,
                   "state": "pending",
@@ -114,10 +96,28 @@
                   "context": null,
                   "code": "cy.buscarYAnalizarEspecie(bono);\n_pages_favoritosPage__WEBPACK_IMPORTED_MODULE_1__.favoritos.saveFavorite();\n_pages_favoritosPage__WEBPACK_IMPORTED_MODULE_1__.favoritos.elements.favoriteSavedButton().should('be.visible');",
                   "err": {},
-                  "uuid": "0562abbe-6557-4416-87c5-7fb4ec1d39bc",
-                  "parentUUID": "95bf003c-8abb-41c5-ac91-afd26153e1ea",
+                  "uuid": "f32806be-f988-481b-93b0-36346cc30645",
+                  "parentUUID": "380ea8af-ce1e-4d90-87dd-8d4e3ded2ffd",
                   "isHook": false,
                   "skipped": false
+                },
+                {
+                  "title": "Guardar como favorita la especie TX28",
+                  "fullTitle": "Favoritos Especies favoritas Guardar como favorita la especie TX28",
+                  "timedOut": null,
+                  "duration": 0,
+                  "state": "skipped",
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.buscarYAnalizarEspecie(bono);\n_pages_favoritosPage__WEBPACK_IMPORTED_MODULE_1__.favoritos.saveFavorite();\n_pages_favoritosPage__WEBPACK_IMPORTED_MODULE_1__.favoritos.elements.favoriteSavedButton().should('be.visible');",
+                  "err": {},
+                  "uuid": "ad4e51fc-3321-4d18-ac0d-d083e2f4f555",
+                  "parentUUID": "380ea8af-ce1e-4d90-87dd-8d4e3ded2ffd",
+                  "isHook": false,
+                  "skipped": true
                 },
                 {
                   "title": "Guardar como favorita la especie LECHO",
@@ -132,8 +132,8 @@
                   "context": null,
                   "code": "cy.buscarYAnalizarEspecie(bono);\n_pages_favoritosPage__WEBPACK_IMPORTED_MODULE_1__.favoritos.saveFavorite();\n_pages_favoritosPage__WEBPACK_IMPORTED_MODULE_1__.favoritos.elements.favoriteSavedButton().should('be.visible');",
                   "err": {},
-                  "uuid": "04c5fdeb-a081-44ae-8e8f-9bc7efdced7e",
-                  "parentUUID": "95bf003c-8abb-41c5-ac91-afd26153e1ea",
+                  "uuid": "67e00288-ceca-423d-baf8-302363d8c4da",
+                  "parentUUID": "380ea8af-ce1e-4d90-87dd-8d4e3ded2ffd",
                   "isHook": false,
                   "skipped": true
                 },
@@ -150,8 +150,8 @@
                   "context": null,
                   "code": "cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION);\ncy.validarFavoritosHome(bonos);",
                   "err": {},
-                  "uuid": "38024cd3-b4cd-480c-9c7a-9ef3c4d74ae6",
-                  "parentUUID": "95bf003c-8abb-41c5-ac91-afd26153e1ea",
+                  "uuid": "3d5227d8-1ee9-4b2f-8f21-c7ded90a3430",
+                  "parentUUID": "380ea8af-ce1e-4d90-87dd-8d4e3ded2ffd",
                   "isHook": false,
                   "skipped": true
                 },
@@ -168,35 +168,35 @@
                   "context": null,
                   "code": "cy.cleanFavoritosHomeStg(bonos);",
                   "err": {},
-                  "uuid": "b27d867b-5c20-4f6b-87dc-6ce6b11681fb",
-                  "parentUUID": "95bf003c-8abb-41c5-ac91-afd26153e1ea",
+                  "uuid": "55a65b98-473e-4486-a9ef-bca9a353a21f",
+                  "parentUUID": "380ea8af-ce1e-4d90-87dd-8d4e3ded2ffd",
                   "isHook": false,
                   "skipped": true
                 }
               ],
               "suites": [],
               "passes": [
-                "39bbf9c5-1062-4550-8d84-499f248b203c",
-                "e865400f-4621-418f-bbf8-8748264e6c3b"
+                "7f814662-b7ce-4d01-935a-f22833db4a3c"
               ],
               "failures": [
-                "c57160ab-c1d9-44be-869f-77dec8f786ef"
+                "531247f5-2168-413b-9bb4-a394f30c9064"
               ],
               "pending": [
-                "0562abbe-6557-4416-87c5-7fb4ec1d39bc"
+                "f32806be-f988-481b-93b0-36346cc30645"
               ],
               "skipped": [
-                "04c5fdeb-a081-44ae-8e8f-9bc7efdced7e",
-                "38024cd3-b4cd-480c-9c7a-9ef3c4d74ae6",
-                "b27d867b-5c20-4f6b-87dc-6ce6b11681fb"
+                "ad4e51fc-3321-4d18-ac0d-d083e2f4f555",
+                "67e00288-ceca-423d-baf8-302363d8c4da",
+                "3d5227d8-1ee9-4b2f-8f21-c7ded90a3430",
+                "55a65b98-473e-4486-a9ef-bca9a353a21f"
               ],
-              "duration": 104203,
+              "duration": 103798,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "f5a4ee11-b487-456d-a58e-00e205141441",
+              "uuid": "c8aa02e1-1935-40d3-976c-c3004776ed27",
               "title": "Curvas favoritas",
               "fullFile": "",
               "file": "",
@@ -216,7 +216,7 @@
                   "context": null,
                   "code": "// cy.contains('a', 'Curvas', { matchCase: false }).click({ force: true })\ncy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/curves`);\n// cy.pageIsLoaded()\ncy.get('input[class=\"search-input form-control form-control-md\"]').should('be.visible');\ncy.get('ul.list-group').should('be.visible');\ncy.wait(3000);",
                   "err": {},
-                  "uuid": "d59992a5-d964-4716-b19c-0be25795f485",
+                  "uuid": "f3e52cfa-fa41-41fd-9397-434c323cddc4",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -234,7 +234,7 @@
                   "context": null,
                   "code": "cy.marcarCurvaFavoritaYValidar(curva);",
                   "err": {},
-                  "uuid": "19004839-7f50-4b7b-be61-37cf6005fba8",
+                  "uuid": "4ce27e44-686b-44d2-942a-08df71a1661b",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -252,7 +252,7 @@
                   "context": null,
                   "code": "cy.marcarCurvaFavoritaYValidar(curva);",
                   "err": {},
-                  "uuid": "01ab11af-d33c-40b9-8bc5-da2ea575ca60",
+                  "uuid": "d64c2e0d-e5dd-4ee2-96aa-43eb2cf451c4",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -270,7 +270,7 @@
                   "context": null,
                   "code": "cy.marcarCurvaFavoritaYValidar(curva);",
                   "err": {},
-                  "uuid": "f6e9fffc-4ab6-4e22-bf99-e2a7d5ac9dc3",
+                  "uuid": "a3b3ab21-34d0-427b-a680-c3ff6ab490d7",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -288,7 +288,7 @@
                   "context": null,
                   "code": "cy.marcarCurvaFavoritaYValidar(curva);",
                   "err": {},
-                  "uuid": "d9d9a50b-7eda-4bcd-9e10-dee9b9c3b897",
+                  "uuid": "ee3ec1ad-d14e-4476-b934-d2f7e9a31881",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -306,7 +306,7 @@
                   "context": null,
                   "code": "cy.marcarCurvaFavoritaYValidar(curva);",
                   "err": {},
-                  "uuid": "d5c2b54b-b051-4063-9d2b-03104263543e",
+                  "uuid": "0cdd1e07-c0d0-42ba-84df-dc96b1e27588",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -324,7 +324,7 @@
                   "context": null,
                   "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/plotter`);\n_pages_graficadorPage__WEBPACK_IMPORTED_MODULE_2__.graficador.elements.selectCurvesDropdown().should('be.visible');\n_pages_graficadorPage__WEBPACK_IMPORTED_MODULE_2__.graficador.clickCurvesDropdown();\nCURVAS_FAVORITAS.forEach(curva => {\n  cy.contains('button.dropdown-item span', curva).closest('button.dropdown-item').within(() => {\n    cy.get('svg.tabler-icon-star-filled.text-body').should('be.visible');\n  });\n});",
                   "err": {},
-                  "uuid": "6c479e89-6ba4-4a19-bda3-350df1bb7ed8",
+                  "uuid": "2b6fcae8-6bba-4434-b6ec-1f871df67c3d",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -342,7 +342,7 @@
                   "context": null,
                   "code": "cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION);\ncy.contains('h6', 'Curvas favoritas', {\n  matchCase: false\n}).closest('.card-body').within(() => {\n  CURVAS_FAVORITAS.forEach(curva => {\n    cy.contains('li.list-group-item a.text-link', curva).closest('li.list-group-item').within(() => {\n      cy.get('svg.tabler-icon-star-filled.text-warning').should('be.visible');\n    });\n  });\n});",
                   "err": {},
-                  "uuid": "c3fdb2d4-50d8-4170-8d42-55af226ec08f",
+                  "uuid": "888ae022-a8c4-4717-adb0-77dfbbc36579",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -360,7 +360,7 @@
                   "context": null,
                   "code": "cy.contains('h6', 'Curvas favoritas').closest('.card-body').as('favoritosCard');\nCURVAS_FAVORITAS.forEach(curva => {\n  // Click en la estrella de cada curva\n  cy.get('@favoritosCard').contains('li.list-group-item a.text-link', curva).closest('li.list-group-item').within(() => {\n    cy.get('svg.tabler-icon-star-filled.text-warning').should('be.visible').click();\n  });\n  // Validar que la curva ya no se muestra en el cuadro\n  cy.get('@favoritosCard').contains('a.text-link', curva).should('not.exist');\n});",
                   "err": {},
-                  "uuid": "cadba6f5-b2cd-4ce9-9e03-71364f997d78",
+                  "uuid": "24049f73-cfde-4b04-94f6-ff6236815e34",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -378,7 +378,7 @@
                   "context": null,
                   "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/plotter`);\n_pages_graficadorPage__WEBPACK_IMPORTED_MODULE_2__.graficador.elements.selectCurvesDropdown().should('be.visible');\n_pages_graficadorPage__WEBPACK_IMPORTED_MODULE_2__.graficador.clickCurvesDropdown();\nCURVAS_FAVORITAS.forEach(curva => {\n  cy.contains('button.dropdown-item span', curva).closest('button.dropdown-item').within(() => {\n    cy.get('svg.tabler-icon-star-filled.text-body').should('not.exist');\n  });\n});",
                   "err": {},
-                  "uuid": "a3f91ac4-2dbc-40d9-99f2-f1f24e0442c9",
+                  "uuid": "a6749ddc-b46b-47ed-a830-80114c89ded3",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -396,7 +396,7 @@
                   "context": null,
                   "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/curves`);\ncy.get('ul.list-group li.list-group-item').each($li => {\n  cy.wrap($li).within(() => {\n    cy.get('svg.tabler-icon-star-filled.text-warning').should('not.exist');\n  });\n});",
                   "err": {},
-                  "uuid": "cbdecd4a-80eb-4852-9c8c-0c57fcdee4ee",
+                  "uuid": "64ea81c3-61f2-470e-b0bd-503417204808",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -407,17 +407,17 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "d59992a5-d964-4716-b19c-0be25795f485",
-                "19004839-7f50-4b7b-be61-37cf6005fba8",
-                "01ab11af-d33c-40b9-8bc5-da2ea575ca60",
-                "f6e9fffc-4ab6-4e22-bf99-e2a7d5ac9dc3",
-                "d9d9a50b-7eda-4bcd-9e10-dee9b9c3b897",
-                "d5c2b54b-b051-4063-9d2b-03104263543e",
-                "6c479e89-6ba4-4a19-bda3-350df1bb7ed8",
-                "c3fdb2d4-50d8-4170-8d42-55af226ec08f",
-                "cadba6f5-b2cd-4ce9-9e03-71364f997d78",
-                "a3f91ac4-2dbc-40d9-99f2-f1f24e0442c9",
-                "cbdecd4a-80eb-4852-9c8c-0c57fcdee4ee"
+                "f3e52cfa-fa41-41fd-9397-434c323cddc4",
+                "4ce27e44-686b-44d2-942a-08df71a1661b",
+                "d64c2e0d-e5dd-4ee2-96aa-43eb2cf451c4",
+                "a3b3ab21-34d0-427b-a680-c3ff6ab490d7",
+                "ee3ec1ad-d14e-4476-b934-d2f7e9a31881",
+                "0cdd1e07-c0d0-42ba-84df-dc96b1e27588",
+                "2b6fcae8-6bba-4434-b6ec-1f871df67c3d",
+                "888ae022-a8c4-4717-adb0-77dfbbc36579",
+                "24049f73-cfde-4b04-94f6-ff6236815e34",
+                "a6749ddc-b46b-47ed-a830-80114c89ded3",
+                "64ea81c3-61f2-470e-b0bd-503417204808"
               ],
               "duration": 0,
               "root": false,
