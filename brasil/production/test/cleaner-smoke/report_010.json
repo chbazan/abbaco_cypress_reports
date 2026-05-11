@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 1,
-    "passes": 1,
-    "pending": 0,
-    "failures": 0,
-    "start": "2026-04-27T12:15:47.718Z",
-    "end": "2026-04-27T12:15:47.814Z",
-    "duration": 96,
+    "tests": 2,
+    "passes": 0,
+    "pending": 1,
+    "failures": 1,
+    "start": "2026-05-11T15:06:17.515Z",
+    "end": "2026-05-11T15:09:26.624Z",
+    "duration": 189109,
     "testsRegistered": 7,
-    "passPercent": 14.285714285714285,
-    "pendingPercent": 0,
+    "passPercent": 0,
+    "pendingPercent": 14.285714285714285,
     "other": 0,
     "hasOther": false,
-    "skipped": 6,
+    "skipped": 5,
     "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "949e2bf8-8b0d-4bbf-b20b-a24e36da8575",
+      "uuid": "4b9f4b3b-b40d-4e37-ad8a-cf2afad71122",
       "title": "",
       "fullFile": "build/production/brasil/smoke/screener.cy.js",
       "file": "build/production/brasil/smoke/screener.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "3b094f55-3e1f-400a-9557-60bfb1664591",
+          "uuid": "b838ed25-405c-4c0c-abbd-83022cd9091c",
           "title": "Screener BR",
           "fullFile": "",
           "file": "",
@@ -38,17 +38,21 @@
               "title": "Ingresar al menú \"Screener\"",
               "fullTitle": "Screener BR Ingresar al menú \"Screener\"",
               "timedOut": null,
-              "duration": 0,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
+              "duration": 92625,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].ABBACO_LOCATION + /bond-screener/);\ncy.get('button.accordion-button').should('be.visible');\ncy.get('div.accordion-body').should('be.visible');",
-              "err": {},
-              "uuid": "2e91fa04-9435-485a-9eab-efd29dafb837",
-              "parentUUID": "3b094f55-3e1f-400a-9557-60bfb1664591",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 90000ms: Expected to find element: `button.accordion-button`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 90000ms: Expected to find element: `button.accordion-button`, but never found it.\n    at screener/ (webpack://cypress/./build/production/brasil/flows/screener.js:11:0)",
+                "diff": null
+              },
+              "uuid": "4af40f38-ae69-445f-ab93-e4521923c878",
+              "parentUUID": "b838ed25-405c-4c0c-abbd-83022cd9091c",
               "isHook": false,
               "skipped": false
             },
@@ -57,18 +61,18 @@
               "fullTitle": "Screener BR Selecciona tipo de deuda \"Debenture\"",
               "timedOut": null,
               "duration": 0,
-              "state": "skipped",
+              "state": "pending",
               "speed": null,
               "pass": false,
               "fail": false,
-              "pending": false,
+              "pending": true,
               "context": null,
               "code": "cy.get('[for=\"Debenture\"]').should('exist').and('be.visible').click();",
               "err": {},
-              "uuid": "0b9197b1-68c0-4411-be37-c79a0251cf58",
-              "parentUUID": "3b094f55-3e1f-400a-9557-60bfb1664591",
+              "uuid": "498dce66-54a3-4b75-a358-f95801338c9f",
+              "parentUUID": "b838ed25-405c-4c0c-abbd-83022cd9091c",
               "isHook": false,
-              "skipped": true
+              "skipped": false
             },
             {
               "title": "Selecciona BRL en \"Moneda de Pago\"",
@@ -83,8 +87,8 @@
               "context": null,
               "code": "cy.contains('Selecionar Moeda de pagamento', {\n  matchCase: false\n}).should('exist').and('be.visible').click({\n  force: true\n});\ncy.get('input[id=\"form-control-Moeda de pagamento\"]').should('be.visible');\ncy.contains('button[class=\"dropdown-item dropdown-item btn btn-outline-primary\"]', 'BRL').click();",
               "err": {},
-              "uuid": "4a92c593-98c0-4bdc-8a7d-44bdcdca599e",
-              "parentUUID": "3b094f55-3e1f-400a-9557-60bfb1664591",
+              "uuid": "fb99e728-8919-47ef-b81e-e5477c4fbfde",
+              "parentUUID": "b838ed25-405c-4c0c-abbd-83022cd9091c",
               "isHook": false,
               "skipped": true
             },
@@ -101,8 +105,8 @@
               "context": null,
               "code": "cy.contains('Selecionar Lei', {\n  matchCase: false\n}).should('exist').and('be.visible').click({\n  force: true\n});\ncy.contains('Lei Brasileira', {\n  matchCase: false\n}).should('exist').and('be.visible').click({\n  force: true\n});",
               "err": {},
-              "uuid": "f79b7709-7326-434e-97d6-e3bcd399d32c",
-              "parentUUID": "3b094f55-3e1f-400a-9557-60bfb1664591",
+              "uuid": "dccd6e52-db99-4f32-bf93-d8dc96c2a0f6",
+              "parentUUID": "b838ed25-405c-4c0c-abbd-83022cd9091c",
               "isHook": false,
               "skipped": true
             },
@@ -119,8 +123,8 @@
               "context": null,
               "code": "cy.contains('Selecionar Emissor', {\n  matchCase: false\n}).should('exist').and('be.visible').click({\n  force: true\n});\ncy.get('#form-control-Emissor').should('exist').and('be.visible').click({\n  force: true\n}).type('Companhia de Eletricidade do Estado da Bahia COELBA');\ncy.contains('Companhia de Eletricidade do Estado da Bahia COELBA', {\n  matchCase: false\n}).should('exist').and('be.visible').click({\n  force: true\n});",
               "err": {},
-              "uuid": "bd4fb25b-05e2-49b2-ac8c-57a3023a33b5",
-              "parentUUID": "3b094f55-3e1f-400a-9557-60bfb1664591",
+              "uuid": "31b41851-25cc-4ab9-af81-915b2a577114",
+              "parentUUID": "b838ed25-405c-4c0c-abbd-83022cd9091c",
               "isHook": false,
               "skipped": true
             },
@@ -137,8 +141,8 @@
               "context": null,
               "code": "cy.contains('Buscar').should('exist').and('be.visible').click({\n  force: true\n});",
               "err": {},
-              "uuid": "41af0a49-a65a-4483-aed4-e9343a26a6de",
-              "parentUUID": "3b094f55-3e1f-400a-9557-60bfb1664591",
+              "uuid": "e986885b-1cf5-46f8-9f4b-cd546b69daf5",
+              "parentUUID": "b838ed25-405c-4c0c-abbd-83022cd9091c",
               "isHook": false,
               "skipped": true
             },
@@ -155,27 +159,28 @@
               "context": null,
               "code": "cy.get('div.card').should('exist').and('be.visible');\ncy.contains('9ANBN8').should('exist').and('be.visible');",
               "err": {},
-              "uuid": "6dfed5e0-dc49-4c7b-8356-610a98077ec4",
-              "parentUUID": "3b094f55-3e1f-400a-9557-60bfb1664591",
+              "uuid": "2e10e371-0945-4615-b64a-b8c06ccd3b4c",
+              "parentUUID": "b838ed25-405c-4c0c-abbd-83022cd9091c",
               "isHook": false,
               "skipped": true
             }
           ],
           "suites": [],
-          "passes": [
-            "2e91fa04-9435-485a-9eab-efd29dafb837"
+          "passes": [],
+          "failures": [
+            "4af40f38-ae69-445f-ab93-e4521923c878"
           ],
-          "failures": [],
-          "pending": [],
+          "pending": [
+            "498dce66-54a3-4b75-a358-f95801338c9f"
+          ],
           "skipped": [
-            "0b9197b1-68c0-4411-be37-c79a0251cf58",
-            "4a92c593-98c0-4bdc-8a7d-44bdcdca599e",
-            "f79b7709-7326-434e-97d6-e3bcd399d32c",
-            "bd4fb25b-05e2-49b2-ac8c-57a3023a33b5",
-            "41af0a49-a65a-4483-aed4-e9343a26a6de",
-            "6dfed5e0-dc49-4c7b-8356-610a98077ec4"
+            "fb99e728-8919-47ef-b81e-e5477c4fbfde",
+            "dccd6e52-db99-4f32-bf93-d8dc96c2a0f6",
+            "31b41851-25cc-4ab9-af81-915b2a577114",
+            "e986885b-1cf5-46f8-9f4b-cd546b69daf5",
+            "2e10e371-0945-4615-b64a-b8c06ccd3b4c"
           ],
-          "duration": 0,
+          "duration": 92625,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
