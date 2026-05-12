@@ -1,23 +1,80 @@
 {
   "stats": {
-    "suites": 0,
-    "tests": 0,
-    "passes": 0,
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-05-12T12:11:49.922Z",
-    "end": "2026-05-12T12:11:49.922Z",
-    "duration": 0,
-    "testsRegistered": 0,
-    "passPercent": null,
-    "pendingPercent": null,
+    "start": "2026-05-12T18:40:17.336Z",
+    "end": "2026-05-12T18:40:46.892Z",
+    "duration": 29556,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false
   },
   "results": [
-    false
+    {
+      "uuid": "b82266ee-3d60-4828-a896-333ec10d6d65",
+      "title": "",
+      "fullFile": "build/production/argentina/cleaner/cleaner.cy.js",
+      "file": "build/production/argentina/cleaner/cleaner.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cfd6b1cd-ea3e-4d82-ad29-2e53de1b0ec2",
+          "title": "Cleaner",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Eliminar todos los bonos favoritos en el Home",
+              "fullTitle": "Cleaner Eliminar todos los bonos favoritos en el Home",
+              "timedOut": null,
+              "duration": 26013,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION);\ncy.pageIsLoaded();\n// El ambiente de testing/staging no suele tener todos los cuadros del home, para usar el cleaner en staging hay que comentar validacionesHome\ncy.validacionesHome();\ncy.cleanFavoritosHomeStg(bonos);",
+              "err": {},
+              "uuid": "4d476f6d-bd0c-429a-900f-fb172e8d807c",
+              "parentUUID": "cfd6b1cd-ea3e-4d82-ad29-2e53de1b0ec2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4d476f6d-bd0c-429a-900f-fb172e8d807c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 26013,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
   ],
   "meta": {
     "mocha": {
