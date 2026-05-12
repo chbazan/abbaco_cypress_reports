@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2026-05-11T17:53:28.594Z",
-    "end": "2026-05-11T17:53:46.804Z",
-    "duration": 18210,
+    "start": "2026-05-12T17:56:11.185Z",
+    "end": "2026-05-12T17:56:27.530Z",
+    "duration": 16345,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "73bb47d9-4363-4cd0-a476-594f7194c986",
+      "uuid": "d2e3f299-ab94-408b-a60e-fe6a56cc6924",
       "title": "",
       "fullFile": "build/production/argentina/performance/screener.cy.js",
       "file": "build/production/argentina/performance/screener.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "5767ed96-9681-4022-8203-0cd65ff9f2b1",
+          "uuid": "b9de2b95-1980-4b8a-af4d-51e7aa334e7f",
           "title": "Screener",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Ingresar al menú Screener",
               "fullTitle": "Screener Ingresar al menú Screener",
               "timedOut": null,
-              "duration": 7213,
+              "duration": 6800,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].ABBACO_LOCATION);\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.clickMenuScreener();\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.termsButtonAccordion().should('be.visible');\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.accordionBody().should('be.visible');",
               "err": {},
-              "uuid": "5d279e49-fcd9-4dfc-86cc-06dbd1bf629b",
-              "parentUUID": "5767ed96-9681-4022-8203-0cd65ff9f2b1",
+              "uuid": "a59e5681-768a-411f-a19e-115ef533413d",
+              "parentUUID": "b9de2b95-1980-4b8a-af4d-51e7aa334e7f",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Búsqueda con filtros en Screener",
               "fullTitle": "Screener Búsqueda con filtros en Screener",
               "timedOut": null,
-              "duration": 7749,
+              "duration": 6535,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.clickNegotiableObligation();\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.negotiableObligationOption().should('be.visible');\n// Selecciona USD en \"Moneda de Pago\"\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.addcurrencyPayment();\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.USDCurrencyOption().should('be.visible');\n// Selecciona Ley Argentina en \"Ley\"\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.addlaw();\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.argentinaLawOption().should('be.visible');\n// Selecciona YPF S.A. en \"Seleccionar Emisor\"\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.addBondIssuer();\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.issuer().should('be.visible');\n// Hacer clic en \"Buscar\" luego de haber seleccionado los filtros\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.clickSearchButton();\n// Verifica que se encuentre el bono YMC1O en el resultado de la búsqueda\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.cardBody().should('be.visible');\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.ONbond().should('be.visible');",
               "err": {},
-              "uuid": "fa9e4abc-0ccc-4c71-b615-0d9e089aa0b7",
-              "parentUUID": "5767ed96-9681-4022-8203-0cd65ff9f2b1",
+              "uuid": "c4862aec-4409-4469-9bc0-f6b239a26ee9",
+              "parentUUID": "b9de2b95-1980-4b8a-af4d-51e7aa334e7f",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "5d279e49-fcd9-4dfc-86cc-06dbd1bf629b",
-            "fa9e4abc-0ccc-4c71-b615-0d9e089aa0b7"
+            "a59e5681-768a-411f-a19e-115ef533413d",
+            "c4862aec-4409-4469-9bc0-f6b239a26ee9"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 14962,
+          "duration": 13335,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
