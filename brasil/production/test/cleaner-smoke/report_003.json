@@ -1,23 +1,182 @@
 {
   "stats": {
-    "suites": 0,
-    "tests": 0,
-    "passes": 0,
-    "pending": 0,
-    "failures": 0,
-    "start": "2026-05-11T15:03:03.940Z",
-    "end": "2026-05-11T15:03:03.942Z",
-    "duration": 2,
-    "testsRegistered": 0,
-    "passPercent": null,
-    "pendingPercent": null,
+    "suites": 1,
+    "tests": 3,
+    "passes": 1,
+    "pending": 1,
+    "failures": 1,
+    "start": "2026-05-13T12:28:30.993Z",
+    "end": "2026-05-13T12:31:52.891Z",
+    "duration": 201898,
+    "testsRegistered": 6,
+    "passPercent": 20,
+    "pendingPercent": 16.666666666666664,
     "other": 0,
     "hasOther": false,
-    "skipped": 0,
-    "hasSkipped": false
+    "skipped": 3,
+    "hasSkipped": true
   },
   "results": [
-    false
+    {
+      "uuid": "9ac26ae2-5ac6-4482-87d1-ba06c0e0d962",
+      "title": "",
+      "fullFile": "build/production/brasil/smoke/arbitraje.cy.js",
+      "file": "build/production/brasil/smoke/arbitraje.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f33f9d67-f329-4c63-8194-6ed9a180fa50",
+          "title": "Arbitraje",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ingresar al menú \"Arbitraje\"",
+              "fullTitle": "Arbitraje Ingresar al menú \"Arbitraje\"",
+              "timedOut": null,
+              "duration": 3459,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].ABBACO_LOCATION}/arbitrage`);",
+              "err": {},
+              "uuid": "0d5b91a8-900f-45ec-a04d-04bc3a2f6c29",
+              "parentUUID": "f33f9d67-f329-4c63-8194-6ed9a180fa50",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Carga las especies RESA15 y ENTV12 a arbitrar",
+              "fullTitle": "Arbitraje Carga las especies RESA15 y ENTV12 a arbitrar",
+              "timedOut": null,
+              "duration": 92105,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_pages_arbitrajePage__WEBPACK_IMPORTED_MODULE_0__.arbitraje.addEspecies(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].HARD_DOLLAR}`, `${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].CER}`);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 90000ms: Expected to find element: `#first-security input.form-control`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 90000ms: Expected to find element: `#first-security input.form-control`, but never found it.\n    at firstInputEspecie (webpack://cypress/./cypress/support/pages/arbitrajePage.js:7:0)\n    at addEspecies (webpack://cypress/./cypress/support/pages/arbitrajePage.js:16:0)\n    at arbitraje/ (webpack://cypress/./build/production/brasil/flows/arbitraje.js:14:19)",
+                "diff": null
+              },
+              "uuid": "1b58268a-c30c-4330-b22a-33cfd4021dd5",
+              "parentUUID": "f33f9d67-f329-4c63-8194-6ed9a180fa50",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Hace clic en Arbitrar y valida que se muestren sus elementos correspondientes",
+              "fullTitle": "Arbitraje Hace clic en Arbitrar y valida que se muestren sus elementos correspondientes",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "_pages_arbitrajePage__WEBPACK_IMPORTED_MODULE_0__.arbitraje.clickArbitrarButton();\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.cardBody().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.highchartsMenu().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.chartBackground().should('be.visible');\n// Se comenta validación del gráfico ya que normalmente en staging/testing no contamos con esa información, se deja habilitado para prod\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.chartTrackerLine().should('be.visible');",
+              "err": {},
+              "uuid": "314b405a-bb92-45f5-b466-474ec775d3bd",
+              "parentUUID": "f33f9d67-f329-4c63-8194-6ed9a180fa50",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Va a la pestaña \"Paridad\" y valida sus elementos",
+              "fullTitle": "Arbitraje Va a la pestaña \"Paridad\" y valida sus elementos",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_arbitrajePage__WEBPACK_IMPORTED_MODULE_0__.arbitraje.clickParityMenu();\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.cardBody().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.highchartsMenu().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.chartTrackerLine().should('be.visible');",
+              "err": {},
+              "uuid": "dad0ca5c-c38d-484d-8098-45d1ca3c3410",
+              "parentUUID": "f33f9d67-f329-4c63-8194-6ed9a180fa50",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Va a la pestaña \"Inversión\" y valida sus elementos",
+              "fullTitle": "Arbitraje Va a la pestaña \"Inversión\" y valida sus elementos",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_arbitrajePage__WEBPACK_IMPORTED_MODULE_0__.arbitraje.clickInvestmentMenu();\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.tableResponsive().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.placeholderGlow().should('not.exist');",
+              "err": {},
+              "uuid": "f8d79861-ac5c-4dcd-9637-9635ce8c0f92",
+              "parentUUID": "f33f9d67-f329-4c63-8194-6ed9a180fa50",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Va a la pestaña \"Scatter\" y valida sus elementos",
+              "fullTitle": "Arbitraje Va a la pestaña \"Scatter\" y valida sus elementos",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_arbitrajePage__WEBPACK_IMPORTED_MODULE_0__.arbitraje.clickScatterMenu();\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.cardBody().should('be.visible');\n// Se comenta validación del gráfico ya que normalmente en staging/testing no contamos con esa información, se deja habilitado para prod\n_pages_arbitrajePage__WEBPACK_IMPORTED_MODULE_0__.arbitraje.elements.scatterPoints().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.chartBackground().should('be.visible');",
+              "err": {},
+              "uuid": "e60cacf3-5dfe-4ab2-b10a-96064f26831f",
+              "parentUUID": "f33f9d67-f329-4c63-8194-6ed9a180fa50",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0d5b91a8-900f-45ec-a04d-04bc3a2f6c29"
+          ],
+          "failures": [
+            "1b58268a-c30c-4330-b22a-33cfd4021dd5"
+          ],
+          "pending": [
+            "314b405a-bb92-45f5-b466-474ec775d3bd"
+          ],
+          "skipped": [
+            "dad0ca5c-c38d-484d-8098-45d1ca3c3410",
+            "f8d79861-ac5c-4dcd-9637-9635ce8c0f92",
+            "e60cacf3-5dfe-4ab2-b10a-96064f26831f"
+          ],
+          "duration": 95564,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
   ],
   "meta": {
     "mocha": {
