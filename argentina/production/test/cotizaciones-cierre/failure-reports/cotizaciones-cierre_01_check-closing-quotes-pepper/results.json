@@ -1,0 +1,59 @@
+{
+  "spec": "build/production/argentina/cotizaciones-cierre/01_check-closing-quotes-pepper.cy.js",
+  "specName": "cotizaciones-cierre_01_check-closing-quotes-pepper",
+  "timestamp": "2026-05-19T12:57:01.233Z",
+  "environment": {
+    "TARGET_ENV": "production",
+    "TARGET_CLIENT": "argentina",
+    "browser": "firefox"
+  },
+  "stats": {
+    "duration": 1124,
+    "endedAt": "2026-05-19T12:56:57.198Z",
+    "failures": 1,
+    "passes": 0,
+    "pending": 1,
+    "skipped": 2,
+    "startedAt": "2026-05-19T12:56:56.074Z",
+    "suites": 1,
+    "tests": 4
+  },
+  "failedTests": [
+    {
+      "title": [
+        "Obtener cotizaciones de cierre vía API",
+        "Obtener y guardar la cotización de cierre del ticker AL30"
+      ],
+      "fullTitle": "Obtener cotizaciones de cierre vía API > Obtener y guardar la cotización de cierre del ticker AL30",
+      "state": "failed",
+      "duration": 942,
+      "error": "CypressError: `cy.request()` failed on:\n\nhttps://api.mercapabbaco.com/tradable-securities?query=AL30&tradeDate=2026-05-19\n\nThe response we received from your web server was:\n\n  > 401: Unauthorized\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: https://api.mercapabbaco.com/tradable-securities?query=AL30&tradeDate=2026-05-19\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"user-agent\": \"Mozilla/5.0 (X11; Linux x86_64; rv:150.0) Gecko/20100101 Firefox/150.0\",\n  \"accept\": \"application/vnd.mercap.tradable-security+json;version=1.0.1\",\n  \"authorization\": \"Basic c21va2U6RzUydFYlS2RJN0Aj\",\n  \"accept-encoding\": \"gzip, deflate\"\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 401 - Unauthorized\nHeaders: {\n  \"date\": \"Tue, 19 May 2026 12:56:56 GMT\",\n  \"content-type\": \"text/plain;charset=UTF-8\",\n  \"content-length\": \"19\",\n  \"connection\": \"keep-alive\",\n  \"speculation-rules\": \"\\\"/cdn-cgi/speculation\\\"\",\n  \"vary\": \"accept-encoding\",\n  \"report-to\": \"{\\\"group\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800,\\\"endpoints\\\":[{\\\"url\\\":\\\"https://a.nel.cloudflare.com/report/v4?s=ddmc69rwKetFfBw1NHXEgdxXNJOnh1Tkd0jH%2BJc9gSveFTLBqkWC%2F8xk4ocr%2B7Zo%2BuGs9WWGUk2VEry611pomcSBrcUEJ523C7bIxTG3u2qT35RNUXCRdYnsA5TlURRhc3Zhs1sn\\\"}]}\",\n  \"nel\": \"{\\\"report_to\\\":\\\"cf-nel\\\",\\\"success_fraction\\\":0.0,\\\"max_age\\\":604800}\",\n  \"server\": \"cloudflare\",\n  \"cf-ray\": \"9fe343bb7f1b4801-SJC\"\n}\nBody: Invalid credentials\n\n\nhttps://on.cypress.io/request\nat __webpack_modules__</__WEBPACK_DEFAULT_EXPORT__/request (http://localhost:37655/__cypress/runner/cypress_runner.js:136154:72)\nat tryCatcher (http://localhost:37655/__cypress/runner/cypress_runner.js:1777:23)\nat __webpack_modules__</module.exports/Promise.prototype._settlePromiseFromHandler (http://localhost:37655/__cypress/runner/cypress_runner.js:1489:31)\nat __webpack_modules__</module.exports/Promise.prototype._settlePromise (http://localhost:37655/__cypress/runner/cypress_runner.js:1546:18)\nat __webpack_modules__</module.exports/Promise.prototype._settlePromise0 (http://localhost:37655/__cypress/runner/cypress_runner.js:1591:10)\nat __webpack_modules__</module.exports/Promise.prototype._settlePromises (http://localhost:37655/__cypress/runner/cypress_runner.js:1671:18)\nat _drainQueueStep (http://localhost:37655/__cypress/runner/cypress_runner.js:2377:12)\nat _drainQueue (http://localhost:37655/__cypress/runner/cypress_runner.js:2370:24)\nat __webpack_modules__</Async.prototype._drainQueues (http://localhost:37655/__cypress/runner/cypress_runner.js:2386:16)\nat __webpack_modules__</Async/this.drainQueues (http://localhost:37655/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at ./cypress/support/commands.js (webpack://cypress/./cypress/support/commands.js:1607:0)\n    at __webpack_modules__</addCommand/wrap (http://localhost:37655/__cypress/runner/cypress_runner.js:146042:43)",
+      "attempts": [
+        {
+          "state": "failed",
+          "error": null
+        },
+        {
+          "state": "failed",
+          "error": null
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "height": 720,
+      "name": null,
+      "path": "/home/runner/work/abbaco-cypress/abbaco-cypress/cypress/reports/screenshots/01_check-closing-quotes-pepper.cy.js/Obtener cotizaciones de cierre vía API -- Obtener y guardar la cotización de cierre del ticker AL30 (failed).png",
+      "takenAt": "2026-05-19T12:56:56.549Z",
+      "width": 1280
+    },
+    {
+      "height": 720,
+      "name": null,
+      "path": "/home/runner/work/abbaco-cypress/abbaco-cypress/cypress/reports/screenshots/01_check-closing-quotes-pepper.cy.js/Obtener cotizaciones de cierre vía API -- Obtener y guardar la cotización de cierre del ticker AL30 (failed) (attempt 2).png",
+      "takenAt": "2026-05-19T12:56:56.909Z",
+      "width": 1280
+    }
+  ]
+}
