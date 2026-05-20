@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 4,
-    "passes": 2,
+    "tests": 5,
+    "passes": 3,
     "pending": 1,
     "failures": 1,
-    "start": "2026-05-19T12:12:12.018Z",
-    "end": "2026-05-19T12:15:55.301Z",
-    "duration": 223283,
+    "start": "2026-05-20T12:08:45.602Z",
+    "end": "2026-05-20T12:12:26.039Z",
+    "duration": 220437,
     "testsRegistered": 7,
-    "passPercent": 33.33333333333333,
+    "passPercent": 50,
     "pendingPercent": 14.285714285714285,
     "other": 0,
     "hasOther": false,
-    "skipped": 3,
+    "skipped": 2,
     "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "de23f6f8-f7d2-45ce-8d22-21b61203b51f",
+      "uuid": "d45f00ff-10fd-499b-b6b9-63cdd842d1b3",
       "title": "",
       "fullFile": "build/production/argentina/smoke/screener.cy.js",
       "file": "build/production/argentina/smoke/screener.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "4a7b654f-93cc-40c4-9e47-6e2ac359f133",
+          "uuid": "1c3ff425-7d87-41e0-86c6-e4211440fbd1",
           "title": "Screener ARG",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Ingresar al menú Screener",
               "fullTitle": "Screener ARG Ingresar al menú Screener",
               "timedOut": null,
-              "duration": 9371,
+              "duration": 7558,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].ABBACO_LOCATION);\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.clickMenuScreener();\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.termsButtonAccordion().should('be.visible');\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.accordionBody().should('be.visible');",
               "err": {},
-              "uuid": "d7f43499-42cb-4a1e-9877-9cbf4bab672b",
-              "parentUUID": "4a7b654f-93cc-40c4-9e47-6e2ac359f133",
+              "uuid": "d73372cf-60e4-4ae6-bda0-4255b54aa5e1",
+              "parentUUID": "1c3ff425-7d87-41e0-86c6-e4211440fbd1",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Selecciona tipo de deuda \"Obligación Negociable\"",
               "fullTitle": "Screener ARG Selecciona tipo de deuda \"Obligación Negociable\"",
               "timedOut": null,
-              "duration": 253,
+              "duration": 259,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.clickNegotiableObligation();\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.negotiableObligationOption().should('be.visible');",
               "err": {},
-              "uuid": "c8e9d290-30bb-42cd-89eb-de9a84380526",
-              "parentUUID": "4a7b654f-93cc-40c4-9e47-6e2ac359f133",
+              "uuid": "aa0456c0-77bc-4b93-835a-62f6c4152ca9",
+              "parentUUID": "1c3ff425-7d87-41e0-86c6-e4211440fbd1",
               "isHook": false,
               "skipped": false
             },
@@ -74,21 +74,17 @@
               "title": "Selecciona USD en \"Moneda de Pago\"",
               "fullTitle": "Screener ARG Selecciona USD en \"Moneda de Pago\"",
               "timedOut": null,
-              "duration": 90328,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 206,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.addcurrencyPayment();\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.USDCurrencyOption().should('be.visible');",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 90000ms: Expected to find content: 'Seleccionar Moneda de Pago' but never did.",
-                "estack": "AssertionError: Timed out retrying after 90000ms: Expected to find content: 'Seleccionar Moneda de Pago' but never did.\n    at currencyPaymentSelect (webpack://cypress/./cypress/support/pages/screenerPage.js:7:0)\n    at addcurrencyPayment (webpack://cypress/./cypress/support/pages/screenerPage.js:32:0)\n    at screener/ (webpack://cypress/./build/production/argentina/flows/screener.js:23:18)",
-                "diff": null
-              },
-              "uuid": "df5eac59-2825-4eac-8100-7650f746daea",
-              "parentUUID": "4a7b654f-93cc-40c4-9e47-6e2ac359f133",
+              "err": {},
+              "uuid": "e52b9002-d000-44ed-84e4-f8fd6a36bc6d",
+              "parentUUID": "1c3ff425-7d87-41e0-86c6-e4211440fbd1",
               "isHook": false,
               "skipped": false
             },
@@ -96,17 +92,21 @@
               "title": "Selecciona Ley Argentina en \"Ley\"",
               "fullTitle": "Screener ARG Selecciona Ley Argentina en \"Ley\"",
               "timedOut": null,
-              "duration": 0,
-              "state": "pending",
+              "duration": 90267,
+              "state": "failed",
               "speed": null,
               "pass": false,
-              "fail": false,
-              "pending": true,
+              "fail": true,
+              "pending": false,
               "context": null,
               "code": "_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.addlaw();\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.argentinaLawOption().should('be.visible');",
-              "err": {},
-              "uuid": "1ed03696-43fc-4dcc-90e6-f9a87c6bf9e2",
-              "parentUUID": "4a7b654f-93cc-40c4-9e47-6e2ac359f133",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 90000ms: Expected to find content: 'Seleccionar Ley' but never did.",
+                "estack": "AssertionError: Timed out retrying after 90000ms: Expected to find content: 'Seleccionar Ley' but never did.\n    at lawSelect (webpack://cypress/./cypress/support/pages/screenerPage.js:9:0)\n    at addlaw (webpack://cypress/./cypress/support/pages/screenerPage.js:39:0)\n    at screener/ (webpack://cypress/./build/production/argentina/flows/screener.js:27:18)",
+                "diff": null
+              },
+              "uuid": "4b6f8b02-2ded-40ab-9ca9-00bfa5aa7a3e",
+              "parentUUID": "1c3ff425-7d87-41e0-86c6-e4211440fbd1",
               "isHook": false,
               "skipped": false
             },
@@ -115,18 +115,18 @@
               "fullTitle": "Screener ARG Selecciona YPF S.A. en \"Seleccionar Emisor\"",
               "timedOut": null,
               "duration": 0,
-              "state": "skipped",
+              "state": "pending",
               "speed": null,
               "pass": false,
               "fail": false,
-              "pending": false,
+              "pending": true,
               "context": null,
               "code": "_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.addBondIssuer();\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.issuer().should('be.visible');",
               "err": {},
-              "uuid": "17b42e5a-8f37-40b7-b4af-d191ed9f43b8",
-              "parentUUID": "4a7b654f-93cc-40c4-9e47-6e2ac359f133",
+              "uuid": "1859aec8-eaeb-4319-b91f-ec6b8ea4e0c7",
+              "parentUUID": "1c3ff425-7d87-41e0-86c6-e4211440fbd1",
               "isHook": false,
-              "skipped": true
+              "skipped": false
             },
             {
               "title": "Hacer clic en \"Buscar\" luego de haber seleccionado los filtros",
@@ -141,8 +141,8 @@
               "context": null,
               "code": "_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.clickSearchButton();",
               "err": {},
-              "uuid": "a1b2b96e-39eb-4fa2-ac6e-5c5ef5b935e1",
-              "parentUUID": "4a7b654f-93cc-40c4-9e47-6e2ac359f133",
+              "uuid": "922f41c3-7c83-4484-8205-4acdbf60272d",
+              "parentUUID": "1c3ff425-7d87-41e0-86c6-e4211440fbd1",
               "isHook": false,
               "skipped": true
             },
@@ -159,29 +159,29 @@
               "context": null,
               "code": "_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.cardBody().should('be.visible');\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.ONbond().should('be.visible');",
               "err": {},
-              "uuid": "52378a03-478c-4938-a4ad-3b9ca5efd992",
-              "parentUUID": "4a7b654f-93cc-40c4-9e47-6e2ac359f133",
+              "uuid": "7f7ba1ed-326c-4d65-8682-845394b78bd4",
+              "parentUUID": "1c3ff425-7d87-41e0-86c6-e4211440fbd1",
               "isHook": false,
               "skipped": true
             }
           ],
           "suites": [],
           "passes": [
-            "d7f43499-42cb-4a1e-9877-9cbf4bab672b",
-            "c8e9d290-30bb-42cd-89eb-de9a84380526"
+            "d73372cf-60e4-4ae6-bda0-4255b54aa5e1",
+            "aa0456c0-77bc-4b93-835a-62f6c4152ca9",
+            "e52b9002-d000-44ed-84e4-f8fd6a36bc6d"
           ],
           "failures": [
-            "df5eac59-2825-4eac-8100-7650f746daea"
+            "4b6f8b02-2ded-40ab-9ca9-00bfa5aa7a3e"
           ],
           "pending": [
-            "1ed03696-43fc-4dcc-90e6-f9a87c6bf9e2"
+            "1859aec8-eaeb-4319-b91f-ec6b8ea4e0c7"
           ],
           "skipped": [
-            "17b42e5a-8f37-40b7-b4af-d191ed9f43b8",
-            "a1b2b96e-39eb-4fa2-ac6e-5c5ef5b935e1",
-            "52378a03-478c-4938-a4ad-3b9ca5efd992"
+            "922f41c3-7c83-4484-8205-4acdbf60272d",
+            "7f7ba1ed-326c-4d65-8682-845394b78bd4"
           ],
-          "duration": 99952,
+          "duration": 98290,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
