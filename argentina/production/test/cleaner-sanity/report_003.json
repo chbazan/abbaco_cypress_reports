@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 1,
     "failures": 0,
-    "start": "2026-05-24T11:58:47.625Z",
-    "end": "2026-05-24T12:01:59.413Z",
-    "duration": 191788,
+    "start": "2026-05-24T18:31:09.185Z",
+    "end": "2026-05-24T18:34:21.006Z",
+    "duration": 191821,
     "testsRegistered": 25,
     "passPercent": 0,
     "pendingPercent": 4,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "0d7e19ed-054f-403a-9be2-f6ae52fed930",
+      "uuid": "89c838c4-e385-413b-a423-f14a3700aef8",
       "title": "",
       "fullFile": "build/production/argentina/sanity/analizar.cy.js",
       "file": "build/production/argentina/sanity/analizar.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "c8c5d697-8479-40e6-807a-33960f316fc7",
+          "uuid": "959260e9-237e-401c-bc3a-5dcfa6cc8adf",
           "title": "Análisis de especies",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "bbacd8ad-ac72-4862-8acd-1186a62cca7c",
+              "uuid": "d1e71e3c-c097-47e9-8e6c-9ba6ba6a1c88",
               "title": "Analizar la especie AL30",
               "fullFile": "",
               "file": "",
@@ -47,7 +47,7 @@
                   "title": "Ingresar al home",
                   "fullTitle": "Análisis de especies Analizar la especie AL30 Ingresar al home",
                   "timedOut": null,
-                  "duration": 151,
+                  "duration": 120,
                   "state": "pending",
                   "speed": null,
                   "pass": false,
@@ -56,8 +56,8 @@
                   "context": null,
                   "code": "cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION);\ncy.validacionesHome();",
                   "err": {},
-                  "uuid": "2fc1fae6-a37b-410d-9d66-db70c5a8fbea",
-                  "parentUUID": "bbacd8ad-ac72-4862-8acd-1186a62cca7c",
+                  "uuid": "ed78a7e7-b94e-4bcd-8ec6-dec7561078b4",
+                  "parentUUID": "d1e71e3c-c097-47e9-8e6c-9ba6ba6a1c88",
                   "isHook": false,
                   "skipped": false
                 },
@@ -74,8 +74,8 @@
                   "context": null,
                   "code": "cy.buscarYAnalizarEspecie(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR);",
                   "err": {},
-                  "uuid": "7486c31a-fa03-4fa9-a9d9-86b21bd8f6d9",
-                  "parentUUID": "bbacd8ad-ac72-4862-8acd-1186a62cca7c",
+                  "uuid": "e388f9bf-27e7-405a-86ea-724412491207",
+                  "parentUUID": "d1e71e3c-c097-47e9-8e6c-9ba6ba6a1c88",
                   "isHook": false,
                   "skipped": true
                 },
@@ -92,8 +92,8 @@
                   "context": null,
                   "code": "// Validaciones de la pestaña General del bono\ncy.verificarTitulosCartas(metricTitles);\n// Valida que TIR, M. DURATION y PARIDAD tengan valores definidos y que el circulo de Última Cotización se muestre verde, rojo o gris\ncy.validarCotizacionTirDurationParidad();\n// Valida que dentro del cuadro Métricas Secundarias y de Cashflow no se tenga un valor N/A\ncy.verificarValoresNulos();",
                   "err": {},
-                  "uuid": "77cd3f03-1495-4607-b06c-b4754862ed12",
-                  "parentUUID": "bbacd8ad-ac72-4862-8acd-1186a62cca7c",
+                  "uuid": "e9a98451-a1cb-4a78-87ed-fb63a04ab748",
+                  "parentUUID": "d1e71e3c-c097-47e9-8e6c-9ba6ba6a1c88",
                   "isHook": false,
                   "skipped": true
                 },
@@ -110,8 +110,8 @@
                   "context": null,
                   "code": "cy.verficiarGraficosParidadTIR();",
                   "err": {},
-                  "uuid": "a3381f43-f1ab-4668-921f-018fa0672895",
-                  "parentUUID": "bbacd8ad-ac72-4862-8acd-1186a62cca7c",
+                  "uuid": "3966503a-2584-4bb4-b8cc-2e0aaf82136f",
+                  "parentUUID": "d1e71e3c-c097-47e9-8e6c-9ba6ba6a1c88",
                   "isHook": false,
                   "skipped": true
                 },
@@ -128,8 +128,8 @@
                   "context": null,
                   "code": "cy.verficarCondicionesDeEmision();",
                   "err": {},
-                  "uuid": "567742c6-d3bd-4525-916a-23edffdebc14",
-                  "parentUUID": "bbacd8ad-ac72-4862-8acd-1186a62cca7c",
+                  "uuid": "6278716d-489b-43d9-a86a-d8dc2eeac0e2",
+                  "parentUUID": "d1e71e3c-c097-47e9-8e6c-9ba6ba6a1c88",
                   "isHook": false,
                   "skipped": true
                 },
@@ -146,8 +146,8 @@
                   "context": null,
                   "code": "// Ingreso a la pestaña de análisis de sensibilidad\ncy.contains('Análisis de sensibilidad', {\n  matchCase: false\n}).should('be.visible').click();\n// Ingreso y Armado de escenarios en Análisis de Sensibilidad\nquantities.forEach(quantity => {\n  variables.forEach(variable => {\n    cy.realizarAnalisisSensibilidad({\n      quantity,\n      variable,\n      variation\n    });\n  });\n});",
                   "err": {},
-                  "uuid": "c1bf34bb-ef4b-4eb9-8d76-056b99692afe",
-                  "parentUUID": "bbacd8ad-ac72-4862-8acd-1186a62cca7c",
+                  "uuid": "55dc4a0e-0f49-4452-926c-e09bb9ae2a5e",
+                  "parentUUID": "d1e71e3c-c097-47e9-8e6c-9ba6ba6a1c88",
                   "isHook": false,
                   "skipped": true
                 },
@@ -164,8 +164,8 @@
                   "context": null,
                   "code": "// Ingreso a la pestaña de simular inversión\ncy.contains('Simular inversión', {\n  matchCase: false\n}).should('be.visible').click();\n// Uso y validación de Simular Inversión\ncy.verficiarSimularInversion();",
                   "err": {},
-                  "uuid": "4b1759fa-e530-4a0f-af89-c68eb78f00d3",
-                  "parentUUID": "bbacd8ad-ac72-4862-8acd-1186a62cca7c",
+                  "uuid": "0b250dd8-6d6f-4089-83c7-e085670a1e22",
+                  "parentUUID": "d1e71e3c-c097-47e9-8e6c-9ba6ba6a1c88",
                   "isHook": false,
                   "skipped": true
                 }
@@ -174,23 +174,23 @@
               "passes": [],
               "failures": [],
               "pending": [
-                "2fc1fae6-a37b-410d-9d66-db70c5a8fbea"
+                "ed78a7e7-b94e-4bcd-8ec6-dec7561078b4"
               ],
               "skipped": [
-                "7486c31a-fa03-4fa9-a9d9-86b21bd8f6d9",
-                "77cd3f03-1495-4607-b06c-b4754862ed12",
-                "a3381f43-f1ab-4668-921f-018fa0672895",
-                "567742c6-d3bd-4525-916a-23edffdebc14",
-                "c1bf34bb-ef4b-4eb9-8d76-056b99692afe",
-                "4b1759fa-e530-4a0f-af89-c68eb78f00d3"
+                "e388f9bf-27e7-405a-86ea-724412491207",
+                "e9a98451-a1cb-4a78-87ed-fb63a04ab748",
+                "3966503a-2584-4bb4-b8cc-2e0aaf82136f",
+                "6278716d-489b-43d9-a86a-d8dc2eeac0e2",
+                "55dc4a0e-0f49-4452-926c-e09bb9ae2a5e",
+                "0b250dd8-6d6f-4089-83c7-e085670a1e22"
               ],
-              "duration": 151,
+              "duration": 120,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "5994ba33-b059-4adf-a4c0-f280d996b380",
+              "uuid": "86267d4d-634f-4753-ac1f-371c16611120",
               "title": "Analizar la especie BDC28",
               "fullFile": "",
               "file": "",
@@ -210,7 +210,7 @@
                   "context": null,
                   "code": "cy.buscarYAnalizarEspecie(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].TASA_VARIABLE);",
                   "err": {},
-                  "uuid": "cd31576b-6adb-41a1-9728-9eca193c2cc3",
+                  "uuid": "d88a5f63-c835-4540-a162-de2f8da906e3",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -228,7 +228,7 @@
                   "context": null,
                   "code": "// Validaciones de la pestaña General del bono\ncy.verificarTitulosCartas(metricTitles);\n// Valida que TIR, M. DURATION y PARIDAD tengan valores definidos y que el circulo de Última Cotización se muestre verde, rojo o gris\ncy.validarCotizacionTirDurationParidad();\n// Valida que dentro del cuadro Métricas Secundarias y de Cashflow no se tenga un valor N/A\ncy.verificarValoresNulos();",
                   "err": {},
-                  "uuid": "697354d4-3d64-40eb-a897-b2b109a1f351",
+                  "uuid": "963bcf31-a757-4472-bbca-edfa909ca7b3",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -246,7 +246,7 @@
                   "context": null,
                   "code": "cy.verficiarGraficosParidadTIR();",
                   "err": {},
-                  "uuid": "70b9b0b6-7e3c-4bea-a30d-921da09c39d0",
+                  "uuid": "fa6e2fae-1826-4d07-8318-f160fbb63fc5",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -264,7 +264,7 @@
                   "context": null,
                   "code": "cy.verficarCondicionesDeEmision();",
                   "err": {},
-                  "uuid": "656468a1-d8e4-494e-9d12-3d6528794088",
+                  "uuid": "af7ccefb-b6e7-4a4a-8581-bbb79998bc6a",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -282,7 +282,7 @@
                   "context": null,
                   "code": "// Ingreso a la pestaña de análisis de sensibilidad\ncy.contains('Análisis de sensibilidad', {\n  matchCase: false\n}).should('be.visible').click();\n// Ingreso y Armado de escenarios en Análisis de Sensibilidad\nquantities.forEach(quantity => {\n  specialVariables.forEach(variable => {\n    cy.realizarAnalisisSensibilidad({\n      quantity,\n      variable,\n      variation\n    });\n  });\n});",
                   "err": {},
-                  "uuid": "35633610-b252-4359-af71-5c0917281772",
+                  "uuid": "052ed5cc-5b8d-4146-8862-c4bfc4008ca2",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -300,7 +300,7 @@
                   "context": null,
                   "code": "// Ingreso a la pestaña de simular inversión\ncy.contains('Simular inversión', {\n  matchCase: false\n}).should('be.visible').click();\n// Uso y validación de Simular Inversión\ncy.verficiarSimularInversionDL();",
                   "err": {},
-                  "uuid": "df11405c-b71a-43ab-b0b4-bd2eda5d3a8f",
+                  "uuid": "d31d1390-47ec-4f82-b7a3-396063bfe539",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -311,12 +311,12 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "cd31576b-6adb-41a1-9728-9eca193c2cc3",
-                "697354d4-3d64-40eb-a897-b2b109a1f351",
-                "70b9b0b6-7e3c-4bea-a30d-921da09c39d0",
-                "656468a1-d8e4-494e-9d12-3d6528794088",
-                "35633610-b252-4359-af71-5c0917281772",
-                "df11405c-b71a-43ab-b0b4-bd2eda5d3a8f"
+                "d88a5f63-c835-4540-a162-de2f8da906e3",
+                "963bcf31-a757-4472-bbca-edfa909ca7b3",
+                "fa6e2fae-1826-4d07-8318-f160fbb63fc5",
+                "af7ccefb-b6e7-4a4a-8581-bbb79998bc6a",
+                "052ed5cc-5b8d-4146-8862-c4bfc4008ca2",
+                "d31d1390-47ec-4f82-b7a3-396063bfe539"
               ],
               "duration": 0,
               "root": false,
@@ -324,7 +324,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "84f4eeed-267d-4cf6-b7f0-0b922b431908",
+              "uuid": "89e2c5d5-d611-4cea-88a6-a8ee886a9e7f",
               "title": "Analizar la especie TX28",
               "fullFile": "",
               "file": "",
@@ -344,7 +344,7 @@
                   "context": null,
                   "code": "cy.buscarYAnalizarEspecie(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].CER);",
                   "err": {},
-                  "uuid": "58337d7f-203d-4fa1-85e1-76b176c29a98",
+                  "uuid": "24336cae-4680-4e4f-8ac3-61f249bdc8ea",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -362,7 +362,7 @@
                   "context": null,
                   "code": "// Validaciones de la pestaña General del bono\ncy.verificarTitulosCartas(metricTitles);\n// Valida que TIR, M. DURATION y PARIDAD tengan valores definidos y que el circulo de Última Cotización se muestre verde, rojo o gris\ncy.validarCotizacionTirDurationParidad();\n// Valida que dentro del cuadro Métricas Secundarias y de Cashflow no se tenga un valor N/A\ncy.verificarValoresNulos();",
                   "err": {},
-                  "uuid": "385d4e40-a2f2-4d59-96dc-9f4a13310854",
+                  "uuid": "1cd41e95-fba9-491b-a9aa-658a865cc429",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -380,7 +380,7 @@
                   "context": null,
                   "code": "cy.verficiarGraficosParidadTIR();",
                   "err": {},
-                  "uuid": "f1fd3e9b-ff05-44e4-8709-7639a9835d14",
+                  "uuid": "a6669f9b-db2e-45f3-b177-12afd15b29b6",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -398,7 +398,7 @@
                   "context": null,
                   "code": "cy.verficarCondicionesDeEmision();",
                   "err": {},
-                  "uuid": "4acc24ec-7d8b-498c-98d3-19134dfd5d08",
+                  "uuid": "b0e900ba-5d0e-427e-a01a-55d91a3b9ad7",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -416,7 +416,7 @@
                   "context": null,
                   "code": "// Ingreso a la pestaña de análisis de sensibilidad\ncy.contains('Análisis de sensibilidad', {\n  matchCase: false\n}).should('be.visible').click();\n// Ingreso y Armado de escenarios en Análisis de Sensibilidad\nquantities.forEach(quantity => {\n  specialVariables.forEach(variable => {\n    cy.realizarAnalisisSensibilidad({\n      quantity,\n      variable,\n      variation\n    });\n  });\n});",
                   "err": {},
-                  "uuid": "158d02f7-b24a-4722-a9b6-7b7aab1f1244",
+                  "uuid": "a9f7459f-fd58-45fc-adb9-168698a50339",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -434,7 +434,7 @@
                   "context": null,
                   "code": "// Ingreso a la pestaña de simular inversión\ncy.contains('Simular inversión', {\n  matchCase: false\n}).should('be.visible').click();\n// Uso y validación de Simular Inversión\ncy.verficiarSimularInversionDL();",
                   "err": {},
-                  "uuid": "0fd7497e-ebd4-4563-8b73-3202c27de7ff",
+                  "uuid": "fbd45a8d-9470-4fe7-808b-5fe6b88b2231",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -445,12 +445,12 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "58337d7f-203d-4fa1-85e1-76b176c29a98",
-                "385d4e40-a2f2-4d59-96dc-9f4a13310854",
-                "f1fd3e9b-ff05-44e4-8709-7639a9835d14",
-                "4acc24ec-7d8b-498c-98d3-19134dfd5d08",
-                "158d02f7-b24a-4722-a9b6-7b7aab1f1244",
-                "0fd7497e-ebd4-4563-8b73-3202c27de7ff"
+                "24336cae-4680-4e4f-8ac3-61f249bdc8ea",
+                "1cd41e95-fba9-491b-a9aa-658a865cc429",
+                "a6669f9b-db2e-45f3-b177-12afd15b29b6",
+                "b0e900ba-5d0e-427e-a01a-55d91a3b9ad7",
+                "a9f7459f-fd58-45fc-adb9-168698a50339",
+                "fbd45a8d-9470-4fe7-808b-5fe6b88b2231"
               ],
               "duration": 0,
               "root": false,
@@ -458,7 +458,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "ea100941-e973-49ea-a9ae-6ba7c1476c01",
+              "uuid": "83860c1e-e9e4-4d54-9c79-a781807bac0a",
               "title": "Analizar la especie LECHO",
               "fullFile": "",
               "file": "",
@@ -478,7 +478,7 @@
                   "context": null,
                   "code": "cy.buscarYAnalizarEspecie(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].DOLLAR_LINKED);",
                   "err": {},
-                  "uuid": "c3990824-9531-40b7-8c91-37db66844a53",
+                  "uuid": "d5371103-9a89-432c-81d1-0a3a17f3bcbe",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -496,7 +496,7 @@
                   "context": null,
                   "code": "// Validaciones de la pestaña General del bono\ncy.verificarTitulosCartas(metricTitles);\n// Valida que TIR, M. DURATION y PARIDAD tengan valores definidos y que el circulo de Última Cotización se muestre verde, rojo o gris\n// cy.validarCotizacionTirDurationParidad() // Se comenta porque está pasando que no figura ningún \"simbolo\" verde, rojo o gris en la cotización del dollar linked.\n// Valida que dentro del cuadro Métricas Secundarias y de Cashflow no se tenga un valor N/A\ncy.verificarValoresNulos();",
                   "err": {},
-                  "uuid": "4ed7a366-81e9-4bfe-8241-74f5e8f06507",
+                  "uuid": "fb5863bb-08c9-4d15-8eb3-16615cd12f5c",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -514,7 +514,7 @@
                   "context": null,
                   "code": "cy.verficiarGraficosParidadTIR();",
                   "err": {},
-                  "uuid": "273d59f9-d32f-4f6f-8912-12cf655de423",
+                  "uuid": "d4627f3d-f91d-44e3-93b2-306922cf847f",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -532,7 +532,7 @@
                   "context": null,
                   "code": "cy.verficarCondicionesDeEmision();",
                   "err": {},
-                  "uuid": "bfcdb526-f01f-4ece-9be5-fec0afbfef91",
+                  "uuid": "1eb853a6-d0a9-4b91-97e7-de0d2659f296",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -550,7 +550,7 @@
                   "context": null,
                   "code": "// Ingreso a la pestaña de análisis de sensibilidad\ncy.contains('Análisis de sensibilidad', {\n  matchCase: false\n}).should('be.visible').click();\n// Ingreso y Armado de escenarios en Análisis de Sensibilidad\nquantities.forEach(quantity => {\n  specialVariables.forEach(variable => {\n    cy.realizarAnalisisSensibilidad({\n      quantity,\n      variable,\n      variation\n    });\n  });\n});",
                   "err": {},
-                  "uuid": "6ca5327e-59d6-440a-a84e-c93c1f633024",
+                  "uuid": "938ee0ca-d158-4d58-aea4-98f805caecc0",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -568,7 +568,7 @@
                   "context": null,
                   "code": "// Ingreso a la pestaña de simular inversión\ncy.contains('Simular inversión', {\n  matchCase: false\n}).should('be.visible').click();\n// Uso y validación de Simular Inversión\ncy.verficiarSimularInversionDL();",
                   "err": {},
-                  "uuid": "897e5482-b3ef-4d12-9b25-978bfeed7d2e",
+                  "uuid": "1be58d45-b757-41ce-80f5-3bb2694a20b2",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -579,12 +579,12 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "c3990824-9531-40b7-8c91-37db66844a53",
-                "4ed7a366-81e9-4bfe-8241-74f5e8f06507",
-                "273d59f9-d32f-4f6f-8912-12cf655de423",
-                "bfcdb526-f01f-4ece-9be5-fec0afbfef91",
-                "6ca5327e-59d6-440a-a84e-c93c1f633024",
-                "897e5482-b3ef-4d12-9b25-978bfeed7d2e"
+                "d5371103-9a89-432c-81d1-0a3a17f3bcbe",
+                "fb5863bb-08c9-4d15-8eb3-16615cd12f5c",
+                "d4627f3d-f91d-44e3-93b2-306922cf847f",
+                "1eb853a6-d0a9-4b91-97e7-de0d2659f296",
+                "938ee0ca-d158-4d58-aea4-98f805caecc0",
+                "1be58d45-b757-41ce-80f5-3bb2694a20b2"
               ],
               "duration": 0,
               "root": false,
