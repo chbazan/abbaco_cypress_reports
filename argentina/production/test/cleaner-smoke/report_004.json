@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 1,
     "failures": 0,
-    "start": "2026-05-25T12:18:14.287Z",
-    "end": "2026-05-25T12:21:29.474Z",
-    "duration": 195187,
+    "start": "2026-05-27T12:14:43.033Z",
+    "end": "2026-05-27T12:17:59.898Z",
+    "duration": 196865,
     "testsRegistered": 7,
     "passPercent": 0,
     "pendingPercent": 14.285714285714285,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "d118315a-8aeb-4bb8-8053-4ed01e77fd06",
+      "uuid": "7570fa05-59f9-411a-beaa-f4d3e330d270",
       "title": "",
       "fullFile": "build/production/argentina/smoke/calculadora.cy.js",
       "file": "build/production/argentina/smoke/calculadora.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "7f828729-2fd7-4988-971d-7bb0282579aa",
+          "uuid": "47e207f6-34fb-4841-bcbf-7c754010463c",
           "title": "Calculadora",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Ingresar al Home e ingresar al menú \"Calculadora\"",
               "fullTitle": "Calculadora Ingresar al Home e ingresar al menú \"Calculadora\"",
               "timedOut": null,
-              "duration": 124,
+              "duration": 106,
               "state": "pending",
               "speed": null,
               "pass": false,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/calculator`);\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.calculadoraTitle().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_2__.sharedElements.cardBody().should('be.visible');\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.addSimulationButton().should('be.visible');",
               "err": {},
-              "uuid": "0a13d74a-f3c0-4eb0-9c51-9c2791cf9177",
-              "parentUUID": "7f828729-2fd7-4988-971d-7bb0282579aa",
+              "uuid": "ad6c8589-88e1-4546-8400-333772b23092",
+              "parentUUID": "47e207f6-34fb-4841-bcbf-7c754010463c",
               "isHook": false,
               "skipped": false
             },
@@ -65,8 +65,8 @@
               "context": null,
               "code": "_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.calculadoraTitle().should('be.visible');\ncy.crearSimulacion({\n  especie: _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR,\n  fecha: /C\\.I|E\\.P\\./,\n  tipo: 'Dirty',\n  cantidad: 10000,\n  valor: 83210,\n  tipoCambio: 1420\n});\ncy.crearSimulacion({\n  especie: _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR,\n  fecha: '24Hs',\n  tipo: 'Yield',\n  cantidad: 1000,\n  valor: 20,\n  tipoCambio: 1420\n});\ncy.crearSimulacion({\n  especie: _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR,\n  fecha: /C\\.I|E\\.P\\./,\n  tipo: 'Dirty',\n  cantidad: 5000,\n  valor: 83210,\n  tipoCambio: 1420\n});\ncy.crearSimulacion({\n  especie: _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR,\n  fecha: /C\\.I|E\\.P\\./,\n  tipo: 'Dirty',\n  valor: 83210,\n  cantidad: '10',\n  tipoCambio: 1420,\n  conComision: true,\n  tipoComision: /\\b(ARS|BRL)\\b/,\n  valorComision: 100\n});\ncy.crearSimulacion({\n  especie: _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR,\n  fecha: '24Hs',\n  tipo: 'Dirty',\n  valor: 83210,\n  cantidad: '10',\n  tipoCambio: 1420,\n  conComision: true,\n  tipoComision: '%',\n  valorComision: 2\n});\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.tableSimulations().should('be.visible');",
               "err": {},
-              "uuid": "96d1e774-178f-4f9d-b0f4-e68bf20b039b",
-              "parentUUID": "7f828729-2fd7-4988-971d-7bb0282579aa",
+              "uuid": "f7f9129b-8ae9-4746-ac06-c5eb1fee40a2",
+              "parentUUID": "47e207f6-34fb-4841-bcbf-7c754010463c",
               "isHook": false,
               "skipped": true
             },
@@ -83,8 +83,8 @@
               "context": null,
               "code": "cy.editarPrecioSimulado('90.000,00');\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.tableSimulations().should('be.visible');",
               "err": {},
-              "uuid": "80b76785-0dbc-4eea-b3bc-b152abf7b324",
-              "parentUUID": "7f828729-2fd7-4988-971d-7bb0282579aa",
+              "uuid": "546f916d-f116-4a5c-b913-a79618ce3343",
+              "parentUUID": "47e207f6-34fb-4841-bcbf-7c754010463c",
               "isHook": false,
               "skipped": true
             },
@@ -101,8 +101,8 @@
               "context": null,
               "code": "cy.editarTIR('15');\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.tableSimulations().should('be.visible');",
               "err": {},
-              "uuid": "62fa7e80-4a7f-40bb-a4ef-325c322cbbb4",
-              "parentUUID": "7f828729-2fd7-4988-971d-7bb0282579aa",
+              "uuid": "9b84b460-5fd6-4dfe-8f84-f6b69c6b9cc3",
+              "parentUUID": "47e207f6-34fb-4841-bcbf-7c754010463c",
               "isHook": false,
               "skipped": true
             },
@@ -119,8 +119,8 @@
               "context": null,
               "code": "_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.hideChartButton().click();\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.chartContainer().should('not.exist');\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.showChartButton().click();\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.chartContainer().should('be.visible');",
               "err": {},
-              "uuid": "c787f12b-3413-4fb2-8ae9-2f63df1629db",
-              "parentUUID": "7f828729-2fd7-4988-971d-7bb0282579aa",
+              "uuid": "d9f4ed12-f53e-4abb-afad-2330b493a755",
+              "parentUUID": "47e207f6-34fb-4841-bcbf-7c754010463c",
               "isHook": false,
               "skipped": true
             },
@@ -137,8 +137,8 @@
               "context": null,
               "code": "cy.eliminarSimulacion();\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.pointsButton().should('have.length', 4);",
               "err": {},
-              "uuid": "d18edb59-fe77-453c-8dbb-77171486f23a",
-              "parentUUID": "7f828729-2fd7-4988-971d-7bb0282579aa",
+              "uuid": "738e4d86-c8ee-44d5-8b6a-2dd4c47ce48e",
+              "parentUUID": "47e207f6-34fb-4841-bcbf-7c754010463c",
               "isHook": false,
               "skipped": true
             },
@@ -155,8 +155,8 @@
               "context": null,
               "code": "_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.deleteAllSimulations();\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.noSimulationsTitle().should('be.visible');",
               "err": {},
-              "uuid": "72141df7-e7f9-4b55-bea0-cb44f3e798d5",
-              "parentUUID": "7f828729-2fd7-4988-971d-7bb0282579aa",
+              "uuid": "2d0fa099-4982-49ff-8dda-41960194d146",
+              "parentUUID": "47e207f6-34fb-4841-bcbf-7c754010463c",
               "isHook": false,
               "skipped": true
             }
@@ -165,17 +165,17 @@
           "passes": [],
           "failures": [],
           "pending": [
-            "0a13d74a-f3c0-4eb0-9c51-9c2791cf9177"
+            "ad6c8589-88e1-4546-8400-333772b23092"
           ],
           "skipped": [
-            "96d1e774-178f-4f9d-b0f4-e68bf20b039b",
-            "80b76785-0dbc-4eea-b3bc-b152abf7b324",
-            "62fa7e80-4a7f-40bb-a4ef-325c322cbbb4",
-            "c787f12b-3413-4fb2-8ae9-2f63df1629db",
-            "d18edb59-fe77-453c-8dbb-77171486f23a",
-            "72141df7-e7f9-4b55-bea0-cb44f3e798d5"
+            "f7f9129b-8ae9-4746-ac06-c5eb1fee40a2",
+            "546f916d-f116-4a5c-b913-a79618ce3343",
+            "9b84b460-5fd6-4dfe-8f84-f6b69c6b9cc3",
+            "d9f4ed12-f53e-4abb-afad-2330b493a755",
+            "738e4d86-c8ee-44d5-8b6a-2dd4c47ce48e",
+            "2d0fa099-4982-49ff-8dda-41960194d146"
           ],
-          "duration": 124,
+          "duration": 106,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
