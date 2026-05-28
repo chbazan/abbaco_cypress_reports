@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 1,
     "failures": 0,
-    "start": "2026-05-27T12:18:01.485Z",
-    "end": "2026-05-27T12:19:41.827Z",
-    "duration": 100342,
+    "start": "2026-05-28T12:22:43.612Z",
+    "end": "2026-05-28T12:24:26.995Z",
+    "duration": 103383,
     "testsRegistered": 6,
     "passPercent": 0,
     "pendingPercent": 16.666666666666664,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "795ce74f-bc1e-4d27-a138-22345a573367",
+      "uuid": "2dd22739-bc5a-4ef6-9dc1-1bf2ba212434",
       "title": "",
       "fullFile": "build/production/argentina/smoke/comparar.cy.js",
       "file": "build/production/argentina/smoke/comparar.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "6c84451e-97aa-4f79-a8e5-19ad207a619c",
+          "uuid": "e31beb5f-70dc-42b8-8e7f-4fe2eb08c512",
           "title": "Comparar",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Ingresar al menú \"Comparar\"",
               "fullTitle": "Comparar Ingresar al menú \"Comparar\"",
               "timedOut": null,
-              "duration": 371,
+              "duration": 917,
               "state": "pending",
               "speed": null,
               "pass": false,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].ABBACO_LOCATION}/security-comparison`);",
               "err": {},
-              "uuid": "57e82f37-ef8a-4545-a65e-174c701d3c0b",
-              "parentUUID": "6c84451e-97aa-4f79-a8e5-19ad207a619c",
+              "uuid": "fa43b0f0-da97-4a3a-948b-94c436339384",
+              "parentUUID": "e31beb5f-70dc-42b8-8e7f-4fe2eb08c512",
               "isHook": false,
               "skipped": false
             },
@@ -65,8 +65,8 @@
               "context": null,
               "code": "_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.searchAndAddEspecie(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].HARD_DOLLAR}`);\n//Valida que no esté el título cuando se agregó la especie\ncy.contains(new RegExp('(Agregue especies utilizando el formulario para comenzar|Adicione espécies utilizando o formulário para começar)', 'i')).should('not.exist');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.placeholderGlow().should('not.exist');\n_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.elements.validateAddedTicker(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].HARD_DOLLAR}`).should('be.visible');\n_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.searchAndAddEspecie(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].CER}`);\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.placeholderGlow().should('not.exist');\n_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.elements.validateAddedTicker(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].CER}`).should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.tableRow().should('contain.text', `${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].HARD_DOLLAR}`);\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.tableRow().should('contain.text', `${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].CER}`);",
               "err": {},
-              "uuid": "a71b4ba3-9f19-4839-878e-bdec2341f198",
-              "parentUUID": "6c84451e-97aa-4f79-a8e5-19ad207a619c",
+              "uuid": "5cdb4f0d-26fd-4d83-b579-b1272d22462c",
+              "parentUUID": "e31beb5f-70dc-42b8-8e7f-4fe2eb08c512",
               "isHook": false,
               "skipped": true
             },
@@ -83,8 +83,8 @@
               "context": null,
               "code": "_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.goToTab(new RegExp('(Condiciones de Emisión|Condições de Emissão)', 'i'));\n//validaciones\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.placeholderGlow().should('not.exist');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.tableRow().should('contain.text', `${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].HARD_DOLLAR}`);\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.tableRow().should('contain.text', `${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].CER}`);",
               "err": {},
-              "uuid": "0ab3aa1d-6f92-4c99-9fb7-d41bc2bd6c6d",
-              "parentUUID": "6c84451e-97aa-4f79-a8e5-19ad207a619c",
+              "uuid": "44f6c8ab-a52a-43e5-ae1c-d451f6ac2362",
+              "parentUUID": "e31beb5f-70dc-42b8-8e7f-4fe2eb08c512",
               "isHook": false,
               "skipped": true
             },
@@ -101,8 +101,8 @@
               "context": null,
               "code": "_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.goToTab('TIR Históricas');\n//Validaciones de los gráficos\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.chartBackground().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.chartTrackerLine().should('be.visible');\n_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.goToTab('Paridades Históricas');\n//Validaciones de los gráficos\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.chartBackground().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.chartTrackerLine().should('be.visible');",
               "err": {},
-              "uuid": "f38e5f05-7a5f-4663-aa47-66658148722b",
-              "parentUUID": "6c84451e-97aa-4f79-a8e5-19ad207a619c",
+              "uuid": "3d89b174-31f1-44c2-9583-40b28862508a",
+              "parentUUID": "e31beb5f-70dc-42b8-8e7f-4fe2eb08c512",
               "isHook": false,
               "skipped": true
             },
@@ -119,8 +119,8 @@
               "context": null,
               "code": "_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.goToTab(new RegExp('^(Análisis|Análise)$', 'i'));\n_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.deleteEspecie(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].HARD_DOLLAR}`);\n//Validaciones\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.tableRows().contains('button', `${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].HARD_DOLLAR}`).should('not.exist');",
               "err": {},
-              "uuid": "0e8ffe1b-7c3c-42b0-ac2b-04a14fab9ea1",
-              "parentUUID": "6c84451e-97aa-4f79-a8e5-19ad207a619c",
+              "uuid": "8731d6a0-036a-43c0-b153-5a34661fe2a2",
+              "parentUUID": "e31beb5f-70dc-42b8-8e7f-4fe2eb08c512",
               "isHook": false,
               "skipped": true
             },
@@ -137,8 +137,8 @@
               "context": null,
               "code": "_pages_compararPage__WEBPACK_IMPORTED_MODULE_0__.comparar.deleteEspecie(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].CER}`);\n//Validaciones\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.tableRows().contains('button', `${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].CER}`).should('not.exist');\ncy.contains(new RegExp('(Agregue especies utilizando el formulario para comenzar|Adicione espécies utilizando o formulário para começar)', 'i')).should('be.visible');",
               "err": {},
-              "uuid": "d523031d-d660-4901-a917-9b0e06cf0f57",
-              "parentUUID": "6c84451e-97aa-4f79-a8e5-19ad207a619c",
+              "uuid": "cbea9b81-bae0-4ca4-81d5-dbbdebbe78f6",
+              "parentUUID": "e31beb5f-70dc-42b8-8e7f-4fe2eb08c512",
               "isHook": false,
               "skipped": true
             }
@@ -147,16 +147,16 @@
           "passes": [],
           "failures": [],
           "pending": [
-            "57e82f37-ef8a-4545-a65e-174c701d3c0b"
+            "fa43b0f0-da97-4a3a-948b-94c436339384"
           ],
           "skipped": [
-            "a71b4ba3-9f19-4839-878e-bdec2341f198",
-            "0ab3aa1d-6f92-4c99-9fb7-d41bc2bd6c6d",
-            "f38e5f05-7a5f-4663-aa47-66658148722b",
-            "0e8ffe1b-7c3c-42b0-ac2b-04a14fab9ea1",
-            "d523031d-d660-4901-a917-9b0e06cf0f57"
+            "5cdb4f0d-26fd-4d83-b579-b1272d22462c",
+            "44f6c8ab-a52a-43e5-ae1c-d451f6ac2362",
+            "3d89b174-31f1-44c2-9583-40b28862508a",
+            "8731d6a0-036a-43c0-b153-5a34661fe2a2",
+            "cbea9b81-bae0-4ca4-81d5-dbbdebbe78f6"
           ],
-          "duration": 371,
+          "duration": 917,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
