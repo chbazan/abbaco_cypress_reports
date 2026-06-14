@@ -1,0 +1,223 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-14T11:53:19.935Z",
+    "end": "2026-06-14T11:54:12.766Z",
+    "duration": 52831,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a8763a06-6db6-4104-8f46-d5b164eaa059",
+      "title": "",
+      "fullFile": "build/production/argentina/smoke/screener.cy.js",
+      "file": "build/production/argentina/smoke/screener.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "47acea0d-541e-4a66-8b97-199052d43cf9",
+          "title": "Screener ARG",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ingresar al menú Screener",
+              "fullTitle": "Screener ARG Ingresar al menú Screener",
+              "timedOut": null,
+              "duration": 7474,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visitRecargandoSi401(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].ABBACO_LOCATION}/bond-screener`);\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.clickMenuScreener();\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.termsButtonAccordion().should('be.visible');\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.accordionBody().should('be.visible');",
+              "err": {},
+              "uuid": "cb677a2c-dc6a-47a3-9776-b9db0b312d6c",
+              "parentUUID": "47acea0d-541e-4a66-8b97-199052d43cf9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Selecciona tipo de deuda \"Obligación Negociable\"",
+              "fullTitle": "Screener ARG Selecciona tipo de deuda \"Obligación Negociable\"",
+              "timedOut": null,
+              "duration": 1646,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.clickNegotiableObligation();\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.negotiableObligationOption().should('be.visible');",
+              "err": {},
+              "uuid": "dd07a77d-51cf-44cd-9f0d-816d5203572a",
+              "parentUUID": "47acea0d-541e-4a66-8b97-199052d43cf9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Selecciona USD en \"Moneda de Pago\"",
+              "fullTitle": "Screener ARG Selecciona USD en \"Moneda de Pago\"",
+              "timedOut": null,
+              "duration": 228,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.addcurrencyPayment();\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.USDCurrencyOption().should('be.visible');",
+              "err": {},
+              "uuid": "bda397a0-03d2-44c8-95dd-ef9d5f1f76a9",
+              "parentUUID": "47acea0d-541e-4a66-8b97-199052d43cf9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Selecciona Ley Argentina en \"Ley\"",
+              "fullTitle": "Screener ARG Selecciona Ley Argentina en \"Ley\"",
+              "timedOut": null,
+              "duration": 195,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.addlaw();\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.argentinaLawOption().should('be.visible');",
+              "err": {},
+              "uuid": "8ff899f7-d0b2-4923-9416-5143f511dc8b",
+              "parentUUID": "47acea0d-541e-4a66-8b97-199052d43cf9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Selecciona YPF S.A. en \"Seleccionar Emisor\"",
+              "fullTitle": "Screener ARG Selecciona YPF S.A. en \"Seleccionar Emisor\"",
+              "timedOut": null,
+              "duration": 565,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.addBondIssuer();\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.issuer().should('be.visible');",
+              "err": {},
+              "uuid": "27c2d608-e2e9-42c1-acca-7481fdefed26",
+              "parentUUID": "47acea0d-541e-4a66-8b97-199052d43cf9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Hacer clic en \"Buscar\" luego de haber seleccionado los filtros",
+              "fullTitle": "Screener ARG Hacer clic en \"Buscar\" luego de haber seleccionado los filtros",
+              "timedOut": null,
+              "duration": 137,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.clickSearchButton();",
+              "err": {},
+              "uuid": "44c1836a-b179-41ee-8f27-9996591cb682",
+              "parentUUID": "47acea0d-541e-4a66-8b97-199052d43cf9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifica que se encuentre el bono YMC1O en el resultado de la búsqueda",
+              "fullTitle": "Screener ARG Verifica que se encuentre el bono YMC1O en el resultado de la búsqueda",
+              "timedOut": null,
+              "duration": 7636,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.cardBody().should('be.visible');\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.ONbond().should('be.visible');",
+              "err": {},
+              "uuid": "91e6a0a0-dee9-40ee-9323-2f216dc20797",
+              "parentUUID": "47acea0d-541e-4a66-8b97-199052d43cf9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cb677a2c-dc6a-47a3-9776-b9db0b312d6c",
+            "dd07a77d-51cf-44cd-9f0d-816d5203572a",
+            "bda397a0-03d2-44c8-95dd-ef9d5f1f76a9",
+            "8ff899f7-d0b2-4923-9416-5143f511dc8b",
+            "27c2d608-e2e9-42c1-acca-7481fdefed26",
+            "44c1836a-b179-41ee-8f27-9996591cb682",
+            "91e6a0a0-dee9-40ee-9323-2f216dc20797"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 17881,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
