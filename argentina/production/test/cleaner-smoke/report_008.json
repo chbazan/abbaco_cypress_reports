@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 2,
-    "passes": 2,
+    "tests": 0,
+    "passes": 0,
     "pending": 0,
     "failures": 0,
-    "start": "2026-06-14T11:51:52.336Z",
-    "end": "2026-06-14T11:52:40.980Z",
-    "duration": 48644,
+    "start": "2026-06-15T13:19:19.552Z",
+    "end": "2026-06-15T13:22:28.018Z",
+    "duration": 188466,
     "testsRegistered": 2,
-    "passPercent": 100,
+    "passPercent": 0,
     "pendingPercent": 0,
-    "other": 0,
-    "hasOther": false,
-    "skipped": 0,
-    "hasSkipped": false
+    "other": 1,
+    "hasOther": true,
+    "skipped": 1,
+    "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "533a0524-d85a-41a4-82c4-c4c5dd2827ca",
+      "uuid": "5222dcc4-39bd-4cd9-810f-17f5a4a515c2",
       "title": "",
       "fullFile": "build/production/argentina/smoke/graficador.cy.js",
       "file": "build/production/argentina/smoke/graficador.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "36d25eab-6c83-4b1c-a996-290f27e03890",
+          "uuid": "60891430-9238-4efc-bd21-51558eb765bc",
           "title": "Graficador",
           "fullFile": "",
           "file": "",
@@ -38,17 +38,21 @@
               "title": "Selecciona todas las curvas, hace clic en \"Graficar\" y espera que se muestren sus elementos correspondientes",
               "fullTitle": "Graficador Selecciona todas las curvas, hace clic en \"Graficar\" y espera que se muestren sus elementos correspondientes",
               "timedOut": null,
-              "duration": 13408,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 154538,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].ABBACO_LOCATION}/plotter`);\n_pages_graficadorPage__WEBPACK_IMPORTED_MODULE_0__.graficador.elements.selectCurvesDropdown().should('be.visible');\n_pages_graficadorPage__WEBPACK_IMPORTED_MODULE_0__.graficador.clickCurvesDropdown();\n_pages_graficadorPage__WEBPACK_IMPORTED_MODULE_0__.graficador.elements.curvesList().should('be.visible');\n_pages_graficadorPage__WEBPACK_IMPORTED_MODULE_0__.graficador.selectAllcurves();\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.chartBackground().should('be.visible');",
-              "err": {},
-              "uuid": "56728f9c-a6d8-4197-a93f-93aaf3923cc9",
-              "parentUUID": "36d25eab-6c83-4b1c-a996-290f27e03890",
+              "err": {
+                "message": "CypressError: `cy.screenshot()` timed out waiting `90000ms` to complete.\n\nBecause this error occurred during a `after each` hook we are skipping all of the remaining tests.",
+                "estack": "CypressError: `cy.screenshot()` timed out waiting `90000ms` to complete.\n\nBecause this error occurred during a `after each` hook we are skipping all of the remaining tests.\n__webpack_modules__</automateScreenshot/<@https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:137484:73\ntryCatcher@https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1777:23\n__webpack_modules__</module.exports/catchFilter/<@https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:4156:41\ntryCatcher@https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1777:23\n__webpack_modules__</module.exports/Promise.prototype._settlePromiseFromHandler@https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1489:31\n__webpack_modules__</module.exports/Promise.prototype._settlePromise@https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1546:18\n__webpack_modules__</module.exports/Promise.prototype._settlePromise0@https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1591:10\n__webpack_modules__</module.exports/Promise.prototype._settlePromises@https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1667:18\n_drainQueueStep@https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:2377:12\n_drainQueue@https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:2370:24\n__webpack_modules__</Async.prototype._drainQueues@https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:2386:16\n__webpack_modules__</Async/this.drainQueues@https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:2256:14\n",
+                "diff": null
+              },
+              "uuid": "659f54d6-e3fe-494b-a849-c7774d0e6b5a",
+              "parentUUID": "60891430-9238-4efc-bd21-51558eb765bc",
               "isHook": false,
               "skipped": false
             },
@@ -56,30 +60,31 @@
               "title": "Va a la pestaña Especies ingresa AL30, hace clic en \"Graficar\" y espera que se muestren sus elementos correspondientes",
               "fullTitle": "Graficador Va a la pestaña Especies ingresa AL30, hace clic en \"Graficar\" y espera que se muestren sus elementos correspondientes",
               "timedOut": null,
-              "duration": 4116,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "_pages_graficadorPage__WEBPACK_IMPORTED_MODULE_0__.graficador.goToTab(new RegExp('(Especies|Espécies)', 'i'), {\n  matchCase: false\n});\n_pages_graficadorPage__WEBPACK_IMPORTED_MODULE_0__.graficador.searchAndAddEspecie(_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].HARD_DOLLAR);\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.highchartsMenu().should('be.visible');",
               "err": {},
-              "uuid": "27fea8ed-9946-46ae-8431-4ff8530e7751",
-              "parentUUID": "36d25eab-6c83-4b1c-a996-290f27e03890",
+              "uuid": "24de9034-4dcd-4748-b48f-b52684e80b00",
+              "parentUUID": "60891430-9238-4efc-bd21-51558eb765bc",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             }
           ],
           "suites": [],
-          "passes": [
-            "56728f9c-a6d8-4197-a93f-93aaf3923cc9",
-            "27fea8ed-9946-46ae-8431-4ff8530e7751"
+          "passes": [],
+          "failures": [
+            "659f54d6-e3fe-494b-a849-c7774d0e6b5a"
           ],
-          "failures": [],
           "pending": [],
-          "skipped": [],
-          "duration": 17524,
+          "skipped": [
+            "24de9034-4dcd-4748-b48f-b52684e80b00"
+          ],
+          "duration": 154538,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
