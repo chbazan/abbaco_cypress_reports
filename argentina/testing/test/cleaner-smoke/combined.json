@@ -1,0 +1,371 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 10,
+    "passes": 2,
+    "pending": 2,
+    "failures": 2,
+    "testsRegistered": 10,
+    "passPercent": 20,
+    "pendingPercent": 20,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 4,
+    "hasSkipped": true,
+    "start": "2026-06-18T17:44:06.547Z",
+    "end": "2026-06-18T17:51:15.084Z",
+    "duration": 428537
+  },
+  "results": [
+    {
+      "uuid": "4f74d2ec-2b0b-4a44-a5b5-b86a9853fffc",
+      "title": "",
+      "fullFile": "build/testing/argentina/cleaner/cleaner.cy.js",
+      "file": "build/testing/argentina/cleaner/cleaner.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e98472b3-f920-4ac2-b1ed-201fc2b51828",
+          "title": "Cleaner",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Eliminar todos los bonos favoritos en el Home",
+              "fullTitle": "Cleaner Eliminar todos los bonos favoritos en el Home",
+              "timedOut": null,
+              "duration": 97062,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION);\ncy.pageIsLoaded();\ncy.cleanFavoritosHome(bonos);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 90000ms: Expected to find element: `div.w-100.h-100.flex-grow-1.d-flex.flex-row.gap-3.overflow-auto`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 90000ms: Expected to find element: `div.w-100.h-100.flex-grow-1.d-flex.flex-row.gap-3.overflow-auto`, but never found it.\n    at eliminarFavoritos (webpack://cypress/./cypress/support/commands.js:1378:0)\n    at ./cypress/support/commands.js (webpack://cypress/./cypress/support/commands.js:1394:0)\n    at __webpack_modules__</addCommand/wrap (https://bonds.testing.mercap.com.ar/__cypress/runner/cypress_runner.js:146042:43)",
+                "diff": null
+              },
+              "uuid": "9edc30fb-6afa-494f-8ab5-9820d71e9d7f",
+              "parentUUID": "e98472b3-f920-4ac2-b1ed-201fc2b51828",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Eliminar los portafolios creados",
+              "fullTitle": "Cleaner Eliminar los portafolios creados",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/security-position`);\ncy.pageIsLoaded();\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.cleanPortfoliosHome();",
+              "err": {},
+              "uuid": "2279e5db-4a57-4988-afbe-b7ebef3b1256",
+              "parentUUID": "e98472b3-f920-4ac2-b1ed-201fc2b51828",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Eliminar todas las curvas favoritas",
+              "fullTitle": "Cleaner Eliminar todas las curvas favoritas",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/curves`);\ncy.pageIsLoaded();\ncy.get('input[class=\"search-input form-control form-control-md\"]').should('be.visible');\ncy.get('ul.list-group').should('be.visible');\ncy.cleanFavoritosCurvas(CURVAS_FAVORITAS);",
+              "err": {},
+              "uuid": "632f5a5b-d903-41cb-9238-9be782172f3f",
+              "parentUUID": "e98472b3-f920-4ac2-b1ed-201fc2b51828",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "9edc30fb-6afa-494f-8ab5-9820d71e9d7f"
+          ],
+          "pending": [
+            "2279e5db-4a57-4988-afbe-b7ebef3b1256"
+          ],
+          "skipped": [
+            "632f5a5b-d903-41cb-9238-9be782172f3f"
+          ],
+          "duration": 97062,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "a752363c-e34f-462f-98a0-2a651d887ff0",
+      "title": "",
+      "fullFile": "build/testing/argentina/smoke/01_login.cy.js",
+      "file": "build/testing/argentina/smoke/01_login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8a4fb9c8-31ce-4675-a267-92a944a1cc1d",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login Abbaco",
+              "fullTitle": "Login Login Abbaco",
+              "timedOut": null,
+              "duration": 910,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.clearAllLocalStorage();\ncy.clearAllCookies();\ncy.clearAllSessionStorage();\ncy.SessionAbbaco();",
+              "err": {},
+              "uuid": "d632561e-20f8-4e54-83f1-e6e5d9873416",
+              "parentUUID": "8a4fb9c8-31ce-4675-a267-92a944a1cc1d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d632561e-20f8-4e54-83f1-e6e5d9873416"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 910,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "8348d677-9019-4a95-aa63-9db65bcf9beb",
+      "title": "",
+      "fullFile": "build/testing/argentina/smoke/analizar.cy.js",
+      "file": "build/testing/argentina/smoke/analizar.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7a0f2591-4fe5-466f-9b11-fc566880d38b",
+          "title": "Analizar la especie AL30",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ingresar al home",
+              "fullTitle": "Analizar la especie AL30 Ingresar al home",
+              "timedOut": null,
+              "duration": 4875,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION);",
+              "err": {},
+              "uuid": "7d57100f-f581-4817-acad-d1b549f5047a",
+              "parentUUID": "7a0f2591-4fe5-466f-9b11-fc566880d38b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ingreso de especie AL30 para Analizar",
+              "fullTitle": "Analizar la especie AL30 Ingreso de especie AL30 para Analizar",
+              "timedOut": null,
+              "duration": 92682,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.buscarYAnalizarEspecie(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 90000ms: expected '<input.input-sm.border-0.p-0.shadow-none.form-control>' to be 'visible'\n\nThis element `<input.input-sm.border-0.p-0.shadow-none.form-control>` is not visible because it has CSS property: `position: fixed` and it's being covered by another element:\n\n`<div role=\"dialog\" aria-modal=\"true\" style=\"display: block;\" class=\"fade container-modal modal show\" tabindex=\"-1\">...</div>`",
+                "estack": "AssertionError: Timed out retrying after 90000ms: expected '<input.input-sm.border-0.p-0.shadow-none.form-control>' to be 'visible'\n\nThis element `<input.input-sm.border-0.p-0.shadow-none.form-control>` is not visible because it has CSS property: `position: fixed` and it's being covered by another element:\n\n`<div role=\"dialog\" aria-modal=\"true\" style=\"display: block;\" class=\"fade container-modal modal show\" tabindex=\"-1\">...</div>`\n    at ./cypress/support/commands.js (webpack://cypress/./cypress/support/commands.js:732:0)\n    at __webpack_modules__</addCommand/wrap (https://bonds.testing.mercap.com.ar/__cypress/runner/cypress_runner.js:146042:43)",
+                "diff": null
+              },
+              "uuid": "601d49f5-c4d5-4501-98c4-867cdda75833",
+              "parentUUID": "7a0f2591-4fe5-466f-9b11-fc566880d38b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validaciones en la pestaña General de la especie AL30",
+              "fullTitle": "Analizar la especie AL30 Validaciones en la pestaña General de la especie AL30",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "cy.verificarTitulosCartas(metricTitles);\ncy.validarCotizacionTirDurationParidad();\ncy.verificarValoresNulos();",
+              "err": {},
+              "uuid": "1fc828cb-d399-4d77-84df-bf6a0d41b05f",
+              "parentUUID": "7a0f2591-4fe5-466f-9b11-fc566880d38b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Recorrida por los botones \"TIRs\" y \"Paridades Históricas\" de la especie AL30",
+              "fullTitle": "Analizar la especie AL30 Recorrida por los botones \"TIRs\" y \"Paridades Históricas\" de la especie AL30",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.verficiarGraficosParidadTIR();",
+              "err": {},
+              "uuid": "193b058a-efb2-4ec9-b86f-abea58164a17",
+              "parentUUID": "7a0f2591-4fe5-466f-9b11-fc566880d38b",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Ingreso a la pestaña \"Condiciones de Emisión\" y validación de los cuadros de la especie AL30",
+              "fullTitle": "Analizar la especie AL30 Ingreso a la pestaña \"Condiciones de Emisión\" y validación de los cuadros de la especie AL30",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.verficarCondicionesDeEmision();",
+              "err": {},
+              "uuid": "96bc0b00-713f-449f-9945-ebfa598657e3",
+              "parentUUID": "7a0f2591-4fe5-466f-9b11-fc566880d38b",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Simular inversión de la especie AL30",
+              "fullTitle": "Analizar la especie AL30 Simular inversión de la especie AL30",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Simular inversión', {\n  matchCase: false\n}).should('be.visible').click();\ncy.verficiarSimularInversion();",
+              "err": {},
+              "uuid": "39ebc177-ed8c-4752-948c-221041020840",
+              "parentUUID": "7a0f2591-4fe5-466f-9b11-fc566880d38b",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7d57100f-f581-4817-acad-d1b549f5047a"
+          ],
+          "failures": [
+            "601d49f5-c4d5-4501-98c4-867cdda75833"
+          ],
+          "pending": [
+            "1fc828cb-d399-4d77-84df-bf6a0d41b05f"
+          ],
+          "skipped": [
+            "193b058a-efb2-4ec9-b86f-abea58164a17",
+            "96bc0b00-713f-449f-9945-ebfa598657e3",
+            "39ebc177-ed8c-4752-948c-221041020840"
+          ],
+          "duration": 97557,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
