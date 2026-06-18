@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 3,
-    "passes": 1,
+    "tests": 4,
+    "passes": 2,
     "pending": 1,
     "failures": 1,
-    "start": "2026-06-17T16:10:56.283Z",
-    "end": "2026-06-17T16:14:22.956Z",
-    "duration": 206673,
+    "start": "2026-06-18T12:24:26.387Z",
+    "end": "2026-06-18T12:27:45.250Z",
+    "duration": 198863,
     "testsRegistered": 5,
-    "passPercent": 25,
+    "passPercent": 50,
     "pendingPercent": 20,
     "other": 0,
     "hasOther": false,
-    "skipped": 2,
+    "skipped": 1,
     "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "3f90a58d-72d9-4e22-a37d-2d2f54f801fb",
+      "uuid": "e08ee5d4-36eb-41a9-8c1a-3c316cadea25",
       "title": "",
       "fullFile": "build/production/argentina/smoke/sensibilidad.cy.js",
       "file": "build/production/argentina/smoke/sensibilidad.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "8bc2a4f1-3d0f-4e48-ace1-c13b2421358d",
+          "uuid": "06aa068a-3504-468a-b1c7-0252da83fdd0",
           "title": "Sensibilidad",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Ingreso al menú Sensibilidad",
               "fullTitle": "Sensibilidad Ingreso al menú Sensibilidad",
               "timedOut": null,
-              "duration": 1382,
+              "duration": 1175,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.visitRecargandoSi401(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/sensitivity`);",
               "err": {},
-              "uuid": "9310b04f-e9fb-4631-b737-4a56671057ae",
-              "parentUUID": "8bc2a4f1-3d0f-4e48-ace1-c13b2421358d",
+              "uuid": "4d99a121-ed57-4006-98b8-eb177ec878ff",
+              "parentUUID": "06aa068a-3504-468a-b1c7-0252da83fdd0",
               "isHook": false,
               "skipped": false
             },
@@ -56,21 +56,17 @@
               "title": "Agregar una especie al análisis de sensibilidad",
               "fullTitle": "Sensibilidad Agregar una especie al análisis de sensibilidad",
               "timedOut": null,
-              "duration": 95498,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 8494,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "_pages_sensibilidadPage__WEBPACK_IMPORTED_MODULE_1__.sensibilidad.addSpecie(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR}`);",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 90000ms: Expected to find element: `#search-security-for-sensitivity`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 90000ms: Expected to find element: `#search-security-for-sensitivity`, but never found it.\n    at searchInput (webpack://cypress/./cypress/support/pages/sensibilidadPage.js:4:0)\n    at addSpecie (webpack://cypress/./cypress/support/pages/sensibilidadPage.js:20:0)\n    at sensibilidad/ (webpack://cypress/./build/production/argentina/flows/smoke/sensibilidad.js:13:22)",
-                "diff": null
-              },
-              "uuid": "10de64e3-30d0-4772-8d7c-a7ffdfe60ec1",
-              "parentUUID": "8bc2a4f1-3d0f-4e48-ace1-c13b2421358d",
+              "err": {},
+              "uuid": "a4ba9c94-6c36-454f-90c8-529c68fa0c59",
+              "parentUUID": "06aa068a-3504-468a-b1c7-0252da83fdd0",
               "isHook": false,
               "skipped": false
             },
@@ -78,17 +74,21 @@
               "title": "Agregar un escenario completando los campos necesarios y verificar sus elementos relacionados",
               "fullTitle": "Sensibilidad Agregar un escenario completando los campos necesarios y verificar sus elementos relacionados",
               "timedOut": null,
-              "duration": 0,
-              "state": "pending",
+              "duration": 90587,
+              "state": "failed",
               "speed": null,
               "pass": false,
-              "fail": false,
-              "pending": true,
+              "fail": true,
+              "pending": false,
               "context": null,
               "code": "_pages_sensibilidadPage__WEBPACK_IMPORTED_MODULE_1__.sensibilidad.addScenario(5);\n_pages_sensibilidadPage__WEBPACK_IMPORTED_MODULE_1__.sensibilidad.elements.cardResult().should('be.visible');\n_pages_sensibilidadPage__WEBPACK_IMPORTED_MODULE_1__.sensibilidad.elements.textSuccess().should('be.visible');",
-              "err": {},
-              "uuid": "6ac38ebf-8429-4c81-b558-fccac8d7bea0",
-              "parentUUID": "8bc2a4f1-3d0f-4e48-ace1-c13b2421358d",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 90000ms: Expected to find element: `.text-success`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 90000ms: Expected to find element: `.text-success`, but never found it.\n    at sensibilidad/ (webpack://cypress/./build/production/argentina/flows/smoke/sensibilidad.js:18:22)",
+                "diff": null
+              },
+              "uuid": "56f90ae4-fd38-456f-9d55-ae8af6b93050",
+              "parentUUID": "06aa068a-3504-468a-b1c7-0252da83fdd0",
               "isHook": false,
               "skipped": false
             },
@@ -97,18 +97,18 @@
               "fullTitle": "Sensibilidad Eliminar escenario agregado previamente",
               "timedOut": null,
               "duration": 0,
-              "state": "skipped",
+              "state": "pending",
               "speed": null,
               "pass": false,
               "fail": false,
-              "pending": false,
+              "pending": true,
               "context": null,
               "code": "_pages_sensibilidadPage__WEBPACK_IMPORTED_MODULE_1__.sensibilidad.deleteScenario();\n_pages_sensibilidadPage__WEBPACK_IMPORTED_MODULE_1__.sensibilidad.elements.cardResult().should('not.exist');",
               "err": {},
-              "uuid": "f5ca4e92-4ccf-4e6c-b132-1a56be6c944e",
-              "parentUUID": "8bc2a4f1-3d0f-4e48-ace1-c13b2421358d",
+              "uuid": "7fb9ab62-71f7-4a76-ba93-2124ef5a02d1",
+              "parentUUID": "06aa068a-3504-468a-b1c7-0252da83fdd0",
               "isHook": false,
-              "skipped": true
+              "skipped": false
             },
             {
               "title": "Eliminar especie agregada previamente",
@@ -123,27 +123,27 @@
               "context": null,
               "code": "_pages_sensibilidadPage__WEBPACK_IMPORTED_MODULE_1__.sensibilidad.deleteSpecie();\n_pages_sensibilidadPage__WEBPACK_IMPORTED_MODULE_1__.sensibilidad.elements.tableSpecies().should('be.visible');\n_pages_sensibilidadPage__WEBPACK_IMPORTED_MODULE_1__.sensibilidad.elements.tableText().should('be.visible');",
               "err": {},
-              "uuid": "5743a7d8-f058-4fe3-9131-c53002cbb5bc",
-              "parentUUID": "8bc2a4f1-3d0f-4e48-ace1-c13b2421358d",
+              "uuid": "1e0c6833-4055-4f1d-9cae-d11afe9a8e2b",
+              "parentUUID": "06aa068a-3504-468a-b1c7-0252da83fdd0",
               "isHook": false,
               "skipped": true
             }
           ],
           "suites": [],
           "passes": [
-            "9310b04f-e9fb-4631-b737-4a56671057ae"
+            "4d99a121-ed57-4006-98b8-eb177ec878ff",
+            "a4ba9c94-6c36-454f-90c8-529c68fa0c59"
           ],
           "failures": [
-            "10de64e3-30d0-4772-8d7c-a7ffdfe60ec1"
+            "56f90ae4-fd38-456f-9d55-ae8af6b93050"
           ],
           "pending": [
-            "6ac38ebf-8429-4c81-b558-fccac8d7bea0"
+            "7fb9ab62-71f7-4a76-ba93-2124ef5a02d1"
           ],
           "skipped": [
-            "f5ca4e92-4ccf-4e6c-b132-1a56be6c944e",
-            "5743a7d8-f058-4fe3-9131-c53002cbb5bc"
+            "1e0c6833-4055-4f1d-9cae-d11afe9a8e2b"
           ],
-          "duration": 96880,
+          "duration": 100256,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
