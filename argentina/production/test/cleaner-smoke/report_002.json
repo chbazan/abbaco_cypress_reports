@@ -1,0 +1,224 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 1,
+    "failures": 0,
+    "start": "2026-06-24T12:04:30.655Z",
+    "end": "2026-06-24T12:07:44.937Z",
+    "duration": 194282,
+    "testsRegistered": 7,
+    "passPercent": 0,
+    "pendingPercent": 14.285714285714285,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 6,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "bd8ee8a8-472c-4e53-ac83-12b7fd403e36",
+      "title": "",
+      "fullFile": "build/production/argentina/smoke/analizar.cy.js",
+      "file": "build/production/argentina/smoke/analizar.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d1ee4087-3476-4eb7-94e4-14e8c24df23e",
+          "title": "Analizar la especie AL30",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ingresar al home",
+              "fullTitle": "Analizar la especie AL30 Ingresar al home",
+              "timedOut": null,
+              "duration": 109,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "cy.visitRecargandoSi401(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}`);\ncy.validacionesHome();",
+              "err": {},
+              "uuid": "8e278210-e25a-48fd-950f-551d0a1413fc",
+              "parentUUID": "d1ee4087-3476-4eb7-94e4-14e8c24df23e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ingreso de especie AL30 para Analizar",
+              "fullTitle": "Analizar la especie AL30 Ingreso de especie AL30 para Analizar",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.buscarYAnalizarEspecie(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR);",
+              "err": {},
+              "uuid": "edc0052b-fb16-4f47-8197-7ec663321f49",
+              "parentUUID": "d1ee4087-3476-4eb7-94e4-14e8c24df23e",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Validaciones en la pestaña General de la especie AL30",
+              "fullTitle": "Analizar la especie AL30 Validaciones en la pestaña General de la especie AL30",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.verificarTitulosCartas(metricTitles);\ncy.validarCotizacionTirDurationParidad();\ncy.verificarValoresNulos();",
+              "err": {},
+              "uuid": "261feefa-4dad-4b33-8dda-af801a8bc93a",
+              "parentUUID": "d1ee4087-3476-4eb7-94e4-14e8c24df23e",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Recorrida por los botones \"TIRs\" y \"Paridades Históricas\" de la especie AL30",
+              "fullTitle": "Analizar la especie AL30 Recorrida por los botones \"TIRs\" y \"Paridades Históricas\" de la especie AL30",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.verficiarGraficosParidadTIR();",
+              "err": {},
+              "uuid": "93b1dadf-3ddd-4fa6-bb8d-f0885599ff9b",
+              "parentUUID": "d1ee4087-3476-4eb7-94e4-14e8c24df23e",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Ingreso a la pestaña \"Condiciones de Emisión\" y validación de los cuadros de la especie AL30",
+              "fullTitle": "Analizar la especie AL30 Ingreso a la pestaña \"Condiciones de Emisión\" y validación de los cuadros de la especie AL30",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.verficarCondicionesDeEmision();",
+              "err": {},
+              "uuid": "6fdd8c0a-22d3-45c5-97df-970d628d0414",
+              "parentUUID": "d1ee4087-3476-4eb7-94e4-14e8c24df23e",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Análisis de Sensibilidad de la especie AL30",
+              "fullTitle": "Analizar la especie AL30 Análisis de Sensibilidad de la especie AL30",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Análisis de sensibilidad', {\n  matchCase: false\n}).should('be.visible').click();\nquantities.forEach(quantity => {\n  variables.forEach(variable => {\n    cy.realizarAnalisisSensibilidad({\n      quantity,\n      variable,\n      variation\n    });\n  });\n});",
+              "err": {},
+              "uuid": "cf12c0f1-9afd-4433-a1e5-01d423b99084",
+              "parentUUID": "d1ee4087-3476-4eb7-94e4-14e8c24df23e",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Simular inversión de la especie AL30",
+              "fullTitle": "Analizar la especie AL30 Simular inversión de la especie AL30",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Simular inversión', {\n  matchCase: false\n}).should('be.visible').click();\ncy.verficiarSimularInversion();",
+              "err": {},
+              "uuid": "34237602-7b8a-4810-990c-afd8ca14641d",
+              "parentUUID": "d1ee4087-3476-4eb7-94e4-14e8c24df23e",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [
+            "8e278210-e25a-48fd-950f-551d0a1413fc"
+          ],
+          "skipped": [
+            "edc0052b-fb16-4f47-8197-7ec663321f49",
+            "261feefa-4dad-4b33-8dda-af801a8bc93a",
+            "93b1dadf-3ddd-4fa6-bb8d-f0885599ff9b",
+            "6fdd8c0a-22d3-45c5-97df-970d628d0414",
+            "cf12c0f1-9afd-4433-a1e5-01d423b99084",
+            "34237602-7b8a-4810-990c-afd8ca14641d"
+          ],
+          "duration": 109,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
