@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 2,
-    "passes": 0,
+    "tests": 3,
+    "passes": 1,
     "pending": 1,
     "failures": 1,
-    "start": "2026-06-27T11:33:20.144Z",
-    "end": "2026-06-27T11:37:25.237Z",
-    "duration": 245093,
+    "start": "2026-06-28T11:36:10.637Z",
+    "end": "2026-06-28T11:36:46.397Z",
+    "duration": 35760,
     "testsRegistered": 3,
-    "passPercent": 0,
+    "passPercent": 50,
     "pendingPercent": 33.33333333333333,
     "other": 0,
     "hasOther": false,
-    "skipped": 1,
-    "hasSkipped": true
+    "skipped": 0,
+    "hasSkipped": false
   },
   "results": [
     {
-      "uuid": "9ff26793-7dc6-40cb-b115-c509851485e2",
+      "uuid": "89b08f2b-5e93-4d22-999b-4a97884b4501",
       "title": "",
       "fullFile": "build/production/argentina/cleaner/cleaner.cy.js",
       "file": "build/production/argentina/cleaner/cleaner.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "7d3a5dd1-90ff-49d5-9ad4-09b01690c1c1",
+          "uuid": "609ef57c-3102-4ace-ace6-6181b9e7200f",
           "title": "Cleaner",
           "fullFile": "",
           "file": "",
@@ -38,21 +38,17 @@
               "title": "Eliminar todos los bonos favoritos en el Home",
               "fullTitle": "Cleaner Eliminar todos los bonos favoritos en el Home",
               "timedOut": null,
-              "duration": 117078,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 17624,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION);\ncy.pageIsLoaded();\n// El ambiente de testing/staging no suele tener todos los cuadros del home, para usar el cleaner en staging hay que comentar validacionesHome\ncy.validacionesHome();\ncy.cleanFavoritosHome(bonos);",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 90000ms: Expected to find content: 'USD CCL' within the selector: 'h6[class=\"text-uppercase text-header mb-0 card-title\"]' but never did.",
-                "estack": "AssertionError: Timed out retrying after 90000ms: Expected to find content: 'USD CCL' within the selector: 'h6[class=\"text-uppercase text-header mb-0 card-title\"]' but never did.\n    at ./cypress/support/commands.js (webpack://cypress/./cypress/support/commands.js:557:6)\n    at __webpack_modules__</addCommand/wrap (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:146042:43)",
-                "diff": null
-              },
-              "uuid": "6c34b931-6920-4ca6-9b74-4ad5ffc5bb5d",
-              "parentUUID": "7d3a5dd1-90ff-49d5-9ad4-09b01690c1c1",
+              "err": {},
+              "uuid": "d8c2345c-0d4a-4b2e-bcd5-6f5983c76820",
+              "parentUUID": "609ef57c-3102-4ace-ace6-6181b9e7200f",
               "isHook": false,
               "skipped": false
             },
@@ -60,17 +56,21 @@
               "title": "Eliminar los portafolios creados",
               "fullTitle": "Cleaner Eliminar los portafolios creados",
               "timedOut": null,
-              "duration": 0,
-              "state": "pending",
+              "duration": 4427,
+              "state": "failed",
               "speed": null,
               "pass": false,
-              "fail": false,
-              "pending": true,
+              "fail": true,
+              "pending": false,
               "context": null,
               "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/security-position`);\ncy.pageIsLoaded();\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.cleanPortfoliosHome();",
-              "err": {},
-              "uuid": "589972f8-0c23-4974-bf54-b4046ec2b101",
-              "parentUUID": "7d3a5dd1-90ff-49d5-9ad4-09b01690c1c1",
+              "err": {
+                "message": "CypressError: The following error originated from your test code, not from Cypress. It was caused by an unhandled promise rejection.\n\n  > A callback was provided to intercept the upstream response, but a network error occurred while making the request:\n\nError: Socket closed before finished writing response\n    at <embedded>:2571:51772\n    at tryCatcher (/home/runner/.cache/Cypress/15.9.0/Cypress/resources/app/node_modules/bluebird/js/release/util.js:16:23)\n    at Promise._settlePromiseFromHandler (/home/runner/.cache/Cypress/15.9.0/Cypress/resources/app/node_modules/bluebird/js/release/promise.js:512:31)\n    at Promise._settlePromise (/home/runner/.cache/Cypress/15.9.0/Cypress/resources/app/node_modules/bluebird/js/release/promise.js:569:18)\n    at Promise._settlePromise0 (/home/runner/.cache/Cypress/15.9.0/Cypress/resources/app/node_modules/bluebird/js/release/promise.js:614:10)\n    at Promise._settlePromises (/home/runner/.cache/Cypress/15.9.0/Cypress/resources/app/node_modules/bluebird/js/release/promise.js:694:18)\n    at _drainQueueStep (/home/runner/.cache/Cypress/15.9.0/Cypress/resources/app/node_modules/bluebird/js/release/async.js:138:12)\n    at _drainQueue (/home/runner/.cache/Cypress/15.9.0/Cypress/resources/app/node_modules/bluebird/js/release/async.js:131:9)\n    at Async._drainQueues (/home/runner/.cache/Cypress/15.9.0/Cypress/resources/app/node_modules/bluebird/js/release/async.js:147:5)\n    at Immediate._onImmediate (/home/runner/.cache/Cypress/15.9.0/Cypress/resources/app/node_modules/bluebird/js/release/async.js:17:14)\n    at process.processImmediate (node:internal/timers:485:21)\n\nRoute: {\n  \"url\": \"**\",\n  \"middleware\": true\n}\n\nIntercepted request: {\n  \"headers\": {\n    \"host\": \"bonds.mercapabbaco.com\",\n    \"user-agent\": \"Mozilla/5.0 (X11; Linux x86_64; rv:152.0) Gecko/20100101 Firefox/152.0\",\n    \"accept\": \"*/*\",\n    \"accept-language\": \"en-US,en;q=0.9\",\n    \"accept-encoding\": \"gzip, deflate, br, zstd\",\n    \"referer\": \"https://bonds.mercapabbaco.com/security-position\",\n    \"content-type\": \"application/json\",\n    \"content-length\": \"722\",\n    \"origin\": \"https://bonds.mercapabbaco.com\",\n    \"connection\": \"keep-alive\",\n    \"cookie\": \"_gcl_au=1.1.521005785.1782646576; _legacy_auth0.3M3Hcs5HlUwtxnJ2okb4zZa5Fhh4Eq40.is.authenticated=true; auth0.3M3Hcs5HlUwtxnJ2okb4zZa5Fhh4Eq40.is.authenticated=true; _ga=GA1.1.916918841.1782646577; _fbp=fb.1.1782646577223.765367992937391313.AQYAAQIB; _ga_W2PJ55DF51=GS2.1.s1782646576$o1$g1$t1782646592$j44$l0$h0; ph_phc_eaiVO3xMKW1I8fAo8x9XvCGT1RsA6qQ3YeVQN4AFAYe_posthog=%7B%22%24device_id%22%3A%22019f0e04-0eba-749a-b4cb-085ca69b9a5a%22%2C%22distinct_id%22%3A%22auth0%7C69303d78adb3ad055aef7221%22%2C%22%24sesid%22%3A%5B1782646591253%2C%22019f0e04-150a-7be9-9d93-228f36f138cb%22%2C1782646576394%5D%2C%22%24epp%22%3Atrue%2C%22%24user_state%22%3A%22identified%22%7D; mp_588aa0073f39e25cdd8a8e36884ee533_mixpanel=%7B%22distinct_id%22%3A%22auth0%7C69303d78adb3ad055aef7221%22%2C%22%24device_id%22%3A%22e116a35a-b118-494d-9930-c268833d35bf%22%2C%22%24initial_referrer%22%3A%22%24direct%22%2C%22%24initial_referring_domain%22%3A%22%24direct%22%2C%22__mps%22%3A%7B%7D%2C%22__mpso%22%3A%7B%22%24initial_referrer%22%3A%22%24direct%22%2C%22%24initial_referring_domain%22%3A%22%24direct%22%7D%2C%22__mpus%22%3A%7B%7D%2C%22__mpa%22%3A%7B%7D%2C%22__mpu%22%3A%7B%7D%2C%22__mpr%22%3A%5B%5D%2C%22__mpap%22%3A%5B%5D%2C%22%24user_id%22%3A%22auth0%7C69303d78adb3ad055aef7221%22%7D\",\n    \"sec-fetch-dest\": \"empty\",\n    \"sec-fetch-mode\": \"cors\",\n    \"sec-fetch-site\": \"same-origin\"\n  },\n  \"url\": \"https://bonds.mercapabbaco.com/cdn-cgi/rum?\",\n  \"method\": \"POST\",\n  \"httpVersion\": \"1.1\",\n  \"query\": {},\n  \"body\": {\n    \"memory\": {},\n    \"resources\": [],\n    \"referrer\": \"\",\n    \"eventType\": 1,\n    \"firstPaint\": 0,\n    \"firstContentfulPaint\": 0,\n    \"startTime\": 1782646592743,\n    \"versions\": {\n      \"fl\": \"2024.11.0\",\n      \"js\": \"2026.5.0\",\n      \"timings\": 2\n    },\n    \"pageloadId\": \"fc08eb9c-27b2-4eb5-b17c-65c7968df1fd\",\n    \"location\": \"https://bonds.mercapabbaco.com/security-position\",\n    \"nt\": \"navigate\",\n    \"timingsV2\": {\n      \"nextHopProtocol\": \"http/1.1\",\n      \"domainLookupStart\": 1,\n      \"domainLookupEnd\": 1,\n      \"connectStart\": 1,\n      \"connectEnd\": 1,\n      \"requestStart\": 165,\n      \"responseStart\": 172,\n      \"responseEnd\": 172,\n      \"domInteractive\": 242,\n      \"domComplete\": 821,\n      \"loadEventStart\": 821,\n      \"loadEventEnd\": 824,\n      \"finalResponseHeadersStart\": 172,\n      \"firstInterimResponseStart\": 0,\n      \"transferSize\": 3156,\n      \"decodedBodySize\": 6374\n    },\n    \"siteToken\": \"cd05c71ae0ab4f958d6cf7bb5d3a4778\",\n    \"st\": 2\n  },\n  \"responseTimeout\": 90000\n}\n\nhttps://on.cypress.io/intercept\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.",
+                "estack": "CypressError: The following error originated from your test code, not from Cypress. It was caused by an unhandled promise rejection.\n\n  > A callback was provided to intercept the upstream response, but a network error occurred while making the request:\n\nError: Socket closed before finished writing response\n    at <unknown> (<embedded>:2571:51772)\n    at tryCatcher (/home/runner/.cache/Cypress/15.9.0/Cypress/resources/app/node_modules/bluebird/js/release/util.js:16:23)\n    at Promise._settlePromiseFromHandler (/home/runner/.cache/Cypress/15.9.0/Cypress/resources/app/node_modules/bluebird/js/release/promise.js:512:31)\n    at Promise._settlePromise (/home/runner/.cache/Cypress/15.9.0/Cypress/resources/app/node_modules/bluebird/js/release/promise.js:569:18)\n    at Promise._settlePromise0 (/home/runner/.cache/Cypress/15.9.0/Cypress/resources/app/node_modules/bluebird/js/release/promise.js:614:10)\n    at Promise._settlePromises (/home/runner/.cache/Cypress/15.9.0/Cypress/resources/app/node_modules/bluebird/js/release/promise.js:694:18)\n    at _drainQueueStep (/home/runner/.cache/Cypress/15.9.0/Cypress/resources/app/node_modules/bluebird/js/release/async.js:138:12)\n    at _drainQueue (/home/runner/.cache/Cypress/15.9.0/Cypress/resources/app/node_modules/bluebird/js/release/async.js:131:9)\n    at Async._drainQueues (/home/runner/.cache/Cypress/15.9.0/Cypress/resources/app/node_modules/bluebird/js/release/async.js:147:5)\n    at Immediate._onImmediate (/home/runner/.cache/Cypress/15.9.0/Cypress/resources/app/node_modules/bluebird/js/release/async.js:17:14)\n    at process.processImmediate (node:internal/timers:485:21)\n\nRoute: {\n\"url\": \"**\",\n\"middleware\": true\n}\n\nIntercepted request: {\n\"headers\": {\n\"host\": \"bonds.mercapabbaco.com\",\n\"user-agent\": \"Mozilla/5.0 (X11; Linux x86_64; rv:152.0) Gecko/20100101 Firefox/152.0\",\n\"accept\": \"*/*\",\n\"accept-language\": \"en-US,en;q=0.9\",\n\"accept-encoding\": \"gzip, deflate, br, zstd\",\n\"referer\": \"https://bonds.mercapabbaco.com/security-position\",\n\"content-type\": \"application/json\",\n\"content-length\": \"722\",\n\"origin\": \"https://bonds.mercapabbaco.com\",\n\"connection\": \"keep-alive\",\n\"cookie\": \"_gcl_au=1.1.521005785.1782646576; _legacy_auth0.3M3Hcs5HlUwtxnJ2okb4zZa5Fhh4Eq40.is.authenticated=true; auth0.3M3Hcs5HlUwtxnJ2okb4zZa5Fhh4Eq40.is.authenticated=true; _ga=GA1.1.916918841.1782646577; _fbp=fb.1.1782646577223.765367992937391313.AQYAAQIB; _ga_W2PJ55DF51=GS2.1.s1782646576$o1$g1$t1782646592$j44$l0$h0; ph_phc_eaiVO3xMKW1I8fAo8x9XvCGT1RsA6qQ3YeVQN4AFAYe_posthog=%7B%22%24device_id%22%3A%22019f0e04-0eba-749a-b4cb-085ca69b9a5a%22%2C%22distinct_id%22%3A%22auth0%7C69303d78adb3ad055aef7221%22%2C%22%24sesid%22%3A%5B1782646591253%2C%22019f0e04-150a-7be9-9d93-228f36f138cb%22%2C1782646576394%5D%2C%22%24epp%22%3Atrue%2C%22%24user_state%22%3A%22identified%22%7D; mp_588aa0073f39e25cdd8a8e36884ee533_mixpanel=%7B%22distinct_id%22%3A%22auth0%7C69303d78adb3ad055aef7221%22%2C%22%24device_id%22%3A%22e116a35a-b118-494d-9930-c268833d35bf%22%2C%22%24initial_referrer%22%3A%22%24direct%22%2C%22%24initial_referring_domain%22%3A%22%24direct%22%2C%22__mps%22%3A%7B%7D%2C%22__mpso%22%3A%7B%22%24initial_referrer%22%3A%22%24direct%22%2C%22%24initial_referring_domain%22%3A%22%24direct%22%7D%2C%22__mpus%22%3A%7B%7D%2C%22__mpa%22%3A%7B%7D%2C%22__mpu%22%3A%7B%7D%2C%22__mpr%22%3A%5B%5D%2C%22__mpap%22%3A%5B%5D%2C%22%24user_id%22%3A%22auth0%7C69303d78adb3ad055aef7221%22%7D\",\n\"sec-fetch-dest\": \"empty\",\n\"sec-fetch-mode\": \"cors\",\n\"sec-fetch-site\": \"same-origin\"\n},\n\"url\": \"https://bonds.mercapabbaco.com/cdn-cgi/rum?\",\n\"method\": \"POST\",\n\"httpVersion\": \"1.1\",\n\"query\": {},\n\"body\": {\n\"memory\": {},\n\"resources\": [],\n\"referrer\": \"\",\n\"eventType\": 1,\n\"firstPaint\": 0,\n\"firstContentfulPaint\": 0,\n\"startTime\": 1782646592743,\n\"versions\": {\n\"fl\": \"2024.11.0\",\n\"js\": \"2026.5.0\",\n\"timings\": 2\n},\n\"pageloadId\": \"fc08eb9c-27b2-4eb5-b17c-65c7968df1fd\",\n\"location\": \"https://bonds.mercapabbaco.com/security-position\",\n\"nt\": \"navigate\",\n\"timingsV2\": {\n\"nextHopProtocol\": \"http/1.1\",\n\"domainLookupStart\": 1,\n\"domainLookupEnd\": 1,\n\"connectStart\": 1,\n\"connectEnd\": 1,\n\"requestStart\": 165,\n\"responseStart\": 172,\n\"responseEnd\": 172,\n\"domInteractive\": 242,\n\"domComplete\": 821,\n\"loadEventStart\": 821,\n\"loadEventEnd\": 824,\n\"finalResponseHeadersStart\": 172,\n\"firstInterimResponseStart\": 0,\n\"transferSize\": 3156,\n\"decodedBodySize\": 6374\n},\n\"siteToken\": \"cd05c71ae0ab4f958d6cf7bb5d3a4778\",\n\"st\": 2\n},\n\"responseTimeout\": 90000\n}\n\nhttps://on.cypress.io/intercept\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\nCypressError: A callback was provided to intercept the upstream response, but a network error occurred while making the request:\n\nError: Socket closed before finished writing response\n    at <unknown> (<embedded>:2571:51772)\n    at tryCatcher (/home/runner/.cache/Cypress/15.9.0/Cypress/resources/app/node_modules/bluebird/js/release/util.js:16:23)\n    at Promise._settlePromiseFromHandler (/home/runner/.cache/Cypress/15.9.0/Cypress/resources/app/node_modules/bluebird/js/release/promise.js:512:31)\n    at Promise._settlePromise (/home/runner/.cache/Cypress/15.9.0/Cypress/resources/app/node_modules/bluebird/js/release/promise.js:569:18)\n    at Promise._settlePromise0 (/home/runner/.cache/Cypress/15.9.0/Cypress/resources/app/node_modules/bluebird/js/release/promise.js:614:10)\n    at Promise._settlePromises (/home/runner/.cache/Cypress/15.9.0/Cypress/resources/app/node_modules/bluebird/js/release/promise.js:694:18)\n    at _drainQueueStep (/home/runner/.cache/Cypress/15.9.0/Cypress/resources/app/node_modules/bluebird/js/release/async.js:138:12)\n    at _drainQueue (/home/runner/.cache/Cypress/15.9.0/Cypress/resources/app/node_modules/bluebird/js/release/async.js:131:9)\n    at Async._drainQueues (/home/runner/.cache/Cypress/15.9.0/Cypress/resources/app/node_modules/bluebird/js/release/async.js:147:5)\n    at Immediate._onImmediate (/home/runner/.cache/Cypress/15.9.0/Cypress/resources/app/node_modules/bluebird/js/release/async.js:17:14)\n    at process.processImmediate (node:internal/timers:485:21)\n\nRoute: {\n\"url\": \"**\",\n\"middleware\": true\n}\n\nIntercepted request: {\n\"headers\": {\n\"host\": \"bonds.mercapabbaco.com\",\n\"user-agent\": \"Mozilla/5.0 (X11; Linux x86_64; rv:152.0) Gecko/20100101 Firefox/152.0\",\n\"accept\": \"*/*\",\n\"accept-language\": \"en-US,en;q=0.9\",\n\"accept-encoding\": \"gzip, deflate, br, zstd\",\n\"referer\": \"https://bonds.mercapabbaco.com/security-position\",\n\"content-type\": \"application/json\",\n\"content-length\": \"722\",\n\"origin\": \"https://bonds.mercapabbaco.com\",\n\"connection\": \"keep-alive\",\n\"cookie\": \"_gcl_au=1.1.521005785.1782646576; _legacy_auth0.3M3Hcs5HlUwtxnJ2okb4zZa5Fhh4Eq40.is.authenticated=true; auth0.3M3Hcs5HlUwtxnJ2okb4zZa5Fhh4Eq40.is.authenticated=true; _ga=GA1.1.916918841.1782646577; _fbp=fb.1.1782646577223.765367992937391313.AQYAAQIB; _ga_W2PJ55DF51=GS2.1.s1782646576$o1$g1$t1782646592$j44$l0$h0; ph_phc_eaiVO3xMKW1I8fAo8x9XvCGT1RsA6qQ3YeVQN4AFAYe_posthog=%7B%22%24device_id%22%3A%22019f0e04-0eba-749a-b4cb-085ca69b9a5a%22%2C%22distinct_id%22%3A%22auth0%7C69303d78adb3ad055aef7221%22%2C%22%24sesid%22%3A%5B1782646591253%2C%22019f0e04-150a-7be9-9d93-228f36f138cb%22%2C1782646576394%5D%2C%22%24epp%22%3Atrue%2C%22%24user_state%22%3A%22identified%22%7D; mp_588aa0073f39e25cdd8a8e36884ee533_mixpanel=%7B%22distinct_id%22%3A%22auth0%7C69303d78adb3ad055aef7221%22%2C%22%24device_id%22%3A%22e116a35a-b118-494d-9930-c268833d35bf%22%2C%22%24initial_referrer%22%3A%22%24direct%22%2C%22%24initial_referring_domain%22%3A%22%24direct%22%2C%22__mps%22%3A%7B%7D%2C%22__mpso%22%3A%7B%22%24initial_referrer%22%3A%22%24direct%22%2C%22%24initial_referring_domain%22%3A%22%24direct%22%7D%2C%22__mpus%22%3A%7B%7D%2C%22__mpa%22%3A%7B%7D%2C%22__mpu%22%3A%7B%7D%2C%22__mpr%22%3A%5B%5D%2C%22__mpap%22%3A%5B%5D%2C%22%24user_id%22%3A%22auth0%7C69303d78adb3ad055aef7221%22%7D\",\n\"sec-fetch-dest\": \"empty\",\n\"sec-fetch-mode\": \"cors\",\n\"sec-fetch-site\": \"same-origin\"\n},\n\"url\": \"https://bonds.mercapabbaco.com/cdn-cgi/rum?\",\n\"method\": \"POST\",\n\"httpVersion\": \"1.1\",\n\"query\": {},\n\"body\": {\n\"memory\": {},\n\"resources\": [],\n\"referrer\": \"\",\n\"eventType\": 1,\n\"firstPaint\": 0,\n\"firstContentfulPaint\": 0,\n\"startTime\": 1782646592743,\n\"versions\": {\n\"fl\": \"2024.11.0\",\n\"js\": \"2026.5.0\",\n\"timings\": 2\n},\n\"pageloadId\": \"fc08eb9c-27b2-4eb5-b17c-65c7968df1fd\",\n\"location\": \"https://bonds.mercapabbaco.com/security-position\",\n\"nt\": \"navigate\",\n\"timingsV2\": {\n\"nextHopProtocol\": \"http/1.1\",\n\"domainLookupStart\": 1,\n\"domainLookupEnd\": 1,\n\"connectStart\": 1,\n\"connectEnd\": 1,\n\"requestStart\": 165,\n\"responseStart\": 172,\n\"responseEnd\": 172,\n\"domInteractive\": 242,\n\"domComplete\": 821,\n\"loadEventStart\": 821,\n\"loadEventEnd\": 824,\n\"finalResponseHeadersStart\": 172,\n\"firstInterimResponseStart\": 0,\n\"transferSize\": 3156,\n\"decodedBodySize\": 6374\n},\n\"siteToken\": \"cd05c71ae0ab4f958d6cf7bb5d3a4778\",\n\"st\": 2\n},\n\"responseTimeout\": 90000\n}\n    at cypressErr (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:78225:18)\n    at errByPath (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:78293:10)\n    at onNetworkError (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:145286:72)\n    at __webpack_modules__</registerEvents/ (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:144666:28)\n    at tryCatcher (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1777:23)\n    at __webpack_modules__</module.exports/Promise.try (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:4285:29)\n    at __webpack_modules__</registerEvents (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:144629:53)\n    at __webpack_modules__</EventEmitter.prototype.emit (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:149186:19)\n    at __webpack_modules__</extend/events.proxyTo/parent[fn] (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:148092:31)\n    at addGlobalListeners/ (https://bonds.mercapabbaco.com/__/assets/index-B7UyWv0E.js:1732:106803)\n    at R1/t.prototype.emit (https://bonds.mercapabbaco.com/__/assets/index-B7UyWv0E.js:1158:60942)\n    at emit (https://bonds.mercapabbaco.com/__/assets/index-B7UyWv0E.js:1159:23143)\n    at emitEvent (https://bonds.mercapabbaco.com/__/assets/index-B7UyWv0E.js:1159:26510)\n    at onevent (https://bonds.mercapabbaco.com/__/assets/index-B7UyWv0E.js:1159:26313)\n    at onpacket (https://bonds.mercapabbaco.com/__/assets/index-B7UyWv0E.js:1159:25819)\n    at R1/t.prototype.emit (https://bonds.mercapabbaco.com/__/assets/index-B7UyWv0E.js:1158:60942)\n    at emitReserved (https://bonds.mercapabbaco.com/__/assets/index-B7UyWv0E.js:1159:23195)\n    at ondecoded (https://bonds.mercapabbaco.com/__/assets/index-B7UyWv0E.js:1159:31671)\n    at R1/t.prototype.emit (https://bonds.mercapabbaco.com/__/assets/index-B7UyWv0E.js:1158:60942)\n    at add (https://bonds.mercapabbaco.com/__/assets/index-B7UyWv0E.js:1159:20826)\n    at ondata (https://bonds.mercapabbaco.com/__/assets/index-B7UyWv0E.js:1159:31646)\n    at R1/t.prototype.emit (https://bonds.mercapabbaco.com/__/assets/index-B7UyWv0E.js:1158:60942)\n    at onPacket (https://bonds.mercapabbaco.com/__/assets/index-B7UyWv0E.js:1159:8075)\n    at AW/setTransport (https://bonds.mercapabbaco.com/__/assets/index-B7UyWv0E.js:1159:5694)\n    at R1/t.prototype.emit (https://bonds.mercapabbaco.com/__/assets/index-B7UyWv0E.js:1158:60942)\n    at onPacket (https://bonds.mercapabbaco.com/__/assets/index-B7UyWv0E.js:1158:66713)\n    at onData (https://bonds.mercapabbaco.com/__/assets/index-B7UyWv0E.js:1158:66684)\n    at EW/addEventListeners/this.ws.onmessage (https://bonds.mercapabbaco.com/__/assets/index-B7UyWv0E.js:1159:1447)\nFrom Your Spec Code:\n    at <unknown> (webpack://cypress/./build/production/argentina/cleaner/cleaner.cy.js:26:0)\nFrom Your Spec Code:\n    at  (webpack://cypress/./build/production/argentina/cleaner/cleaner.cy.js:26:0)",
+                "diff": null
+              },
+              "uuid": "1c8215ee-d0f1-4e9b-89cf-e3e93342e2a9",
+              "parentUUID": "609ef57c-3102-4ace-ace6-6181b9e7200f",
               "isHook": false,
               "skipped": false
             },
@@ -79,32 +79,32 @@
               "fullTitle": "Cleaner Eliminar todas las curvas favoritas",
               "timedOut": null,
               "duration": 0,
-              "state": "skipped",
+              "state": "pending",
               "speed": null,
               "pass": false,
               "fail": false,
-              "pending": false,
+              "pending": true,
               "context": null,
               "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/curves`);\ncy.pageIsLoaded();\ncy.get('input[class=\"search-input form-control form-control-md\"]').should('be.visible');\ncy.get('ul.list-group').should('be.visible');\ncy.cleanFavoritosCurvas(CURVAS_FAVORITAS);",
               "err": {},
-              "uuid": "531cc3f9-9834-49b0-8fa6-bc1746153624",
-              "parentUUID": "7d3a5dd1-90ff-49d5-9ad4-09b01690c1c1",
+              "uuid": "574fe863-dc22-4afa-a56f-d777c0c2f7bf",
+              "parentUUID": "609ef57c-3102-4ace-ace6-6181b9e7200f",
               "isHook": false,
-              "skipped": true
+              "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
+          "passes": [
+            "d8c2345c-0d4a-4b2e-bcd5-6f5983c76820"
+          ],
           "failures": [
-            "6c34b931-6920-4ca6-9b74-4ad5ffc5bb5d"
+            "1c8215ee-d0f1-4e9b-89cf-e3e93342e2a9"
           ],
           "pending": [
-            "589972f8-0c23-4974-bf54-b4046ec2b101"
+            "574fe863-dc22-4afa-a56f-d777c0c2f7bf"
           ],
-          "skipped": [
-            "531cc3f9-9834-49b0-8fa6-bc1746153624"
-          ],
-          "duration": 117078,
+          "skipped": [],
+          "duration": 22051,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
