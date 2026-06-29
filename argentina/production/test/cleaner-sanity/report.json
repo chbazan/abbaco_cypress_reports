@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 1,
     "failures": 1,
-    "start": "2026-06-28T18:20:40.730Z",
-    "end": "2026-06-28T18:25:20.341Z",
-    "duration": 279611,
+    "start": "2026-06-29T18:36:13.648Z",
+    "end": "2026-06-29T18:40:24.279Z",
+    "duration": 250631,
     "testsRegistered": 3,
     "passPercent": 0,
     "pendingPercent": 33.33333333333333,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "b492f30a-1941-4e76-a5c5-544b61e7803a",
+      "uuid": "691a1722-6f27-4a45-8d3b-fbd9225db43c",
       "title": "",
       "fullFile": "build/production/argentina/cleaner/cleaner.cy.js",
       "file": "build/production/argentina/cleaner/cleaner.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "306b3449-0fa3-481b-89eb-0fb3a844fc2f",
+          "uuid": "376c88f3-0b68-4103-a09d-590f85aa9bdd",
           "title": "Cleaner",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Eliminar todos los bonos favoritos en el Home",
               "fullTitle": "Cleaner Eliminar todos los bonos favoritos en el Home",
               "timedOut": null,
-              "duration": 129327,
+              "duration": 122474,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -48,11 +48,11 @@
               "code": "cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION);\ncy.pageIsLoaded();\n// El ambiente de testing/staging no suele tener todos los cuadros del home, para usar el cleaner en staging hay que comentar validacionesHome\ncy.validacionesHome();\ncy.cleanFavoritosHome(bonos);",
               "err": {
                 "message": "AssertionError: Timed out retrying after 90000ms: Expected to find content: 'USD CCL' within the selector: 'h6[class=\"text-uppercase text-header mb-0 card-title\"]' but never did.",
-                "estack": "AssertionError: Timed out retrying after 90000ms: Expected to find content: 'USD CCL' within the selector: 'h6[class=\"text-uppercase text-header mb-0 card-title\"]' but never did.\n    at ./cypress/support/commands.js (webpack://cypress/./cypress/support/commands.js:557:6)\n    at __webpack_modules__</addCommand/wrap (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:146042:43)",
+                "estack": "AssertionError: Timed out retrying after 90000ms: Expected to find content: 'USD CCL' within the selector: 'h6[class=\"text-uppercase text-header mb-0 card-title\"]' but never did.\n    at ./cypress/support/commands.js (webpack://cypress/./cypress/support/commands.js:559:6)\n    at __webpack_modules__</addCommand/wrap (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:146042:43)",
                 "diff": null
               },
-              "uuid": "99342774-eb6d-42c9-bd7f-462a68bffb32",
-              "parentUUID": "306b3449-0fa3-481b-89eb-0fb3a844fc2f",
+              "uuid": "041b303c-0a28-4b12-96e2-fd48804cb8b0",
+              "parentUUID": "376c88f3-0b68-4103-a09d-590f85aa9bdd",
               "isHook": false,
               "skipped": false
             },
@@ -69,8 +69,8 @@
               "context": null,
               "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/security-position`);\ncy.pageIsLoaded();\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.cleanPortfoliosHome();",
               "err": {},
-              "uuid": "f97550d6-08a5-4237-b954-d49c0cc689d3",
-              "parentUUID": "306b3449-0fa3-481b-89eb-0fb3a844fc2f",
+              "uuid": "b33ddf2a-ee4d-45f7-a88f-aca755260234",
+              "parentUUID": "376c88f3-0b68-4103-a09d-590f85aa9bdd",
               "isHook": false,
               "skipped": false
             },
@@ -87,8 +87,8 @@
               "context": null,
               "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/curves`);\ncy.pageIsLoaded();\ncy.get('input[class=\"search-input form-control form-control-md\"]').should('be.visible');\ncy.get('ul.list-group').should('be.visible');\ncy.cleanFavoritosCurvas(CURVAS_FAVORITAS);",
               "err": {},
-              "uuid": "7d2c6890-ba30-460c-b87e-68f39acf45cb",
-              "parentUUID": "306b3449-0fa3-481b-89eb-0fb3a844fc2f",
+              "uuid": "3a4affea-f878-47dc-b1f6-c6f40c899476",
+              "parentUUID": "376c88f3-0b68-4103-a09d-590f85aa9bdd",
               "isHook": false,
               "skipped": true
             }
@@ -96,15 +96,15 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "99342774-eb6d-42c9-bd7f-462a68bffb32"
+            "041b303c-0a28-4b12-96e2-fd48804cb8b0"
           ],
           "pending": [
-            "f97550d6-08a5-4237-b954-d49c0cc689d3"
+            "b33ddf2a-ee4d-45f7-a88f-aca755260234"
           ],
           "skipped": [
-            "7d2c6890-ba30-460c-b87e-68f39acf45cb"
+            "3a4affea-f878-47dc-b1f6-c6f40c899476"
           ],
-          "duration": 129327,
+          "duration": 122474,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
