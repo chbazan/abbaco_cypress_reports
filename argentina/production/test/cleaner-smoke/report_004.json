@@ -1,0 +1,223 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-30T12:00:26.857Z",
+    "end": "2026-06-30T12:02:42.761Z",
+    "duration": 135904,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bb2eb707-87e7-407b-a3da-ec7eb3b4a370",
+      "title": "",
+      "fullFile": "build/production/argentina/smoke/calculadora.cy.js",
+      "file": "build/production/argentina/smoke/calculadora.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e5df919f-3554-41b2-9d57-5fd88b9173d3",
+          "title": "Calculadora",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ingresar al Home e ingresar al menú \"Calculadora\"",
+              "fullTitle": "Calculadora Ingresar al Home e ingresar al menú \"Calculadora\"",
+              "timedOut": null,
+              "duration": 5808,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/calculator`);\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.calculadoraTitle().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_2__.sharedElements.cardBody().should('be.visible');\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.addSimulationButton().should('be.visible');",
+              "err": {},
+              "uuid": "522326c4-f55d-4c38-b698-671d45a20e19",
+              "parentUUID": "e5df919f-3554-41b2-9d57-5fd88b9173d3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Simular inversiones de la especie AL30 y validar que se muestren correctamente",
+              "fullTitle": "Calculadora Simular inversiones de la especie AL30 y validar que se muestren correctamente",
+              "timedOut": null,
+              "duration": 31457,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.calculadoraTitle().should('be.visible');\ncy.crearSimulacion({\n  especie: _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR,\n  fecha: /C\\.I|E\\.P\\./,\n  tipo: 'Dirty',\n  cantidad: 10000,\n  valor: 83210,\n  tipoCambio: 1420\n});\ncy.crearSimulacion({\n  especie: _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR,\n  fecha: '24Hs',\n  tipo: 'Yield',\n  cantidad: 1000,\n  valor: 20,\n  tipoCambio: 1420\n});\ncy.crearSimulacion({\n  especie: _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR,\n  fecha: /C\\.I|E\\.P\\./,\n  tipo: 'Dirty',\n  cantidad: 5000,\n  valor: 83210,\n  tipoCambio: 1420\n});\ncy.crearSimulacion({\n  especie: _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR,\n  fecha: /C\\.I|E\\.P\\./,\n  tipo: 'Dirty',\n  valor: 83210,\n  cantidad: '10',\n  tipoCambio: 1420,\n  conComision: true,\n  tipoComision: /\\b(ARS|BRL)\\b/,\n  valorComision: 100\n});\ncy.crearSimulacion({\n  especie: _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR,\n  fecha: '24Hs',\n  tipo: 'Dirty',\n  valor: 83210,\n  cantidad: '10',\n  tipoCambio: 1420,\n  conComision: true,\n  tipoComision: '%',\n  valorComision: 2\n});\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.tableSimulations().should('be.visible');",
+              "err": {},
+              "uuid": "9d28864c-f1e5-4cfc-a611-361acfb87587",
+              "parentUUID": "e5df919f-3554-41b2-9d57-5fd88b9173d3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Editar P. Simulado, de la primera simulación y verificar en la tabla de Simulaciones",
+              "fullTitle": "Calculadora Editar P. Simulado, de la primera simulación y verificar en la tabla de Simulaciones",
+              "timedOut": null,
+              "duration": 5047,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.editarPrecioSimulado('90.000,00');\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.tableSimulations().should('be.visible');",
+              "err": {},
+              "uuid": "90b4fadf-ee47-4420-8f3f-7f206f5d9761",
+              "parentUUID": "e5df919f-3554-41b2-9d57-5fd88b9173d3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Editar la TIR de la primera simulación y verificar en la tabla de Simulaciones",
+              "fullTitle": "Calculadora Editar la TIR de la primera simulación y verificar en la tabla de Simulaciones",
+              "timedOut": null,
+              "duration": 722,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.editarTIR('15');\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.tableSimulations().should('be.visible');",
+              "err": {},
+              "uuid": "ceace01f-f483-4b7b-a030-2ca15804d819",
+              "parentUUID": "e5df919f-3554-41b2-9d57-5fd88b9173d3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ocultar gŕafico de simulaciones",
+              "fullTitle": "Calculadora Ocultar gŕafico de simulaciones",
+              "timedOut": null,
+              "duration": 562,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.hideChartButton().click();\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.chartContainer().should('not.exist');\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.showChartButton().click();\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.chartContainer().should('be.visible');",
+              "err": {},
+              "uuid": "2ccde22c-5b0b-47d5-93d0-e420347534fa",
+              "parentUUID": "e5df919f-3554-41b2-9d57-5fd88b9173d3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Eliminar una simulación de la tabla de Simulaciones",
+              "fullTitle": "Calculadora Eliminar una simulación de la tabla de Simulaciones",
+              "timedOut": null,
+              "duration": 323,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.eliminarSimulacion();\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.pointsButton().should('be.visible');",
+              "err": {},
+              "uuid": "659b8ed6-8e9c-45e8-a2cd-e7116871473c",
+              "parentUUID": "e5df919f-3554-41b2-9d57-5fd88b9173d3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Eliminar todas las simulaciones",
+              "fullTitle": "Calculadora Eliminar todas las simulaciones",
+              "timedOut": null,
+              "duration": 558,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.deleteAllSimulations();\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.noSimulationsTitle().should('be.visible');",
+              "err": {},
+              "uuid": "081c2149-505d-460d-8bb7-ef1463580226",
+              "parentUUID": "e5df919f-3554-41b2-9d57-5fd88b9173d3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "522326c4-f55d-4c38-b698-671d45a20e19",
+            "9d28864c-f1e5-4cfc-a611-361acfb87587",
+            "90b4fadf-ee47-4420-8f3f-7f206f5d9761",
+            "ceace01f-f483-4b7b-a030-2ca15804d819",
+            "2ccde22c-5b0b-47d5-93d0-e420347534fa",
+            "659b8ed6-8e9c-45e8-a2cd-e7116871473c",
+            "081c2149-505d-460d-8bb7-ef1463580226"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 44477,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
