@@ -1,0 +1,192 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 2,
+    "pending": 1,
+    "failures": 1,
+    "start": "2026-07-02T19:18:15.488Z",
+    "end": "2026-07-02T19:21:41.583Z",
+    "duration": 206095,
+    "testsRegistered": 5,
+    "passPercent": 50,
+    "pendingPercent": 20,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "bbd6fc07-77c5-4c49-b2c6-2a3127b363ec",
+      "title": "",
+      "fullFile": "build/production/argentina/smoke/sensibilidad.cy.js",
+      "file": "build/production/argentina/smoke/sensibilidad.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f3cdea4d-6363-4bb6-995a-deab9761d520",
+          "title": "Sensibilidad",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ingreso al menú Sensibilidad",
+              "fullTitle": "Sensibilidad Ingreso al menú Sensibilidad",
+              "timedOut": null,
+              "duration": 950,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visitRecargandoSi401(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/sensitivity`);",
+              "err": {},
+              "uuid": "a01a89d8-dd19-4780-956e-79eb99165c2b",
+              "parentUUID": "f3cdea4d-6363-4bb6-995a-deab9761d520",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Agregar una especie al análisis de sensibilidad",
+              "fullTitle": "Sensibilidad Agregar una especie al análisis de sensibilidad",
+              "timedOut": null,
+              "duration": 4268,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.agregarEspecieSensibilidad({\n  especie: `${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR}`\n});",
+              "err": {},
+              "uuid": "de75cb3d-61f0-48f5-a07e-e318e75e7550",
+              "parentUUID": "f3cdea4d-6363-4bb6-995a-deab9761d520",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Agregar 3 escenarios completando los campos necesarios y verificar sus elementos relacionados",
+              "fullTitle": "Sensibilidad Agregar 3 escenarios completando los campos necesarios y verificar sus elementos relacionados",
+              "timedOut": null,
+              "duration": 90568,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.configurarTresEscenarios({\n  escenario1: {\n    tipo: 'fixedRate',\n    valor: '5'\n  },\n  escenario2: {\n    tipo: 'spread',\n    valor: '100'\n  },\n  escenario3: {\n    tipo: 'fixedRate',\n    valor: '-3'\n  }\n});",
+              "err": {
+                "message": "CypressError: Timed out retrying after 90050ms: `cy.click()` failed because this element:\n\n`<button type=\"button\" class=\"btn-neutral text-nowrap btn btn-light\">Configu...</button>`\n\nis being covered by another element:\n\n`<div>...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 90050ms: `cy.click()` failed because this element:\n\n`<button type=\"button\" class=\"btn-neutral text-nowrap btn btn-light\">Configu...</button>`\n\nis being covered by another element:\n\n`<div>...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\nat ensureIsDescendent (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:115046:68)\nat ensureDescendents (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:115097:23)\nat ensureDescendentsAndScroll (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:115103:14)\nat ensureElIsNotCovered (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:115234:5)\nat runAllChecks (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:115433:52)\nat retryActionability (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:115470:16)\nat tryCatcher (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1777:23)\nat __webpack_modules__</module.exports/Promise.try (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:4285:29)\nat whenStable (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:151746:62)\nat __webpack_modules__</create/retry (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:151687:14)\nat tryCatcher (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1777:23)\nat __webpack_modules__</module.exports/Promise.prototype._settlePromiseFromHandler (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1489:31)\nat __webpack_modules__</module.exports/Promise.prototype._settlePromise (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1546:18)\nat __webpack_modules__</module.exports/Promise.prototype._settlePromise0 (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1591:10)\nat __webpack_modules__</module.exports/Promise.prototype._settlePromises (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1671:18)\nat __webpack_modules__</module.exports/Promise.prototype._fulfill (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1615:18)\nat __webpack_modules__</module.exports/Promise.delay/handle< (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:5420:46)",
+                "diff": null
+              },
+              "uuid": "3811273c-0cff-4535-8193-d1c8e38c8c72",
+              "parentUUID": "f3cdea4d-6363-4bb6-995a-deab9761d520",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Eliminar todos los escenarios",
+              "fullTitle": "Sensibilidad Eliminar todos los escenarios",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "_pages_sensibilidadPage__WEBPACK_IMPORTED_MODULE_1__.sensibilidad.deleteAllScenarios();\ncy.get('tbody tr').should('have.length', 1);\ncy.get('tbody tr td').eq(1).should('have.text', 'AL30');",
+              "err": {},
+              "uuid": "91a59f7b-7360-4c2e-8bbd-f32c6cc5b26c",
+              "parentUUID": "f3cdea4d-6363-4bb6-995a-deab9761d520",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Eliminar especie agregada",
+              "fullTitle": "Sensibilidad Eliminar especie agregada",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_sensibilidadPage__WEBPACK_IMPORTED_MODULE_1__.sensibilidad.deleteSpecie();\ncy.get('tbody').should('not.exist');",
+              "err": {},
+              "uuid": "bac03b3e-e314-46bc-b69c-93c99d2acf00",
+              "parentUUID": "f3cdea4d-6363-4bb6-995a-deab9761d520",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a01a89d8-dd19-4780-956e-79eb99165c2b",
+            "de75cb3d-61f0-48f5-a07e-e318e75e7550"
+          ],
+          "failures": [
+            "3811273c-0cff-4535-8193-d1c8e38c8c72"
+          ],
+          "pending": [
+            "91a59f7b-7360-4c2e-8bbd-f32c6cc5b26c"
+          ],
+          "skipped": [
+            "bac03b3e-e314-46bc-b69c-93c99d2acf00"
+          ],
+          "duration": 95786,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
