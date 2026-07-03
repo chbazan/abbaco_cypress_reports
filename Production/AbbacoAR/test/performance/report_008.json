@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 1,
+    "failures": 0,
+    "start": "2026-07-03T16:00:38.236Z",
+    "end": "2026-07-03T16:00:44.528Z",
+    "duration": 6292,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 50,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "81fd3426-3d33-4dd5-8f5e-e88cd6dd6318",
+      "title": "",
+      "fullFile": "build/production/argentina/performance/screener.cy.js",
+      "file": "build/production/argentina/performance/screener.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "82d9daee-c441-4195-816b-ed7021881f1e",
+          "title": "Screener",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ingresar al menú Screener",
+              "fullTitle": "Screener Ingresar al menú Screener",
+              "timedOut": null,
+              "duration": 3457,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visitRecargandoSi401(`${_support_constants__WEBPACK_IMPORTED_MODULE_2__[\"default\"].ABBACO_LOCATION}/bond-screener`);\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.clickMenuScreener();\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.termsButtonAccordion().should('be.visible');\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.accordionBody().should('be.visible');",
+              "err": {},
+              "uuid": "bbfd5a7c-9852-43c2-8342-4201980440be",
+              "parentUUID": "82d9daee-c441-4195-816b-ed7021881f1e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Búsqueda con filtros en Screener",
+              "fullTitle": "Screener Búsqueda con filtros en Screener",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.clickNegotiableObligation();\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.negotiableObligationOption().should('be.visible');\n// Selecciona USD en \"Moneda de Pago\"\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.addcurrencyPayment();\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.USDCurrencyOption().should('be.visible');\n// Selecciona Ley Argentina en \"Ley\"\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.addlaw();\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.argentinaLawOption().should('be.visible');\n// Selecciona YPF S.A. en \"Seleccionar Emisor\"\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.addBondIssuer();\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.issuer().should('be.visible');\n// Hacer clic en \"Buscar\" luego de haber seleccionado los filtros\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.clickSearchButton();\n// Verifica que se encuentre el bono YMC1O en el resultado de la búsqueda\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_1__.sharedElements.cardBody().should('be.visible');\n_pages_screenerPage__WEBPACK_IMPORTED_MODULE_0__.screener.elements.ONbond().should('be.visible');",
+              "err": {},
+              "uuid": "b0c7a087-4fc8-4c72-bba6-b103c5c377e4",
+              "parentUUID": "82d9daee-c441-4195-816b-ed7021881f1e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bbfd5a7c-9852-43c2-8342-4201980440be"
+          ],
+          "failures": [],
+          "pending": [
+            "b0c7a087-4fc8-4c72-bba6-b103c5c377e4"
+          ],
+          "skipped": [],
+          "duration": 3457,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
