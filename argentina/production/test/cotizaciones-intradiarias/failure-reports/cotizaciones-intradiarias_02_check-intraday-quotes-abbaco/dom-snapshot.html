@@ -1,0 +1,830 @@
+<html lang="es" style="scroll-behavior: auto;"><head> <script type="text/javascript" async="" src="https://capi-automation.s3.us-east-2.amazonaws.com/public/client_js/capiParamBuilder/clientParamBuilder.bundle.js"></script><script src="https://connect.facebook.net/signals/config/964169115100425?v=2.9.349&amp;r=stable&amp;domain=bonds.mercapabbaco.com&amp;optin_meta_enabled_capi=true&amp;hme=f29d86973612db0f0627890a64bdc8c47b471189050b33f2680b7d76997afc9a&amp;ex_m=107%2C208%2C158%2C22%2C73%2C74%2C149%2C69%2C68%2C11%2C167%2C93%2C16%2C141%2C130%2C39%2C76%2C81%2C137%2C163%2C169%2C8%2C4%2C5%2C7%2C6%2C3%2C94%2C104%2C170%2C175%2C222%2C30%2C75%2C234%2C233%2C232%2C23%2C33%2C55%2C106%2C61%2C10%2C64%2C100%2C101%2C102%2C108%2C133%2C31%2C29%2C135%2C136%2C132%2C131%2C159%2C77%2C162%2C160%2C161%2C50%2C60%2C126%2C15%2C166%2C45%2C279%2C280%2C278%2C26%2C27%2C28%2C48%2C150%2C78%2C115%2C18%2C20%2C44%2C40%2C42%2C41%2C86%2C95%2C99%2C113%2C148%2C151%2C46%2C114%2C24%2C21%2C122%2C70%2C36%2C153%2C152%2C154%2C145%2C143%2C25%2C35%2C59%2C112%2C165%2C71%2C17%2C156%2C117%2C84%2C67%2C19%2C88%2C89%2C119%2C87%2C139%2C138%2C142%2C164%2C34%2C293%2C309%2C215%2C204%2C62%2C205%2C203%2C312%2C303%2C52%2C216%2C110%2C134%2C83%2C124%2C54%2C47%2C49%2C116%2C123%2C129%2C128%2C58%2C65%2C63%2C155%2C79%2C80%2C118%2C37%2C32%2C53%2C56%2C103%2C168%2C1%2C127%2C14%2C125%2C12%2C2%2C57%2C96%2C66%2C121%2C92%2C91%2C171%2C172%2C97%2C98%2C9%2C105%2C51%2C146%2C90%2C82%2C72%2C120%2C109%2C43%2C147%2C0%2C85%2C140%2C144%2C157%2C38%2C111%2C13%2C173" async=""></script><script type="text/javascript" async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=AW-757478473&amp;cx=c&amp;gtm=4e66u1"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-W2PJ55DF51&amp;cx=c&amp;gtm=4e66u1"></script><script type="text/javascript" async="" src="//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-TZSGLXZ3"></script><script type="text/javascript"> (()=>{"use strict";const e=window.Cypress=parent.Cypress;if(!e)throw new Error("Something went terribly wrong and we cannot proceed. We expected to find the global Cypress in the parent window but it is missing. This should never happen and likely is a bug. Please open an issue.");(e=>{const t=e.XMLHttpRequest.prototype.open;e.XMLHttpRequest.prototype.open=function(...e){const n=t.apply(this,e);return e.length>2&&!e[2]&&this.setRequestHeader("x-cypress-is-sync-request","true"),n}})(window);const t=(()=>{let e,t,n,r;const o=()=>{e=!1,t=!1,n=[],r={}},s=(e,t=[])=>"function"==typeof e?e.apply(window,t):window.eval(e);return o(),{wrap:()=>{const o={setTimeout:window.setTimeout,setInterval:window.setInterval,requestAnimationFrame:window.requestAnimationFrame,clearTimeout:window.clearTimeout,clearInterval:window.clearInterval},i=(e,t)=>o[e].apply(window,t),a=e=>n=>(t&&(r[n]=!0),i(e,[n])),p=t=>(...r)=>{let o,[a,p,...w]=r;return o=i(t,[(...r)=>{if(!e)return s(a,r);n.push({timerId:o,fnOrCode:a,params:r,type:t})},p,...w]),o};window.setTimeout=p("setTimeout"),window.setInterval=p("setInterval"),window.requestAnimationFrame=p("requestAnimationFrame"),window.clearTimeout=a("clearTimeout"),window.clearInterval=a("clearInterval")},reset:o,pause:i=>{e=Boolean(i),e||(t=!0,n.forEach((e=>{const{timerId:t,type:n,fnOrCode:o,params:i}=e;"setInterval"===n&&r[t]||s(o,i)})),o())}}})();e.removeAllListeners("app:timers:reset"),e.removeAllListeners("app:timers:pause"),e.on("app:timers:reset",t.reset),e.on("app:timers:pause",t.pause),t.wrap(),e.action("app:window:before:load",window)})(); </script>
+  <meta charset="utf-8">
+  <style type="text/css">:root, :host {
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Solid";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Regular";
+  --fa-font-light: normal 300 1em/1 "Font Awesome 6 Light";
+  --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Thin";
+  --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+}
+
+svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
+}
+
+.svg-inline--fa {
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.svg-inline--fa.fa-2xs {
+  vertical-align: 0.1em;
+}
+.svg-inline--fa.fa-xs {
+  vertical-align: 0em;
+}
+.svg-inline--fa.fa-sm {
+  vertical-align: -0.0714285705em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.2em;
+}
+.svg-inline--fa.fa-xl {
+  vertical-align: -0.25em;
+}
+.svg-inline--fa.fa-2xl {
+  vertical-align: -0.3125em;
+}
+.svg-inline--fa.fa-pull-left {
+  margin-right: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-pull-right {
+  margin-left: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-li {
+  width: var(--fa-li-width, 2em);
+  top: 0.25em;
+}
+.svg-inline--fa.fa-fw {
+  width: var(--fa-fw-width, 1.25em);
+}
+
+.fa-layers svg.svg-inline--fa {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+.fa-layers svg.svg-inline--fa {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: var(--fa-counter-background-color, #ff253a);
+  border-radius: var(--fa-counter-border-radius, 1em);
+  box-sizing: border-box;
+  color: var(--fa-inverse, #fff);
+  line-height: var(--fa-counter-line-height, 1);
+  max-width: var(--fa-counter-max-width, 5em);
+  min-width: var(--fa-counter-min-width, 1.5em);
+  overflow: hidden;
+  padding: var(--fa-counter-padding, 0.25em 0.5em);
+  right: var(--fa-right, 0);
+  text-overflow: ellipsis;
+  top: var(--fa-top, 0);
+  -webkit-transform: scale(var(--fa-counter-scale, 0.25));
+          transform: scale(var(--fa-counter-scale, 0.25));
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: var(--fa-bottom, 0);
+  right: var(--fa-right, 0);
+  top: auto;
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: var(--fa-bottom, 0);
+  left: var(--fa-left, 0);
+  right: auto;
+  top: auto;
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  top: var(--fa-top, 0);
+  right: var(--fa-right, 0);
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: var(--fa-left, 0);
+  right: auto;
+  top: var(--fa-top, 0);
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: 0.625em;
+  line-height: 0.1em;
+  vertical-align: 0.225em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+  line-height: 0.0833333337em;
+  vertical-align: 0.125em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+  line-height: 0.0714285718em;
+  vertical-align: 0.0535714295em;
+}
+
+.fa-lg {
+  font-size: 1.25em;
+  line-height: 0.05em;
+  vertical-align: -0.075em;
+}
+
+.fa-xl {
+  font-size: 1.5em;
+  line-height: 0.0416666682em;
+  vertical-align: -0.125em;
+}
+
+.fa-2xl {
+  font-size: 2em;
+  line-height: 0.03125em;
+  vertical-align: -0.1875em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: var(--fa-li-margin, 2.5em);
+  padding-left: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: calc(var(--fa-li-width, 2em) * -1);
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em);
+  line-height: inherit;
+}
+
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, 0.1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, 0.08em);
+  padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);
+}
+
+.fa-pull-left {
+  float: left;
+  margin-right: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-pull-right {
+  float: right;
+  margin-left: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-beat {
+  -webkit-animation-name: fa-beat;
+          animation-name: fa-beat;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);
+          animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-bounce {
+  -webkit-animation-name: fa-bounce;
+          animation-name: fa-bounce;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+          animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+}
+
+.fa-fade {
+  -webkit-animation-name: fa-fade;
+          animation-name: fa-fade;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+          animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-beat-fade {
+  -webkit-animation-name: fa-beat-fade;
+          animation-name: fa-beat-fade;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+          animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-flip {
+  -webkit-animation-name: fa-flip;
+          animation-name: fa-flip;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);
+          animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-shake {
+  -webkit-animation-name: fa-shake;
+          animation-name: fa-shake;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, linear);
+          animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin {
+  -webkit-animation-name: fa-spin;
+          animation-name: fa-spin;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 2s);
+          animation-duration: var(--fa-animation-duration, 2s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, linear);
+          animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-reverse {
+  --fa-animation-direction: reverse;
+}
+
+.fa-pulse,
+.fa-spin-pulse {
+  -webkit-animation-name: fa-spin;
+          animation-name: fa-spin;
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, steps(8));
+          animation-timing-function: var(--fa-animation-timing, steps(8));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-beat,
+.fa-bounce,
+.fa-fade,
+.fa-beat-fade,
+.fa-flip,
+.fa-pulse,
+.fa-shake,
+.fa-spin,
+.fa-spin-pulse {
+    -webkit-animation-delay: -1ms;
+            animation-delay: -1ms;
+    -webkit-animation-duration: 1ms;
+            animation-duration: 1ms;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+    -webkit-transition-duration: 0s;
+            transition-duration: 0s;
+  }
+}
+@-webkit-keyframes fa-beat {
+  0%, 90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  45% {
+    -webkit-transform: scale(var(--fa-beat-scale, 1.25));
+            transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@keyframes fa-beat {
+  0%, 90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  45% {
+    -webkit-transform: scale(var(--fa-beat-scale, 1.25));
+            transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@-webkit-keyframes fa-bounce {
+  0% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    -webkit-transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+            transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    -webkit-transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+            transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    -webkit-transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+            transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    -webkit-transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+            transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes fa-bounce {
+  0% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    -webkit-transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+            transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    -webkit-transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+            transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    -webkit-transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+            transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    -webkit-transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+            transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+}
+@-webkit-keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@-webkit-keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));
+            transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));
+            transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@-webkit-keyframes fa-flip {
+  50% {
+    -webkit-transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+            transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@keyframes fa-flip {
+  50% {
+    -webkit-transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+            transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@-webkit-keyframes fa-shake {
+  0% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  4% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  8%, 24% {
+    -webkit-transform: rotate(-18deg);
+            transform: rotate(-18deg);
+  }
+  12%, 28% {
+    -webkit-transform: rotate(18deg);
+            transform: rotate(18deg);
+  }
+  16% {
+    -webkit-transform: rotate(-22deg);
+            transform: rotate(-22deg);
+  }
+  20% {
+    -webkit-transform: rotate(22deg);
+            transform: rotate(22deg);
+  }
+  32% {
+    -webkit-transform: rotate(-12deg);
+            transform: rotate(-12deg);
+  }
+  36% {
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg);
+  }
+  40%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@keyframes fa-shake {
+  0% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  4% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  8%, 24% {
+    -webkit-transform: rotate(-18deg);
+            transform: rotate(-18deg);
+  }
+  12%, 28% {
+    -webkit-transform: rotate(18deg);
+            transform: rotate(18deg);
+  }
+  16% {
+    -webkit-transform: rotate(-22deg);
+            transform: rotate(-22deg);
+  }
+  20% {
+    -webkit-transform: rotate(22deg);
+            transform: rotate(22deg);
+  }
+  32% {
+    -webkit-transform: rotate(-12deg);
+            transform: rotate(-12deg);
+  }
+  36% {
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg);
+  }
+  40%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
+}
+
+.fa-flip-both,
+.fa-flip-horizontal.fa-flip-vertical {
+  -webkit-transform: scale(-1, -1);
+          transform: scale(-1, -1);
+}
+
+.fa-rotate-by {
+  -webkit-transform: rotate(var(--fa-rotate-angle, none));
+          transform: rotate(var(--fa-rotate-angle, none));
+}
+
+.fa-stack {
+  display: inline-block;
+  vertical-align: middle;
+  height: 2em;
+  position: relative;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: var(--fa-stack-z-index, auto);
+}
+
+.svg-inline--fa.fa-stack-1x {
+  height: 1em;
+  width: 1.25em;
+}
+.svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}
+
+.sr-only,
+.fa-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only-focusable:not(:focus),
+.fa-sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}
+
+.fad.fa-inverse,
+.fa-duotone.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}</style><link rel="icon" sizes="128x128" href="https://abbaco-cdn.nyc3.cdn.digitaloceanspaces.com/abbaco/abbaco-branding-1.0.2/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Plataforma de bonos para para inversores de renta fija. Tu propia herramienta de research para tomar decisiones inteligentes y eficientes.">
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="/manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <!-- Google Tag Manager -->
+  <script type="text/javascript">(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-TZSGLXZ3');</script>
+  <!-- End Google Tag Manager -->
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <title>Mercap Abbaco</title>
+  <script type="module" crossorigin="" src="/assets/index-D1Vtdm5p.js"></script>
+  <link rel="modulepreload" crossorigin="" href="/assets/runtime-4S9nFfJs.js">
+  <link rel="modulepreload" crossorigin="" href="/assets/react-vendor-DqpNoJRv.js">
+  <link rel="modulepreload" crossorigin="" href="/assets/preload-helper-CLcXU_4U.js">
+  <link rel="modulepreload" crossorigin="" href="/assets/useEventTracker-CAELjJGZ.js">
+  <link rel="modulepreload" crossorigin="" href="/assets/useUser-U7Q-J_Ad.js">
+  <link rel="modulepreload" crossorigin="" href="/assets/routesMap-CWwYowL1.js">
+  <link rel="modulepreload" crossorigin="" href="/assets/httpClient-UD2j43ms.js">
+  <link rel="modulepreload" crossorigin="" href="/assets/@react-router-J9Q8c4OP.js">
+  <link rel="modulepreload" crossorigin="" href="/assets/useSubscriptionModal-CtfXYcVZ.js">
+  <link rel="modulepreload" crossorigin="" href="/assets/i18n-5Jdgn5-A.js">
+  <link rel="modulepreload" crossorigin="" href="/assets/LocalStorage-DmnthIxs.js">
+  <link rel="modulepreload" crossorigin="" href="/assets/popperjs-Ce_riGYK.js">
+  <link rel="modulepreload" crossorigin="" href="/assets/bootstrap-BpuSij2r.js">
+  <link rel="modulepreload" crossorigin="" href="/assets/fortawesome-DJGeSY16.js">
+  <link rel="stylesheet" crossorigin="" href="/assets/index-Blm0aYx5.css">
+<link rel="modulepreload" as="script" crossorigin="" href="/assets/Layout-DzGk4uXh.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/middleware-BRHOmTHZ.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/useHelpOffcanvas-XbB8caIO.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/useSidebar-CzjznX9S.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/useDeviceType-CCJdZYQu.js"><link rel="stylesheet" crossorigin="" href="/assets/style-NN-TJmAQ.css"><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/757478473/?random=1783092918173&amp;cv=11&amp;fst=1783092918173&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be66u1v9256551404z89253179566za20gzb9253179566zd9253179566xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=115938466~115938469~119027224~119576881~119576885~119576891~119576895&amp;u_w=1280&amp;u_h=720&amp;url=https%3A%2F%2Fbonds.mercapabbaco.com%2F__%2F&amp;rcb=1&amp;frm=1&amp;tiba=Mercap%20Abbaco&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=1237697990.1783092872&amp;data=event%3Dgtag.config&amp;ept=9&amp;rfmt=3&amp;fmt=4"></script><link rel="modulepreload" as="script" crossorigin="" href="/assets/TopNavigationBar-CxDTLxDO.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/useSearchMode-IkvkDP9t.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/useBondAnalysisHistory-D9JmRMp2.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/userProfileService-BYIh1xzy.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/YieldCurveSearchHighlight-Bi8m0Wtg.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/tradableSecuritiesService-wvk-07Sf.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/yieldCurvesService-CPDq9wCP.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/bondsService-DBDDvCIj.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/Quote-CQOdJlDO.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/index-D1Vtdm5p.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/YieldCurveHit-CYx0uaHe.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/typeSenseService-DRXQOQTh.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/Searchbar-hJMeooTP.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/debounce-BRW7sJud.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/Trans-D6BFJD61.js"><link rel="stylesheet" crossorigin="" href="/assets/Searchbar-C33qig5J.css"><link rel="modulepreload" as="script" crossorigin="" href="/assets/SearchMatchHighlight-DbU6G2IF.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/StylelessButton-Vh7MJQVU.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/IconAlertTriangle-CxG26Sjt.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/createReactComponent-D_IqXOET.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/IconX-BPIzFPD5.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/useChangelog-BYOYJt0J.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/useLocaleFormatter-Bh_PQuVZ.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/CustomTooltip-sdLv6U75.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/useAccess-Bx98bfdj.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/Sidebar-CxHmoylG.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/IconLock-BYyPCGAq.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/IconChartLine-CgseUXh0.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/IconRocket-CSZwN_eI.js"><link rel="stylesheet" crossorigin="" href="/assets/Sidebar-Dxwf0kVu.css"><link rel="modulepreload" as="script" crossorigin="" href="/assets/HomeView-CofQ11lP.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/EmptyChartNotificationWrapper-BkLsOL7T.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/useIsMutating-BIyc0FVx.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/CurvesListItem-p7mB_C2W.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/YieldCurvesInformation-CkYbrgTK.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/IconStarFilled-C54uarYA.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/useRemoveYieldCurveFromFavorites-CRy8XiFJ.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/useYieldCurvesFavorites-BEGWU4Ix.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/useSecurityIRRs-Cw-fA-st.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/historicalDataService-DoAzdEJO.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/PortfolioCardHeader-DIljToPl.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/Currency-D_0qThN6.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/IconTrash-D4W7WPtz.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/TitledCard-BCVPdaK0.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/TradableSecuritiesLinks-BiXCIiWx.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/AwaitingUserInteractionAlert-Cgo4OyYP.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/groupBy-4VCrlEyq.js"><link rel="stylesheet" crossorigin="" href="/assets/HomeView-D0V7XKtB.css"><link rel="modulepreload" as="script" crossorigin="" href="/assets/ArgentinianTopCards-B25jlthT.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/useImplicitExchangeRates-CcWYddUL.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/InvestmentMetric-xPGZxX8i.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/CustomPopover-DYlfmC6E.js"></head>
+
+<body style="background-color:#212529 ;">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZSGLXZ3" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div id="toast-root"><div style="z-index: 9999; pointer-events: none;" class="toast-container bottom-0 end-0 position-fixed m-3"></div></div>
+  <div id="root"><div class="fade-out visible"><div class="layout p-0 m-0 container-fluid"><nav class="top-navigation-bar p-2 gap-3 bg-surface-0 w-100 navbar navbar-expand navbar-light sticky-top"><button type="button" class="border-0 btn btn-none"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-menu-2 text-primary"><path d="M4 6l16 0"></path><path d="M4 12l16 0"></path><path d="M4 18l16 0"></path></svg></button><a class="abbaco-home d-flex justify-content-center" href="/"><img height="35" src="/assets/abbaco-logo-PDjTXpel.png" class=""></a><div class="d-flex flex-row w-100 justify-content-between align-items-center row" style="margin-left: 1rem;"><div id="bond-search" class="searchbar-container col-md-6 col-12"><div id="search-input" class="row"><div style="margin-right: 0px;" class="col-xxl-7 col-md-8 col-9"><div class="form-control input-sm d-flex align-items-center searchbar enabled"><span class="user-select-none"> <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="magnifying-glass" class="svg-inline--fa fa-magnifying-glass fa-fw me-2 text-muted" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg></span><input placeholder="Buscar bonos o curvas (AL30, Soberanos)" autocomplete="off" type="text" class="input-sm border-0 p-0 shadow-none form-control" value=""></div></div><div class="d-flex p-0 justify-content-end justify-content-md-start col-3"><button type="button" disabled="" id="search-button" class="m-0 btn btn-primary">Analizar</button></div></div></div><div id="right-content" class="d-flex justify-content-end align-items-center gap-2 px-4 col-md-6 col-12"><button type="button" aria-label="Changelog - 2 no leídos" style="border: 0px; padding: 0px; cursor: pointer;" class="position-relative changelog-icon-button p-1 bg-transparent border-0 bg-transparent btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="currentColor" stroke="none" class="tabler-icon tabler-icon-bell-filled text-primary"><path d="M14.235 19c.865 0 1.322 1.024 .745 1.668a3.992 3.992 0 0 1 -2.98 1.332a3.992 3.992 0 0 1 -2.98 -1.332c-.552 -.616 -.158 -1.579 .634 -1.661l.11 -.006h4.471z"></path><path d="M12 2c1.358 0 2.506 .903 2.875 2.141l.046 .171l.008 .043a8.013 8.013 0 0 1 4.024 6.069l.028 .287l.019 .289v2.931l.021 .136a3 3 0 0 0 1.143 1.847l.167 .117l.162 .099c.86 .487 .56 1.766 -.377 1.864l-.116 .006h-16c-1.028 0 -1.387 -1.364 -.493 -1.87a3 3 0 0 0 1.472 -2.063l.021 -.143l.001 -2.97a8 8 0 0 1 3.821 -6.454l.248 -.146l.01 -.043a3.003 3.003 0 0 1 2.562 -2.29l.182 -.017l.176 -.004z"></path></svg><span style="font-size: 0.65rem; min-width: 20px;" class="position-absolute changelog-icon-badge d-flex justify-content-center align-items-center py-1 px-2 badge rounded-pill bg-danger">2</span></button><div class="d-flex gap-3 align-items-center"><button type="button" class="border-0 d-flex text-primary p-0 m-0 btn btn-none"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-help "><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path><path d="M12 17l0 .01"></path><path d="M12 13.5a1.5 1.5 0 0 1 1 -1.5a2.6 2.6 0 1 0 -3 -4"></path></svg></button><div class="dropdown p-0 m-0 d-flex justify-content-end  container"><button type="button" class="text-primary toggle border-0 p-0 m-0 btn btn-none"><img height="30" width="30" src="https://s.gravatar.com/avatar/b3354a4ce1345dab83ccc1bc228c1e0d?s=480&amp;r=pg&amp;d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fcy.png" role="button" class="border border-1 border-dark rounded-circle"></button></div></div></div></div></nav><div class="layout-container"><div id="sidebar" class="bg-white rounded sidebar d-flex flex-column false"><div class="flex-column mb-auto pt-2 nav" id="sidebar-top"><a id="section-link" class="section text-primary p-2 m-1 d-flex flex-row justify-content-between rounded bg-primary-overlay nav-link" href="/"><div><div id="section" class="d-flex gap-2 align-items-center justify-content-center"><div id="section-icon" class="p-0 m-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-home "><path d="M5 12l-2 0l9 -9l9 9l-2 0"></path><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"></path></svg></div><p id="section-name" class="p-0 m-0 sidebar-label">Inicio</p></div></div><div class="fs-6" id="section-disabled-icon"></div></a><a id="section-link" class="section text-body-regular p-2 m-1 d-flex flex-row justify-content-between rounded bg-false nav-link" href="/curves"><div><div id="section" class="d-flex gap-2 align-items-center justify-content-center"><div id="section-icon" class="p-0 m-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-chart-line "><path d="M4 19l16 0"></path><path d="M4 15l4 -6l4 2l4 -5l4 4"></path></svg></div><p id="section-name" class="p-0 m-0 sidebar-label">Curvas</p></div></div><div class="fs-6" id="section-disabled-icon"></div></a><a id="section-link" class="section text-body-regular p-2 m-1 d-flex flex-row justify-content-between rounded bg-false nav-link" href="/security-comparison"><div><div id="section" class="d-flex gap-2 align-items-center justify-content-center"><div id="section-icon" class="p-0 m-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-a-b "><path d="M3 16v-5.5a2.5 2.5 0 0 1 5 0v5.5m0 -4h-5"></path><path d="M12 6l0 12"></path><path d="M16 16v-8h3a2 2 0 0 1 0 4h-3m3 0a2 2 0 0 1 0 4h-3"></path></svg></div><p id="section-name" class="p-0 m-0 sidebar-label">Comparar</p></div></div><div class="fs-6" id="section-disabled-icon"></div></a><a id="section-link" class="section text-body-regular p-2 m-1 d-flex flex-row justify-content-between rounded bg-false nav-link" href="/security-position"><div><div id="section" class="d-flex gap-2 align-items-center justify-content-center"><div id="section-icon" class="p-0 m-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-folder-dollar "><path d="M13.5 19h-8.5a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2h4l3 3h7a2 2 0 0 1 2 2v1.5"></path><path d="M21 15h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5"></path><path d="M19 21v1m0 -8v1"></path></svg></div><p id="section-name" class="p-0 m-0 sidebar-label">Mis Portafolios</p></div></div><div class="fs-6" id="section-disabled-icon"></div></a><a id="section-link" class="section text-body-regular p-2 m-1 d-flex flex-row justify-content-between rounded bg-false nav-link" href="/bond-screener"><div><div id="section" class="d-flex gap-2 align-items-center justify-content-center"><div id="section-icon" class="p-0 m-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-table-shortcut "><path d="M3 13v-8a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8"></path><path d="M3 10h18"></path><path d="M10 3v11"></path><path d="M2 22l5 -5"></path><path d="M7 21.5v-4.5h-4.5"></path></svg></div><p id="section-name" class="p-0 m-0 sidebar-label">Screener</p></div></div><div class="fs-6" id="section-disabled-icon"></div></a><a id="section-link" class="section text-body-regular p-2 m-1 d-flex flex-row justify-content-between rounded bg-false nav-link" href="/arbitrage"><div><div id="section" class="d-flex gap-2 align-items-center justify-content-center"><div id="section-icon" class="p-0 m-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-chart-area-line "><path d="M4 19l4 -6l4 2l4 -5l4 4l0 5l-16 0"></path><path d="M4 12l3 -4l4 2l5 -6l4 4"></path></svg></div><p id="section-name" class="p-0 m-0 sidebar-label">Arbitraje</p></div></div><div class="fs-6" id="section-disabled-icon"></div></a><a id="section-link" class="section text-body-regular p-2 m-1 d-flex flex-row justify-content-between rounded bg-false nav-link" href="/sensitivity"><div><div id="section" class="d-flex gap-2 align-items-center justify-content-center"><div id="section-icon" class="p-0 m-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-flask "><path d="M9 3l6 0"></path><path d="M10 9l4 0"></path><path d="M10 3v6l-4 11a.7 .7 0 0 0 .5 1h11a.7 .7 0 0 0 .5 -1l-4 -11v-6"></path></svg></div><p id="section-name" class="p-0 m-0 sidebar-label">Sensibilidad</p></div></div><div class="fs-6" id="section-disabled-icon"></div></a><a id="section-link" class="section text-body-regular p-2 m-1 d-flex flex-row justify-content-between rounded bg-false nav-link" href="/plotter"><div><div id="section" class="d-flex gap-2 align-items-center justify-content-center"><div id="section-icon" class="p-0 m-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-chart-dots "><path d="M3 3v18h18"></path><path d="M9 9m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path><path d="M19 7m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path><path d="M14 15m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path><path d="M10.16 10.62l2.34 2.88"></path><path d="M15.088 13.328l2.837 -4.586"></path></svg></div><p id="section-name" class="p-0 m-0 sidebar-label">Graficador</p></div></div><div class="fs-6" id="section-disabled-icon"></div></a><a id="section-link" class="section text-body-regular p-2 m-1 d-flex flex-row justify-content-between rounded bg-false nav-link" href="/calculator"><div><div id="section" class="d-flex gap-2 align-items-center justify-content-center"><div id="section-icon" class="p-0 m-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-calculator "><path d="M4 3m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path><path d="M8 7m0 1a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1v1a1 1 0 0 1 -1 1h-6a1 1 0 0 1 -1 -1z"></path><path d="M8 14l0 .01"></path><path d="M12 14l0 .01"></path><path d="M16 14l0 .01"></path><path d="M8 17l0 .01"></path><path d="M12 17l0 .01"></path><path d="M16 17l0 .01"></path></svg></div><p id="section-name" class="p-0 m-0 sidebar-label">Calculadora</p></div></div><div class="fs-6" id="section-disabled-icon"></div></a></div><div id="sidebar-bottom" class="px-2 pb-4 d-flex flex-column gap-2"><div id="call-to-action" class="pb-2"></div><p id="app-version" class="p-0 m-0 text-grey">v1.44.1</p></div></div><div class="content false container-fluid"><div class="container-fluid"><div class="mt-3 g-0 row"><div class="col-sm-12"><div class="card"><div class="d-flex flex-column card-body"><div class="d-flex justify-content-between align-items-center mb-2"><span class="h5">Bonos favoritos</span><div class="d-flex flex-row gap-2"><button type="button" class="border btn btn-outline-light"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-chevron-left text-primary"><path d="M15 6l-6 6l6 6"></path></svg></button><button type="button" class="border btn btn-outline-light"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-chevron-right text-primary"><path d="M9 6l6 6l-6 6"></path></svg></button></div></div><div class="w-100 h-100 flex-grow-1 d-flex flex-row gap-3 overflow-auto"><div style="flex: 1 1 0px;"><div class="h-100 d-flex justify-content-start align-items-end text-muted border card"><div class="card-body">9/15</div></div></div><div style="flex: 1 1 0px;"><div class="h-100 d-flex justify-content-start align-items-end text-muted border card"><div class="card-body">10/15</div></div></div><div style="flex: 1 1 0px;"><div class="h-100 d-flex justify-content-start align-items-end text-muted border card"><div class="card-body">11/15</div></div></div><div style="flex: 1 1 0px;"><div class="h-100 d-flex justify-content-start align-items-end text-muted border card"><div class="card-body">12/15</div></div></div></div></div></div></div></div><div class="gy-3 mt-2 row"><div class="col-lg-9"><div class="h-100 card"><div class="card-body"><h6 class="false text-header card-title">Posición valuada</h6><div role="alert" class="fade bg-danger-overlay text-danger-strong border-danger-hover  alert alert-primary show"><div class="h-100 d-flex align-items-center"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="info" class="svg-inline--fa fa-info fa-fw h5 mb-0" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="currentColor" d="M48 80a48 48 0 1 1 96 0A48 48 0 1 1 48 80zM0 224c0-17.7 14.3-32 32-32H96c17.7 0 32 14.3 32 32V448h32c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H64V256H32c-17.7 0-32-14.3-32-32z"></path></svg><div class="vr mx-3"></div><span>No olvide registrar su posición</span></div></div></div></div></div><div class="col-lg-3"><div class="card"><div class="card-body"><h6 class="text-uppercase text-header card-title"><div class="d-flex flex-row justify-content-between"><div>Curvas favoritas</div><a class="text-link text-capitalize" href="/curves">Ver Todas</a></div></h6><ul class="list-group"><li class="d-flex justify-content-between align-items-start border-0 border-bottom list-group-item"><div class="w-100 d-flex justify-content-between"><div class="d-flex flex-column"><a class="text-link" href="/curves/f9c0db3d-9190-4692-9c70-0d7b0eb9e9ee">Argentina - Soberanos - Tasa Fija + CER - ARS</a></div><button type="button" style="border: 0px; padding: 0px;" class="undefined bg-transparent btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" class="tabler-icon tabler-icon-star-filled text-warning"><path d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"></path></svg></button></div></li></ul></div></div></div></div><div class="gy-3 py-3 row"><div class="col-lg-3 col-md-6 col-sm-12"><div class="h-100 card"><div class="card-body"><div class="d-flex justify-content-between align-items-baseline mb-2"><h6 class="text-uppercase text-header mb-0 card-title">USD MEP / CCL</h6><span class="text-muted small">ARS/USD</span></div><table class="mb-0 align-middle table"><thead><tr><th scope="col" class="text-header text-uppercase small fw-bold text-muted">Especie</th><th scope="col" class="text-header text-uppercase small fw-bold text-muted text-end">CCL</th><th scope="col" class="text-header text-uppercase small fw-bold text-muted text-end">MEP</th></tr></thead><tbody><tr><th scope="row" class="fw-bold">AL29</th><td aria-label="CCL AL29"><div class="d-flex flex-column align-items-end"><span class="fw-bold text-nowrap">1.569,92</span></div></td><td aria-label="MEP AL29"><div class="d-flex flex-column align-items-end"><span class="fw-bold text-nowrap">1.525,15</span></div></td></tr><tr><th scope="row" class="fw-bold">AL30</th><td aria-label="CCL AL30"><div class="d-flex flex-column align-items-end"><span class="fw-bold text-nowrap">1.569,94</span></div></td><td aria-label="MEP AL30"><div class="d-flex flex-column align-items-end"><span class="fw-bold text-nowrap">1.525,27</span></div></td></tr><tr><th scope="row" class="fw-bold">AL35</th><td aria-label="CCL AL35"><div class="d-flex flex-column align-items-end"><span class="fw-bold text-nowrap">1.572,67</span></div></td><td aria-label="MEP AL35"><div class="d-flex flex-column align-items-end"><span class="fw-bold text-nowrap">1.526,37</span></div></td></tr><tr><th scope="row" class="fw-bold">AL41</th><td aria-label="CCL AL41"><div class="d-flex flex-column align-items-end"><span class="fw-bold text-nowrap">1.570,59</span></div></td><td aria-label="MEP AL41"><div class="d-flex flex-column align-items-end"><span class="fw-bold text-nowrap">1.524,77</span></div></td></tr></tbody></table></div></div></div><div class="col-lg-3 col-md-6 col-sm-12"><div class="h-100 card"><div class="card-body"><h6 class="text-uppercase text-header mb-2 card-title">Spread Soberano vs UST 4.2% 2032</h6><table class="mb-0 align-middle table"><thead><tr><th scope="col" class="text-header text-uppercase small fw-bold text-muted">Especie</th><th scope="col" class="text-header text-uppercase small fw-bold text-muted text-end">TIR/UST</th><th scope="col" class="text-header text-uppercase small fw-bold text-muted text-end">Spread</th></tr></thead><tbody><tr><th scope="row"><a class="text-link d-inline-flex align-items-center gap-2" href="/arbitrage?firstSecurity=GD35C&amp;secondSecurity=US91282CNF40"><span class="d-flex flex-column lh-sm"><span class="fw-bold fs-6">GD35</span><span class="small fw-bold text-nowrap">vs US-MAY32</span></span></a></th><td aria-label="TIR/UST GD35"><div class="d-flex flex-column align-items-end"><span class="fw-bold text-nowrap">8,84%</span><span class="small text-muted text-nowrap">4,31%</span></div></td><td aria-label="Spread GD35"><div class="d-flex flex-column align-items-end"><span class="fw-bold text-nowrap">+453</span><span class="d-inline-flex align-items-center gap-1 small text-danger-strong"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-trending-down "><path d="M3 7l6 6l4 -4l8 8"></path><path d="M21 10l0 7l-7 0"></path></svg><span>-6 bp</span></span></div></td></tr><tr><th scope="row"><a class="text-link d-inline-flex align-items-center gap-2" href="/arbitrage?firstSecurity=US105756BB58&amp;secondSecurity=US91282CNF40"><span class="d-flex flex-column lh-sm"><span class="fw-bold fs-6">BR-ENE34</span><span class="small fw-bold text-nowrap">vs US-MAY32</span></span></a></th><td aria-label="TIR/UST BR-ENE34"><div class="d-flex flex-column align-items-end"><span class="fw-bold text-nowrap">6,10%</span><span class="small text-muted text-nowrap">4,31%</span></div></td><td aria-label="Spread BR-ENE34"><div class="d-flex flex-column align-items-end"><span class="fw-bold text-nowrap">+179</span><span class="d-inline-flex align-items-center gap-1 small text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-minus "><path d="M5 12l14 0"></path></svg><span>0 bp</span></span></div></td></tr><tr><th scope="row"><a class="text-link d-inline-flex align-items-center gap-2" href="/arbitrage?firstSecurity=US91087BBK52&amp;secondSecurity=US91282CNF40"><span class="d-flex flex-column lh-sm"><span class="fw-bold fs-6">MX-MAR33</span><span class="small fw-bold text-nowrap">vs US-MAY32</span></span></a></th><td aria-label="TIR/UST MX-MAR33"><div class="d-flex flex-column align-items-end"><span class="fw-bold text-nowrap">5,85%</span><span class="small text-muted text-nowrap">4,31%</span></div></td><td aria-label="Spread MX-MAR33"><div class="d-flex flex-column align-items-end"><span class="fw-bold text-nowrap">+153</span><span class="d-inline-flex align-items-center gap-1 small text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-minus "><path d="M5 12l14 0"></path></svg><span>0 bp</span></span></div></td></tr><tr><th scope="row"><a class="text-link d-inline-flex align-items-center gap-2" href="/arbitrage?firstSecurity=US168863DN50&amp;secondSecurity=US91282CNF40"><span class="d-flex flex-column lh-sm"><span class="fw-bold fs-6">CL-ENE32</span><span class="small fw-bold text-nowrap">vs US-MAY32</span></span></a></th><td aria-label="TIR/UST CL-ENE32"><div class="d-flex flex-column align-items-end"><span class="fw-bold text-nowrap">4,89%</span><span class="small text-muted text-nowrap">4,31%</span></div></td><td aria-label="Spread CL-ENE32"><div class="d-flex flex-column align-items-end"><span class="fw-bold text-nowrap">+58</span><span class="d-inline-flex align-items-center gap-1 small text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-minus "><path d="M5 12l14 0"></path></svg><span>0 bp</span></span></div></td></tr><tr><th scope="row"><a class="text-link d-inline-flex align-items-center gap-2" href="/arbitrage?firstSecurity=US195325EF88&amp;secondSecurity=US91282CNF40"><span class="d-flex flex-column lh-sm"><span class="fw-bold fs-6">CO-ABR33</span><span class="small fw-bold text-nowrap">vs US-MAY32</span></span></a></th><td aria-label="TIR/UST CO-ABR33"><div class="d-flex flex-column align-items-end"><span class="fw-bold text-nowrap">6,34%</span><span class="small text-muted text-nowrap">4,31%</span></div></td><td aria-label="Spread CO-ABR33"><div class="d-flex flex-column align-items-end"><span class="fw-bold text-nowrap">+202</span><span class="d-inline-flex align-items-center gap-1 small text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-minus "><path d="M5 12l14 0"></path></svg><span>0 bp</span></span></div></td></tr><tr><th scope="row"><a class="text-link d-inline-flex align-items-center gap-2" href="/arbitrage?firstSecurity=USP75744AM75&amp;secondSecurity=US91282CNF40"><span class="d-flex flex-column lh-sm"><span class="fw-bold fs-6">USP75744AM75</span><span class="small fw-bold text-nowrap">vs US-MAY32</span></span></a></th><td aria-label="TIR/UST USP75744AM75"><div class="d-flex flex-column align-items-end"><span class="fw-bold text-nowrap">5,30%</span><span class="small text-muted text-nowrap">4,31%</span></div></td><td aria-label="Spread USP75744AM75"><div class="d-flex flex-column align-items-end"><span class="fw-bold text-nowrap">+99</span><span class="d-inline-flex align-items-center gap-1 small text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-minus "><path d="M5 12l14 0"></path></svg><span>0 bp</span></span></div></td></tr></tbody></table></div></div></div><div class="col-lg-3 col-md-6 col-sm-12"><div class="h-100 card"><div class="card-body"><h6 class="text-uppercase text-header mb-2 card-title">Tasas e índices</h6><table class="mb-0 align-middle table"><tbody><tr><th colspan="2" class="text-uppercase small fw-bold text-muted border-0 pt-3 pb-1">Tasas</th></tr><tr><td><span>BADLAR</span></td><td class="text-end fw-bold text-nowrap">21,69%</td></tr><tr><td><span>TAMAR</span></td><td class="text-end fw-bold text-nowrap">22,50%</td></tr><tr><td><span>TM20</span></td><td class="text-end fw-bold text-nowrap">22,00%</td></tr></tbody><tbody><tr><th colspan="2" class="text-uppercase small fw-bold text-muted border-0 pt-3 pb-1">Índices</th></tr><tr><td><span>CER</span></td><td class="text-end fw-bold text-nowrap">800,31</td></tr><tr><td><span>UVA</span></td><td class="text-end fw-bold text-nowrap">$ 2.019,65</td></tr></tbody></table></div></div></div><div class="col-lg-3 col-md-6 col-sm-12"><div class="h-100 card"><div class="card-body"><h6 class="text-uppercase text-header card-title">Curvas internacionales</h6><ul class="list-group"><li class="d-flex justify-content-between align-items-start border-0 border-bottom list-group-item"><div class="w-100 d-flex justify-content-between"><div class="d-flex flex-column"><a class="text-link" href="/curves/8217e3c3-7a60-4dc5-a772-856732650b8a">Brasil - Soberanos - Bonos Globales - USD</a></div><button type="button" style="border: 0px; padding: 0px;" class="undefined bg-transparent btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-star text-body"><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path></svg></button></div></li><li class="d-flex justify-content-between align-items-start border-0 border-bottom list-group-item"><div class="w-100 d-flex justify-content-between"><div class="d-flex flex-column"><a class="text-link" href="/curves/577aa710-749c-412f-9cab-7f1ce6379673">Chile - Soberanos - Bonos Globales - USD</a></div><button type="button" style="border: 0px; padding: 0px;" class="undefined bg-transparent btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-star text-body"><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path></svg></button></div></li><li class="d-flex justify-content-between align-items-start border-0 border-bottom list-group-item"><div class="w-100 d-flex justify-content-between"><div class="d-flex flex-column"><a class="text-link" href="/curves/8c2d9de4-5cb3-4f2f-85ad-9aee19f88a8e">Colombia - Soberanos - Bonos Globales - USD</a></div><button type="button" style="border: 0px; padding: 0px;" class="undefined bg-transparent btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-star text-body"><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path></svg></button></div></li><li class="d-flex justify-content-between align-items-start border-0 border-bottom list-group-item"><div class="w-100 d-flex justify-content-between"><div class="d-flex flex-column"><a class="text-link" href="/curves/86a282be-f60d-4cd6-be14-b1fd2871ba9b">Mexico - Soberanos - Bonos Globales - USD</a></div><button type="button" style="border: 0px; padding: 0px;" class="undefined bg-transparent btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-star text-body"><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path></svg></button></div></li><li class="d-flex justify-content-between align-items-start border-0 border-bottom list-group-item"><div class="w-100 d-flex justify-content-between"><div class="d-flex flex-column"><a class="text-link" href="/curves/b0d8c01d-972c-4e1e-97e9-1edcaffb2b20">Paraguay - Soberanos - Bonos Globales - USD</a></div><button type="button" style="border: 0px; padding: 0px;" class="undefined bg-transparent btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-star text-body"><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path></svg></button></div></li><li class="d-flex justify-content-between align-items-start border-0 border-bottom list-group-item"><div class="w-100 d-flex justify-content-between"><div class="d-flex flex-column"><a class="text-link" href="/curves/3e5993cf-64c5-4fa2-ba5b-9fae8bfcd6d5">Estados Unidos - Soberanos - Treasury Notes/Bonds - USD</a></div><button type="button" style="border: 0px; padding: 0px;" class="undefined bg-transparent btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-star text-body"><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path></svg></button></div></li></ul></div></div></div></div><div class="gy-3 row"><div class="col-lg-6"><div class="card"><div class="card-body"><h6 class="text-uppercase text-header card-title">Bonos más analizados</h6><ul class="list-group"><li class="d-flex justify-content-between align-items-start border-0 border-bottom  list-group-item"><a class="text-link" href="/bond-analysis/BYMA/MRCAO">MRCAO - BYMA - ARS </a></li><li class="d-flex justify-content-between align-items-start border-0 border-bottom  list-group-item"><a class="text-link" href="/bond-analysis/BYMA/MRCAD">MRCAD - BYMA - ARS </a></li><li class="d-flex justify-content-between align-items-start border-0 border-bottom  list-group-item"><a class="text-link" href="/bond-analysis/BYMA/YMCJO">YMCJO - BYMA - USD </a></li><li class="d-flex justify-content-between align-items-start border-0 border-bottom  list-group-item"><a class="text-link" href="/bond-analysis/BYMA/AL30">AL30 - BYMA - USD </a></li><li class="d-flex justify-content-between align-items-start border-0 border-bottom  list-group-item"><a class="text-link" href="/bond-analysis/BYMA/YMCHO">YMCHO - BYMA - ARS </a></li></ul></div></div></div><div class="col-lg-6"><div class="card"><div class="card-body"><h6 class="text-uppercase text-header card-title">Arbitrajes más populares</h6><ul class="list-group"><li class="d-flex justify-content-between align-items-start border-0 border-bottom list-group-item"><a class="text-link" href="/arbitrage?firstSecurity=AL30&amp;secondSecurity=GD30">AL30 vs GD30</a></li><li class="d-flex justify-content-between align-items-start border-0 border-bottom list-group-item"><a class="text-link" href="/arbitrage?firstSecurity=TX26&amp;secondSecurity=TX28">TX26 vs TX28</a></li><li class="d-flex justify-content-between align-items-start border-0 border-bottom list-group-item"><a class="text-link" href="/arbitrage?firstSecurity=AL30D&amp;secondSecurity=GD30D">AL30D vs GD30D</a></li><li class="d-flex justify-content-between align-items-start border-0 border-bottom list-group-item"><a class="text-link" href="/arbitrage?firstSecurity=CUAP&amp;secondSecurity=PARP">CUAP vs PARP</a></li><li class="d-flex justify-content-between align-items-start border-0 border-bottom list-group-item"><a class="text-link" href="/arbitrage?firstSecurity=AL29D&amp;secondSecurity=AL30D">AL29D vs AL30D</a></li></ul></div></div></div></div></div></div></div></div></div></div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+<script type="text/javascript" crossorigin="anonymous" src="https://pd.mercapabbaco.com/static/conversations.js?v=1.372.10"></script><script type="text/javascript" crossorigin="anonymous" src="https://pd.mercapabbaco.com/static/surveys.js?v=1.372.10"></script><script type="text/javascript" crossorigin="anonymous" src="https://pd.mercapabbaco.com/array/phc_eaiVO3xMKW1I8fAo8x9XvCGT1RsA6qQ3YeVQN4AFAYe/config.js"></script><script type="text/javascript" crossorigin="anonymous" src="https://pd.mercapabbaco.com/static/posthog-recorder.js?v=1.372.10"></script><script type="text/javascript" crossorigin="anonymous" src="https://pd.mercapabbaco.com/static/dead-clicks-autocapture.js?v=1.372.10"></script><script type="text/javascript" crossorigin="anonymous" src="https://pd.mercapabbaco.com/static/exception-autocapture.js?v=1.372.10"></script><script type="text/javascript" crossorigin="anonymous" src="https://pd.mercapabbaco.com/static/web-vitals.js?v=1.372.10"></script><script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;cd05c71ae0ab4f958d6cf7bb5d3a4778&quot;,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+
+</body></html>
