@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 3,
-    "passes": 3,
+    "passes": 2,
     "pending": 0,
-    "failures": 0,
-    "start": "2026-07-03T19:53:40.863Z",
-    "end": "2026-07-03T19:54:44.782Z",
-    "duration": 63919,
+    "failures": 1,
+    "start": "2026-07-04T18:18:33.213Z",
+    "end": "2026-07-04T18:19:33.253Z",
+    "duration": 60040,
     "testsRegistered": 3,
-    "passPercent": 100,
+    "passPercent": 66.66666666666666,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "1258c7fc-a4a7-4369-9c2c-c1d2575fd588",
+      "uuid": "c017c0b5-12e3-46d2-887b-1f58753a1369",
       "title": "",
       "fullFile": "build/production/argentina/cleaner/cleaner.cy.js",
       "file": "build/production/argentina/cleaner/cleaner.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "f8942d57-8fdf-4fbb-b4ef-f2a95641bfaf",
+          "uuid": "c4338f57-100f-4ae9-ad73-8eac042104cc",
           "title": "Cleaner",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Eliminar todos los bonos favoritos en el Home",
               "fullTitle": "Cleaner Eliminar todos los bonos favoritos en el Home",
               "timedOut": null,
-              "duration": 55703,
+              "duration": 28635,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION);\ncy.pageIsLoaded();\n// El ambiente de testing/staging no suele tener todos los cuadros del home, para usar el cleaner en staging hay que comentar validacionesHome\ncy.validacionesHome();\ncy.cleanFavoritosHome(bonos);",
               "err": {},
-              "uuid": "f63b1bd9-7601-4e41-a0b6-85c37e6bbaf8",
-              "parentUUID": "f8942d57-8fdf-4fbb-b4ef-f2a95641bfaf",
+              "uuid": "0e091b4e-6ce1-49b1-b06f-d605445363ce",
+              "parentUUID": "c4338f57-100f-4ae9-ad73-8eac042104cc",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Eliminar los portafolios creados",
               "fullTitle": "Cleaner Eliminar los portafolios creados",
               "timedOut": null,
-              "duration": 2743,
+              "duration": 4292,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/security-position`);\ncy.pageIsLoaded();\n_pages_portafolioPage__WEBPACK_IMPORTED_MODULE_1__.portafolio.cleanPortfoliosHome();",
               "err": {},
-              "uuid": "f9596483-a654-4cbf-b7bd-f0c1a56203cd",
-              "parentUUID": "f8942d57-8fdf-4fbb-b4ef-f2a95641bfaf",
+              "uuid": "c9629539-4935-465a-9703-041c8e5c26e8",
+              "parentUUID": "c4338f57-100f-4ae9-ad73-8eac042104cc",
               "isHook": false,
               "skipped": false
             },
@@ -74,31 +74,36 @@
               "title": "Eliminar todas las curvas favoritas",
               "fullTitle": "Cleaner Eliminar todas las curvas favoritas",
               "timedOut": null,
-              "duration": 2036,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
+              "duration": 10528,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/curves`);\ncy.pageIsLoaded();\ncy.get('input[class=\"search-input form-control form-control-md\"]').should('be.visible');\ncy.get('ul.list-group').should('be.visible');\ncy.cleanFavoritosCurvas(CURVAS_FAVORITAS);",
-              "err": {},
-              "uuid": "707663f2-4102-4b6c-8708-5372f0dd12c5",
-              "parentUUID": "f8942d57-8fdf-4fbb-b4ef-f2a95641bfaf",
+              "err": {
+                "message": "CypressError: Timed out retrying after 5000ms: `cy.wait()` timed out waiting `5000ms` for the 1st request to the route: `removeFavoriteCurve`. No request ever occurred.\n\nhttps://on.cypress.io/wait",
+                "estack": "CypressError: Timed out retrying after 5000ms: `cy.wait()` timed out waiting `5000ms` for the 1st request to the route: `removeFavoriteCurve`. No request ever occurred.\n\nhttps://on.cypress.io/wait\nat cypressErr (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:78225:18)\nat errByPath (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:78293:10)\nat checkForXhr (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:138654:84)\nat __webpack_modules__</__WEBPACK_DEFAULT_EXPORT__/waitString/checkForXhr (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:138679:28)\nat tryCatcher (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1777:23)\nat __webpack_modules__</module.exports/Promise.try (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:4285:29)\nat whenStable (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:151746:62)\nat __webpack_modules__</create/retry (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:151687:14)\nat tryCatcher (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1777:23)\nat __webpack_modules__</module.exports/Promise.prototype._settlePromiseFromHandler (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1489:31)\nat __webpack_modules__</module.exports/Promise.prototype._settlePromise (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1546:18)\nat __webpack_modules__</module.exports/Promise.prototype._settlePromise0 (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1591:10)\nat __webpack_modules__</module.exports/Promise.prototype._settlePromises (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1671:18)\nat __webpack_modules__</module.exports/Promise.prototype._fulfill (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1615:18)\nat __webpack_modules__</module.exports/Promise.delay/handle< (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:5420:46)",
+                "diff": null
+              },
+              "uuid": "e1fcdcd2-0b3a-471e-a1f0-ad11dae9440e",
+              "parentUUID": "c4338f57-100f-4ae9-ad73-8eac042104cc",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "f63b1bd9-7601-4e41-a0b6-85c37e6bbaf8",
-            "f9596483-a654-4cbf-b7bd-f0c1a56203cd",
-            "707663f2-4102-4b6c-8708-5372f0dd12c5"
+            "0e091b4e-6ce1-49b1-b06f-d605445363ce",
+            "c9629539-4935-465a-9703-041c8e5c26e8"
           ],
-          "failures": [],
+          "failures": [
+            "e1fcdcd2-0b3a-471e-a1f0-ad11dae9440e"
+          ],
           "pending": [],
           "skipped": [],
-          "duration": 60482,
+          "duration": 43455,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
