@@ -1,0 +1,130 @@
+{
+  "hash": "cc8dab51817cf712229a6363f07ce24872883f220ad356387a19ba30370b8ccd",
+  "ai_model": "gemini-2.5-flash",
+  "conclusions": {
+    "estado_general": "atencion",
+    "resumen_ejecutivo": "La versión v1.44.2 de Abbaco muestra un estado de atención debido a una degradación del 20.7% en la sección 'Mis portafolios' y una tendencia sostenida de rendimiento decreciente en 6 versiones. Además, la acción 'Simular inversiones de la especie AL30' en 'Calculadora' es persistentemente lenta (95.19s). Se observan mejoras significativas en 'Comparar' (+70.3% vs. versión anterior) y 'Screener' (+65.8% vs. histórico), pero también saltos abruptos en acciones críticas.",
+    "escalar": {
+      "titulo": "Degradación sostenida y acciones persistentemente lentas",
+      "detalle": "La sección 'Mis portafolios' ha degradado un 20.7% vs. histórico y muestra una tendencia negativa en 6 versiones. La acción 'Simular inversiones de la especie AL30' en 'Calculadora' es persistentemente lenta, con P95 de 95.19s y 4 de 5 versiones sobre el umbral."
+    },
+    "investigar": {
+      "titulo": "Saltos abruptos en acciones críticas de Curvas y Comparar",
+      "detalle": "La acción 'Ingreso en la pestaña Análisis online de la curva de: Soberanos - Tasa Fija + CE' en 'Curvas' sufrió un salto del 640.7% (de 3.98s a 29.48s) y fue discontinuada. 'Realizar comparativa entre las especies AL30 y TX28' en 'Comparar' saltó un 305.9% (de 14.88s a 60.4s)."
+    },
+    "optimizar": {
+      "titulo": "Optimizar la simulación de inversiones en Calculadora",
+      "detalle": "La acción 'Simular inversiones de la especie AL30' en 'Calculadora' es la más lenta con 95.19s y un historial de lentitud persistente, representando una gran oportunidad de mejora en la experiencia de usuario."
+    },
+    "hallazgos": [
+      {
+        "tipo": "alerta",
+        "seccion": "Curvas",
+        "descripcion": "La acción 'Ingreso en la pestaña Análisis online de la curva de: Soberanos - Tasa Fija + CE' fue discontinuada tras un salto abrupto de rendimiento.",
+        "evidencia": "P95 de 3.98s a 29.48s (+640.7%) en v1.43.3, luego discontinuada."
+      },
+      {
+        "tipo": "alerta",
+        "seccion": "Comparar",
+        "descripcion": "La acción 'Realizar comparativa entre las especies AL30 y TX28' sufrió un salto abrupto de rendimiento entre versiones.",
+        "evidencia": "P95 pasó de 14.88s a 60.4s (+305.9%) entre v1.43.3 y v1.44.1."
+      },
+      {
+        "tipo": "alerta",
+        "seccion": "Calculadora",
+        "descripcion": "La acción 'Simular inversiones de la especie AL30' es persistentemente lenta y supera el umbral de alerta en la mayoría de las versiones.",
+        "evidencia": "4 de 5 versiones sobre el umbral, con un P95 actual de 95.19s."
+      },
+      {
+        "tipo": "alerta",
+        "seccion": "Mis portafolios",
+        "descripcion": "La sección 'Mis portafolios' muestra una degradación sostenida en el tiempo y un rendimiento más lento que su histórico.",
+        "evidencia": "Degradación sostenida en 6 versiones (de 6.91s a 9.28s) y -20.7% vs. histórico (de 7.65s a 9.23s)."
+      },
+      {
+        "tipo": "mejora",
+        "seccion": "Comparar",
+        "descripcion": "La sección 'Comparar' ha mejorado significativamente su rendimiento respecto a la versión anterior.",
+        "evidencia": "P95 mejoró de 54.58s a 16.19s (+70.3%) entre v1.44.1 y v1.44.2."
+      },
+      {
+        "tipo": "mejora",
+        "seccion": "Analizar",
+        "descripcion": "La sección 'Analizar' ha mostrado una mejora notable en su rendimiento respecto a la versión anterior.",
+        "evidencia": "P95 mejoró de 18.9s a 13.29s (+29.7%) entre v1.44.1 y v1.44.2."
+      },
+      {
+        "tipo": "mejora",
+        "seccion": "Screener",
+        "descripcion": "La sección 'Screener' ha experimentado una mejora sustancial en su rendimiento general.",
+        "evidencia": "P95 mejoró de 11.41s a 3.9s (+65.8%) vs. histórico."
+      }
+    ],
+    "causa_raiz": [
+      {
+        "seccion": "Mis portafolios",
+        "hipotesis": [
+          "Podría deberse a un aumento en la complejidad o volumen de datos de los portfolios que se cargan y renderizan.",
+          "Revisar si hay ineficiencias en las consultas a la base de datos o APIs para obtener la información de los portfolios.",
+          "Posibles cuellos de botella en el procesamiento de datos o cálculos de métricas al cargar la sección."
+        ]
+      },
+      {
+        "seccion": "Comparar",
+        "hipotesis": [
+          "El salto abrupto en la acción 'Realizar comparativa entre las especies AL30 y TX28' podría indicar un problema en el servicio de comparación de especies o en la cantidad de datos procesados.",
+          "Revisar si hubo cambios recientes en la lógica de comparación o en las fuentes de datos para estas especies específicas.",
+          "Posibles problemas de rendimiento en el backend al ejecutar la lógica de comparación o al consultar datos históricos."
+        ]
+      },
+      {
+        "seccion": "Curvas",
+        "hipotesis": [
+          "El salto abrupto en la acción 'Ingreso en la pestaña Análisis online de la curva de: Soberanos - Tasa Fija + CE' sugiere un problema específico de carga o procesamiento de datos para esa curva.",
+          "Revisar la configuración y el origen de datos de la curva afectada, ya que fue discontinuada tras el incidente.",
+          "Posibles errores en la integración con servicios externos o en la lógica de visualización de datos complejos para esa pestaña."
+        ]
+      },
+      {
+        "seccion": "Calculadora",
+        "hipotesis": [
+          "La lentitud crónica de 'Simular inversiones de la especie AL30' podría deberse a la complejidad del modelo de simulación o a la cantidad de iteraciones requeridas.",
+          "Revisar la eficiencia del algoritmo de simulación y la infraestructura que lo soporta.",
+          "Considerar la optimización de las consultas de datos de entrada para la simulación o la implementación de caching."
+        ]
+      }
+    ],
+    "recomendaciones": [
+      {
+        "prioridad": "P1",
+        "accion": "Investigar y optimizar la acción 'Simular inversiones de la especie AL30' para reducir su tiempo de respuesta.",
+        "seccion": "Calculadora",
+        "evidencia": "P95 actual de 95.19s, sobre el umbral en 4 de 5 versiones."
+      },
+      {
+        "prioridad": "P1",
+        "accion": "Realizar un análisis exhaustivo de la sección 'Mis portafolios' para identificar la causa de la degradación sostenida.",
+        "seccion": "Mis portafolios",
+        "evidencia": "Degradación del 20.7% vs. histórico y tendencia negativa en 6 versiones consecutivas."
+      },
+      {
+        "prioridad": "P1",
+        "accion": "Investigar la causa raíz del salto abrupto en la acción 'Realizar comparativa entre las especies AL30 y TX28'.",
+        "seccion": "Comparar",
+        "evidencia": "Salto del 305.9% (de 14.88s a 60.4s) entre v1.43.3 y v1.44.1."
+      },
+      {
+        "prioridad": "P2",
+        "accion": "Analizar la acción 'Ingreso en la pestaña Análisis online de la curva de: Soberanos - Tasa Fija + CE' para entender el salto abrupto que llevó a su discontinuación.",
+        "seccion": "Curvas",
+        "evidencia": "P95 de 29.48s en v1.43.3 tras un salto del 640.7%."
+      },
+      {
+        "prioridad": "P3",
+        "accion": "Documentar y replicar las estrategias que llevaron a las mejoras en 'Screener' y 'Analizar' para aplicarlas en otras secciones.",
+        "seccion": "General",
+        "evidencia": "Screener mejoró 65.8% vs. histórico y Analizar mejoró 29.7% vs. versión anterior."
+      }
+    ]
+  }
+}
