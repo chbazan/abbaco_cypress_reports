@@ -1,101 +1,107 @@
 {
-  "hash": "e9e2667f461433fc0e06e1afe58f328ab65d7b99b178b5a7dfe9b6d82c529f9b",
-  "ai_model": "gemini-2.5-pro",
+  "hash": "1004e7274fa9b33ee317d76184921870065cf7bdc1f8138f1f3ec009a006feab",
+  "ai_model": "gemini-2.5-flash",
   "conclusions": {
     "estado_general": "atencion",
-    "resumen_ejecutivo": "La versión v1.44.3 muestra una mejora generalizada, con 8 de 9 secciones optimizadas frente a su histórico. Sin embargo, la sección 'Calculadora' requiere atención al superar el umbral de rendimiento con un P95 de 61.82s, a pesar de haber mejorado un 37.2% respecto a su propia línea base.",
+    "resumen_ejecutivo": "La versión actual de Abbaco presenta un estado de 'atención' debido a una degradación significativa en la sección 'Curvas' (-59.1% vs histórico) y la persistencia de la sección 'Calculadora' por encima del umbral de rendimiento (P95 de 83.63s). A pesar de esto, se observan mejoras notables en secciones como 'Screener' (+62.8%) y 'Comparar' (+25.6% vs versión anterior).",
     "escalar": {
-      "titulo": "Acción 'Simular inversiones AL30' es crónicamente lenta (5/5 versiones)",
-      "detalle": "La acción 'Simular inversiones de la especie AL30' en Calculadora es persistentemente lenta, superando el umbral de alerta en 5 de las últimas 5 versiones, con un P95 actual de 76.47s."
+      "titulo": "Degradación crítica en Curvas y lentitud crónica en Calculadora",
+      "detalle": "La sección 'Curvas' sufrió una degradación del 59.1% vs histórico, con un P95 actual de 45.07s, y muestra una tendencia sostenida de degradación en 3 versiones. Además, la acción 'Simular inversiones de la especie AL30' en 'Calculadora' es persistentemente lenta, superando el umbral en 5 de 5 versiones con un P95 actual de 89.49s."
     },
     "investigar": {
-      "titulo": "Regresión puntual en 'Curvas' pese a mejora general de la sección",
-      "detalle": "Investigar por qué la acción 'Ingreso a la curva Corporativos - ONs TAMAR - ARS' se degradó un 111.69% (de 5.97s a 12.64s) mientras la sección mejoraba un 32.8% vs la versión anterior."
+      "titulo": "Salto abrupto en la carga de curvas de bonos globales",
+      "detalle": "La acción 'Ingreso a la curva Colombia - Soberanos - Bonos Globales - USD' en la sección 'Curvas' experimentó un salto abrupto del 102.1% en la última versión (v1.44.3), pasando de 24.7s a 49.91s, lo que contribuye a la degradación general de la sección."
     },
     "optimizar": {
-      "titulo": "Optimizar la sección 'Calculadora' para bajar su P95 de 61.82s",
-      "detalle": "La sección 'Calculadora' es la única que supera el umbral de rendimiento (61.82s). La acción 'Simular inversiones de la especie AL30' (76.47s) es el principal contribuyente y una oportunidad clara de mejora."
+      "titulo": "Mejorar la performance de simulaciones complejas en Calculadora",
+      "detalle": "La sección 'Calculadora' es la más lenta con un P95 de 83.63s, impulsada principalmente por la acción 'Simular inversiones de la especie AL30' que es persistentemente lenta y representa la mayor oportunidad de mejora para la experiencia del usuario."
     },
     "hallazgos": [
       {
         "tipo": "alerta",
-        "seccion": "Calculadora",
-        "descripcion": "La acción 'Simular inversiones de la especie AL30' es crónicamente lenta, superando el umbral en 5 de 5 versiones medidas.",
-        "evidencia": "P95 actual de la acción: 76.47s. P95 de la sección: 61.82s."
-      },
-      {
-        "tipo": "mejora",
-        "seccion": "Screener",
-        "descripcion": "Recuperación significativa respecto a la versión anterior y mejora histórica notable.",
-        "evidencia": "P95 mejoró de 3.9s a 2.79s (+28.4%) vs v1.44.2 y de 9.62s a 2.79s (+71%) vs histórico."
-      },
-      {
-        "tipo": "mejora",
-        "seccion": "Comparar",
-        "descripcion": "Recuperación importante del rendimiento respecto a la versión anterior.",
-        "evidencia": "P95 mejoró de 16.19s a 10.69s (+34%)."
-      },
-      {
-        "tipo": "mejora",
         "seccion": "Curvas",
-        "descripcion": "Fuerte recuperación de la sección, con 8 de 17 acciones mejorando más de un 20%.",
-        "evidencia": "P95 mejoró de 26.87s a 18.07s (+32.8%). Mejora destacada: 'Ingreso a la curva Paraguay' (-40.47%)."
+        "descripcion": "La sección muestra una degradación sostenida en 3 versiones y un salto abrupto en una acción clave.",
+        "evidencia": "P95 actual 45.07s (-59.1% vs histórico). La acción 'Ingreso a la curva Colombia - Soberanos - Bonos Globales - USD' pasó de 24.7s a 49.91s (+102.1%) en v1.44.3."
       },
       {
-        "tipo": "mejora",
-        "seccion": "Graficador",
-        "descripcion": "Mejora de rendimiento consistente respecto a la versión anterior.",
-        "evidencia": "P95 mejoró de 8.16s a 6.21s (+23.9%)."
-      },
-      {
-        "tipo": "mejora",
-        "seccion": "Mis portafolios",
-        "descripcion": "Optimización drástica en la funcionalidad de eliminación de activos.",
-        "evidencia": "La acción 'Eliminar todas las especies del portafolio' mejoró su P95 de 5.94s a 0.19s (+96.8%)."
+        "tipo": "alerta",
+        "seccion": "Calculadora",
+        "descripcion": "La sección supera el umbral de rendimiento y una acción crítica es persistentemente lenta.",
+        "evidencia": "P95 actual 83.63s (sobre umbral). La acción 'Simular inversiones de la especie AL30' superó el umbral en 5 de 5 versiones, con un P95 actual de 89.49s."
       },
       {
         "tipo": "degradacion",
         "seccion": "Sensibilidad",
-        "descripcion": "Regresión en el tiempo de carga del módulo de Sensibilidad.",
-        "evidencia": "La acción 'Ingresar al menú Sensibilidad' empeoró su P95 de 0.97s a 2.05s (-111.2%) vs histórico."
+        "descripcion": "La sección 'Sensibilidad' muestra una tendencia sostenida de degradación en las últimas versiones.",
+        "evidencia": "El P95 de la sección aumentó de 7.64s a 8.7s en 3 versiones consecutivas."
+      },
+      {
+        "tipo": "mejora",
+        "seccion": "Comparar",
+        "descripcion": "La sección 'Comparar' ha experimentado una mejora significativa respecto a la versión anterior.",
+        "evidencia": "El P95 mejoró de 16.19s a 12.04s (+25.6%) entre v1.44.2 y v1.44.3."
+      },
+      {
+        "tipo": "mejora",
+        "seccion": "Graficador",
+        "descripcion": "La sección 'Graficador' muestra una mejora notable en su rendimiento reciente.",
+        "evidencia": "El P95 mejoró de 8.16s a 5.85s (+28.3%) entre v1.44.2 y v1.44.3."
+      },
+      {
+        "tipo": "mejora",
+        "seccion": "Screener",
+        "descripcion": "La sección 'Screener' ha logrado una mejora sustancial en su rendimiento histórico.",
+        "evidencia": "El P95 mejoró de 9.62s a 3.57s (+62.8%) vs histórico."
+      },
+      {
+        "tipo": "mejora",
+        "seccion": "Analizar",
+        "descripcion": "La sección 'Analizar' muestra una mejora general en su rendimiento.",
+        "evidencia": "El P95 mejoró de 18.79s a 13.55s (+27.9%) vs histórico."
       }
     ],
     "causa_raiz": [
       {
-        "seccion": "Calculadora",
+        "seccion": "Curvas",
         "hipotesis": [
-          "El motor de cálculo para la simulación de bonos podría ser ineficiente, especialmente para activos complejos como AL30.",
-          "La obtención de datos de mercado históricos necesarios para la simulación podría estar generando cuellos de botella en la base de datos o en servicios externos.",
-          "Podría haber un problema de renderizado en el frontend al mostrar los resultados de la simulación, especialmente si se generan gráficos o tablas muy grandes."
+          "Aumento en la complejidad o volumen de datos de bonos globales a procesar y renderizar en las curvas.",
+          "Cambios recientes en las APIs de backend que alimentan las curvas, introduciendo latencia o ineficiencias en la recuperación de datos.",
+          "Ineficiencias en el procesamiento o filtrado de datos en el frontend al cargar curvas específicas, especialmente para regiones con muchos bonos."
         ]
       },
       {
-        "seccion": "Sensibilidad",
+        "seccion": "Calculadora",
         "hipotesis": [
-          "La carga inicial de datos para el módulo podría haber aumentado, quizás por un cambio en los datos por defecto o un nuevo componente que se inicializa.",
-          "Un cambio en una librería de UI o un componente compartido podría haber introducido una regresión que afecta la transición a esta vista.",
-          "Revisar si se agregó una nueva llamada a una API en el momento de la carga del módulo que no existía en versiones anteriores."
+          "Cálculos financieros complejos o iterativos que no están optimizados para grandes volúmenes de datos o escenarios de simulación.",
+          "Dependencia de servicios externos lentos para obtener cotizaciones o parámetros de simulación en tiempo real.",
+          "Problemas de rendimiento en la UI al actualizar o renderizar los resultados de simulaciones complejas, causando bloqueos."
         ]
       }
     ],
     "recomendaciones": [
       {
         "prioridad": "P1",
-        "accion": "Priorizar la optimización de la acción 'Simular inversiones de la especie AL30' en la sección Calculadora.",
+        "accion": "Investigar y optimizar la acción 'Simular inversiones de la especie AL30'.",
         "seccion": "Calculadora",
-        "evidencia": "Ha superado el umbral de rendimiento en 5 de las últimas 5 versiones medidas (P95 actual: 76.47s)."
+        "evidencia": "Es persistentemente lenta (5 de 5 versiones sobre umbral) y tiene un P95 actual de 89.49s."
+      },
+      {
+        "prioridad": "P1",
+        "accion": "Realizar un análisis de causa raíz exhaustivo para la sección 'Curvas'.",
+        "seccion": "Curvas",
+        "evidencia": "Degradación del 59.1% vs histórico, tendencia sostenida en 3 versiones, y un salto abrupto del 102.1% en la acción 'Ingreso a la curva Colombia - Soberanos - Bonos Globales - USD'."
       },
       {
         "prioridad": "P2",
-        "accion": "Investigar y revertir la regresión en la acción 'Ingresar al menú Sensibilidad'.",
+        "accion": "Revisar la acción 'Ingresar al menú Sensibilidad' y la sección 'Sensibilidad' en general.",
         "seccion": "Sensibilidad",
-        "evidencia": "El tiempo de carga empeoró de 0.97s (histórico) a 2.05s (+111.2%)."
+        "evidencia": "La sección muestra una tendencia sostenida de degradación en 3 versiones, y la acción específica degradó un 112.2% vs versión anterior."
       },
       {
         "prioridad": "P3",
-        "accion": "Analizar las optimizaciones en 'Screener' y 'Curvas' para replicar las mejoras en otras secciones.",
+        "accion": "Analizar las mejoras en 'Screener', 'Comparar' y 'Graficador' para identificar patrones de optimización aplicables a otras secciones.",
         "seccion": "General",
-        "evidencia": "Mejoras del 71% en Screener y 36.2% en Curvas vs. histórico demuestran optimizaciones exitosas."
+        "evidencia": "'Screener' mejoró 62.8% vs histórico, 'Comparar' 25.6% y 'Graficador' 28.3% vs versión anterior."
       }
     ]
   }
