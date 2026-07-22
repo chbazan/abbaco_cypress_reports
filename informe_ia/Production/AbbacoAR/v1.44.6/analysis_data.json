@@ -1,0 +1,897 @@
+{
+  "input": {
+    "meta": {
+      "ambiente": "Production",
+      "cliente": "AbbacoAR",
+      "version": "v1.44.6",
+      "version_anterior": "v1.44.5",
+      "timestamp_informe": "2026-07-22T14:45:52-03:00",
+      "muestras": 1
+    },
+    "resumen": {
+      "total_secciones": 9,
+      "total_acciones": 70,
+      "secciones_con_mejora": 6,
+      "secciones_con_degradacion": 2,
+      "secciones_con_alerta_15pct": 2,
+      "ux_health_score": 74,
+      "secciones_en_sla_critico": 0,
+      "secciones_sobre_umbral": 1
+    },
+    "secciones": [
+      {
+        "seccion": "Analizar",
+        "p95_actual_s": 22.67,
+        "p95_historico_s": 16.47,
+        "pct_mejora": -37.6,
+        "estado": "degradacion",
+        "p50_s": 4.89,
+        "ratio_p95_p50": 4.64,
+        "sla": {
+          "color": "#27ae60",
+          "bg": "#eafaf1",
+          "label": "Dentro de SLA",
+          "icon": "🟢"
+        }
+      },
+      {
+        "seccion": "Arbitraje",
+        "p95_actual_s": 10.95,
+        "p95_historico_s": 12.25,
+        "pct_mejora": 10.6,
+        "estado": "mejora",
+        "p50_s": 10.95,
+        "ratio_p95_p50": 1.0,
+        "sla": {
+          "color": "#27ae60",
+          "bg": "#eafaf1",
+          "label": "Dentro de SLA",
+          "icon": "🟢"
+        }
+      },
+      {
+        "seccion": "Calculadora",
+        "p95_actual_s": 75.36,
+        "p95_historico_s": 91.81,
+        "pct_mejora": 17.9,
+        "estado": "mejora",
+        "p50_s": 3.38,
+        "ratio_p95_p50": 22.3,
+        "sla": {
+          "color": "#e67e22",
+          "bg": "#fef5e7",
+          "label": "Sobre umbral",
+          "icon": "🟡"
+        }
+      },
+      {
+        "seccion": "Comparar",
+        "p95_actual_s": 12.52,
+        "p95_historico_s": 21.45,
+        "pct_mejora": 41.6,
+        "estado": "mejora",
+        "p50_s": 3.28,
+        "ratio_p95_p50": 3.82,
+        "sla": {
+          "color": "#27ae60",
+          "bg": "#eafaf1",
+          "label": "Dentro de SLA",
+          "icon": "🟢"
+        }
+      },
+      {
+        "seccion": "Curvas",
+        "p95_actual_s": 51.44,
+        "p95_historico_s": 32.83,
+        "pct_mejora": -56.7,
+        "estado": "degradacion",
+        "p50_s": 1.91,
+        "ratio_p95_p50": 26.93,
+        "sla": {
+          "color": "#27ae60",
+          "bg": "#eafaf1",
+          "label": "Dentro de SLA",
+          "icon": "🟢"
+        }
+      },
+      {
+        "seccion": "Graficador",
+        "p95_actual_s": 7.23,
+        "p95_historico_s": 8.41,
+        "pct_mejora": 14.0,
+        "estado": "mejora",
+        "p50_s": 3.83,
+        "ratio_p95_p50": 1.89,
+        "sla": {
+          "color": "#27ae60",
+          "bg": "#eafaf1",
+          "label": "Dentro de SLA",
+          "icon": "🟢"
+        }
+      },
+      {
+        "seccion": "Mis portafolios",
+        "p95_actual_s": 8.97,
+        "p95_historico_s": 9.07,
+        "pct_mejora": 1.2,
+        "estado": "estable",
+        "p50_s": 3.23,
+        "ratio_p95_p50": 2.78,
+        "sla": {
+          "color": "#27ae60",
+          "bg": "#eafaf1",
+          "label": "Dentro de SLA",
+          "icon": "🟢"
+        }
+      },
+      {
+        "seccion": "Screener",
+        "p95_actual_s": 3.68,
+        "p95_historico_s": 8.07,
+        "pct_mejora": 54.4,
+        "estado": "mejora",
+        "p50_s": 3.68,
+        "ratio_p95_p50": 1.0,
+        "sla": {
+          "color": "#27ae60",
+          "bg": "#eafaf1",
+          "label": "Dentro de SLA",
+          "icon": "🟢"
+        }
+      },
+      {
+        "seccion": "Sensibilidad",
+        "p95_actual_s": 6.57,
+        "p95_historico_s": 8.46,
+        "pct_mejora": 22.3,
+        "estado": "mejora",
+        "p50_s": 0.8,
+        "ratio_p95_p50": 8.21,
+        "sla": {
+          "color": "#27ae60",
+          "bg": "#eafaf1",
+          "label": "Dentro de SLA",
+          "icon": "🟢"
+        }
+      }
+    ],
+    "alertas": [
+      {
+        "seccion": "Analizar",
+        "pct_degradacion": -37.6,
+        "p95_actual_s": 22.67
+      },
+      {
+        "seccion": "Curvas",
+        "pct_degradacion": -56.7,
+        "p95_actual_s": 51.44
+      }
+    ],
+    "top_acciones_lentas": [
+      {
+        "descripcion": "Simular inversiones de la especie AL30",
+        "seccion": "Calculadora",
+        "p95_actual_s": 93.18,
+        "p95_historico_s": 96.92,
+        "pct_mejora": 3.9
+      },
+      {
+        "descripcion": "Ingreso a la curva Colombia - Soberanos - Bonos Globales - USD",
+        "seccion": "Curvas",
+        "p95_actual_s": 63.29,
+        "p95_historico_s": 41.23,
+        "pct_mejora": -53.5
+      },
+      {
+        "descripcion": "Ingresar al Home",
+        "seccion": "Analizar",
+        "p95_actual_s": 54.77,
+        "p95_historico_s": 37.49,
+        "pct_mejora": -46.1
+      },
+      {
+        "descripcion": "Ingreso a la curva Mexico - Soberanos - Bonos Globales - USD",
+        "seccion": "Curvas",
+        "p95_actual_s": 48.48,
+        "p95_historico_s": 56.27,
+        "pct_mejora": 13.8
+      },
+      {
+        "descripcion": "Ingreso a la curva Paraguay - Soberanos - Bonos Globales - USD",
+        "seccion": "Curvas",
+        "p95_actual_s": 23.27,
+        "p95_historico_s": 15.39,
+        "pct_mejora": -51.1
+      }
+    ],
+    "top_acciones_rapidas": [
+      {
+        "descripcion": "Ingreso a la pestaña \"BCRA\"",
+        "seccion": "Curvas",
+        "p95_actual_s": 0.17,
+        "p95_historico_s": 0.18,
+        "pct_mejora": 5.2
+      },
+      {
+        "descripcion": "Ingreso a la pestaña \"Corporativos\"",
+        "seccion": "Curvas",
+        "p95_actual_s": 0.18,
+        "p95_historico_s": 0.25,
+        "pct_mejora": 27.1
+      },
+      {
+        "descripcion": "Eliminar todas las especies del portafolio",
+        "seccion": "Mis portafolios",
+        "p95_actual_s": 0.19,
+        "p95_historico_s": 6.12,
+        "pct_mejora": 96.9
+      },
+      {
+        "descripcion": "Ingreso a la pestaña \"SubSoberanos\"",
+        "seccion": "Curvas",
+        "p95_actual_s": 0.2,
+        "p95_historico_s": 0.19,
+        "pct_mejora": -4.7
+      },
+      {
+        "descripcion": "Eliminar especie",
+        "seccion": "Sensibilidad",
+        "p95_actual_s": 0.22,
+        "p95_historico_s": 0.23,
+        "pct_mejora": 2.9
+      }
+    ],
+    "top_acciones_mejoradas": [
+      {
+        "descripcion": "Eliminar todas las especies del portafolio",
+        "seccion": "Mis portafolios",
+        "p95_actual_s": 0.19,
+        "p95_historico_s": 6.12,
+        "pct_mejora": 96.9
+      },
+      {
+        "descripcion": "Ir a Condiciones de Emisión",
+        "seccion": "Comparar",
+        "p95_actual_s": 1.44,
+        "p95_historico_s": 24.65,
+        "pct_mejora": 94.2
+      },
+      {
+        "descripcion": "Agregar la segunda especie al portafolio",
+        "seccion": "Mis portafolios",
+        "p95_actual_s": 0.54,
+        "p95_historico_s": 9.1,
+        "pct_mejora": 94.0
+      },
+      {
+        "descripcion": "Ingreso a la curva Corporativos - ONs TAMAR - ARS",
+        "seccion": "Curvas",
+        "p95_actual_s": 5.12,
+        "p95_historico_s": 38.91,
+        "pct_mejora": 86.8
+      },
+      {
+        "descripcion": "Ingreso a la curva Brasil - Soberanos - Bonos Globales - USD",
+        "seccion": "Curvas",
+        "p95_actual_s": 10.88,
+        "p95_historico_s": 55.33,
+        "pct_mejora": 80.3
+      }
+    ],
+    "top_acciones_degradadas": [
+      {
+        "descripcion": "Ingreso a la pestaña Condiciones de Emisión de la especie PECMO",
+        "seccion": "Analizar",
+        "p95_actual_s": 19.67,
+        "p95_historico_s": 1.07,
+        "pct_mejora": -1738.8
+      },
+      {
+        "descripcion": "Analizar la especie TX28",
+        "seccion": "Analizar",
+        "p95_actual_s": 22.83,
+        "p95_historico_s": 2.96,
+        "pct_mejora": -671.3
+      },
+      {
+        "descripcion": "Ingreso a la pestaña Condiciones de Emisión de la especie  AL30",
+        "seccion": "Analizar",
+        "p95_actual_s": 10.06,
+        "p95_historico_s": 1.6,
+        "pct_mejora": -528.5
+      },
+      {
+        "descripcion": "Analizar la especie  BDC28",
+        "seccion": "Analizar",
+        "p95_actual_s": 12.43,
+        "p95_historico_s": 3.4,
+        "pct_mejora": -265.8
+      },
+      {
+        "descripcion": "Ingreso a la curva Colombia - Soberanos - Bonos Globales - USD",
+        "seccion": "Curvas",
+        "p95_actual_s": 63.29,
+        "p95_historico_s": 41.23,
+        "pct_mejora": -53.5
+      }
+    ],
+    "comparativa_version_anterior": [
+      {
+        "seccion": "Analizar",
+        "p95_actual_s": 22.67,
+        "p95_anterior_s": 26.47,
+        "pct_mejora": 14.3
+      },
+      {
+        "seccion": "Arbitraje",
+        "p95_actual_s": 10.95,
+        "p95_anterior_s": 11.34,
+        "pct_mejora": 3.5
+      },
+      {
+        "seccion": "Calculadora",
+        "p95_actual_s": 75.36,
+        "p95_anterior_s": 74.55,
+        "pct_mejora": -1.1
+      },
+      {
+        "seccion": "Comparar",
+        "p95_actual_s": 12.52,
+        "p95_anterior_s": 12.84,
+        "pct_mejora": 2.5
+      },
+      {
+        "seccion": "Curvas",
+        "p95_actual_s": 51.44,
+        "p95_anterior_s": 20.5,
+        "pct_mejora": -150.9
+      },
+      {
+        "seccion": "Graficador",
+        "p95_actual_s": 7.23,
+        "p95_anterior_s": 7.8,
+        "pct_mejora": 7.2
+      },
+      {
+        "seccion": "Mis portafolios",
+        "p95_actual_s": 8.97,
+        "p95_anterior_s": 9.27,
+        "pct_mejora": 3.3
+      },
+      {
+        "seccion": "Screener",
+        "p95_actual_s": 3.68,
+        "p95_anterior_s": 3.93,
+        "pct_mejora": 6.4
+      },
+      {
+        "seccion": "Sensibilidad",
+        "p95_actual_s": 6.57,
+        "p95_anterior_s": 7.77,
+        "pct_mejora": 15.5
+      }
+    ],
+    "impacto_cache": [],
+    "tendencia_versiones": [
+      {
+        "version": "v1.40.0",
+        "p95_global_s": 25.21
+      },
+      {
+        "version": "v1.41.0",
+        "p95_global_s": 20.48
+      },
+      {
+        "version": "v1.42.0",
+        "p95_global_s": 18.99
+      },
+      {
+        "version": "v1.43.3",
+        "p95_global_s": 18.6
+      },
+      {
+        "version": "v1.44.1",
+        "p95_global_s": 22.78
+      },
+      {
+        "version": "v1.44.2",
+        "p95_global_s": 21.68
+      },
+      {
+        "version": "v1.44.3",
+        "p95_global_s": 19.84
+      },
+      {
+        "version": "v1.44.5",
+        "p95_global_s": 24.33
+      },
+      {
+        "version": "v1.44.6",
+        "p95_global_s": 35.87
+      }
+    ],
+    "nuevas_acciones": [],
+    "impact_ranking": [
+      {
+        "seccion": "Curvas",
+        "p95_actual_s": 51.44,
+        "n_acciones": 17,
+        "impact_score": 874.5,
+        "estado": "degradacion"
+      },
+      {
+        "seccion": "Analizar",
+        "p95_actual_s": 22.67,
+        "n_acciones": 22,
+        "impact_score": 498.7,
+        "estado": "degradacion"
+      },
+      {
+        "seccion": "Calculadora",
+        "p95_actual_s": 75.36,
+        "n_acciones": 5,
+        "impact_score": 376.8,
+        "estado": "mejora"
+      },
+      {
+        "seccion": "Mis portafolios",
+        "p95_actual_s": 8.97,
+        "n_acciones": 10,
+        "impact_score": 89.7,
+        "estado": "estable"
+      },
+      {
+        "seccion": "Comparar",
+        "p95_actual_s": 12.52,
+        "n_acciones": 5,
+        "impact_score": 62.6,
+        "estado": "mejora"
+      },
+      {
+        "seccion": "Arbitraje",
+        "p95_actual_s": 10.95,
+        "n_acciones": 3,
+        "impact_score": 32.8,
+        "estado": "mejora"
+      },
+      {
+        "seccion": "Sensibilidad",
+        "p95_actual_s": 6.57,
+        "n_acciones": 4,
+        "impact_score": 26.3,
+        "estado": "mejora"
+      },
+      {
+        "seccion": "Graficador",
+        "p95_actual_s": 7.23,
+        "n_acciones": 3,
+        "impact_score": 21.7,
+        "estado": "mejora"
+      }
+    ],
+    "tendencias_sostenidas": [
+      {
+        "seccion": "Calculadora",
+        "n_versiones": 3,
+        "p95_inicio_s": 89.49,
+        "p95_actual_s": 93.18,
+        "version_inicio": "v1.44.3"
+      },
+      {
+        "seccion": "Mis portafolios",
+        "n_versiones": 3,
+        "p95_inicio_s": 8.89,
+        "p95_actual_s": 10.27,
+        "version_inicio": "v1.44.3"
+      }
+    ],
+    "saltos_abruptos": [
+      {
+        "seccion": "Comparar",
+        "de_version": "v1.43.3",
+        "a_version": "v1.44.1",
+        "de_p95_s": 14.88,
+        "a_p95_s": 60.4,
+        "pct_salto": 305.9
+      },
+      {
+        "seccion": "Curvas",
+        "de_version": "v1.44.5",
+        "a_version": "v1.44.6",
+        "de_p95_s": 19.45,
+        "a_p95_s": 48.48,
+        "pct_salto": 149.3
+      },
+      {
+        "seccion": "Curvas",
+        "de_version": "v1.44.2",
+        "a_version": "v1.44.3",
+        "de_p95_s": 24.7,
+        "a_p95_s": 48.82,
+        "pct_salto": 97.7
+      },
+      {
+        "seccion": "Analizar",
+        "de_version": "v1.44.3",
+        "a_version": "v1.44.5",
+        "de_p95_s": 13.53,
+        "a_p95_s": 26.6,
+        "pct_salto": 96.6
+      }
+    ],
+    "saltos_abruptos_acciones": [
+      {
+        "seccion": "Curvas",
+        "accion": "Ingreso a la curva Brasil - Soberanos - Bonos Globales - USD",
+        "de_version": "v1.44.2",
+        "a_version": "v1.44.3",
+        "de_p95_s": 15.56,
+        "a_p95_s": 75.92,
+        "pct_salto": 387.9
+      },
+      {
+        "seccion": "Comparar",
+        "accion": "Realizar comparativa entre las especies AL30 y TX28",
+        "de_version": "v1.43.3",
+        "a_version": "v1.44.1",
+        "de_p95_s": 14.88,
+        "a_p95_s": 60.4,
+        "pct_salto": 305.9
+      },
+      {
+        "seccion": "Analizar",
+        "accion": "Ingresar al Home",
+        "de_version": "v1.44.3",
+        "a_version": "v1.44.5",
+        "de_p95_s": 20.44,
+        "a_p95_s": 47.2,
+        "pct_salto": 130.9
+      },
+      {
+        "seccion": "Screener",
+        "accion": "Búsqueda con filtros en Screener",
+        "de_version": "v1.40.0",
+        "a_version": "v1.41.0",
+        "de_p95_s": 12.58,
+        "a_p95_s": 35.59,
+        "pct_salto": 182.9
+      },
+      {
+        "seccion": "Mis portafolios",
+        "accion": "Agregar la cuarta especie al portafolio",
+        "de_version": "v1.43.3",
+        "a_version": "v1.44.1",
+        "de_p95_s": 3.74,
+        "a_p95_s": 11.07,
+        "pct_salto": 196.0
+      }
+    ],
+    "tendencias_acciones_por_seccion": {
+      "Analizar": {
+        "n_improved": 7,
+        "n_degraded": 6,
+        "total_with_history": 22,
+        "pct_improved": 31.8,
+        "pct_degraded": 27.3,
+        "best_improvement": {
+          "accion": "Ingreso a la pestaña Condiciones de Emisión de la especie BDC28",
+          "pct": -87.49,
+          "de_p95_s": 23.95,
+          "a_p95_s": 3.0,
+          "de_version": "v1.44.5",
+          "a_version": "v1.44.6"
+        },
+        "worst_degradation": {
+          "accion": "Ingreso a la pestaña Condiciones de Emisión de la especie PECMO",
+          "pct": 2390.0,
+          "de_p95_s": 0.79,
+          "a_p95_s": 19.67,
+          "de_version": "v1.44.5",
+          "a_version": "v1.44.6"
+        }
+      },
+      "Arbitraje": {
+        "n_improved": 0,
+        "n_degraded": 0,
+        "total_with_history": 3,
+        "pct_improved": 0.0,
+        "pct_degraded": 0.0,
+        "best_improvement": {
+          "accion": "Navegabilidad entre las pestañas Paridad, Inversión y Scatter",
+          "pct": -3.94,
+          "de_p95_s": 11.39,
+          "a_p95_s": 10.95,
+          "de_version": "v1.44.5",
+          "a_version": "v1.44.6"
+        },
+        "worst_degradation": {
+          "accion": "Ingresar al menú Arbitraje",
+          "pct": 8.19,
+          "de_p95_s": 0.89,
+          "a_p95_s": 0.96,
+          "de_version": "v1.44.5",
+          "a_version": "v1.44.6"
+        }
+      },
+      "Calculadora": {
+        "n_improved": 0,
+        "n_degraded": 2,
+        "total_with_history": 5,
+        "pct_improved": 0.0,
+        "pct_degraded": 40.0,
+        "best_improvement": {
+          "accion": "Editar P. Simulado, de la primera simulación",
+          "pct": -9.29,
+          "de_p95_s": 2.47,
+          "a_p95_s": 2.24,
+          "de_version": "v1.44.5",
+          "a_version": "v1.44.6"
+        },
+        "worst_degradation": {
+          "accion": "Editar la TIR de la primera simulación",
+          "pct": 76.58,
+          "de_p95_s": 0.89,
+          "a_p95_s": 1.57,
+          "de_version": "v1.44.5",
+          "a_version": "v1.44.6"
+        }
+      },
+      "Comparar": {
+        "n_improved": 0,
+        "n_degraded": 2,
+        "total_with_history": 5,
+        "pct_improved": 0.0,
+        "pct_degraded": 40.0,
+        "best_improvement": {
+          "accion": "Ingresar al menú Comparar",
+          "pct": -11.14,
+          "de_p95_s": 0.93,
+          "a_p95_s": 0.82,
+          "de_version": "v1.44.5",
+          "a_version": "v1.44.6"
+        },
+        "worst_degradation": {
+          "accion": "Navegabilidad por pestañas gráficas",
+          "pct": 39.35,
+          "de_p95_s": 8.76,
+          "a_p95_s": 12.21,
+          "de_version": "v1.44.5",
+          "a_version": "v1.44.6"
+        }
+      },
+      "Curvas": {
+        "n_improved": 2,
+        "n_degraded": 6,
+        "total_with_history": 17,
+        "pct_improved": 11.8,
+        "pct_degraded": 35.3,
+        "best_improvement": {
+          "accion": "Ingreso a la curva Corporativos - ONs TAMAR - ARS",
+          "pct": -56.99,
+          "de_p95_s": 11.9,
+          "a_p95_s": 5.12,
+          "de_version": "v1.44.5",
+          "a_version": "v1.44.6"
+        },
+        "worst_degradation": {
+          "accion": "Ingreso a la curva Colombia - Soberanos - Bonos Globales - USD",
+          "pct": 225.4,
+          "de_p95_s": 19.45,
+          "a_p95_s": 63.29,
+          "de_version": "v1.44.5",
+          "a_version": "v1.44.6"
+        }
+      },
+      "Graficador": {
+        "n_improved": 0,
+        "n_degraded": 0,
+        "total_with_history": 3,
+        "pct_improved": 0.0,
+        "pct_degraded": 0.0,
+        "best_improvement": {
+          "accion": "Graficar la especie AL30",
+          "pct": -7.64,
+          "de_p95_s": 8.24,
+          "a_p95_s": 7.61,
+          "de_version": "v1.44.5",
+          "a_version": "v1.44.6"
+        },
+        "worst_degradation": {
+          "accion": "Graficar todas las curvas",
+          "pct": 5.36,
+          "de_p95_s": 1.08,
+          "a_p95_s": 1.14,
+          "de_version": "v1.44.5",
+          "a_version": "v1.44.6"
+        }
+      },
+      "Mis portafolios": {
+        "n_improved": 4,
+        "n_degraded": 0,
+        "total_with_history": 10,
+        "pct_improved": 40.0,
+        "pct_degraded": 0.0,
+        "best_improvement": {
+          "accion": "Agregar la segunda especie al portafolio",
+          "pct": -93.85,
+          "de_p95_s": 8.79,
+          "a_p95_s": 0.54,
+          "de_version": "v1.44.5",
+          "a_version": "v1.44.6"
+        },
+        "worst_degradation": {
+          "accion": "Agregar la cuarta especie al portafolio",
+          "pct": 11.33,
+          "de_p95_s": 9.22,
+          "a_p95_s": 10.27,
+          "de_version": "v1.44.5",
+          "a_version": "v1.44.6"
+        }
+      },
+      "Screener": {
+        "n_improved": 0,
+        "n_degraded": 0,
+        "total_with_history": 1,
+        "pct_improved": 0.0,
+        "pct_degraded": 0.0,
+        "best_improvement": {
+          "accion": "Ingresar al menú Screener",
+          "pct": -6.41,
+          "de_p95_s": 3.93,
+          "a_p95_s": 3.68,
+          "de_version": "v1.44.5",
+          "a_version": "v1.44.6"
+        },
+        "worst_degradation": null
+      },
+      "Sensibilidad": {
+        "n_improved": 0,
+        "n_degraded": 0,
+        "total_with_history": 4,
+        "pct_improved": 0.0,
+        "pct_degraded": 0.0,
+        "best_improvement": {
+          "accion": "Ingresar al menú Sensibilidad",
+          "pct": -16.6,
+          "de_p95_s": 0.96,
+          "a_p95_s": 0.8,
+          "de_version": "v1.44.5",
+          "a_version": "v1.44.6"
+        },
+        "worst_degradation": null
+      }
+    },
+    "acciones_discontinuadas_con_tendencia": [],
+    "secc_dropout_bias": [],
+    "acciones_persistentemente_lentas": [
+      {
+        "seccion": "Calculadora",
+        "accion": "Simular inversiones de la especie AL30",
+        "n_over": 5,
+        "n_total": 5,
+        "p95_actual_s": 93.18,
+        "p95_max_s": 98.67
+      }
+    ],
+    "acciones_comportamiento_cronico": []
+  },
+  "conclusions": {
+    "estado_general": "critico",
+    "resumen_ejecutivo": "La versión v1.44.6 de Abbaco presenta un estado crítico de rendimiento. Dos secciones clave, 'Curvas' y 'Analizar', han sufrido degradaciones significativas del -56.7% y -37.6% respectivamente frente a su P95 histórico. Además, la sección 'Calculadora' sigue siendo un punto de atención con una acción crónicamente lenta que supera el umbral de rendimiento.",
+    "escalar": {
+      "titulo": "Degradaciones críticas en Curvas y Analizar, y lentitud crónica en Calculadora",
+      "detalle": "La sección 'Curvas' sufrió una degradación del -56.7% (P95 51.44s) y 'Analizar' del -37.6% (P95 22.67s). Además, la acción 'Simular inversiones de la especie AL30' en 'Calculadora' ha superado el umbral de alerta en 5 de las últimas 5 versiones, con un P95 actual de 93.18s."
+    },
+    "investigar": {
+      "titulo": "Degradación extrema en acción específica de Analizar",
+      "detalle": "La acción 'Ingreso a la pestaña Condiciones de Emisión de la especie PECMO' en la sección 'Analizar' sufrió una degradación del -1738.8%, pasando de 1.07s a 19.67s, lo que requiere una investigación inmediata."
+    },
+    "optimizar": {
+      "titulo": "Mejorar rendimiento de Calculadora y revertir degradaciones en Curvas/Analizar",
+      "detalle": "La sección 'Calculadora' presenta un P95 de 75.36s, siendo la más lenta y con una acción crónicamente lenta. Revertir las degradaciones del -56.7% en 'Curvas' y -37.6% en 'Analizar' también ofrece un alto potencial de mejora en la UX."
+    },
+    "hallazgos": [
+      {
+        "tipo": "alerta",
+        "seccion": "Analizar",
+        "descripcion": "La sección 'Analizar' presenta degradaciones críticas en acciones clave, incluyendo un salto abrupto en el ingreso al Home y una degradación extrema en la consulta de condiciones de emisión.",
+        "evidencia": "La acción 'Ingreso a la pestaña Condiciones de Emisión de la especie PECMO' degradó de 1.07s a 19.67s (+1738.8%) en v1.44.6. Además, 'Ingresar al Home' pasó de 20.44s a 47.2s (+130.9%) en v1.44.5."
+      },
+      {
+        "tipo": "alerta",
+        "seccion": "Curvas",
+        "descripcion": "La sección 'Curvas' sufrió una degradación general significativa y un salto abrupto en una acción específica.",
+        "evidencia": "El P95 de la sección degradó de 32.83s a 51.44s (-56.7%). La acción 'Ingreso a la curva Colombia - Soberanos - Bonos Globales - USD' pasó de 19.45s a 63.29s (+225.4%) en v1.44.6."
+      },
+      {
+        "tipo": "mejora",
+        "seccion": "Mis portafolios",
+        "descripcion": "La sección 'Mis portafolios' muestra una mejora estructural con un alto porcentaje de acciones mejorando.",
+        "evidencia": "El 40% de sus acciones mejoraron, destacando 'Agregar la segunda especie al portafolio' que mejoró de 8.79s a 0.54s (+93.85%) en v1.44.6."
+      },
+      {
+        "tipo": "alerta",
+        "seccion": "Calculadora",
+        "descripcion": "La sección 'Calculadora' contiene una acción crónicamente lenta que persiste sobre el umbral de alerta.",
+        "evidencia": "La acción 'Simular inversiones de la especie AL30' ha superado el umbral en 5 de 5 versiones medidas, con un P95 actual de 93.18s."
+      },
+      {
+        "tipo": "mejora",
+        "seccion": "Comparar",
+        "descripcion": "La sección 'Comparar' muestra una mejora significativa en su rendimiento general.",
+        "evidencia": "P95 mejoró de 21.45s a 12.52s (+41.6%)."
+      },
+      {
+        "tipo": "mejora",
+        "seccion": "Screener",
+        "descripcion": "La sección 'Screener' ha logrado una mejora sustancial en su tiempo de respuesta.",
+        "evidencia": "P95 mejoró de 8.07s a 3.68s (+54.4%)."
+      },
+      {
+        "tipo": "mejora",
+        "seccion": "Sensibilidad",
+        "descripcion": "La sección 'Sensibilidad' presenta una mejora notable en su performance.",
+        "evidencia": "P95 mejoró de 8.46s a 6.57s (+22.3%)."
+      }
+    ],
+    "causa_raiz": [
+      {
+        "seccion": "Analizar",
+        "hipotesis": [
+          "Problemas de carga de datos o consultas complejas para las condiciones de emisión de bonos específicos.",
+          "Ineficiencias en el renderizado de componentes de la UI al mostrar información detallada de especies.",
+          "Aumento en el volumen o complejidad de los datos de bonos que se procesan al ingresar a la sección."
+        ]
+      },
+      {
+        "seccion": "Curvas",
+        "hipotesis": [
+          "Ineficiencias en la recuperación o procesamiento de datos de curvas de rendimiento para bonos soberanos.",
+          "Cambios en la lógica de cálculo o visualización de las curvas que impactan el rendimiento.",
+          "Problemas de conectividad o latencia con los servicios externos que proveen los datos de las curvas."
+        ]
+      },
+      {
+        "seccion": "Calculadora",
+        "hipotesis": [
+          "Cálculos complejos o iterativos en la simulación de inversiones que no están optimizados.",
+          "Dependencia de servicios de backend lentos para obtener datos de mercado o realizar proyecciones.",
+          "Problemas de rendimiento en el frontend al actualizar la UI con los resultados de las simulaciones."
+        ]
+      }
+    ],
+    "recomendaciones": [
+      {
+        "prioridad": "P1",
+        "accion": "Investigar y optimizar la acción 'Simular inversiones de la especie AL30' en la sección 'Calculadora'.",
+        "seccion": "Calculadora",
+        "evidencia": "P95 actual de 93.18s y persistencia sobre el umbral en 5 de 5 versiones."
+      },
+      {
+        "prioridad": "P1",
+        "accion": "Priorizar la investigación y corrección de la degradación extrema en la acción 'Ingreso a la pestaña Condiciones de Emisión de la especie PECMO'.",
+        "seccion": "Analizar",
+        "evidencia": "Degradación del -1738.8% (de 1.07s a 19.67s) en la versión actual."
+      },
+      {
+        "prioridad": "P1",
+        "accion": "Analizar la causa del salto abrupto en la acción 'Ingreso a la curva Colombia - Soberanos - Bonos Globales - USD'.",
+        "seccion": "Curvas",
+        "evidencia": "Degradación del -225.4% (de 19.45s a 63.29s) en la versión actual."
+      },
+      {
+        "prioridad": "P2",
+        "accion": "Realizar un análisis de rendimiento exhaustivo en la sección 'Curvas' para identificar y revertir la degradación general.",
+        "seccion": "Curvas",
+        "evidencia": "Degradación del -56.7% vs histórico (P95 51.44s)."
+      },
+      {
+        "prioridad": "P3",
+        "accion": "Documentar y replicar las optimizaciones realizadas en las secciones 'Screener' y 'Comparar' para aplicar patrones de mejora en otras áreas.",
+        "seccion": "General",
+        "evidencia": "'Screener' mejoró +54.4% y 'Comparar' +41.6%."
+      }
+    ]
+  },
+  "ai_model": "gemini-2.5-flash"
+}
