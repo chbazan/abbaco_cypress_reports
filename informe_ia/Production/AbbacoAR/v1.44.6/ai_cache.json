@@ -1,129 +1,139 @@
 {
-  "hash": "7fbde5faadb3a95b0bca70fc83c6d3462ce55fb5d0bc8168a5cd17e5a03bbbe4",
+  "hash": "f805249b0bfe05f87998ed45825acdf648d90a05a51d1b1e7cae68aa53eb2a5e",
   "ai_model": "gemini-2.5-flash",
   "conclusions": {
     "estado_general": "critico",
-    "resumen_ejecutivo": "La versión actual v1.44.6 presenta un estado crítico debido a degradaciones significativas en múltiples secciones. Dos secciones, Analizar y Arbitraje, muestran una degradación superior al 15% respecto a su histórico, y la sección Calculadora permanece sobre el umbral de rendimiento con 95.24s, mostrando además una tendencia sostenida de degradación.",
+    "resumen_ejecutivo": "La versión actual presenta un estado crítico con dos secciones, Arbitraje y Curvas, mostrando degradaciones significativas del 22.6% y 16.4% respectivamente frente al histórico. La sección Calculadora permanece sobre el umbral de rendimiento con 94.31s y una acción crítica es persistentemente lenta, mientras que Analizar muestra una degradación masiva en una acción clave.",
     "escalar": {
-      "titulo": "Calculadora y Analizar requieren atención urgente por rendimiento crítico",
-      "detalle": "La acción 'Simular inversiones de la especie AL30' en Calculadora es persistentemente lenta (96.93s, 5 de 5 versiones sobre umbral). Además, la acción 'Ingresar al Home' en Analizar sufrió un salto abrupto del P95 de 20.44s a 47.2s (+130.9%) en la versión v1.44.5."
+      "titulo": "Degradaciones críticas en Analizar y lentitud crónica en Calculadora",
+      "detalle": "La acción 'Ingreso a la pestaña Condiciones de Emisión de la especie PECMO' en Analizar degradó un 2153.87% (0.79s a 17.81s). Además, 'Simular inversiones de la especie AL30' en Calculadora es persistentemente lenta (96.93s, 5 de 5 versiones sobre umbral)."
     },
     "investigar": {
-      "titulo": "Salto abrupto en la acción 'Ingresar al Home' de la sección Analizar",
-      "detalle": "La acción 'Ingresar al Home' en la sección Analizar experimentó un incremento del P95 de 20.44s a 47.2s (+130.9%) en la versión v1.44.5, lo que impacta directamente la experiencia de usuario al inicio de la navegación."
+      "titulo": "Anomalías en Analizar: degradación masiva y salto en Home",
+      "detalle": "La acción 'Ingreso a la pestaña Condiciones de Emisión de la especie PECMO' en Analizar sufrió una degradación del 2153.87% (0.79s a 17.81s). También, 'Ingresar al Home' en Analizar saltó de 20.44s a 47.2s (+130.9%) en la versión anterior."
     },
     "optimizar": {
-      "titulo": "Optimizar la sección Calculadora, la más lenta y con tendencia negativa",
-      "detalle": "La sección Calculadora es la más lenta con un P95 de 95.24s y muestra una tendencia sostenida de degradación en las últimas 3 versiones, pasando de 89.49s a 96.93s."
+      "titulo": "Optimizar la sección Calculadora y acciones lentas",
+      "detalle": "La sección Calculadora tiene un P95 de 94.31s y la acción 'Simular inversiones de la especie AL30' es persistentemente lenta (96.93s). Reducir estos tiempos mejoraría significativamente la UX."
     },
     "hallazgos": [
       {
         "tipo": "alerta",
         "seccion": "Calculadora",
-        "descripcion": "La acción 'Simular inversiones de la especie AL30' es persistentemente lenta y supera el umbral de rendimiento.",
-        "evidencia": "5 de 5 versiones sobre el umbral, con P95 actual de 96.93s."
+        "descripcion": "La acción 'Simular inversiones de la especie AL30' es persistentemente lenta y la sección muestra una tendencia sostenida de degradación.",
+        "evidencia": "La acción está 5 de 5 versiones sobre el umbral (P95 actual 96.93s). La sección aumentó su P95 en 3 versiones consecutivas, de 89.49s a 93.18s."
       },
       {
         "tipo": "alerta",
         "seccion": "Analizar",
-        "descripcion": "La acción 'Ingresar al Home' sufrió un salto abrupto en la versión v1.44.5.",
-        "evidencia": "P95 pasó de 20.44s a 47.2s (+130.9%) en v1.44.5."
+        "descripcion": "Se observan degradaciones críticas en acciones clave de la sección.",
+        "evidencia": "'Ingreso a la pestaña Condiciones de Emisión de la especie PECMO' degradó de 0.79s a 17.81s (+2153.87%) y 'Ingresar al Home' saltó de 20.44s a 47.2s (+130.9%) en la versión anterior."
+      },
+      {
+        "tipo": "alerta",
+        "seccion": "Graficador",
+        "descripcion": "La sección muestra una tendencia sostenida de degradación en su rendimiento.",
+        "evidencia": "El P95 de la sección aumentó en 3 versiones consecutivas, de 6.57s a 9.94s."
+      },
+      {
+        "tipo": "alerta",
+        "seccion": "Screener",
+        "descripcion": "La sección muestra una tendencia sostenida de degradación en su rendimiento.",
+        "evidencia": "El P95 de la sección aumentó en 3 versiones consecutivas, de 3.74s a 4.03s."
       },
       {
         "tipo": "degradacion",
         "seccion": "Arbitraje",
-        "descripcion": "La sección Arbitraje se degradó significativamente respecto a su histórico.",
-        "evidencia": "P95 actual 15.8s vs histórico 12.25s (-29.0%)."
+        "descripcion": "La sección ha experimentado una degradación significativa en su rendimiento.",
+        "evidencia": "El P95 degradó un 22.6% vs histórico, alcanzando 15.01s."
       },
       {
         "tipo": "degradacion",
         "seccion": "Curvas",
-        "descripcion": "La sección Curvas se degradó considerablemente respecto a la versión anterior.",
-        "evidencia": "P95 pasó de 20.5s a 32.09s (+56.5%) entre v1.44.5 y v1.44.6."
-      },
-      {
-        "tipo": "degradacion",
-        "seccion": "Calculadora",
-        "descripcion": "La sección Calculadora muestra una tendencia sostenida de degradación en las últimas 3 versiones.",
-        "evidencia": "P95 aumentó de 89.49s a 96.93s desde la v1.44.3."
+        "descripcion": "La sección ha experimentado una degradación significativa en su rendimiento.",
+        "evidencia": "El P95 degradó un 16.4% vs histórico, alcanzando 38.22s."
       },
       {
         "tipo": "mejora",
-        "seccion": "Comparar",
-        "descripcion": "La sección Comparar mejoró notablemente su rendimiento.",
-        "evidencia": "P95 mejoró de 21.45s a 12.42s (+42.1%)."
-      },
-      {
-        "tipo": "mejora",
-        "seccion": "Screener",
-        "descripcion": "La sección Screener mostró una mejora significativa en su rendimiento.",
-        "evidencia": "P95 mejoró de 8.07s a 4.01s (+50.3%)."
+        "seccion": "Analizar",
+        "descripcion": "La sección ha mostrado una recuperación significativa en su rendimiento general.",
+        "evidencia": "El P95 mejoró un 44.1% vs la versión anterior, de 26.47s a 14.79s."
       }
     ],
     "causa_raiz": [
       {
+        "seccion": "Calculadora",
+        "hipotesis": [
+          "Podría deberse a la complejidad de los cálculos o la carga de datos para simulaciones de bonos, especialmente para especies específicas como AL30.",
+          "Revisar si hay ineficiencias en la lógica de procesamiento de la interfaz de usuario o en las llamadas a servicios externos para obtener información financiera."
+        ]
+      },
+      {
         "seccion": "Analizar",
         "hipotesis": [
-          "Podría deberse a una mayor complejidad en la carga inicial de datos o componentes del Home.",
-          "Revisar si hay problemas de rendimiento en APIs o servicios backend que alimentan la vista principal.",
-          "Considerar la introducción de nuevos elementos o lógica pesada en el renderizado del Home que impacten la acción 'Ingresar al Home'."
+          "Posibles regresiones en la eficiencia de las consultas a la base de datos o APIs al cargar condiciones de emisión para especies específicas (PECMO).",
+          "Cambios recientes en la carga de componentes o datos en la página de inicio que impactan el tiempo de 'Ingresar al Home'."
         ]
       },
       {
         "seccion": "Arbitraje",
         "hipotesis": [
-          "Posible aumento en el volumen de datos procesados para las operaciones de arbitraje.",
-          "Revisar ineficiencias en los algoritmos de cálculo o visualización de oportunidades de arbitraje.",
-          "Investigar posibles problemas de latencia en la comunicación con fuentes de datos externas."
-        ]
-      },
-      {
-        "seccion": "Calculadora",
-        "hipotesis": [
-          "La lógica de simulación de inversiones podría haberse vuelto más compleja o ineficiente, especialmente para la acción 'Simular inversiones de la especie AL30'.",
-          "Identificar posibles cuellos de botella en el procesamiento de cálculos intensivos en el servidor.",
-          "Evaluar problemas de optimización en la UI al manejar grandes volúmenes de datos de simulación."
+          "Aumento en el volumen o complejidad de los datos de arbitraje procesados, o ineficiencias en el renderizado de la UI.",
+          "Posibles cuellos de botella en el backend al calcular oportunidades de arbitraje o en la interacción con APIs de mercado."
         ]
       },
       {
         "seccion": "Curvas",
         "hipotesis": [
-          "Podría haber un aumento en la cantidad de datos o complejidad de las curvas financieras mostradas.",
-          "Revisar ineficiencias en la carga o renderizado de los gráficos de curvas.",
-          "Investigar una posible degradación en el rendimiento de la API que provee los datos de las curvas."
+          "Mayor volumen de datos para la construcción de curvas o cambios en la librería de gráficos que afectan el rendimiento.",
+          "Ineficiencias en la consulta o agregación de datos de bonos para generar las curvas de rendimiento."
+        ]
+      },
+      {
+        "seccion": "Graficador",
+        "hipotesis": [
+          "Ineficiencias en la librería de gráficos utilizada o en la forma en que se manejan grandes volúmenes de datos para la visualización.",
+          "Posibles problemas de rendimiento en el servidor al preparar los datos para ser graficados."
+        ]
+      },
+      {
+        "seccion": "Screener",
+        "hipotesis": [
+          "Aumento en la complejidad de los filtros aplicados o en el volumen de datos a procesar para el screener.",
+          "Ineficiencias en la consulta o indexación de la base de datos que soporta la funcionalidad del screener."
         ]
       }
     ],
     "recomendaciones": [
       {
         "prioridad": "P1",
-        "accion": "Investigar y optimizar la acción 'Simular inversiones de la especie AL30'.",
+        "accion": "Investigar y optimizar la acción 'Simular inversiones de la especie AL30' en la sección Calculadora.",
         "seccion": "Calculadora",
-        "evidencia": "5 de 5 versiones sobre el umbral, con P95 actual de 96.93s."
+        "evidencia": "La acción está 5 de 5 versiones sobre el umbral de alerta (P95 actual 96.93s)."
       },
       {
         "prioridad": "P1",
-        "accion": "Analizar la causa raíz del salto abrupto en la acción 'Ingresar al Home'.",
+        "accion": "Realizar un análisis de causa raíz urgente para la acción 'Ingreso a la pestaña Condiciones de Emisión de la especie PECMO'.",
         "seccion": "Analizar",
-        "evidencia": "P95 pasó de 20.44s a 47.2s (+130.9%) en v1.44.5."
+        "evidencia": "Degradación del 2153.87% (de 0.79s a 17.81s) en la última versión."
       },
       {
-        "prioridad": "P2",
-        "accion": "Priorizar la optimización de la sección Arbitraje para revertir la degradación.",
-        "seccion": "Arbitraje",
-        "evidencia": "Degradación del P95 en un 29.0% (15.8s vs 12.25s)."
-      },
-      {
-        "prioridad": "P2",
-        "accion": "Revisar el rendimiento de la sección Curvas, especialmente las acciones de ingreso a curvas específicas.",
-        "seccion": "Curvas",
-        "evidencia": "Degradación del P95 en un 56.5% respecto a la versión anterior (de 20.5s a 32.09s)."
-      },
-      {
-        "prioridad": "P3",
-        "accion": "Monitorear de cerca la tendencia de degradación sostenida en la sección Calculadora.",
+        "prioridad": "P1",
+        "accion": "Abordar la tendencia sostenida de degradación en la sección Calculadora y revisar la eficiencia de sus procesos.",
         "seccion": "Calculadora",
-        "evidencia": "P95 aumentó en 3 versiones consecutivas, de 89.49s a 96.93s."
+        "evidencia": "El P95 aumentó en 3 versiones consecutivas, de 89.49s a 93.18s, y está sobre el umbral de rendimiento."
+      },
+      {
+        "prioridad": "P2",
+        "accion": "Investigar la degradación de la sección Arbitraje y la acción 'Navegabilidad entre las pestañas Paridad, Inversión y Scatter'.",
+        "seccion": "Arbitraje",
+        "evidencia": "Degradación del 22.6% vs histórico (P95 15.01s) y la acción degradó 44.74% vs anterior."
+      },
+      {
+        "prioridad": "P2",
+        "accion": "Analizar la tendencia sostenida de degradación en la sección Graficador.",
+        "seccion": "Graficador",
+        "evidencia": "El P95 aumentó en 3 versiones consecutivas, de 6.57s a 9.94s."
       }
     ]
   }
