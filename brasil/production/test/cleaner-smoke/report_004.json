@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 1,
     "failures": 1,
-    "start": "2026-07-20T12:29:48.357Z",
-    "end": "2026-07-20T12:33:41.395Z",
-    "duration": 233038,
+    "start": "2026-07-27T12:50:13.865Z",
+    "end": "2026-07-27T12:54:12.051Z",
+    "duration": 238186,
     "testsRegistered": 7,
     "passPercent": 50,
     "pendingPercent": 14.285714285714285,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "1e040cca-ad8c-45f4-9b49-5a757646e86a",
+      "uuid": "9dd2ce3e-a322-48fe-b382-df676d98c270",
       "title": "",
       "fullFile": "build/production/brasil/smoke/calculadora.cy.js",
       "file": "build/production/brasil/smoke/calculadora.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "53247a1a-3d54-4584-9508-20d7f87bc8c8",
+          "uuid": "d6efc928-5fb5-4f21-a418-f29f064f69d0",
           "title": "Calculadora",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Ingresar al Home e ingresar al menú \"Calculadora\"",
               "fullTitle": "Calculadora Ingresar al Home e ingresar al menú \"Calculadora\"",
               "timedOut": null,
-              "duration": 10729,
+              "duration": 16576,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ABBACO_LOCATION}/calculator`);\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.calculadoraTitle().should('be.visible');\n_selectors_sharedElements__WEBPACK_IMPORTED_MODULE_2__.sharedElements.cardBody().should('be.visible');\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.addSimulationButton().should('be.visible');",
               "err": {},
-              "uuid": "44da0ccb-270a-4598-b40e-03c83ce4549f",
-              "parentUUID": "53247a1a-3d54-4584-9508-20d7f87bc8c8",
+              "uuid": "fbe415b0-0bd6-4e83-ad1d-8de6c6c42600",
+              "parentUUID": "d6efc928-5fb5-4f21-a418-f29f064f69d0",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Simular inversiones de la especie RESA15 y validar que se muestren correctamente",
               "fullTitle": "Calculadora Simular inversiones de la especie RESA15 y validar que se muestren correctamente",
               "timedOut": null,
-              "duration": 30299,
+              "duration": 29181,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.calculadoraTitle().should('be.visible');\ncy.crearSimulacionBR({\n  especie: _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR,\n  fecha: /C\\.I|E\\.P\\./,\n  tipo: 'Dirty',\n  cantidad: 100,\n  valor: 736.06,\n  tipoCambio: 1420\n});\ncy.crearSimulacionBR({\n  especie: _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR,\n  fecha: '24Hs',\n  tipo: 'Yield',\n  cantidad: 100,\n  valor: 20,\n  tipoCambio: 1420\n});\ncy.crearSimulacionBR({\n  especie: _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR,\n  fecha: /C\\.I|E\\.P\\./,\n  tipo: 'Dirty',\n  cantidad: 500,\n  valor: 736.06,\n  tipoCambio: 1420\n});\ncy.crearSimulacionBR({\n  especie: _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR,\n  fecha: /C\\.I|E\\.P\\./,\n  tipo: 'Dirty',\n  valor: 736.06,\n  cantidad: '10',\n  tipoCambio: 1420,\n  conComision: true,\n  tipoComision: /\\b(ARS|BRL)\\b/,\n  valorComision: 100\n});\ncy.crearSimulacionBR({\n  especie: _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].HARD_DOLLAR,\n  fecha: '24Hs',\n  tipo: 'Dirty',\n  valor: 736.06,\n  cantidad: '10',\n  tipoCambio: 1420,\n  conComision: true,\n  tipoComision: '%',\n  valorComision: 2\n});\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.tableSimulations().should('be.visible');",
               "err": {},
-              "uuid": "c6981b73-5874-4c4d-a0da-867ff8f6e69a",
-              "parentUUID": "53247a1a-3d54-4584-9508-20d7f87bc8c8",
+              "uuid": "f94e1cbe-50d4-49c4-b711-d5e84e552977",
+              "parentUUID": "d6efc928-5fb5-4f21-a418-f29f064f69d0",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Editar P. Simulado, de la primera simulación y verificar en la tabla de Simulaciones",
               "fullTitle": "Calculadora Editar P. Simulado, de la primera simulación y verificar en la tabla de Simulaciones",
               "timedOut": null,
-              "duration": 5598,
+              "duration": 6204,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -83,8 +83,8 @@
               "context": null,
               "code": "cy.editarPrecioSimuladoBR('6.80');\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.tableSimulations().should('be.visible');",
               "err": {},
-              "uuid": "b897d7a4-76cf-49c1-88cb-4323b33d3479",
-              "parentUUID": "53247a1a-3d54-4584-9508-20d7f87bc8c8",
+              "uuid": "b67470e9-2b87-4b5f-80dd-9808c099679d",
+              "parentUUID": "d6efc928-5fb5-4f21-a418-f29f064f69d0",
               "isHook": false,
               "skipped": false
             },
@@ -92,7 +92,7 @@
               "title": "Editar la TIR de la primera simulación y verificar en la tabla de Simulaciones",
               "fullTitle": "Calculadora Editar la TIR de la primera simulación y verificar en la tabla de Simulaciones",
               "timedOut": null,
-              "duration": 90706,
+              "duration": 90600,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -102,11 +102,11 @@
               "code": "cy.editarTIRBR('15');\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.tableSimulations().should('be.visible');",
               "err": {
                 "message": "AssertionError: Timed out retrying after 90000ms: Expected to find element: `input`, but never found it. Queried from:\n\n              > cy.get(@celdaTIR)",
-                "estack": "AssertionError: Timed out retrying after 90000ms: Expected to find element: `input`, but never found it. Queried from:\n\n              > cy.get(@celdaTIR)\n    at ./cypress/support/commands.js (webpack://cypress/./cypress/support/commands.js:1377:0)\n    at __webpack_modules__</addCommand/wrap (https://bonds.mercapabbaco.com.br/__cypress/runner/cypress_runner.js:146042:43)",
+                "estack": "AssertionError: Timed out retrying after 90000ms: Expected to find element: `input`, but never found it. Queried from:\n\n              > cy.get(@celdaTIR)\n    at ./cypress/support/commands.js (webpack://cypress/./cypress/support/commands.js:1426:0)\n    at __webpack_modules__</addCommand/wrap (https://bonds.mercapabbaco.com.br/__cypress/runner/cypress_runner.js:146042:43)",
                 "diff": null
               },
-              "uuid": "39b4d4a7-d3ee-4a94-9075-2e76d2e80169",
-              "parentUUID": "53247a1a-3d54-4584-9508-20d7f87bc8c8",
+              "uuid": "b802ef45-9322-4696-b820-6cdf69533fff",
+              "parentUUID": "d6efc928-5fb5-4f21-a418-f29f064f69d0",
               "isHook": false,
               "skipped": false
             },
@@ -123,8 +123,8 @@
               "context": null,
               "code": "_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.hideChartButton().click();\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.chartContainer().should('not.exist');\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.showChartButton().click();\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.chartContainer().should('be.visible');",
               "err": {},
-              "uuid": "2ccec89c-2966-4abe-b721-fb006285b925",
-              "parentUUID": "53247a1a-3d54-4584-9508-20d7f87bc8c8",
+              "uuid": "c59715fb-7a7c-40d4-b3a6-3dbe16d74f66",
+              "parentUUID": "d6efc928-5fb5-4f21-a418-f29f064f69d0",
               "isHook": false,
               "skipped": false
             },
@@ -141,8 +141,8 @@
               "context": null,
               "code": "cy.eliminarSimulacion();\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.pointsButton().should('be.visible');",
               "err": {},
-              "uuid": "9570ddd8-8eb5-4f9a-81a8-4ffe383ef351",
-              "parentUUID": "53247a1a-3d54-4584-9508-20d7f87bc8c8",
+              "uuid": "7a6c2312-8db5-4eda-adf5-15b2b247a08c",
+              "parentUUID": "d6efc928-5fb5-4f21-a418-f29f064f69d0",
               "isHook": false,
               "skipped": true
             },
@@ -159,29 +159,29 @@
               "context": null,
               "code": "_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.deleteAllSimulationsBR();\n_pages_calculadoraPage__WEBPACK_IMPORTED_MODULE_1__.calculadora.elements.noSimulationsTitle().should('be.visible');",
               "err": {},
-              "uuid": "d669e345-640a-4287-bec2-45dcbcc04dc9",
-              "parentUUID": "53247a1a-3d54-4584-9508-20d7f87bc8c8",
+              "uuid": "3c2ca5f9-40bd-45f7-a095-09a12b7b7f48",
+              "parentUUID": "d6efc928-5fb5-4f21-a418-f29f064f69d0",
               "isHook": false,
               "skipped": true
             }
           ],
           "suites": [],
           "passes": [
-            "44da0ccb-270a-4598-b40e-03c83ce4549f",
-            "c6981b73-5874-4c4d-a0da-867ff8f6e69a",
-            "b897d7a4-76cf-49c1-88cb-4323b33d3479"
+            "fbe415b0-0bd6-4e83-ad1d-8de6c6c42600",
+            "f94e1cbe-50d4-49c4-b711-d5e84e552977",
+            "b67470e9-2b87-4b5f-80dd-9808c099679d"
           ],
           "failures": [
-            "39b4d4a7-d3ee-4a94-9075-2e76d2e80169"
+            "b802ef45-9322-4696-b820-6cdf69533fff"
           ],
           "pending": [
-            "2ccec89c-2966-4abe-b721-fb006285b925"
+            "c59715fb-7a7c-40d4-b3a6-3dbe16d74f66"
           ],
           "skipped": [
-            "9570ddd8-8eb5-4f9a-81a8-4ffe383ef351",
-            "d669e345-640a-4287-bec2-45dcbcc04dc9"
+            "7a6c2312-8db5-4eda-adf5-15b2b247a08c",
+            "3c2ca5f9-40bd-45f7-a095-09a12b7b7f48"
           ],
-          "duration": 137332,
+          "duration": 142561,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
