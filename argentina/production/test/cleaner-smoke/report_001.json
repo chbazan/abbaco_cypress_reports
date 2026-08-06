@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 0,
-    "start": "2026-08-05T11:44:42.194Z",
-    "end": "2026-08-05T11:44:43.094Z",
-    "duration": 900,
+    "failures": 1,
+    "start": "2026-08-06T13:00:52.685Z",
+    "end": "2026-08-06T13:04:36.077Z",
+    "duration": 223392,
     "testsRegistered": 1,
-    "passPercent": 100,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "fd3e8b77-b5ac-487b-a377-aaded844a087",
+      "uuid": "9e993c3c-50a4-4dd3-b4d0-8c7671f5c023",
       "title": "",
       "fullFile": "build/production/argentina/smoke/01_login.cy.js",
       "file": "build/production/argentina/smoke/01_login.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "3dc048c4-5eaf-462c-81fc-c273638e791c",
+          "uuid": "83e5342e-2031-4ca7-91cd-d0c1cb1c5098",
           "title": "Login",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,33 @@
               "title": "Login Abbaco",
               "fullTitle": "Login Login Abbaco",
               "timedOut": null,
-              "duration": 652,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
+              "duration": 108950,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "cy.clearAllLocalStorage();\ncy.clearAllCookies();\ncy.clearAllSessionStorage();\ncy.SessionAbbaco();",
-              "err": {},
-              "uuid": "840ef337-5499-47da-a726-8ccde1714d42",
-              "parentUUID": "3dc048c4-5eaf-462c-81fc-c273638e791c",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 90000ms: Expected to find element: `#access-buttons`, but never found it.\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.",
+                "estack": "AssertionError: Timed out retrying after 90000ms: Expected to find element: `#access-buttons`, but never found it.\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n    at clickAcceso (webpack://cypress/./cypress/support/commands.js:58:0)\n    at intentarLogin (webpack://cypress/./cypress/support/commands.js:145:0)\n    at intentarLogin (webpack://cypress/./cypress/support/commands.js:155:0)\n    at getRet (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:122690:20)\n    at tryCatcher (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:1777:23)\n    at __webpack_modules__</module.exports/Promise.try (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:4285:29)\n    at thenFn (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:122701:60)\n    at then (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:122952:21)\n    at wrapped (https://bonds.mercapabbaco.com/__cypress/runner/cypress_runner.js:146050:19)",
+                "diff": null
+              },
+              "uuid": "f7f94744-c9d5-4e43-8040-a562c55136ee",
+              "parentUUID": "83e5342e-2031-4ca7-91cd-d0c1cb1c5098",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "840ef337-5499-47da-a726-8ccde1714d42"
+          "passes": [],
+          "failures": [
+            "f7f94744-c9d5-4e43-8040-a562c55136ee"
           ],
-          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 652,
+          "duration": 108950,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
